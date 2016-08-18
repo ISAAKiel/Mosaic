@@ -1,0 +1,703 @@
+---
+title       : R basics
+subtitle    : First Steps
+author      : Franziska Faupel
+job         : MOSaIC
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow    # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+logo        : logo03.png
+biglogo     : logo03.png
+--- &twocol
+
+<style type="text/css">
+body {background:grey transparent;
+}
+</style>
+
+<style>
+strong {
+  font-weight: bold;
+}
+</style>
+
+## Structure 
+
+*** =left
+
+- **First Part**
+
+> 1. Vectors
+> 2. Functions
+> 3. Operators
+> 4. Data Frames, Martices & Arrays
+
+*** =right
+
+- **Second Part**
+
+> 6. Load data
+> 7. Manipulate Data
+> 8. Loops and Restrictions
+> 9. Loading Packages
+> 10. Plots 
+
+<div style='position:absolute;top:5%;right:5%'>
+    <img  height="100" width="100" src='assets/img/Rlogo.png' />
+</div>
+
+--- .segue bg:grey
+
+## Something to remember...
+
+---
+
+## Something to remember:
+
+To understand computations in R, two slogans are helpful:
+
+- **Everything that exists is an object.**
+- **Everything that happens is a function call.**
+
+John Chambers
+
+---
+
+## Further basics...
+
+R has many data structures. These include:
+
+> - atomic vector
+> - list
+> - matrix
+> - data frame
+> - factors
+> - tables
+
+*** =pnotes
+
+Blah
+
+--- .segue bg:grey
+
+## Open a new R Script
+
+*** =pnotes
+File > New File > R Script
+
+--- .segue bg:grey
+
+## 1.  Vectors
+
+*** =pnotes
+
+A Vector is THE basic structure in R.
+Most of your data is handled as vectors in R.
+Vectoris are pretty much the workhorses...
+
+---
+
+## 1.  Vectors | How to create a vector?
+
+```{r collapse=TRUE, results='hide'}
+vec01 <- 5                        # "<-" is an operator to asign vec01 with 5
+vec01
+vec02 = c(4,6,7,2)                # c() is short for combine()
+vec02
+"neolithic" -> vec03 
+vec03
+```
+
+---
+
+## 1.  Vectors | How to create a vector?
+
+```{r collapse=TRUE}
+vec01 <- 5                        # "<-" is an operator to asign vec01 with 5
+vec01
+vec02 = c(4,6,7,2)                # c() is short for combine()
+vec02
+"neolithic" -> vec03 
+vec03
+```
+
+---
+
+## 1.  Vectors | How to create a vector?
+
+
+```{r collapse=TRUE, results='hide'}
+seq_var <- 1:10
+seq_var
+seq_var <- seq(10)                # sep() is a function!
+seq_var
+seq_var <- seq(1, 9, by = 0.1)    # seq("from", "to", by = "steps")
+seq_var
+```
+
+---
+
+## 1.  Vectors | How to create a vector?
+
+
+```{r collapse=TRUE}
+seq_var <- 1:10
+seq_var
+seq_var <- seq(10)                # sep() is a function!
+seq_var
+seq_var <- seq(1, 9, by = 0.1)    # seq("from", "to", by = "steps")
+seq_var
+```
+
+--- &twocol
+
+## 1.  Vectors | Atomic Vectors
+
+*** =left
+
+- numeric
+       - logical
+       - integer
+       - double
+- character
+- complex
+- raw
+- date
+
+*** =right
+
+```{r collapse=TRUE, results='hide'}
+dbl_var <- c(4,6,7,2)     
+dbl_var
+# With the L suffix, you get an integer
+int_var <- c(1L, 6L, 10L)
+int_var 
+# Use TRUE and FALSE (or T and F) 
+# to create logical vectors
+log_var <- c(TRUE, FALSE, T, F)
+log_var
+chr_var <- c("these are", "some strings")
+chr_var
+```
+
+--- &twocol
+
+## 1.  Vectors | Atomic Vectors
+
+*** =left
+
+- numeric
+       - logical
+       - integer
+       - double
+- charackter
+- complex
+- raw
+- date
+
+*** =right
+
+```{r collapse=TRUE}
+dbl_var <- c(4,6,7,2)     
+dbl_var
+# With the L suffix, you get an integer
+int_var <- c(1L, 6L, 10L)
+int_var 
+# Use TRUE and FALSE (or T and F) 
+# to create logical vectors
+log_var <- c(TRUE, FALSE, T, F)
+log_var
+chr_var <- c("these are", "some strings")
+chr_var
+```
+
+--- &twocol
+
+## 1.  Vectors | Atomic Vectors
+
+*** =left
+
+- numeric
+       - logical
+       - integer
+       - double
+- charackter
+- complex
+- raw
+- date
+
+*** =right
+
+```{r collapse=TRUE, results='hide'}
+cpl_var <-2i+2     
+cpl_var
+
+d <- as.Date("2016-09-06")
+d
+# Raw vectors are used to store 
+# fixed-length sequences of bytes.
+raw_var <- raw(10)
+raw_var
+```
+
+--- &twocol
+
+## 1.  Vectors | Atomic Vectors
+
+*** =left
+
+- numeric
+       - logical
+       - integer
+       - double
+- charackter
+- complex
+- raw
+- date
+
+*** =right
+
+```{r collapse=TRUE}
+cpl_var <-2i+2     
+cpl_var
+
+d <- as.Date("2016-09-06")
+d
+# Raw vectors are used to store 
+# fixed-length sequences of bytes.
+raw_var <- raw(10)
+raw_var
+```
+
+--- 
+
+## 1.  Vectors | Atomic Vectors
+
+Atomic vectors are always flat, even if you nest **c()**’s:
+
+```{r collapse=TRUE}
+c(1, c(2, c(3, 4)))
+
+# the same as
+c(1, 2, 3, 4)
+
+```
+
+---
+
+## 1.  Vectors | Adding elements to existing vectors
+
+```{r collapse=TRUE}
+dbl_var
+dbl_var <- c(dbl_var,8,7,1)
+dbl_var
+chr_var 
+chr_var  <- c(chr_var, "and some", "more strings")
+chr_var 
+
+```
+
+---
+
+## 1.  Vectors | Checking details of a vector
+
+```{r collapse=TRUE,  results='hide'}
+dbl_var
+typeof(dbl_var)  # What is it?
+length(dbl_var)  # How long is it?
+attributes(dbl_var)  # Does it have any metadata?
+d
+attributes(d) 
+```
+
+---
+
+## 1.  Vectors | Checking details of a vector
+
+```{r collapse=TRUE}
+dbl_var
+typeof(dbl_var)  # What is it?
+length(dbl_var)  # How long is it?
+attributes(dbl_var)  # Does it have any metadata?
+d
+attributes(d) 
+```
+
+
+--- 
+
+## 1.  Vectors | Atomic Vectors
+
+How to check vector types?
+
+```{r collapse=TRUE, eval=FALSE}
+is.atomic()
+is.character()
+is.double()
+is.integer()
+is.logical()
+class()
+```
+
+---
+
+##  Exercise 1
+
+```{r collapse=TRUE}
+# Create a new R Script to document your exercises.
+# 1. Create some new vectors of typ numeric and character (name those vectors meaningfully)
+# 2. Use seq() function to create a vector from 5 to 23 with 0,3 steps.
+# 3. Combine two numeric vectors to a new vector.
+# 4. Combine vectors of different classes.
+# 5. Explore properties of your created vectors.
+```
+
+--- .segue bg:grey
+
+## 2.  Functions
+
+*** =pnotes
+In programming, a named section of a program that performs a specific task. In this sense, a function is a type of procedure or routine. Some programming languages make a distinction between a function, which returns a value, and a procedure, which performs some operation but does not return a value.
+
+Most programming languages come with a prewritten set of functions that are kept in a library. You can also write your own functions to perform specialized tasks.
+
+The term function is also used synonymously with operation and command. For example, you execute the delete function to erase a word.
+http://www.webopedia.com/TERM/F/function.html
+---
+
+## 2.  Functions
+
+```{r collapse=TRUE, results='hide'}
+vec_a <- c(3,5,2,2,5,8,5,2)             # Function: c()
+seq_a <- seq(along=vec_a)               # Function: seq()
+rep01 <- rep(3,5)                       # Function: rep("value", "count")
+min(vec_a)                              # Function: min("vector")
+range(vec_a)                            # Function: range("vector")
+length(vec_a)                           # Function: length("vector")
+vec_s <- sort(vec_a)                    # Function: sort("vector")
+vec_r <- rev(vec_a)                     # Function: rev("vector")
+vec_rs <- rev(sort(vec_a))              # Nested funtions!
+```
+
+--- 
+
+## 2.  Functions | How to adapte an unkown funtion
+
+```{r collapse=TRUE, eval=FALSE}
+# Use implemented help function
+help(round)
+?round
+```
+
+--- 
+
+## 2.  Functions | Help?!
+
+<div style='position:absolute;bottom:10%;right:15%'>
+<img  height="500" width="750" src='assets/img/RStudio_help.png' />
+</div>
+
+
+---
+
+## 2.  Functions | Some Examples
+
+```{r collapse=TRUE}
+vec_a <- c(3,5,2,2,5,8,5,2)
+seq_a <- seq(along=vec_a)
+seq_a
+rep01 <- rep(3,5)
+rep01
+min(vec_a)
+range(vec_a)
+
+```
+
+--- 
+
+## 2.  Functions | Some Examples
+
+```{r collapse=TRUE}
+length(vec_a)
+vec_s <- sort(vec_a)
+vec_s
+vec_r <- rev(vec_a)
+vec_r
+vec_rs <- rev(sort(vec_a))
+vec_rs
+```
+
+---
+
+## 2.  Funtion | How to develope your own function?
+
+```{r collapse=TRUE, eval=FALSE}
+name_func <- function(parameter1,parameter2){
+  output <- "What ever needs to be done"
+  return (output)
+}
+
+name_func(vec_a, vec_b)
+```
+
+--- &twocol
+
+## 2.  Funtion | How to develope your own function?
+
+*** =left
+
+One simple function...
+
+```{r collapse=TRUE, results='hide'}
+myfunc <- function(a,b){
+  res_myfunc <- a*b
+  return(res_myfunc)
+}
+
+myfunc(2,4)
+```
+
+*** =right
+
+This is how it works...
+
+```{r collapse=TRUE}
+myfunc <- function(a,b){
+  res_myfunc <- a*b
+  return (res_myfunc)
+}
+
+myfunc(2,4)
+```
+
+--- .segue bg:grey
+
+## 3.  Operators
+
+---
+
+## 3.  Operators | Some basic Operators
+
+```{r collapse=TRUE}
+2 + 5 # addition
+4 - 2 # substraction
+2 * 5 # muliplication
+8 / 2 # division
+5^2 # exponentiate
+2 ** 5 # exponentiate
+```
+
+--- &twocol
+
+## 3.  Operators
+
+*** =left
+
+```{r collapse=TRUE}
+7 %% 3 # x mod y
+7 %/% 3 # integer division
+2 < 5  # x smaler as y
+2 > 5 # x bigger as y
+2 == 5 # x equal to y
+2 != 5 # x unequal to y
+(2 < 5) | (2 > 5) # "or"
+(2 < 5) & (2 > 5) # "and"
+```
+
+*** =right
+
+```{r collapse= TRUE}
+vec_a[c(1:4)]
+seq_a[c(1:4)]
+vec_a[c(1:4)] >= seq_a[c(1:4)]
+vec_a[c(1:4)] <= seq_a[c(1:4)]
+com <- vec_a[c(1:4)] == seq_a[c(1:4)]
+vec_b <- vec_a * seq_a
+vec_b
+```
+
+--- .segue bg:grey
+
+## 4.  Data Frames, Martices & Arrays 
+
+*** =pnotes
+
+As we allready know: a vector store multiple elements in a one dimensional array
+Now we will continue with matrices and arrays as further basic object in R
+
+---
+
+## 4. Data Frames, Martices & Arrays | Matrices
+
+**A Matrix stores multiple elements in a two dimensional array.**
+
+```{r collapse=TRUE}
+mat <- matrix(vec_a, nrow=2)        # matrix(data, nrow = rows, ncol = cols)
+mat
+mat_t <- t(mat)
+mat_t
+```
+
+
+---
+
+## 4. Data Frames, Martices & Arrays | Array
+
+**An Array stores multiple elements in more then two dimensions.**
+```{r collapse=TRUE}
+arr <- array(vec_a, dim=(c(2,2,3)))   # array(data, dim, dimnames)
+arr
+```
+
+---
+
+## 4. Data Frames, Martices & Arrays | What are Data Frames for?
+
+**Vectors, Matrices and Arrays can't include different data types.**
+
+```{r collapse=TRUE}
+mat <- matrix(c(vec_a[1:4], chr_var), nrow=2)       
+mat
+class(mat)
+is.numeric(mat)
+is.character(mat)
+```
+
+*** =pnotes
+A Matrix can either be character or numeric. It is not possible to combines 
+these different data types.
+
+---
+
+## 4. Data Frames, Martices & Arrays | Data Frame
+
+**A Data Frame combines different data types.**
+```{r collapse=TRUE}
+nam_s <- c("Bettelsbühl", "Mont Lassoir", "Kappel", "salem", "Königsbück", 
+           "seltz", "Giesshübel", "Hohmichele")
+
+df <- data.frame(vec_a, vec_b, nam_s)
+class(df)
+str(df)
+```
+
+---
+
+## 4. Data Frames, Martices & Arrays | Data Frame
+
+**A data frame is a two diomensional group of R objects.**
+```{r collapse=TRUE}
+df
+```
+
+---
+
+## 4. Data Frames, Martices & Arrays | Data Frame & Factors
+
+**A Data Frame combines different data types.**
+```{r collapse=TRUE}
+nam_s <- c("Bettelsbühl", "Mont Lassoir", "Kappel", "Salem", "Königsbück", 
+           "Seltz", "Gießhübel", "Hohmichele")
+
+df <- data.frame(vec_a, vec_b, nam_s)
+class(df)
+str(df)
+```
+
+*** =pnotes
+Here we see some thing funny: Our sites are no character strings, but a factor!
+
+---
+
+## 4. Data Frames, Martices & Arrays | Factors
+
+**Factors are special vectors that represent categorical data.**
+```{r collapse=TRUE}
+df$nam_s
+str(df$nam_s)
+df$nam_s <- as.character(df$nam_s)
+df$nam_s
+str(df$nam_s)
+```
+
+
+*** =pnotes
+Factors can be ordered or unordered and are important when for modelling functions such as lm() and glm() and also in plot methods.
+Factors can only contain pre-defined values.
+Factors are pretty much integers that have labels on them. While factors look (and often behave) like character vectors, they are actually integers under the hood, and you need to be careful when treating them like strings. Some string methods will coerce factors to strings, while others will throw an error.
+
+---
+
+## 4. Data Frames, Martices & Arrays | Factors
+
+```{r collapse=TRUE}
+x <- factor(c("settlement", "grave", "settlement", "settlement", "grave"))
+x
+x <- as.character(x)
+x
+
+y <- factor(c("grave", "grave", "settlement"), levels = c("settlement", "grave"))
+y
+```
+
+--- &twocol
+
+## 4. Data Frames, Martices & Arrays | Data Frame
+
+*** =left
+You can name elements of a R objects while creating them or using `names()`.
+
+```{r collapse=TRUE}
+ndf <- data.frame(Imports = vec_a, 
+                  Graves = vec_b, 
+                  Site = nam_s)
+ndf
+```
+
+*** =right
+
+```{r collapse=TRUE}
+names(df) <- c("Imports", "Graves", "Site")
+df
+```
+
+---
+
+## Summary | Objects in R
+
+> - Vectors
+> - Matrices
+> - Arrays
+> - Lists
+> - Data Frames
+
+---
+
+## Summary | Helper Functions
+
+**Obejct**|**Create**|**change to**|**check**|**get names**|**get dimensions**
+------|------|------|------|------|------
+vector|`c()` or `vector()`|`as.vector`|`is.vector`|`names()`|`lenght()`
+matirx|`matrix()`|`as.matrix`|`is.matrix`|`rownames()` or `colnames()`|`dim()`, `nrow()`or `ncol()`
+array|`array()`|`as.array`|`is.array`|`dimnames()`|`dim()`
+list|`list()`|`as.list`|`is.list`|`names()`|`lenght()`
+data frame|`data.frame()`|`as.data.frame()`|`is.data.frame`|`names()`|`dim()`, `nrow()`or `ncol()`
+
+
+---
+
+##  Exercise 2
+
+```{r collapse=TRUE}
+# Create a new section in your exercise script
+# 1. Use your existing vectors to create a Matirx and transpond it.
+# 2. Use your existing vectors to create an array and explore this array.
+# 3. Create a data frame using your vectors.
+# 4. Explore your data frame.
+# 5. Rename all columns of your data frame and save this as a new object.
+# 6. Explore function "as.numeric/etc".
+```
+

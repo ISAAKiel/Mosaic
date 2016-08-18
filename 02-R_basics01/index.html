@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R basics</title>
+  <meta charset="utf-8">
+  <meta name="description" content="R basics">
+  <meta name="author" content="Franziska Faupel">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/style.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/logo03.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/logo03.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>R basics</h1>
+    <h2>First Steps</h2>
+    <p>Franziska Faupel<br/>MOSaIC</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1">
+<hgroup>
+
+</hgroup>
+<article>
+<style type="text/css">
+body {background:grey transparent;
+}
+</style>
+
+<style>
+strong {
+  font-weight: bold;
+}
+</style>
+
+<h2>Structure</h2>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li><strong>First Part</strong></li>
+</ul>
+
+<ol class = "build incremental">
+<li>Vectors</li>
+<li>Functions</li>
+<li>Operators</li>
+<li>Data Frames, Martices &amp; Arrays</li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li><strong>Second Part</strong></li>
+</ul>
+
+<ol class = "build incremental">
+<li>Load data</li>
+<li>Manipulate Data</li>
+<li>Loops and Restrictions</li>
+<li>Loading Packages</li>
+<li>Plots </li>
+</ol>
+
+<div style='position:absolute;top:5%;right:5%'>
+    <img  height="100" width="100" src='assets/img/Rlogo.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="segue" id="slide-2">
+<hgroup>
+<h2>Something to remember...</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-3">
+<hgroup>
+<h2>Something to remember:</h2>
+</hgroup>
+<article>
+<p>To understand computations in R, two slogans are helpful:</p>
+
+<ul>
+<li><strong>Everything that exists is an object.</strong></li>
+<li><strong>Everything that happens is a function call.</strong></li>
+</ul>
+
+<p>John Chambers</p>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-4">
+<hgroup>
+<h2>Further basics...</h2>
+</hgroup>
+<article>
+<p>R has many data structures. These include:</p>
+
+<ul class = "build incremental">
+<li>atomic vector</li>
+<li>list</li>
+<li>matrix</li>
+<li>data frame</li>
+<li>factors</li>
+<li>tables</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="segue" id="slide-5">
+<hgroup>
+<h2>Open a new R Script</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="segue" id="slide-6">
+<hgroup>
+<h2>1.  Vectors</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-7">
+<hgroup>
+<h2>1.  Vectors | How to create a vector?</h2>
+</hgroup>
+<article>
+<pre><code class="r">vec01 &lt;- 5                        # &quot;&lt;-&quot; is an operator to asign vec01 with 5
+vec01
+vec02 = c(4,6,7,2)                # c() is short for combine()
+vec02
+&quot;neolithic&quot; -&gt; vec03 
+vec03
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-8">
+<hgroup>
+<h2>1.  Vectors | How to create a vector?</h2>
+</hgroup>
+<article>
+<pre><code class="r">vec01 &lt;- 5                        # &quot;&lt;-&quot; is an operator to asign vec01 with 5
+vec01
+## [1] 5
+vec02 = c(4,6,7,2)                # c() is short for combine()
+vec02
+## [1] 4 6 7 2
+&quot;neolithic&quot; -&gt; vec03 
+vec03
+## [1] &quot;neolithic&quot;
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-9">
+<hgroup>
+<h2>1.  Vectors | How to create a vector?</h2>
+</hgroup>
+<article>
+<pre><code class="r">seq_var &lt;- 1:10
+seq_var
+seq_var &lt;- seq(10)                # sep() is a function!
+seq_var
+seq_var &lt;- seq(1, 9, by = 0.1)    # seq(&quot;from&quot;, &quot;to&quot;, by = &quot;steps&quot;)
+seq_var
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-10">
+<hgroup>
+<h2>1.  Vectors | How to create a vector?</h2>
+</hgroup>
+<article>
+<pre><code class="r">seq_var &lt;- 1:10
+seq_var
+##  [1]  1  2  3  4  5  6  7  8  9 10
+seq_var &lt;- seq(10)                # sep() is a function!
+seq_var
+##  [1]  1  2  3  4  5  6  7  8  9 10
+seq_var &lt;- seq(1, 9, by = 0.1)    # seq(&quot;from&quot;, &quot;to&quot;, by = &quot;steps&quot;)
+seq_var
+##  [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 2.3 2.4 2.5 2.6
+## [18] 2.7 2.8 2.9 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3
+## [35] 4.4 4.5 4.6 4.7 4.8 4.9 5.0 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 6.0
+## [52] 6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9 7.0 7.1 7.2 7.3 7.4 7.5 7.6 7.7
+## [69] 7.8 7.9 8.0 8.1 8.2 8.3 8.4 8.5 8.6 8.7 8.8 8.9 9.0
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-11">
+<hgroup>
+<h2>1.  Vectors | Atomic Vectors</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>numeric
+
+<ul>
+<li>logical</li>
+<li>integer</li>
+<li>double</li>
+</ul></li>
+<li>character</li>
+<li>complex</li>
+<li>raw</li>
+<li>date</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">dbl_var &lt;- c(4,6,7,2)     
+dbl_var
+# With the L suffix, you get an integer
+int_var &lt;- c(1L, 6L, 10L)
+int_var 
+# Use TRUE and FALSE (or T and F) 
+# to create logical vectors
+log_var &lt;- c(TRUE, FALSE, T, F)
+log_var
+chr_var &lt;- c(&quot;these are&quot;, &quot;some strings&quot;)
+chr_var
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-12">
+<hgroup>
+<h2>1.  Vectors | Atomic Vectors</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>numeric
+
+<ul>
+<li>logical</li>
+<li>integer</li>
+<li>double</li>
+</ul></li>
+<li>charackter</li>
+<li>complex</li>
+<li>raw</li>
+<li>date</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">dbl_var &lt;- c(4,6,7,2)     
+dbl_var
+## [1] 4 6 7 2
+# With the L suffix, you get an integer
+int_var &lt;- c(1L, 6L, 10L)
+int_var 
+## [1]  1  6 10
+# Use TRUE and FALSE (or T and F) 
+# to create logical vectors
+log_var &lt;- c(TRUE, FALSE, T, F)
+log_var
+## [1]  TRUE FALSE  TRUE FALSE
+chr_var &lt;- c(&quot;these are&quot;, &quot;some strings&quot;)
+chr_var
+## [1] &quot;these are&quot;    &quot;some strings&quot;
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-13">
+<hgroup>
+<h2>1.  Vectors | Atomic Vectors</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>numeric
+
+<ul>
+<li>logical</li>
+<li>integer</li>
+<li>double</li>
+</ul></li>
+<li>charackter</li>
+<li>complex</li>
+<li>raw</li>
+<li>date</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">cpl_var &lt;-2i+2     
+cpl_var
+
+d &lt;- as.Date(&quot;2016-09-06&quot;)
+d
+# Raw vectors are used to store 
+# fixed-length sequences of bytes.
+raw_var &lt;- raw(10)
+raw_var
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-14">
+<hgroup>
+<h2>1.  Vectors | Atomic Vectors</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>numeric
+
+<ul>
+<li>logical</li>
+<li>integer</li>
+<li>double</li>
+</ul></li>
+<li>charackter</li>
+<li>complex</li>
+<li>raw</li>
+<li>date</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">cpl_var &lt;-2i+2     
+cpl_var
+## [1] 2+2i
+
+d &lt;- as.Date(&quot;2016-09-06&quot;)
+d
+## [1] &quot;2016-09-06&quot;
+# Raw vectors are used to store 
+# fixed-length sequences of bytes.
+raw_var &lt;- raw(10)
+raw_var
+##  [1] 00 00 00 00 00 00 00 00 00 00
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-15">
+<hgroup>
+<h2>1.  Vectors | Atomic Vectors</h2>
+</hgroup>
+<article>
+<p>Atomic vectors are always flat, even if you nest <strong>c()</strong>’s:</p>
+
+<pre><code class="r">c(1, c(2, c(3, 4)))
+## [1] 1 2 3 4
+
+# the same as
+c(1, 2, 3, 4)
+## [1] 1 2 3 4
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-16">
+<hgroup>
+<h2>1.  Vectors | Adding elements to existing vectors</h2>
+</hgroup>
+<article>
+<pre><code class="r">dbl_var
+## [1] 4 6 7 2
+dbl_var &lt;- c(dbl_var,8,7,1)
+dbl_var
+## [1] 4 6 7 2 8 7 1
+chr_var 
+## [1] &quot;these are&quot;    &quot;some strings&quot;
+chr_var  &lt;- c(chr_var, &quot;and some&quot;, &quot;more strings&quot;)
+chr_var 
+## [1] &quot;these are&quot;    &quot;some strings&quot; &quot;and some&quot;     &quot;more strings&quot;
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-17">
+<hgroup>
+<h2>1.  Vectors | Checking details of a vector</h2>
+</hgroup>
+<article>
+<pre><code class="r">dbl_var
+typeof(dbl_var)  # What is it?
+length(dbl_var)  # How long is it?
+attributes(dbl_var)  # Does it have any metadata?
+d
+attributes(d) 
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-18">
+<hgroup>
+<h2>1.  Vectors | Checking details of a vector</h2>
+</hgroup>
+<article>
+<pre><code class="r">dbl_var
+## [1] 4 6 7 2 8 7 1
+typeof(dbl_var)  # What is it?
+## [1] &quot;double&quot;
+length(dbl_var)  # How long is it?
+## [1] 7
+attributes(dbl_var)  # Does it have any metadata?
+## NULL
+d
+## [1] &quot;2016-09-06&quot;
+attributes(d) 
+## $class
+## [1] &quot;Date&quot;
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-19">
+<hgroup>
+<h2>1.  Vectors | Atomic Vectors</h2>
+</hgroup>
+<article>
+<p>How to check vector types?</p>
+
+<pre><code class="r">is.atomic()
+is.character()
+is.double()
+is.integer()
+is.logical()
+class()
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-20">
+<hgroup>
+<h2>Exercise 1</h2>
+</hgroup>
+<article>
+<pre><code class="r"># Create a new R Script to document your exercises.
+# 1. Create some new vectors of typ numeric and character (name those vectors meaningfully)
+# 2. Use seq() function to create a vector from 5 to 23 with 0,3 steps.
+# 3. Combine two numeric vectors to a new vector.
+# 4. Combine vectors of different classes.
+# 5. Explore properties of your created vectors.
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="segue" id="slide-21">
+<hgroup>
+<h2>2.  Functions</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-22">
+<hgroup>
+<h2>2.  Functions | How to adapte an unkown funtion</h2>
+</hgroup>
+<article>
+<pre><code class="r"># Use implemented help function
+help(round)
+?round
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-23">
+<hgroup>
+<h2>2.  Functions | Help?!</h2>
+</hgroup>
+<article>
+<div style='position:absolute;bottom:10%;right:15%'>
+<img  height="500" width="750" src='assets/img/RStudio_help.png' />
+</div>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-24">
+<hgroup>
+<h2>2.  Functions | Some Examples</h2>
+</hgroup>
+<article>
+<pre><code class="r">vec_a &lt;- c(3,5,2,2,5,8,5,2)
+seq_a &lt;- seq(along=vec_a)
+seq_a
+## [1] 1 2 3 4 5 6 7 8
+rep01 &lt;- rep(3,5)
+rep01
+## [1] 3 3 3 3 3
+min(vec_a)
+## [1] 2
+range(vec_a)
+## [1] 2 8
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-25">
+<hgroup>
+<h2>2.  Functions | Some Examples</h2>
+</hgroup>
+<article>
+<pre><code class="r">length(vec_a)
+## [1] 8
+vec_s &lt;- sort(vec_a)
+vec_s
+## [1] 2 2 2 3 5 5 5 8
+vec_r &lt;- rev(vec_a)
+vec_r
+## [1] 2 5 8 5 2 2 5 3
+vec_rs &lt;- rev(sort(vec_a))
+vec_rs
+## [1] 8 5 5 5 3 2 2 2
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-26">
+<hgroup>
+<h2>2.  Funtion | How to develope your own function?</h2>
+</hgroup>
+<article>
+<pre><code class="r">name_func &lt;- function(parameter1,parameter2){
+  output &lt;- &quot;What ever needs to be done&quot;
+  return (output)
+}
+
+name_func(vec_a, vec_b)
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-27">
+<hgroup>
+<h2>2.  Funtion | How to develope your own function?</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>One simple function...</p>
+
+<pre><code class="r">myfunc &lt;- function(a,b){
+  res_myfunc &lt;- a*b
+  return(res_myfunc)
+}
+
+myfunc(2,4)
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>This is how it works...</p>
+
+<pre><code class="r">myfunc &lt;- function(a,b){
+  res_myfunc &lt;- a*b
+  return (res_myfunc)
+}
+
+myfunc(2,4)
+## [1] 8
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="segue" id="slide-28">
+<hgroup>
+<h2>3.  Operators</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-29">
+<hgroup>
+<h2>3.  Operators | Some basic Operators</h2>
+</hgroup>
+<article>
+<pre><code class="r">2 + 5 # addition
+## [1] 7
+4 - 2 # substraction
+## [1] 2
+2 * 5 # muliplication
+## [1] 10
+8 / 2 # division
+## [1] 4
+5^2 # exponentiate
+## [1] 25
+2 ** 5 # exponentiate
+## [1] 32
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-30">
+<hgroup>
+<h2>3.  Operators</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">7 %% 3 # x mod y
+## [1] 1
+7 %/% 3 # integer division
+## [1] 2
+2 &lt; 5  # x smaler as y
+## [1] TRUE
+2 &gt; 5 # x bigger as y
+## [1] FALSE
+2 == 5 # x equal to y
+## [1] FALSE
+2 != 5 # x unequal to y
+## [1] TRUE
+(2 &lt; 5) | (2 &gt; 5) # &quot;or&quot;
+## [1] TRUE
+(2 &lt; 5) &amp; (2 &gt; 5) # &quot;and&quot;
+## [1] FALSE
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">vec_a[c(1:4)]
+## [1] 3 5 2 2
+seq_a[c(1:4)]
+## [1] 1 2 3 4
+vec_a[c(1:4)] &gt;= seq_a[c(1:4)]
+## [1]  TRUE  TRUE FALSE FALSE
+vec_a[c(1:4)] &lt;= seq_a[c(1:4)]
+## [1] FALSE FALSE  TRUE  TRUE
+com &lt;- vec_a[c(1:4)] == seq_a[c(1:4)]
+vec_b &lt;- vec_a * seq_a
+vec_b
+## [1]  3 10  6  8 25 48 35 16
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="segue" id="slide-31">
+<hgroup>
+<h2>4.  Data Frames, Martices &amp; Arrays</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-32">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Matrices</h2>
+</hgroup>
+<article>
+<p><strong>A Matrix stores multiple elements in a two dimensional array.</strong></p>
+
+<pre><code class="r">mat &lt;- matrix(vec_a, nrow=2)        # matrix(data, nrow = rows, ncol = cols)
+mat
+##      [,1] [,2] [,3] [,4]
+## [1,]    3    2    5    5
+## [2,]    5    2    8    2
+mat_t &lt;- t(mat)
+mat_t
+##      [,1] [,2]
+## [1,]    3    5
+## [2,]    2    2
+## [3,]    5    8
+## [4,]    5    2
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-33">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Array</h2>
+</hgroup>
+<article>
+<p><strong>An Array stores multiple elements in more then two dimensions.</strong></p>
+
+<pre><code class="r">arr &lt;- array(vec_a, dim=(c(2,2,3)))   # array(data, dim, dimnames)
+arr
+## , , 1
+## 
+##      [,1] [,2]
+## [1,]    3    2
+## [2,]    5    2
+## 
+## , , 2
+## 
+##      [,1] [,2]
+## [1,]    5    5
+## [2,]    8    2
+## 
+## , , 3
+## 
+##      [,1] [,2]
+## [1,]    3    2
+## [2,]    5    2
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-34">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | What are Data Frames for?</h2>
+</hgroup>
+<article>
+<p><strong>Vectors, Matrices and Arrays can&#39;t include different data types.</strong></p>
+
+<pre><code class="r">mat &lt;- matrix(c(vec_a[1:4], chr_var), nrow=2)       
+mat
+##      [,1] [,2] [,3]           [,4]          
+## [1,] &quot;3&quot;  &quot;2&quot;  &quot;these are&quot;    &quot;and some&quot;    
+## [2,] &quot;5&quot;  &quot;2&quot;  &quot;some strings&quot; &quot;more strings&quot;
+class(mat)
+## [1] &quot;matrix&quot;
+is.numeric(mat)
+## [1] FALSE
+is.character(mat)
+## [1] TRUE
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-35">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Data Frame</h2>
+</hgroup>
+<article>
+<p><strong>A Data Frame combines different data types.</strong></p>
+
+<pre><code class="r">nam_s &lt;- c(&quot;Bettelsbühl&quot;, &quot;Mont Lassoir&quot;, &quot;Kappel&quot;, &quot;salem&quot;, &quot;Königsbück&quot;, 
+           &quot;seltz&quot;, &quot;Giesshübel&quot;, &quot;Hohmichele&quot;)
+
+df &lt;- data.frame(vec_a, vec_b, nam_s)
+class(df)
+## [1] &quot;data.frame&quot;
+str(df)
+## &#39;data.frame&#39;:    8 obs. of  3 variables:
+##  $ vec_a: num  3 5 2 2 5 8 5 2
+##  $ vec_b: num  3 10 6 8 25 48 35 16
+##  $ nam_s: Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-36">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Data Frame</h2>
+</hgroup>
+<article>
+<p><strong>A data frame is a two diomensional group of R objects.</strong></p>
+
+<pre><code class="r">df
+##   vec_a vec_b        nam_s
+## 1     3     3 Bettelsbühl
+## 2     5    10 Mont Lassoir
+## 3     2     6       Kappel
+## 4     2     8        salem
+## 5     5    25 Königsbück
+## 6     8    48        seltz
+## 7     5    35  Giesshübel
+## 8     2    16   Hohmichele
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-37">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Data Frame &amp; Factors</h2>
+</hgroup>
+<article>
+<p><strong>A Data Frame combines different data types.</strong></p>
+
+<pre><code class="r">nam_s &lt;- c(&quot;Bettelsbühl&quot;, &quot;Mont Lassoir&quot;, &quot;Kappel&quot;, &quot;Salem&quot;, &quot;Königsbück&quot;, 
+           &quot;Seltz&quot;, &quot;Gießhübel&quot;, &quot;Hohmichele&quot;)
+
+df &lt;- data.frame(vec_a, vec_b, nam_s)
+class(df)
+## [1] &quot;data.frame&quot;
+str(df)
+## &#39;data.frame&#39;:    8 obs. of  3 variables:
+##  $ vec_a: num  3 5 2 2 5 8 5 2
+##  $ vec_b: num  3 10 6 8 25 48 35 16
+##  $ nam_s: Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-38">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Factors</h2>
+</hgroup>
+<article>
+<p><strong>Factors are special vectors that represent categorical data.</strong></p>
+
+<pre><code class="r">df$nam_s
+## [1] Bettelsbühl Mont Lassoir Kappel       Salem        Königsbück
+## [6] Seltz        Gie�&lt;U+009F&gt;hübel  Hohmichele  
+## 8 Levels: Bettelsbühl Gie�&lt;U+009F&gt;hübel Hohmichele Königsbück ... Seltz
+str(df$nam_s)
+##  Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
+df$nam_s &lt;- as.character(df$nam_s)
+df$nam_s
+## [1] &quot;Bettelsbühl&quot; &quot;Mont Lassoir&quot; &quot;Kappel&quot;       &quot;Salem&quot;       
+## [5] &quot;Königsbück&quot; &quot;Seltz&quot;        &quot;Gie�&lt;U+009F&gt;hübel&quot;  &quot;Hohmichele&quot;
+str(df$nam_s)
+##  chr [1:8] &quot;Bettelsbühl&quot; &quot;Mont Lassoir&quot; &quot;Kappel&quot; &quot;Salem&quot; ...
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-39">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Factors</h2>
+</hgroup>
+<article>
+<pre><code class="r">x &lt;- factor(c(&quot;settlement&quot;, &quot;grave&quot;, &quot;settlement&quot;, &quot;settlement&quot;, &quot;grave&quot;))
+x
+## [1] settlement grave      settlement settlement grave     
+## Levels: grave settlement
+x &lt;- as.character(x)
+x
+## [1] &quot;settlement&quot; &quot;grave&quot;      &quot;settlement&quot; &quot;settlement&quot; &quot;grave&quot;
+
+y &lt;- factor(c(&quot;grave&quot;, &quot;grave&quot;, &quot;settlement&quot;), levels = c(&quot;settlement&quot;, &quot;grave&quot;))
+y
+## [1] grave      grave      settlement
+## Levels: settlement grave
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-40">
+<hgroup>
+<h2>4. Data Frames, Martices &amp; Arrays | Data Frame</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>You can name elements of a R objects while creating them or using <code>names()</code>.</p>
+
+<pre><code class="r">ndf &lt;- data.frame(Imports = vec_a, 
+                  Graves = vec_b, 
+                  Site = nam_s)
+ndf
+##   Imports Graves         Site
+## 1       3      3 Bettelsbühl
+## 2       5     10 Mont Lassoir
+## 3       2      6       Kappel
+## 4       2      8        Salem
+## 5       5     25 Königsbück
+## 6       8     48        Seltz
+## 7       5     35  Gie�&lt;U+009F&gt;hübel
+## 8       2     16   Hohmichele
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">names(df) &lt;- c(&quot;Imports&quot;, &quot;Graves&quot;, &quot;Site&quot;)
+df
+##   Imports Graves         Site
+## 1       3      3 Bettelsbühl
+## 2       5     10 Mont Lassoir
+## 3       2      6       Kappel
+## 4       2      8        Salem
+## 5       5     25 Königsbück
+## 6       8     48        Seltz
+## 7       5     35  Gie�&lt;U+009F&gt;hübel
+## 8       2     16   Hohmichele
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-41">
+<hgroup>
+<h2>Summary | Objects in R</h2>
+</hgroup>
+<article>
+<ul class = "build incremental">
+<li>Vectors</li>
+<li>Matrices</li>
+<li>Arrays</li>
+<li>Lists</li>
+<li>Data Frames</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-42">
+<hgroup>
+<h2>Summary | Helper Functions</h2>
+</hgroup>
+<article>
+<table><thead>
+<tr>
+<th><strong>Obejct</strong></th>
+<th><strong>Create</strong></th>
+<th><strong>change to</strong></th>
+<th><strong>check</strong></th>
+<th><strong>get names</strong></th>
+<th><strong>get dimensions</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>vector</td>
+<td><code>c()</code> or <code>vector()</code></td>
+<td><code>as.vector</code></td>
+<td><code>is.vector</code></td>
+<td><code>names()</code></td>
+<td><code>lenght()</code></td>
+</tr>
+<tr>
+<td>matirx</td>
+<td><code>matrix()</code></td>
+<td><code>as.matrix</code></td>
+<td><code>is.matrix</code></td>
+<td><code>rownames()</code> or <code>colnames()</code></td>
+<td><code>dim()</code>, <code>nrow()</code>or <code>ncol()</code></td>
+</tr>
+<tr>
+<td>array</td>
+<td><code>array()</code></td>
+<td><code>as.array</code></td>
+<td><code>is.array</code></td>
+<td><code>dimnames()</code></td>
+<td><code>dim()</code></td>
+</tr>
+<tr>
+<td>list</td>
+<td><code>list()</code></td>
+<td><code>as.list</code></td>
+<td><code>is.list</code></td>
+<td><code>names()</code></td>
+<td><code>lenght()</code></td>
+</tr>
+<tr>
+<td>data frame</td>
+<td><code>data.frame()</code></td>
+<td><code>as.data.frame()</code></td>
+<td><code>is.data.frame</code></td>
+<td><code>names()</code></td>
+<td><code>dim()</code>, <code>nrow()</code>or <code>ncol()</code></td>
+</tr>
+</tbody></table>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-43">
+<hgroup>
+<h2>Exercise 2</h2>
+</hgroup>
+<article>
+<pre><code class="r"># Create a new section in your exercise script
+# 1. Use your existing vectors to create a Matirx and transpond it.
+# 2. Use your existing vectors to create an array and explore this array.
+# 3. Create a data frame using your vectors.
+# 4. Explore your data frame.
+# 5. Rename all columns of your data frame and save this as a new object.
+# 6. Explore function &quot;as.numeric/etc&quot;.
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Something to remember...'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Something to remember:'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Further basics...'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Open a new R Script'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='1.  Vectors'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='1.  Vectors | How to create a vector?'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='1.  Vectors | How to create a vector?'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='1.  Vectors | How to create a vector?'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='1.  Vectors | How to create a vector?'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='1.  Vectors | Atomic Vectors'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='1.  Vectors | Atomic Vectors'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='1.  Vectors | Atomic Vectors'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='1.  Vectors | Atomic Vectors'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='1.  Vectors | Atomic Vectors'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='1.  Vectors | Adding elements to existing vectors'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='1.  Vectors | Checking details of a vector'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='1.  Vectors | Checking details of a vector'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='1.  Vectors | Atomic Vectors'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Exercise 1'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='2.  Functions'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='2.  Functions | How to adapte an unkown funtion'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='2.  Functions | Help?!'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='2.  Functions | Some Examples'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='2.  Functions | Some Examples'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='2.  Funtion | How to develope your own function?'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='2.  Funtion | How to develope your own function?'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='3.  Operators'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='3.  Operators | Some basic Operators'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='3.  Operators'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='4.  Data Frames, Martices &amp; Arrays'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='4. Data Frames, Martices &amp; Arrays | Matrices'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='4. Data Frames, Martices &amp; Arrays | Array'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='4. Data Frames, Martices &amp; Arrays | What are Data Frames for?'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='4. Data Frames, Martices &amp; Arrays | Data Frame'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='4. Data Frames, Martices &amp; Arrays | Data Frame'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='4. Data Frames, Martices &amp; Arrays | Data Frame &amp; Factors'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='4. Data Frames, Martices &amp; Arrays | Factors'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='4. Data Frames, Martices &amp; Arrays | Factors'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='4. Data Frames, Martices &amp; Arrays | Data Frame'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='Summary | Objects in R'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='Summary | Helper Functions'>
+         42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='Exercise 2'>
+         43
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
