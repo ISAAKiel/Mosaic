@@ -1,0 +1,22 @@
+<slide class="{{ slide.class }}" id="{{ slide.id }}" style="background:{{{ slide.bg }}};">
+  {{# slide.header }}
+  <hgroup>
+    {{{ slide.header}}}
+  </hgroup>
+  {{/ slide.header }}
+  <article data-timings="{{ slide.dt }}">
+    {{{ slide.content }}}
+    <footer class = 'logo'>
+      <img src = 'C:\\Diss\\SumSchool MOSaIC\\presentation\\My_First\\assets\\img'></logo03>
+    </footer>
+  </article>
+  <!-- Presenter Notes -->
+  {{# slide.pnotes }}
+  <aside class="note" id="{{ id }}">
+    <section>
+      {{{ html }}}
+    </section>
+  </aside>
+  {{/ slide.pnotes }}
+</slide>
+
