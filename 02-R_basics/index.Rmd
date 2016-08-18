@@ -888,7 +888,7 @@ rbind(df_mounds, ndf)
 ## 2.  Manipulate Data | Merge Data Frames
 
 ```{r collapse=TRUE }
-ndf_mounds <- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole
+ndf_mounds <- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole,
                     by.y=site)
 ```
 

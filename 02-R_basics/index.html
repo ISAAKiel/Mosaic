@@ -18,7 +18,7 @@
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
   <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
   <script data-main="libraries/frameworks/io2012/js/slides" 
     src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
@@ -1327,7 +1327,7 @@ load(&quot;7ws/name01.rws&quot;)
 <article>
 <pre><code class="r">df_mounds &lt;- read.table(&#39;2data/gravemounds.csv&#39;, header=TRUE)
 ## Warning in file(file, &quot;rt&quot;): kann Datei &#39;2data/gravemounds.csv&#39; nicht
-## öffnen: No such file or directory
+## öffnen: Datei oder Verzeichnis nicht gefunden
 ## Error in file(file, &quot;rt&quot;): kann Verbindung nicht öffnen
 
 filename &lt;- &quot;2data/gravemounds02.csv&quot;
@@ -1606,12 +1606,9 @@ rbind(x,y) # Combines data frames rowwise
 <h2>2.  Manipulate Data | Merge Data Frames</h2>
 </hgroup>
 <article>
-<pre><code class="r">ndf_mounds &lt;- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole
+<pre><code class="r">ndf_mounds &lt;- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole,
                     by.y=site)
-## Error: &lt;text&gt;:2:21: unerwartetes Symbol
-## 1: ndf_mounds &lt;- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole
-## 2:                     by.y
-##                        ^
+## Error in merge(df_mounds, ndf, all.x = TRUE, all.y = FALSE, by.x = Nekropole, : Objekt &#39;df_mounds&#39; nicht gefunden
 </code></pre>
 
 <footer class = 'logo'>

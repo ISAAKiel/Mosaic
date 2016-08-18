@@ -927,7 +927,7 @@ load("7ws/name01.rws")
 ```r
 df_mounds <- read.table('2data/gravemounds.csv', header=TRUE)
 ## Warning in file(file, "rt"): kann Datei '2data/gravemounds.csv' nicht
-## öffnen: No such file or directory
+## öffnen: Datei oder Verzeichnis nicht gefunden
 ## Error in file(file, "rt"): kann Verbindung nicht öffnen
 
 filename <- "2data/gravemounds02.csv"
@@ -1110,12 +1110,9 @@ rbind(df_mounds, ndf)
 
 
 ```r
-ndf_mounds <- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole
+ndf_mounds <- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole,
                     by.y=site)
-## Error: <text>:2:21: unerwartetes Symbol
-## 1: ndf_mounds <- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole
-## 2:                     by.y
-##                        ^
+## Error in merge(df_mounds, ndf, all.x = TRUE, all.y = FALSE, by.x = Nekropole, : Objekt 'df_mounds' nicht gefunden
 ```
 
 ---
@@ -1164,8 +1161,6 @@ R
 duplicated(x = R, fromLast = TRUE)
 ## [1]  TRUE FALSE FALSE
 ```
-
-
 
 --- .segue bg:grey
 
