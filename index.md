@@ -14,7 +14,8 @@ knit        : slidify::knit2slides
 ## Presentations
 
 1. [Introduction](01-introduction/index.html)
-2. [R Basics](02-R_basics/index.html)
+2. [R Basics: Frist Steps](02-R_basics01/index.html)
+3. [R Basics: Getting used to R](03-R_basics02/index.html)
 
 --- .class #id 
 
