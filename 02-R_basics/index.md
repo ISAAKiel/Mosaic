@@ -700,7 +700,7 @@ str(df)
 ## 'data.frame':	8 obs. of  3 variables:
 ##  $ vec_a: num  3 5 2 2 5 8 5 2
 ##  $ vec_b: num  3 10 6 8 25 48 35 16
-##  $ nam_s: Factor w/ 8 levels "Bettelsbühl",..: 1 6 4 7 5 8 2 3
+##  $ nam_s: Factor w/ 8 levels "Bettelsbühl",..: 1 6 5 7 4 8 2 3
 ```
 
 ---
@@ -712,13 +712,13 @@ str(df)
 ```r
 df
 ##   vec_a vec_b        nam_s
-## 1     3     3  Bettelsbühl
+## 1     3     3 Bettelsbühl
 ## 2     5    10 Mont Lassoir
 ## 3     2     6       Kappel
 ## 4     2     8        salem
-## 5     5    25   Königsbück
+## 5     5    25 Königsbück
 ## 6     8    48        seltz
-## 7     5    35   Giesshübel
+## 7     5    35  Giesshübel
 ## 8     2    16   Hohmichele
 ```
 
@@ -739,7 +739,7 @@ str(df)
 ## 'data.frame':	8 obs. of  3 variables:
 ##  $ vec_a: num  3 5 2 2 5 8 5 2
 ##  $ vec_b: num  3 10 6 8 25 48 35 16
-##  $ nam_s: Factor w/ 8 levels "Bettelsbühl",..: 1 6 4 7 5 8 2 3
+##  $ nam_s: Factor w/ 8 levels "Bettelsbühl",..: 1 6 5 7 4 8 2 3
 ```
 
 *** =pnotes
@@ -753,15 +753,15 @@ Here we see some thing funny: Our sites are no character strings, but a factor!
 
 ```r
 df$nam_s
-## [1] Bettelsbühl  Mont Lassoir Kappel       Salem        Königsbück  
-## [6] Seltz        Gießhübel    Hohmichele  
-## 8 Levels: Bettelsbühl Gießhübel Hohmichele Kappel ... Seltz
+## [1] Bettelsbühl Mont Lassoir Kappel       Salem        Königsbück
+## [6] Seltz        Gie�<U+009F>hübel  Hohmichele  
+## 8 Levels: Bettelsbühl Gie�<U+009F>hübel Hohmichele Königsbück ... Seltz
 str(df$nam_s)
-##  Factor w/ 8 levels "Bettelsbühl",..: 1 6 4 7 5 8 2 3
+##  Factor w/ 8 levels "Bettelsbühl",..: 1 6 5 7 4 8 2 3
 df$nam_s <- as.character(df$nam_s)
 df$nam_s
-## [1] "Bettelsbühl"  "Mont Lassoir" "Kappel"       "Salem"       
-## [5] "Königsbück"   "Seltz"        "Gießhübel"    "Hohmichele"
+## [1] "Bettelsbühl" "Mont Lassoir" "Kappel"       "Salem"       
+## [5] "Königsbück" "Seltz"        "Gie�<U+009F>hübel"  "Hohmichele"
 str(df$nam_s)
 ##  chr [1:8] "Bettelsbühl" "Mont Lassoir" "Kappel" "Salem" ...
 ```
@@ -806,13 +806,13 @@ ndf <- data.frame(Imports = vec_a,
                   Site = nam_s)
 ndf
 ##   Imports Graves         Site
-## 1       3      3  Bettelsbühl
+## 1       3      3 Bettelsbühl
 ## 2       5     10 Mont Lassoir
 ## 3       2      6       Kappel
 ## 4       2      8        Salem
-## 5       5     25   Königsbück
+## 5       5     25 Königsbück
 ## 6       8     48        Seltz
-## 7       5     35    Gießhübel
+## 7       5     35  Gie�<U+009F>hübel
 ## 8       2     16   Hohmichele
 ```
 
@@ -823,13 +823,13 @@ ndf
 names(df) <- c("Imports", "Graves", "Site")
 df
 ##   Imports Graves         Site
-## 1       3      3  Bettelsbühl
+## 1       3      3 Bettelsbühl
 ## 2       5     10 Mont Lassoir
 ## 3       2      6       Kappel
 ## 4       2      8        Salem
-## 5       5     25   Königsbück
+## 5       5     25 Königsbück
 ## 6       8     48        Seltz
-## 7       5     35    Gießhübel
+## 7       5     35  Gie�<U+009F>hübel
 ## 8       2     16   Hohmichele
 ```
 
@@ -926,15 +926,15 @@ load("7ws/name01.rws")
 
 ```r
 df_mounds <- read.table('2data/gravemounds.csv', header=TRUE)
-## Warning in file(file, "rt"): kann Datei '2data/gravemounds.csv' nicht
-## öffnen: No such file or directory
-## Error in file(file, "rt"): kann Verbindung nicht öffnen
+## Warning in file(file, "rt"): cannot open file '2data/gravemounds.csv': No
+## such file or directory
+## Error in file(file, "rt"): cannot open the connection
 
 filename <- "2data/gravemounds02.csv"
 
 write.table(df_mounds, file = filename, append = FALSE, quote = FALSE,
 sep = ";", eol = "\n", na = "NA", dec = ".", row.names = TRUE, col.names = TRUE)
-## Error in is.data.frame(x): Objekt 'df_mounds' nicht gefunden
+## Error in is.data.frame(x): object 'df_mounds' not found
 ```
 
 ---
@@ -951,11 +951,11 @@ Tabelle laden und prüfen ob alle Splaten richtig angelegt sind. ggf. anpassen
 
 ```r
 df_BA <- subset(df_mounds, variable=="colour")
-## Error in subset(df_mounds, variable == "colour"): Objekt 'df_mounds' nicht gefunden
+## Error in subset(df_mounds, variable == "colour"): object 'df_mounds' not found
 df_BA_INH <- subset(df_mounds, variable=="diameter" |variable=="length")
-## Error in subset(df_mounds, variable == "diameter" | variable == "length"): Objekt 'df_mounds' nicht gefunden
+## Error in subset(df_mounds, variable == "diameter" | variable == "length"): object 'df_mounds' not found
 str(df_BA_INH)
-## Error in str(df_BA_INH): Objekt 'df_BA_INH' nicht gefunden
+## Error in str(df_BA_INH): object 'df_BA_INH' not found
 ```
 
 
@@ -974,7 +974,7 @@ vec_a[4]
 vec_a[3]
 ## [1] 2
 df[1,]
-##   Imports Graves        Site
+##   Imports Graves         Site
 ## 1       3      3 Bettelsbühl
 df[ ,1]
 ## [1] 3 5 2 2 5 8 5 2
@@ -993,7 +993,7 @@ vec_a[c(3:5)]
 ## [1] 2 2 5
 df[ c(1:3),c(2,3)]
 ##   Graves         Site
-## 1      3  Bettelsbühl
+## 1      3 Bettelsbühl
 ## 2     10 Mont Lassoir
 ## 3      6       Kappel
 df[3, c(1,3)]
@@ -1014,17 +1014,17 @@ df[3,"Imports"]
 df[c(6,7,8),2] <- NA
 df
 ##   Imports Graves         Site
-## 1       3      3  Bettelsbühl
+## 1       3      3 Bettelsbühl
 ## 2       5     10 Mont Lassoir
 ## 3       1      6       Kappel
 ## 4       2      8        Salem
-## 5       5     25   Königsbück
+## 5       5     25 Königsbück
 ## 6       8     NA        Seltz
-## 7       5     NA    Gießhübel
+## 7       5     NA  Gie�<U+009F>hübel
 ## 8       2     NA   Hohmichele
 df$Site
-## [1] "Bettelsbühl"  "Mont Lassoir" "Kappel"       "Salem"       
-## [5] "Königsbück"   "Seltz"        "Gießhübel"    "Hohmichele"
+## [1] "Bettelsbühl" "Mont Lassoir" "Kappel"       "Salem"       
+## [5] "Königsbück" "Seltz"        "Gie�<U+009F>hübel"  "Hohmichele"
 ```
 
 ---
@@ -1065,9 +1065,9 @@ str(ndf)
 ## 'data.frame':	8 obs. of  3 variables:
 ##  $ Imports: num  3 5 2 2 5 8 5 2
 ##  $ Graves : num  3 10 6 8 25 48 35 16
-##  $ Site   : Factor w/ 8 levels "Bettelsbühl",..: 1 6 4 7 5 8 2 3
+##  $ Site   : Factor w/ 8 levels "Bettelsbühl",..: 1 6 5 7 4 8 2 3
 str(df_mounds)
-## Error in str(df_mounds): Objekt 'df_mounds' nicht gefunden
+## Error in str(df_mounds): object 'df_mounds' not found
 ```
 
 ---
@@ -1091,7 +1091,7 @@ If there are several matrix arguments, they must all have the same number of col
 
 ```r
 cbind(df_mounds, ndf) 
-## Error in cbind(df_mounds, ndf): Objekt 'df_mounds' nicht gefunden
+## Error in cbind(df_mounds, ndf): object 'df_mounds' not found
 ```
 
 ---
@@ -1101,7 +1101,7 @@ cbind(df_mounds, ndf)
 
 ```r
 rbind(df_mounds, ndf)
-## Error in rbind(df_mounds, ndf): Objekt 'df_mounds' nicht gefunden
+## Error in rbind(df_mounds, ndf): object 'df_mounds' not found
 ```
 
 ---
@@ -1109,230 +1109,32 @@ rbind(df_mounds, ndf)
 ## 2.  Manipulate Data | Merge Data Frames
 
 
-```r
-ndf_mounds <- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole
-                    by.y=site)
-## Error: <text>:2:21: unerwartetes Symbol
-## 1: ndf_mounds <- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole
-## 2:                     by.y
-##                        ^
-```
 
----
 
-## 2.  Manipulate Data | Unique 
 
- 
 
-```r
-unique(x, incomparables = FALSE, fromLast = FALSE, ...)
-```
 
-**... `unique()` returns a vector, data frame or array like x but with duplicate elements/rows removed.**
 
 
-```r
-R <- data.frame(V1 = c(1,1,1), V2 = c(2,2,2), V3 = c("A","A","B"))
-unique(R)
-##   V1 V2 V3
-## 1  1  2  A
-## 3  1  2  B
-uni_v3 <- unique(R$V3)
-uni_v3
-## [1] A B
-## Levels: A B
-```
 
----
 
-## 2.  Manipulate Data | Unique 
 
 
-```r
-duplicated(x, incomparables = FALSE, fromLast = FALSE, nmax = NA, ...)
-```
 
-**... `duplicated()` determines which elements of a vector or data frame are duplicates of elements with smaller subscripts, and returns a logical vector indicating which elements (rows) are duplicates.**
 
 
-```r
-R 
-##   V1 V2 V3
-## 1  1  2  A
-## 2  1  2  A
-## 3  1  2  B
-duplicated(x = R, fromLast = TRUE)
-## [1]  TRUE FALSE FALSE
-```
 
 
 
---- .segue bg:grey
 
-## 3.  Loops and Restrictions
 
---- 
 
-## 3.  Loops and Restrictions
 
-Loops repeat statements
 
 
-```r
-# Loops repeat statements
-a <- 1
-for (i in 1:20){
-a <- a+a
-}
-```
 
---- 
 
-## 3.  Loops and Restrictions
 
-Loops repeat statements
 
-
-```r
-# Loops repeat statements
-a <- 1
-for (i in 1:20){
-a <- a+a
-}
-
-a
-## [1] 1048576
-```
-
---- 
-
-## 3.  Loops and Restrictions
-
-
-```r
-# conditions restrict statements
-i <- 1
-a <- 1
-
-while (a <55){
-a <-a+a
-i=i+1
-}
-```
-
---- 
-
-## 3.  Loops and Restrictions
-
-
-```r
-# conditions restrict statements
-i <- 1
-a <- 1
-
-while (a <55){
-a <-a+a
-i=i+1
-}
-
-a
-## [1] 64
-i
-## [1] 7
-```
-
---- 
-
-## 3.  Loops and Restrictions
-
-
-```r
-# conditions restrict statements
-if (a>55){
-a <- a/2
-} else {
-a <- a*2
-}
-```
-
---- 
-
-## 3.  Loops and Restrictions
-
-
-```r
-# conditions restrict statements
-a 
-## [1] 32
-
-if (a>55){
-a <- a/2
-} else {
-a <- a*2
-}
-a
-## [1] 64
-```
-
---- 
-
-## 3.  Loops and Restrictions
-
-Loops or Restrictions|**starts**|**Condistions**|**Indside**|**Ends**
-------|------|------|------|------
-Loop|`for`|`(i in **repetition**)`|`{ result <- **functions to apply**`|`}` in a seperate line
-Restrictions|`while`|`(i in **condition**)`|`{ result <- **functions to apply**`|`}` in a seperate line
-Restrictions|`if` in combination with `else`|`(i in **condition**)`|`{ result <- **functions to apply**`|`}` in a seperate line
-Restrictions|`else`|`(i in **condition**)`|`{ result <- **functions to apply**`|`}` in a seperate line
-
---- .segue bg:grey
-
-## 4.  Package management
-
----
-
-## 4.  Package management
-
-Package management:
-
-
-```r
-old.packages()                        # Your currently installed packages
-
-update.packages()                     # Update all Packages
-update.packages("package-name")       # Update a specific package
-```
-
-Loading Packages:
-
-
-```r
-install.packages("package-name")    # Download and install the named package
-```
-
-Using Packages:
-
-
-```r
-library(package-name)               # Loading packages every time you restart R!
-```
-
---- .segue bg:grey
-
-## 5.  Plots
-
----
-
-##  Exercise 3
-
-
-```r
-# 1. Set your working directory.
-# 2. Load gravemound.csv
-# 3. Save created Dara Frame of Iron Age graves (Note: This is dummy data!)
-# 4. 
-# 5.
-# 6. Download and load all neccessary packages for our next lectrue.
-```
 
 
