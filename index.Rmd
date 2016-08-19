@@ -34,10 +34,10 @@ strong {
 
 **Tuesday, 6th of September**
 
-2. [Introduction to R](01-introduction/index.html)
-3. [R Basics: Frist Steps](02-R_basics01/index.html)
-4. [R Basics: Getting used to R](03-R_basics02/index.html)
-5. [Using R as GIS](04-R_GIS/index.html)
+2. [Introduction to R](02-introduction/index.html)
+3. [R Basics: Frist Steps](03-R_basics01/index.html)
+4. [R Basics: Getting used to R](04-R_basics02/index.html)
+5. [Using R as GIS](05-R_GIS/index.html)
 6. [**Workshop:** Basic Spatial Statistics]
 
 *** =right
@@ -59,6 +59,33 @@ strong {
 
 ## Needed Packages
 
+- `rgdal`
+- `raster`
+
+---
+
+## MOSAIC - Modelling Speheres of Interaction
+
+** Aim**
+
+This Summer School focuses on interaction as a key concept in social life, and 
+on methods for reconstructing and modeling spheres of interaction at different 
+spatial and temporal scales. Students will learn an innovative approach, used in
+recent studies, for modelling spheres of interaction. The course will cover a 
+variety of theories and concepts that will enable students to apply this method 
+to further regions, material groups, and time periods. The course is divided 
+into individual lessons presented by experts, thus providing a diverse overview 
+of approaches.
+
+**About Mosaic**
+
+At Kiel University there is a growing interdisciplinary community which strives 
+to establish an integrative concept and culture of modelling. The intention 
+behind Mosaic is to convey the Kiel spirit of interdisciplinary modelling and to
+facilitate knowledge transfer on basic theories, methods and techniques in 
+spatio-temporal modelling. In this summer school we will introduce participants 
+to the basics of modelling, mathematics, trends, boundaries, movement, 
+interaction and networks.
 
 ---
 

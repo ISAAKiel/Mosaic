@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modelling Interaction</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Modelling Interaction">
+  <meta name="author" content="Oliver Nakoinz, Daniel Knitter">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/style.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/logo03_scaled.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/logo03_scaled.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Modelling Interaction</h1>
+    <h2>Distances</h2>
+    <p>Oliver Nakoinz, Daniel Knitter<br/>MOSAIC Summer School 2016</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1">
+<hgroup>
+
+</hgroup>
+<article>
+<style type="text/css">
+body {background:grey transparent;
+}
+</style>
+
+<h2>Content</h2>
+
+<ol class = "build incremental">
+<li>Prerequisites: load data into R, calculate simple geomorphometric measures</li>
+<li>Euclidean distance</li>
+<li>Least-cost distance</li>
+</ol>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-2">
+<hgroup>
+<h2>Content</h2>
+</hgroup>
+<article>
+<ol>
+<li><strong>Prerequisites: load data into R, calculate simple geomorphometric measures</strong></li>
+<li>Euclidean distance</li>
+<li>Least-cost distance</li>
+</ol>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-3">
+<hgroup>
+<h2>1.1 Download DEM</h2>
+</hgroup>
+<article>
+<p>As test data, I download the data provided with the book of Nakoinz and Knitter (2016):</p>
+
+<pre><code class="r">download.file(
+    url = &quot;https://raw.githubusercontent.com/dakni/mhbil/master/data/dw_gk3_50_ag.asc&quot;,
+    destfile = &quot;dem.asc&quot;)
+</code></pre>
+
+<p>Now, load the file using <code>rgdal</code> package</p>
+
+<pre><code class="r">library(rgdal)
+dem &lt;- readGDAL(&quot;dem.asc&quot;)
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-4">
+<hgroup>
+<h2>1.1 Download DEM</h2>
+</hgroup>
+<article>
+<p>Structure of the <code>dem</code> object</p>
+
+<pre><code class="r">str(dem)
+## Formal class &#39;SpatialGridDataFrame&#39; [package &quot;sp&quot;] with 4 slots
+##   ..@ data       :&#39;data.frame&#39;:  204892 obs. of  1 variable:
+##   .. ..$ band1: num [1:204892] 11.57 10.15 9.91 10.96 11.64 ...
+##   ..@ grid       :Formal class &#39;GridTopology&#39; [package &quot;sp&quot;] with 3 slots
+##   .. .. ..@ cellcentre.offset: Named num [1:2] 3550761 6022492
+##   .. .. .. ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;x&quot; &quot;y&quot;
+##   .. .. ..@ cellsize         : num [1:2] 50 50
+##   .. .. ..@ cells.dim        : int [1:2] 566 362
+##   ..@ bbox       : num [1:2, 1:2] 3550736 6022467 3579036 6040567
+##   .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+##   .. .. ..$ : chr [1:2] &quot;x&quot; &quot;y&quot;
+##   .. .. ..$ : chr [1:2] &quot;min&quot; &quot;max&quot;
+##   ..@ proj4string:Formal class &#39;CRS&#39; [package &quot;sp&quot;] with 1 slot
+##   .. .. ..@ projargs: chr NA
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-5">
+<hgroup>
+<h2>1.1 Where is the DEM?</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>What is the meaning of the coordinates?</p>
+
+<pre><code class="r">dem@bbox
+##       min     max
+## x 3550736 3579036
+## y 6022467 6040567
+</code></pre>
+
+<p>What is the Spatial Reference System (SRS)?</p>
+
+<p>[= Coordinate Reference System (CRS)]</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='text-align: center;'>
+    <img height='460' src='https://upload.wikimedia.org/wikipedia/commons/1/15/MercTranSph.png' />
+</div>
+
+<div style="font-size:10px">By <a href="//commons.wikimedia.org/wiki/User:Peter_Mercator" title="User:Peter Mercator">Peter Mercator</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, https://commons.wikimedia.org/w/index.php?curid=9910926</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-6">
+<hgroup>
+<h2>1.1 Where is the DEM?</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>What is the meaning of the coordinates?</p>
+
+<pre><code class="r">dem@bbox
+##       min     max
+## x 3550736 3579036
+## y 6022467 6040567
+</code></pre>
+
+<p>What is the Spatial Reference System (SRS)?</p>
+
+<p>[= Coordinate Reference System (CRS)]</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='text-align: center;'>
+    <img height='520' src='https://upload.wikimedia.org/wikipedia/de/1/12/Gau%C3%9F-Kr%C3%BCger-Raster_Deutschland.png' />
+</div>
+
+<div style="font-size:10px">Von <a href="//de.wikipedia.org/wiki/Benutzer:BerndH" title="Benutzer:BerndH">BerndH</a> - selbst erstellt mit Generic Mapping Tools (psbasemap, psxy), Python, GIMP, <a title="Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen Unported 3.0" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">CC BY-SA 3.0</a>, https://de.wikipedia.org/w/index.php?curid=4186798</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-7">
+<hgroup>
+<h2>1.2 Project DEM and plot</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><a href="https://epsg.io/5677">https://epsg.io/5677</a></p>
+
+<pre><code class="r">dem@proj4string &lt;- CRS(&quot;+init=epsg:5677&quot;)
+is.projected(dem)
+## [1] TRUE
+plot(dem)
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7"></p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-8">
+<hgroup>
+<h2>1.2 Project DEM and plot</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>Plot using <code>raster</code> package</p>
+
+<pre><code class="r">#library(raster)
+plot(raster(dem))
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code>## Error in plot(raster(dem)): could not find function &quot;raster&quot;
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-9">
+<hgroup>
+<h2>1.3 Download point data</h2>
+</hgroup>
+<article>
+<pre><code class="r">download.file(
+    url = &quot;https://raw.githubusercontent.com/dakni/mhbil/master/data/meg_dw.csv&quot;,
+    destfile = &quot;meg_dw.csv&quot;)
+
+meg_dw &lt;- read.table(file = &quot;meg_dw.csv&quot;,
+                     header = TRUE,
+                     sep = &quot;;&quot;)
+head(meg_dw)
+</code></pre>
+
+<pre><code>##   id       x       y
+## 1  1 3553751 6028609
+## 2  2 3553442 6027416
+## 3  3 3552502 6025080
+## 4  4 3552518 6024799
+## 5  5 3553799 6025130
+## 6  6 3551621 6025247
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-10">
+<hgroup>
+<h2>1.4 Create SpatialPointsDataFrame (spdf)</h2>
+</hgroup>
+<article>
+<pre><code class="r">library(sp)
+coordinates(meg_dw) &lt;- ~x+y
+str(meg_dw)
+</code></pre>
+
+<pre><code>## Formal class &#39;SpatialPointsDataFrame&#39; [package &quot;sp&quot;] with 5 slots
+##   ..@ data       :&#39;data.frame&#39;:  267 obs. of  1 variable:
+##   .. ..$ id: int [1:267] 1 2 3 4 5 6 7 8 9 10 ...
+##   ..@ coords.nrs : int [1:2] 2 3
+##   ..@ coords     : num [1:267, 1:2] 3553751 3553442 3552502 3552518 3553799 ...
+##   .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+##   .. .. ..$ : chr [1:267] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
+##   .. .. ..$ : chr [1:2] &quot;x&quot; &quot;y&quot;
+##   ..@ bbox       : num [1:2, 1:2] 3551621 6022761 3576305 6040236
+##   .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+##   .. .. ..$ : chr [1:2] &quot;x&quot; &quot;y&quot;
+##   .. .. ..$ : chr [1:2] &quot;min&quot; &quot;max&quot;
+##   ..@ proj4string:Formal class &#39;CRS&#39; [package &quot;sp&quot;] with 1 slot
+##   .. .. ..@ projargs: chr NA
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-11">
+<hgroup>
+<h2>1.5 Project spdf and plot</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">proj4string(meg_dw) &lt;- CRS(&quot;+init=epsg:5677&quot;)
+is.projected(meg_dw)
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+<pre><code class="r">plot(raster(dem))
+</code></pre>
+
+<pre><code>## Error in plot(raster(dem)): could not find function &quot;raster&quot;
+</code></pre>
+
+<pre><code class="r">points(meg_dw)     
+</code></pre>
+
+<pre><code>## Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code>## Error in plot(raster(dem)): could not find function &quot;raster&quot;
+</code></pre>
+
+<pre><code>## Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-12">
+<hgroup>
+<h2>Content</h2>
+</hgroup>
+<article>
+<ol>
+<li>Prerequisites: load data into R, calculate simple geomorphometric measures</li>
+<li><strong>Euclidean distance</strong></li>
+<li>Least-cost distance</li>
+</ol>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-13">
+<hgroup>
+<h2>2 Euclidean distance 1</h2>
+</hgroup>
+<article>
+<p>Distance between points using Euclidean distance with our own function</p>
+
+<p>\[d(i,j) = \sqrt{(x_i-x_j)^2 + (y_i-y_j)^2}\]</p>
+
+<pre><code class="r">meg_dw@coords[1,]
+</code></pre>
+
+<pre><code>##       x       y 
+## 3553751 6028609
+</code></pre>
+
+<pre><code class="r">e.d &lt;- function(x1,x2){
+    ed &lt;- sqrt((x1[1]-x2[1])^2 + (x1[2]-x2[2])^2)
+    return(ed)
+    }             
+ed1 &lt;- e.d(meg_dw@coords[1,],meg_dw@coords[2,])
+ed1
+</code></pre>
+
+<pre><code>##        x 
+## 1232.368
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-14">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+<p>Distance between points using Euclidean distance using package <code>rgeos</code></p>
+
+<pre><code class="r">library(rgeos)
+</code></pre>
+
+<pre><code>## Warning: package &#39;rgeos&#39; was built under R version 3.3.1
+</code></pre>
+
+<pre><code>## rgeos version: 0.3-19, (SVN revision 524)
+##  GEOS runtime version: 3.5.0-CAPI-1.9.0 r4084 
+##  Linking to sp version: 1.2-3 
+##  Polygon checking: TRUE
+</code></pre>
+
+<pre><code class="r">gDistance(spgeom1 = meg_dw[meg_dw@data$id==1,],
+          spgeom2 = meg_dw[meg_dw@data$id==2,])
+</code></pre>
+
+<pre><code>## [1] 1232.368
+</code></pre>
+
+<pre><code class="r">ed2 &lt;- gDistance(spgeom1 = meg_dw,
+          byid = TRUE)
+ed2[2]
+</code></pre>
+
+<pre><code>## [1] 1232.368
+</code></pre>
+
+<pre><code class="r">ed1==ed2[2]
+</code></pre>
+
+<pre><code>##    x 
+## TRUE
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-15">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">class(ed2)
+</code></pre>
+
+<pre><code>## [1] &quot;matrix&quot;
+</code></pre>
+
+<pre><code class="r">str(ed2)
+</code></pre>
+
+<pre><code>##  num [1:267, 1:267] 0 1232 3744 4005 3479 ...
+##  - attr(*, &quot;dimnames&quot;)=List of 2
+##   ..$ : chr [1:267] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
+##   ..$ : chr [1:267] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
+</code></pre>
+
+<pre><code class="r">library(fields)
+</code></pre>
+
+<pre><code>## Error in library(fields): there is no package called &#39;fields&#39;
+</code></pre>
+
+<pre><code class="r">image.plot(ed2)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;image.plot&quot;
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;image.plot&quot;
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-16">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+<pre><code class="r">min(ed2)
+</code></pre>
+
+<pre><code>## [1] 0
+</code></pre>
+
+<pre><code class="r">round(data.frame(min = min(ed2[ed2&gt;0]),
+                 max = max(ed2[ed2&gt;0]),
+                 mean = mean(ed2[ed2&gt;0]),
+                 median = median(ed2[ed2&gt;0])
+                 ),
+      2)
+</code></pre>
+
+<pre><code>##     min      max    mean  median
+## 1 18.44 27561.77 9565.89 8619.07
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-17">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">hist(ed2)
+abline(v = mean(ed2[ed2&gt;0]), col = &quot;red&quot;)
+abline(v = median(ed2[ed2&gt;0]), col = &quot;blue&quot;)
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-21-1.png" alt="plot of chunk unnamed-chunk-21"></p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-18">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+<p>Some further questions that might be interesting</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">mp &lt;- apply(X = ed2,
+            MARGIN = 2,
+            FUN = mean)
+
+tmp &lt;- ed2
+tmp[tmp==0] &lt;- 9999
+
+cp &lt;- apply(X = tmp,
+            MARGIN = 2,
+            FUN = min)
+
+meg_dw$mp &lt;- mp
+meg_dw@data$cp &lt;- cp
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>What is the mean euclidean distance from a point to its surrounding points (mp)?</p>
+
+<p>What is the closest euclidean distance from a point to its surrounding points (cp)?</p>
+
+<p>Write the result in the attribute table of our spdf</p>
+
+<p><strong>Question:</strong> Why changing 0 to 9999?</p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-19">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+<p>Examples how to use <code>spplot</code>: <a href="http://rspatial.r-forge.r-project.org/gallery/">http://rspatial.r-forge.r-project.org/gallery/</a></p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">spplot(meg_dw, &quot;cp&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-23-1.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="450px" /></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">spplot(meg_dw, &quot;mp&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-24-1.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="450px" /></p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-20">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+<p>Leaflet in <code>R</code>: <a href="https://rstudio.github.io/leaflet/">https://rstudio.github.io/leaflet/</a></p>
+
+<pre><code class="r">library(leaflet)
+tmp &lt;- spTransform(meg_dw, CRSobj = CRS(&quot;+init=epsg:4326&quot;))
+leaflet(data=tmp$cp) %&gt;%
+    addTiles() %&gt;%
+    addCircleMarkers(lng = tmp@coords[,1],
+                     lat = tmp@coords[,2],
+                     radius = tmp$mp/1000,
+                     )
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-21">
+<hgroup>
+<h2>2 Euclidean distance 2</h2>
+</hgroup>
+<article>
+<p><code>Mapview</code> [as alternative to <code>leaflet</code>]: <a href="http://environmentalinformatics-marburg.github.io/mapview/introduction.html">http://environmentalinformatics-marburg.github.io/mapview/introduction.html</a></p>
+
+<pre><code class="r">library(mapview)
+mapview(meg_dw, zcol = &quot;mp&quot;, legend = TRUE)
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-22">
+<hgroup>
+<h2>Questions?</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-23">
+<hgroup>
+<h2>Content</h2>
+</hgroup>
+<article>
+<ol>
+<li>Prerequisites: load data into R, calculate simple geomorphometric measures</li>
+<li>Euclidean distance</li>
+<li><strong>Least-cost distance</strong></li>
+</ol>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-24">
+<hgroup>
+<h2>3 Least cost distance</h2>
+</hgroup>
+<article>
+<p>What are the necessary steps?</p>
+
+<ol>
+<li>Create cost surface</li>
+<li>Create transition matrix, i.e. matrix recording connections between cells</li>
+<li>Transition matrix is filled with conductance, rather than resistance values; hence unconnected cells have value 0 (= no conductance); memory efficient</li>
+<li>Geocorrection of values</li>
+<li>Identify adjacent cells</li>
+<li>Calculate walking speed for adjacent cells</li>
+<li>Geocorrect speed values</li>
+<li>Find path using least-cost (&quot;as the wolf runs&quot;) or random walk (&quot;drunkard&#39;s walk&quot;) algorithm</li>
+</ol>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-25">
+<hgroup>
+<h2>3 Least cost distance</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>We use the <code>gdistance</code> package by Jacob van Etten (<a href="https://cran.r-project.org/web/packages/gdistance">https://cran.r-project.org/web/packages/gdistance</a>)</p>
+
+<p>First we calculate the slope, as this is used as cost</p>
+
+<pre><code class="r">library(raster)
+</code></pre>
+
+<pre><code>## Warning: package &#39;raster&#39; was built under R version 3.3.1
+</code></pre>
+
+<pre><code>## Error: package or namespace load failed for &#39;raster&#39;
+</code></pre>
+
+<pre><code class="r">dem &lt;- raster(dem)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;raster&quot;
+</code></pre>
+
+<pre><code class="r">slope &lt;- terrain(x = dem,
+                 opt = &quot;slope&quot;,
+                 neighbors = 8,
+                 unit = &quot;degrees&quot;)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;terrain&quot;
+</code></pre>
+
+<pre><code class="r">plot(slope)
+</code></pre>
+
+<pre><code>## Error in plot(slope): object &#39;slope&#39; not found
+</code></pre>
+
+<pre><code class="r">##drawExtent()
+crop.extent &lt;- extent(c(3551000,3578650,6022770,6045000))
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;extent&quot;
+</code></pre>
+
+<pre><code class="r">slope &lt;- crop(x = slope, y = crop.extent)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;crop&quot;
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code>## Error in plot(slope): object &#39;slope&#39; not found
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-26">
+<hgroup>
+<h2>3 Least cost distance</h2>
+</hgroup>
+<article>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-27">
+<hgroup>
+<h2>3 Least cost distance</h2>
+</hgroup>
+<article>
+<p>Afterwards we create the transition object and geocorrect it</p>
+
+<pre><code class="r">library(gdistance)
+</code></pre>
+
+<pre><code>## Warning: package &#39;gdistance&#39; was built under R version 3.3.1
+</code></pre>
+
+<pre><code>## Warning: package &#39;raster&#39; was built under R version 3.3.1
+</code></pre>
+
+<pre><code>## Error: package &#39;raster&#39; could not be loaded
+</code></pre>
+
+<pre><code class="r">slope.tran &lt;- transition(x = slope,
+                         transitionFunction = mean,
+                         directions = 8,
+                         symm = TRUE)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;transition&quot;
+</code></pre>
+
+<pre><code class="r">slope.geo &lt;- geoCorrection(x = slope.tran, scl = TRUE)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;geoCorrection&quot;
+</code></pre>
+
+<p>To see how the results look like we create a raster stack for easy plotting</p>
+
+<pre><code class="r">slopes &lt;- stack(slope,
+                raster(slope.tran),
+                raster(slope.geo))
+</code></pre>
+
+<pre><code>## Error in stack(slope, raster(slope.tran), raster(slope.geo)): object &#39;slope&#39; not found
+</code></pre>
+
+<pre><code class="r">names(slopes) &lt;- c(&quot;Slope&quot;,&quot;Transition&quot;,&quot;Geocorrection&quot;)
+</code></pre>
+
+<pre><code>## Error in names(slopes) &lt;- c(&quot;Slope&quot;, &quot;Transition&quot;, &quot;Geocorrection&quot;): object &#39;slopes&#39; not found
+</code></pre>
+
+<pre><code class="r">plot(slopes, nr = 1)
+</code></pre>
+
+<pre><code>## Error in plot(slopes, nr = 1): object &#39;slopes&#39; not found
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-28">
+<hgroup>
+<h2>3 Least cost distance</h2>
+</hgroup>
+<article>
+<p>Now, the final step. Calculate Tobler&#39;s hiking speed, geocorrect again and calculate a shortest path</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">adj &lt;- adjacent(x = slope,
+                cells=1:ncell(slope),
+                pairs=TRUE,
+                directions=8)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;adjacent&quot;
+</code></pre>
+
+<pre><code class="r">speed &lt;- slope.geo
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;slope.geo&#39; not found
+</code></pre>
+
+<pre><code class="r">speed[adj] &lt;-  6 * exp(-3.5 * abs(slope.geo[adj] + 0.05))
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;slope.geo&#39; not found
+</code></pre>
+
+<pre><code class="r">speed.geo &lt;- geoCorrection(x = speed, scl=TRUE)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;geoCorrection&quot;
+</code></pre>
+
+<pre><code class="r">sp1 &lt;- shortestPath(x = speed.geo,
+                    origin = meg_dw@coords[4,],
+                    goal = meg_dw@coords[231,],
+                    output = &quot;SpatialLines&quot;)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;shortestPath&quot;
+</code></pre>
+
+<pre><code class="r">plot(raster(speed.geo))
+</code></pre>
+
+<pre><code>## Error in plot(raster(speed.geo)): could not find function &quot;raster&quot;
+</code></pre>
+
+<pre><code class="r">lines(sp1)
+</code></pre>
+
+<pre><code>## Error in lines(sp1): object &#39;sp1&#39; not found
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code>## Error in plot(raster(speed)): could not find function &quot;raster&quot;
+</code></pre>
+
+<pre><code>## Error in lines(sp1): object &#39;sp1&#39; not found
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-29">
+<hgroup>
+<h2>3 Least cost distance</h2>
+</hgroup>
+<article>
+<p>What about the &quot;drunkard&#39;s walk&quot;? <code>theta</code> is the level of drunkenness, i.e. the degree from which
+the path randomly deviates from the shortest path</p>
+
+<pre><code class="r">p1 &lt;- passage(x = speed.geo,
+              origin = meg_dw@coords[4,],
+              goal = meg_dw@coords[231,],
+              theta = .005)              
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;passage&quot;
+</code></pre>
+
+<pre><code class="r">p2 &lt;- passage(x = speed.geo,
+              origin = meg_dw@coords[4,],
+              goal = meg_dw@coords[231,],
+              theta = .05)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;passage&quot;
+</code></pre>
+
+<pre><code class="r">hs &lt;-  hillShade(slope = terrain(x = dem*10, opt = &quot;slope&quot;),
+                 aspect = terrain(x = dem, opt = &quot;aspect&quot;),
+                 angle = 40, direction = 270)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;hillShade&quot;
+</code></pre>
+
+<pre><code class="r">plot(hs, col=grey(0:100/100), legend=FALSE)
+</code></pre>
+
+<pre><code>## Error in plot(hs, col = grey(0:100/100), legend = FALSE): object &#39;hs&#39; not found
+</code></pre>
+
+<pre><code class="r">plot(p1, alpha = .5, add=TRUE); lines(sp1)
+</code></pre>
+
+<pre><code>## Error in plot(p1, alpha = 0.5, add = TRUE): object &#39;p1&#39; not found
+</code></pre>
+
+<pre><code>## Error in lines(sp1): object &#39;sp1&#39; not found
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-30">
+<hgroup>
+<h2>3 Least cost distance</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>theta = .005</p>
+
+<pre><code>## Error in plot(hs, col = grey(0:100/100), legend = FALSE): object &#39;hs&#39; not found
+</code></pre>
+
+<pre><code>## Error in plot(p1, alpha = 0.5, add = TRUE): object &#39;p1&#39; not found
+</code></pre>
+
+<pre><code>## Error in lines(sp1): object &#39;sp1&#39; not found
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>theta = .05</p>
+
+<pre><code>## Error in plot(hs, col = grey(0:100/100), legend = FALSE): object &#39;hs&#39; not found
+</code></pre>
+
+<pre><code>## Error in plot(p2, alpha = 0.5, add = TRUE): object &#39;p2&#39; not found
+</code></pre>
+
+<pre><code>## Error in lines(sp1): object &#39;sp1&#39; not found
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-31">
+<hgroup>
+<h2>3 The prehistoric &quot;Autobahn&quot;</h2>
+</hgroup>
+<article>
+<p>Run the code and get some coffee... a lot of coffee</p>
+
+<pre><code class="r">xy &lt;- data.frame(X = meg_dw@coords[,1],
+                 Y = meg_dw@coords[,2])
+
+rows.xy &lt;- row.names(xy)
+sa.rows.xy &lt;- sample(row.names(xy), length(xy$X)/2)
+starts &lt;- subset(xy, rows.xy %in% sa.rows.xy)
+goals &lt;- subset(xy, !(rows.xy %in% sa.rows.xy))
+sg.passages &lt;- brick(slope)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;brick&quot;
+</code></pre>
+
+<pre><code class="r">for(i in 1:length(starts$X)) {
+    s &lt;- c(starts$X[i],starts$Y[i])
+    z &lt;- c(goals$X[i],goals$Y[i])
+    sg.passages[[i]] &lt;- passage(x = speed.geo, origin = s, goal = z, theta = .05) 
+    cat(&quot;iteration &quot;, i, &quot; of &quot;, length(starts$X),&quot;\n&quot;)
+}
+</code></pre>
+
+<pre><code>## Error: could not find function &quot;passage&quot;
+</code></pre>
+
+<pre><code class="r">sg.passages.sum &lt;- sum(sg.passages)
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;sg.passages&#39; not found
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-32">
+<hgroup>
+<h2>3 The prehistoric &quot;Autobahn&quot;</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">plot(hs, col=grey(0:100/100), legend=FALSE)
+</code></pre>
+
+<pre><code>## Error in plot(hs, col = grey(0:100/100), legend = FALSE): object &#39;hs&#39; not found
+</code></pre>
+
+<pre><code class="r">plot(sg.passages.sum,
+     col = colorRampPalette(colors = c(&quot;white&quot;,&quot;red&quot;))(50),
+     alpha = .5,
+     add=TRUE)
+</code></pre>
+
+<pre><code>## Error in plot(sg.passages.sum, col = colorRampPalette(colors = c(&quot;white&quot;, : object &#39;sg.passages.sum&#39; not found
+</code></pre>
+
+<pre><code class="r">points(meg_dw,
+       pch = 19,
+       col = rgb(red = 0, green = 0, blue = 0, alpha = .2))
+</code></pre>
+
+<pre><code>## Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code>## Error in plot(hs, col = grey(0:100/100), legend = FALSE): object &#39;hs&#39; not found
+</code></pre>
+
+<pre><code>## Error in plot(sg.passages.sum, col = colorRampPalette(colors = c(&quot;white&quot;, : object &#39;sg.passages.sum&#39; not found
+</code></pre>
+
+<pre><code>## Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Content'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='1.1 Download DEM'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='1.1 Download DEM'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='1.1 Where is the DEM?'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='1.1 Where is the DEM?'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='1.2 Project DEM and plot'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='1.2 Project DEM and plot'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='1.3 Download point data'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='1.4 Create SpatialPointsDataFrame (spdf)'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='1.5 Project spdf and plot'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Content'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='2 Euclidean distance 1'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='2 Euclidean distance 2'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='2 Euclidean distance 2'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='2 Euclidean distance 2'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='2 Euclidean distance 2'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='2 Euclidean distance 2'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='2 Euclidean distance 2'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='2 Euclidean distance 2'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='2 Euclidean distance 2'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Questions?'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Content'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='3 Least cost distance'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='3 Least cost distance'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='3 Least cost distance'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='3 Least cost distance'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='3 Least cost distance'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='3 Least cost distance'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='3 Least cost distance'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='3 The prehistoric &quot;Autobahn&quot;'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='3 The prehistoric &quot;Autobahn&quot;'>
+         32
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
