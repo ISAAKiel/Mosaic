@@ -10,8 +10,8 @@ hitheme     : tomorrow # tomorrow
 widgets     : [mathjax, phantomjs]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
-logo        : logo03_scaled.png
-biglogo     : logo03_scaled.png
+logo        : logo03.png
+biglogo     : logo03.png
 --- 
 
 <style type="text/css">
@@ -170,7 +170,7 @@ Plot using `raster` package
 
 
 ```r
-#library(raster)
+library("raster")
 plot(raster(dem))
 ```
 
