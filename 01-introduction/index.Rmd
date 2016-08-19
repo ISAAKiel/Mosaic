@@ -1,8 +1,8 @@
 ---
-title       : R basics
-subtitle    : An introduction to R
+title       : Introdution to R
+subtitle    : Advantages and Disadvatages 
 author      : Franziska Faupel
-job         : MOSaIC
+job         : MOSAIC Summer School 2016
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow    # 
@@ -11,7 +11,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 logo        : logo03.png
 biglogo     : logo03.png
---- &twocol
+---  
 
 <style type="text/css">
 body {background:grey transparent;
@@ -23,6 +23,27 @@ strong {
   font-weight: bold;
 }
 </style>
+
+## With special thanks to...
+
+
+- Oliver Nakoinz
+- Clemens Schmid
+- Dirk Seidensticker
+- Martin Hinz
+
+
+
+<div style='position:absolute;top:20%;right:5%'>
+    <img  height="300" width="500" src='assets/img/IsaaKiel.png' />
+</div>
+
+<div style='position:absolute;bottom:20%;left:5%'>
+ <a href="https://isaakiel.github.io/index.html"> For more Information, please check out our homepage: https://isaakiel.github.io/ </a> 
+</div>
+
+
+--- &twocol
 
 ## Structure 
 
@@ -40,9 +61,17 @@ strong {
     <img  height="500" width="500" src='assets/img/Rlogo07.png' />
 </div>
 
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
 --- .segue bg:grey
 
 ## 1.  R - What is it?!
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
 
 ---  
 
@@ -75,10 +104,6 @@ strong {
 
 ## History of R 
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="100" width="100" src='assets/img/Rlogo.png' />
-</div>
-
 - 1976: **S language by John Chambers** at Bell Laboratories (AT&T)
 
 <div style='position:absolute;bottom:20%;right:40%'>
@@ -88,10 +113,6 @@ strong {
 ---
 
 ## History of R 
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="100" width="100" src='assets/img/Rlogo.png' />
-</div>
 
 - 1976: S language by **John Chambers** at Bell Laboratories (AT&T)
 
@@ -109,10 +130,6 @@ strong {
 
 ## History of R 
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="100" width="100" src='assets/img/Rlogo.png' />
-</div>
-
 - 1976: S language by **John Chambers** at Bell Laboratories (AT&T)
 - 1993: Free implementation of R under the name R by **Ross Ihaka** and **Robert Gentleman**
 
@@ -124,14 +141,14 @@ strong {
 
 ## 2.  Why using R?
 
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
 ---
 
 ## 2. Some Advantages and Disadvantages
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
-   
    
 Most statistical software provides usfull standartised test, as $chi^2$ test etc. R has some very convienient advantages:
 
@@ -147,10 +164,6 @@ independent platform with a great support|
 
 ## 7 levels of using R
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
-
 > 1. Asking a colleague to run R for you
 > 2. Applying build in functions
 > 3. Combining build in functions
@@ -163,13 +176,13 @@ independent platform with a great support|
 
 ## 3.  How to start?
 
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
 ---
 
 ## Gerneral Workflow | Before you beginn
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 > 1. **Problem:** Put your question.
 > 2. **Theory:** Which theoretical frame is adequate for solving the problem?
@@ -193,10 +206,6 @@ independent platform with a great support|
 >        - Multivariate analysis
 
 *** =right
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 >    - Inference
 >        - tests
@@ -316,10 +325,6 @@ Most of the usful R applications appear in packages.
 
 *** =right
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
-
 > * Documentation Viewer
 > * Project and Session Manager
 > * Workspace Explorer
@@ -330,13 +335,13 @@ Most of the usful R applications appear in packages.
 
 ## 4. Scipts and why they are usefull
 
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
 ---
 
 ## Lets talk about scripts
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 > - **Scripts** are an exact documentation of the work.
 > - **Scripts** allow reproducing the analysis.
@@ -351,10 +356,6 @@ Most of the usful R applications appear in packages.
 ---
 
 ## Lets talk about scripts | Some rules
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 > * Each analysis has its own **script**.
 > * Each **script** has a header containing important information such as title, 
@@ -385,10 +386,6 @@ topic, purpose, author, date, etc.
 
 ## Lets talk about scripts | Some rules
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
-
 - For each **command**, you should learn the usage only once.
        - Supplement the command with comments so that you can re-use the 
 command for similar purposes without reading the manual again. 
@@ -406,10 +403,6 @@ median(a)                         # This is the "median" function
 
 ## Lets talk about scripts | Some rules
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
-
 > * Use detailed **comments** to understand your analysis years later.
 >        * It is useful to think that you should hand over the script to a 
 colleague with limited knowledge to optimise comments and structure.
@@ -419,10 +412,6 @@ colleague with limited knowledge to optimise comments and structure.
 ---
 
 ## Lets talk about scripts | Some rules
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 <div style='position:absolute;bottom:10%;right:5%'>
     <img  height="200" width="200" src='assets/img/github01.png' />
@@ -439,9 +428,6 @@ colleague with limited knowledge to optimise comments and structure.
 
 ## Lets talk about scripts | Some rules
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 > - Avoid special characters in file names, variable names, etc. 
 >        - Subset Ä with Ae etc.
@@ -452,10 +438,6 @@ results and reports.
 --- &twocol
 
 ## Lets talk about scripts 
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 Use a convenient yet standardised folder structure for scripts, data, 
 results and reports. During the Mosaic Summer School, we will work with the follwoing structure.
@@ -475,10 +457,6 @@ results and reports. During the Mosaic Summer School, we will work with the foll
 
 ## Weblinks
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
-
 Source|Link
 ---------|----------
 R Foundation Homepage| https://www.r-project.org/ 
@@ -494,10 +472,6 @@ ISAAKiel|https://isaakiel.github.io/
 ---
 
 ## Weblinks and literature
-
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="75" width="75" src='assets/img/Rlogo.png' />
-</div>
 
 <div style='position:absolute;bottom:20%;right:20%'>
     <img  height="300" src='assets/img/graphics_cookbook.jpg' />
@@ -518,11 +492,12 @@ ISAAKiel|https://isaakiel.github.io/
 
 --- .segue bg:grey
 
-## Let's make a break...
-
---- .segue bg:grey
 
 ## 5.  Getting started with R
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
 
 ---
 
@@ -546,6 +521,14 @@ ISAAKiel|https://isaakiel.github.io/
 
 ## 5.  Getting started with R
 
+<div style='position:absolute;bottom:10%;right:15%'>
+<img  height="500" width="750" src='assets/img/RStudio_empty.png' />
+</div>
+
+---
+
+## 5.  Getting started with R
+
 
 ```{r collapse=TRUE, results='hide'}
 # This is an R Code sniplet
@@ -596,25 +579,7 @@ log10(25)
 
 ---
 
-## 5.  Getting started with R
-
-```{r collapse=TRUE, results='hide'}
-abs(-23.45)
-round(2.454324,2)
-ceiling(2.5)
-floor(2.5)
-```
-
----
-
-## 5.  Getting started with R
-
-```{r collapse=TRUE}
-abs(-23.45)
-round(2.454324,2)
-ceiling(2.5)
-floor(2.5)
-```
-
-
-
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' />
+ 
+</a>

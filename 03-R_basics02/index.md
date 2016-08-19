@@ -1,8 +1,8 @@
 ---
 title       : R basics
-subtitle    : Getting started 
+subtitle    : Getting used to R
 author      : Franziska Faupel
-job         : MOSaIC
+job         : MOSAIC Summer School 2016
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow    # 
@@ -45,18 +45,17 @@ strong {
 > 9. Loading Packages
 > 10. Plots 
 
-<div style='position:absolute;top:5%;right:5%'>
-    <img  height="100" width="100" src='assets/img/Rlogo.png' />
-</div>
-
-
---- .segue bg:grey
-
-## **Second Part**
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
 
 --- .segue bg:grey
 
 ## 1.  Load Data
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
 
 ---
 
@@ -140,6 +139,10 @@ str(df_BA_INH)
 --- .segue bg:grey
 
 ## 2.  Manipulate Data
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
 
 ---
 
@@ -344,6 +347,10 @@ duplicated(x = R, fromLast = TRUE)
 
 ## 3.  Loops and Restrictions
 
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
 --- 
 
 ## 3.  Loops and Restrictions
@@ -462,6 +469,10 @@ Restrictions|`else`|`(i in **condition**)`|`{ result <- **functions to apply**`|
 
 ## 4.  Package management
 
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
 ---
 
 ## 4.  Package management
@@ -494,6 +505,10 @@ library(package-name)               # Loading packages every time you restart R!
 
 ## 5.  Plots
 
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
 ---
 
 ##  Exercise 3
@@ -507,5 +522,12 @@ library(package-name)               # Loading packages every time you restart R!
 # 5.
 # 6. Download and load all neccessary packages for our next lectrue.
 ```
+
+---
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' />
+ 
+</a>
 
 
