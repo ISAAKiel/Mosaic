@@ -2,3 +2,7 @@ base
 slidify
 slidifyLibraries
 knitr
+sp
+rgdal
+raster
+rgeos

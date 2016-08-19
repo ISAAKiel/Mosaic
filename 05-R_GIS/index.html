@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>R basics</title>
+  <title>Using R as GIS</title>
   <meta charset="utf-8">
-  <meta name="description" content="R basics">
+  <meta name="description" content="Using R as GIS">
   <meta name="author" content="Franziska Faupel">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -43,8 +43,8 @@
     <img src="assets/img/logo03.png">
   </aside>
   <hgroup class="auto-fadein">
-    <h1>R basics</h1>
-    <h2>Getting started</h2>
+    <h1>Using R as GIS</h1>
+    <h2>Objects, Functions etc...</h2>
     <p>Franziska Faupel<br/>MOSaIC</p>
   </hgroup>
   <article></article>  
@@ -72,28 +72,28 @@ strong {
 
 <div style='float:left;width:48%;' class='centered'>
   <ul>
-<li><strong>First Part</strong></li>
+<li><strong>Spatial Objects in R</strong></li>
 </ul>
 
 <ol>
-<li>Vectors</li>
-<li>Functions</li>
-<li>Operators</li>
-<li>Data Frames, Martices &amp; Arrays</li>
+<li>Load Spatial Objects</li>
+<li>Create Spatial Objects</li>
+<li>Manipulate Spatial Objects</li>
+<li>Reproject into other projection Systems</li>
 </ol>
 
 </div>
 <div style='float:right;width:48%;'>
   <ul>
-<li><strong>Second Part</strong></li>
+<li><strong>Spatial Analyis</strong></li>
 </ul>
 
-<ol class = "build incremental">
-<li>Load data</li>
-<li>Manipulate Data</li>
-<li>Loops and Restrictions</li>
-<li>Loading Packages</li>
-<li>Plots </li>
+<ol>
+<li>Plots</li>
+<li>Density Estimations</li>
+<li></li>
+<li></li>
+<li> </li>
 </ol>
 
 <div style='position:absolute;top:5%;right:5%'>
@@ -110,7 +110,7 @@ strong {
 </slide>.
 <slide class="segue" id="slide-2">
 <hgroup>
-<h2><strong>Second Part</strong></h2>
+<h2>1.  Load Spatial Objects</h2>
 </hgroup>
 <article>
 
@@ -121,9 +121,9 @@ strong {
 </footer>
 </article>
 </slide>.
-<slide class="segue" id="slide-3">
+<slide class="" id="slide-3">
 <hgroup>
-<h2>1.  Load Data</h2>
+<h2>1.  Load Spatial Objects|</h2>
 </hgroup>
 <article>
 
@@ -134,14 +134,11 @@ strong {
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-4">
+<slide class="segue" id="slide-4">
 <hgroup>
-<h2>1.  Load Data | Where is your project at home?</h2>
+<h2>2.  Create Spatial Objects</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_wd.png' />
-</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -152,16 +149,9 @@ strong {
 </slide>.
 <slide class="" id="slide-5">
 <hgroup>
-<h2>1.  Load Data | Where is your project at home?</h2>
+<h2>2.  Create Spatial Objects |</h2>
 </hgroup>
 <article>
-<pre><code class="r">wd &lt;- &quot;C:\\Folder\\Subfolder\\SubSubFolder&quot;
-setwd(wd)   
-
-wd &lt;- &quot;/home/xxx/subFolder/SubSubFolder&quot;
-setwd(wd)
-
-</code></pre>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -170,14 +160,11 @@ setwd(wd)
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-6">
+<slide class="segue" id="slide-6">
 <hgroup>
-<h2>1.  Load Data | Save your current environement</h2>
+<h2>3.  Manipulate Spatial Objects</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_ws.png' />
-</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -188,12 +175,9 @@ setwd(wd)
 </slide>.
 <slide class="" id="slide-7">
 <hgroup>
-<h2>1.  Load Data | Save your current environement</h2>
+<h2>3.  Manipulate Spatial Objects</h2>
 </hgroup>
 <article>
-<pre><code class="r">save.image(&quot;7ws/name01.rws&quot;)
-load(&quot;7ws/name01.rws&quot;)
-</code></pre>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -202,22 +186,11 @@ load(&quot;7ws/name01.rws&quot;)
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-8">
+<slide class="segue" id="slide-8">
 <hgroup>
-<h2>1.  Load Data | Loading a Data Table</h2>
+<h2>4.  Reproject into other projection Systems</h2>
 </hgroup>
 <article>
-<pre><code class="r">df_mounds &lt;- read.table(&#39;2data/gravemounds.csv&#39;, header=TRUE)
-## Warning in file(file, &quot;rt&quot;): cannot open file &#39;2data/gravemounds.csv&#39;: No
-## such file or directory
-## Error in file(file, &quot;rt&quot;): cannot open the connection
-
-filename &lt;- &quot;2data/gravemounds02.csv&quot;
-
-write.table(df_mounds, file = filename, append = FALSE, quote = FALSE,
-sep = &quot;;&quot;, eol = &quot;\n&quot;, na = &quot;NA&quot;, dec = &quot;.&quot;, row.names = TRUE, col.names = TRUE)
-## Error in is.data.frame(x): object &#39;df_mounds&#39; not found
-</code></pre>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -228,7 +201,7 @@ sep = &quot;;&quot;, eol = &quot;\n&quot;, na = &quot;NA&quot;, dec = &quot;.&qu
 </slide>.
 <slide class="" id="slide-9">
 <hgroup>
-<h2>1.  Load Data | Loading a Data Table</h2>
+<h2>4.  Reproject into other projection Systems</h2>
 </hgroup>
 <article>
 
@@ -239,18 +212,11 @@ sep = &quot;;&quot;, eol = &quot;\n&quot;, na = &quot;NA&quot;, dec = &quot;.&qu
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-10">
+<slide class="segue" id="slide-10">
 <hgroup>
-<h2>1.  Load Data | Tidy Data</h2>
+<h2><strong>Spatial Analyis</strong></h2>
 </hgroup>
 <article>
-<pre><code class="r">df_BA &lt;- subset(df_mounds, variable==&quot;colour&quot;)
-## Error in subset(df_mounds, variable == &quot;colour&quot;): object &#39;df_mounds&#39; not found
-df_BA_INH &lt;- subset(df_mounds, variable==&quot;diameter&quot; |variable==&quot;length&quot;)
-## Error in subset(df_mounds, variable == &quot;diameter&quot; | variable == &quot;length&quot;): object &#39;df_mounds&#39; not found
-str(df_BA_INH)
-## Error in str(df_BA_INH): object &#39;df_BA_INH&#39; not found
-</code></pre>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -261,7 +227,7 @@ str(df_BA_INH)
 </slide>.
 <slide class="segue" id="slide-11">
 <hgroup>
-<h2>2.  Manipulate Data</h2>
+<h2>1.  Plots</h2>
 </hgroup>
 <article>
 
@@ -274,19 +240,9 @@ str(df_BA_INH)
 </slide>.
 <slide class="" id="slide-12">
 <hgroup>
-<h2>2.  Manipulate Data | Subset</h2>
+<h2>1.  Plots</h2>
 </hgroup>
 <article>
-<pre><code class="r">vec_a[4]
-## [1] 2
-vec_a[3]
-## [1] 2
-df[1,]
-##   Imports Graves         Site
-## 1       3      3 Bettelsbühl
-df[ ,1]
-## [1] 3 5 1 2 5 8 5 2
-</code></pre>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -295,50 +251,12 @@ df[ ,1]
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-13">
+<slide class="segue" id="slide-13">
 <hgroup>
-<h2>2.  Manipulate Data | Subset</h2>
+<h2>2.  Density Estimations</h2>
 </hgroup>
 <article>
 
-<div style='float:left;width:48%;' class='centered'>
-  <pre><code class="r">vec_a[c(3:5)]
-## [1] 2 2 5
-df[ c(1:3),c(2,3)]
-##   Graves         Site
-## 1      3 Bettelsbühl
-## 2     10 Mont Lassoir
-## 3      6       Kappel
-df[3, c(1,3)]
-##   Imports   Site
-## 3       1 Kappel
-# Using subset to change a value
-df[3,&quot;Imports&quot;] 
-## [1] 1
-df[3,&quot;Imports&quot;] &lt;- 1
-df[3,&quot;Imports&quot;] 
-## [1] 1
-</code></pre>
-
-</div>
-<div style='float:right;width:48%;'>
-  <pre><code class="r">df[c(6,7,8),2] &lt;- NA
-df
-##   Imports Graves         Site
-## 1       3      3 Bettelsbühl
-## 2       5     10 Mont Lassoir
-## 3       1      6       Kappel
-## 4       2      8        Salem
-## 5       5     25 Königsbück
-## 6       8     NA        Seltz
-## 7       5     NA  Gie�&lt;U+009F&gt;hübel
-## 8       2     NA   Hohmichele
-df$Site
-## [1] &quot;Bettelsbühl&quot; &quot;Mont Lassoir&quot; &quot;Kappel&quot;       &quot;Salem&quot;       
-## [5] &quot;Königsbück&quot; &quot;Seltz&quot;        &quot;Gie�&lt;U+009F&gt;hübel&quot;  &quot;Hohmichele&quot;
-</code></pre>
-
-</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -347,473 +265,6 @@ df$Site
 </article>
 </slide>.
 <slide class="" id="slide-14">
-<hgroup>
-<h2>2.  Manipulate Data | Subset</h2>
-</hgroup>
-<article>
-<p><strong>vector[...]</strong></p>
-
-<p><strong>df[ row , col ]</strong></p>
-
-<table><thead>
-<tr>
-<th><strong>subset</strong></th>
-<th><strong>effect</strong></th>
-<th>Example</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>positive integer</td>
-<td>returns <strong>specified</strong> elements</td>
-<td><code>c(1,3:4)</code> or <code>2</code></td>
-</tr>
-<tr>
-<td>negative integer</td>
-<td>returns <strong>all other</strong> elements</td>
-<td><code>c(-1,-3:4)</code> or <code>-2</code></td>
-</tr>
-<tr>
-<td>blank spaces</td>
-<td>returns <strong>all</strong></td>
-<td></td>
-</tr>
-<tr>
-<td>names</td>
-<td>return those with <strong>specific names</strong></td>
-<td><code>c(&quot;name&quot;, &quot;type&quot;)</code> or <code>&quot;name&quot;</code></td>
-</tr>
-<tr>
-<td>logical</td>
-<td>returns elements, that corresponds to <strong>TRUE</strong></td>
-<td><code>c(TRUE, FALSE)</code> or <code>TRUE</code></td>
-</tr>
-</tbody></table>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-15">
-<hgroup>
-<h2>2.  Manipulate Data | Combine Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">merge(x, y, by = intersect(names(x), names(y)),
-      by.x = by, by.y = by, all = FALSE, all.x = all, all.y = all,
-      sort = TRUE, suffixes = c(&quot;.x&quot;,&quot;.y&quot;),
-      incomparables = NULL, ...)
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-16">
-<hgroup>
-<h2>2.  Manipulate Data | Combine Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">str(ndf)
-## &#39;data.frame&#39;:    8 obs. of  3 variables:
-##  $ Imports: num  3 5 2 2 5 8 5 2
-##  $ Graves : num  3 10 6 8 25 48 35 16
-##  $ Site   : Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
-str(df_mounds)
-## Error in str(df_mounds): object &#39;df_mounds&#39; not found
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-17">
-<hgroup>
-<h2>2.  Manipulate Data | Combine Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">cbind(x,y) # Combines data frames columnwise
-rbind(x,y) # Combines data frames rowwise
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-18">
-<hgroup>
-<h2>2.  Manipulate Data | Combine Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">cbind(df_mounds, ndf) 
-## Error in cbind(df_mounds, ndf): object &#39;df_mounds&#39; not found
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-19">
-<hgroup>
-<h2>2.  Manipulate Data | Combine Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">rbind(df_mounds, ndf)
-## Error in rbind(df_mounds, ndf): object &#39;df_mounds&#39; not found
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-20">
-<hgroup>
-<h2>2.  Manipulate Data | Merge Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">ndf_mounds &lt;- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole,
-                    by.y=site)
-## Error in merge(df_mounds, ndf, all.x = TRUE, all.y = FALSE, by.x = Nekropole, : object &#39;df_mounds&#39; not found
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-21">
-<hgroup>
-<h2>2.  Manipulate Data | Unique</h2>
-</hgroup>
-<article>
-<pre><code class="r">unique(x, incomparables = FALSE, fromLast = FALSE, ...)
-</code></pre>
-
-<p><strong>... <code>unique()</code> returns a vector, data frame or array like x but with duplicate elements/rows removed.</strong></p>
-
-<pre><code class="r">R &lt;- data.frame(V1 = c(1,1,1), V2 = c(2,2,2), V3 = c(&quot;A&quot;,&quot;A&quot;,&quot;B&quot;))
-unique(R)
-##   V1 V2 V3
-## 1  1  2  A
-## 3  1  2  B
-uni_v3 &lt;- unique(R$V3)
-uni_v3
-## [1] A B
-## Levels: A B
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-22">
-<hgroup>
-<h2>2.  Manipulate Data | Unique</h2>
-</hgroup>
-<article>
-<pre><code class="r">duplicated(x, incomparables = FALSE, fromLast = FALSE, nmax = NA, ...)
-</code></pre>
-
-<p><strong>... <code>duplicated()</code> determines which elements of a vector or data frame are duplicates of elements with smaller subscripts, and returns a logical vector indicating which elements (rows) are duplicates.</strong></p>
-
-<pre><code class="r">R 
-##   V1 V2 V3
-## 1  1  2  A
-## 2  1  2  A
-## 3  1  2  B
-duplicated(x = R, fromLast = TRUE)
-## [1]  TRUE FALSE FALSE
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="segue" id="slide-23">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-24">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-<p>Loops repeat statements</p>
-
-<pre><code class="r"># Loops repeat statements
-a &lt;- 1
-for (i in 1:20){
-a &lt;- a+a
-}
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-25">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-<p>Loops repeat statements</p>
-
-<pre><code class="r"># Loops repeat statements
-a &lt;- 1
-for (i in 1:20){
-a &lt;- a+a
-}
-
-a
-## [1] 1048576
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-26">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-<pre><code class="r"># conditions restrict statements
-i &lt;- 1
-a &lt;- 1
-
-while (a &lt;55){
-a &lt;-a+a
-i=i+1
-}
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-27">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-<pre><code class="r"># conditions restrict statements
-i &lt;- 1
-a &lt;- 1
-
-while (a &lt;55){
-a &lt;-a+a
-i=i+1
-}
-
-a
-## [1] 64
-i
-## [1] 7
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-28">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-<pre><code class="r"># conditions restrict statements
-if (a&gt;55){
-a &lt;- a/2
-} else {
-a &lt;- a*2
-}
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-29">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-<pre><code class="r"># conditions restrict statements
-a 
-## [1] 32
-
-if (a&gt;55){
-a &lt;- a/2
-} else {
-a &lt;- a*2
-}
-a
-## [1] 64
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-30">
-<hgroup>
-<h2>3.  Loops and Restrictions</h2>
-</hgroup>
-<article>
-<table><thead>
-<tr>
-<th>Loops or Restrictions</th>
-<th><strong>starts</strong></th>
-<th><strong>Condistions</strong></th>
-<th><strong>Indside</strong></th>
-<th><strong>Ends</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Loop</td>
-<td><code>for</code></td>
-<td><code>(i in **repetition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
-<td><code>}</code> in a seperate line</td>
-</tr>
-<tr>
-<td>Restrictions</td>
-<td><code>while</code></td>
-<td><code>(i in **condition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
-<td><code>}</code> in a seperate line</td>
-</tr>
-<tr>
-<td>Restrictions</td>
-<td><code>if</code> in combination with <code>else</code></td>
-<td><code>(i in **condition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
-<td><code>}</code> in a seperate line</td>
-</tr>
-<tr>
-<td>Restrictions</td>
-<td><code>else</code></td>
-<td><code>(i in **condition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
-<td><code>}</code> in a seperate line</td>
-</tr>
-</tbody></table>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="segue" id="slide-31">
-<hgroup>
-<h2>4.  Package management</h2>
-</hgroup>
-<article>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-32">
-<hgroup>
-<h2>4.  Package management</h2>
-</hgroup>
-<article>
-<p>Package management:</p>
-
-<pre><code class="r">old.packages()                        # Your currently installed packages
-
-update.packages()                     # Update all Packages
-update.packages(&quot;package-name&quot;)       # Update a specific package
-</code></pre>
-
-<p>Loading Packages:</p>
-
-<pre><code class="r">install.packages(&quot;package-name&quot;)    # Download and install the named package
-</code></pre>
-
-<p>Using Packages:</p>
-
-<pre><code class="r">library(package-name)               # Loading packages every time you restart R!
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="segue" id="slide-33">
-<hgroup>
-<h2>5.  Plots</h2>
-</hgroup>
-<article>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-34">
 <hgroup>
 <h2>Exercise 3</h2>
 </hgroup>
@@ -845,200 +296,80 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='<strong>Second Part</strong>'>
+        data-slide=2 title='1.  Load Spatial Objects'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='1.  Load Data'>
+        data-slide=3 title='1.  Load Spatial Objects|'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='1.  Load Data | Where is your project at home?'>
+        data-slide=4 title='2.  Create Spatial Objects'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='1.  Load Data | Where is your project at home?'>
+        data-slide=5 title='2.  Create Spatial Objects |'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='1.  Load Data | Save your current environement'>
+        data-slide=6 title='3.  Manipulate Spatial Objects'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='1.  Load Data | Save your current environement'>
+        data-slide=7 title='3.  Manipulate Spatial Objects'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='1.  Load Data | Loading a Data Table'>
+        data-slide=8 title='4.  Reproject into other projection Systems'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='1.  Load Data | Loading a Data Table'>
+        data-slide=9 title='4.  Reproject into other projection Systems'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='1.  Load Data | Tidy Data'>
+        data-slide=10 title='<strong>Spatial Analyis</strong>'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='2.  Manipulate Data'>
+        data-slide=11 title='1.  Plots'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='2.  Manipulate Data | Subset'>
+        data-slide=12 title='1.  Plots'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='2.  Manipulate Data | Subset'>
+        data-slide=13 title='2.  Density Estimations'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='2.  Manipulate Data | Subset'>
+        data-slide=14 title='Exercise 3'>
          14
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='2.  Manipulate Data | Combine Data Frames'>
-         15
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='2.  Manipulate Data | Combine Data Frames'>
-         16
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='2.  Manipulate Data | Combine Data Frames'>
-         17
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='2.  Manipulate Data | Combine Data Frames'>
-         18
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='2.  Manipulate Data | Combine Data Frames'>
-         19
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='2.  Manipulate Data | Merge Data Frames'>
-         20
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='2.  Manipulate Data | Unique'>
-         21
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='2.  Manipulate Data | Unique'>
-         22
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='3.  Loops and Restrictions'>
-         23
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='3.  Loops and Restrictions'>
-         24
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='3.  Loops and Restrictions'>
-         25
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='3.  Loops and Restrictions'>
-         26
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='3.  Loops and Restrictions'>
-         27
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='3.  Loops and Restrictions'>
-         28
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='3.  Loops and Restrictions'>
-         29
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='3.  Loops and Restrictions'>
-         30
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='4.  Package management'>
-         31
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='4.  Package management'>
-         32
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='5.  Plots'>
-         33
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='Exercise 3'>
-         34
       </a>
     </li>
   </ul>
