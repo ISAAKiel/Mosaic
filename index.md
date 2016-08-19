@@ -66,7 +66,7 @@ strong {
 
 ## MOSAIC - Modelling Speheres of Interaction
 
-** Aim**
+**Aim**
 
 This Summer School focuses on interaction as a key concept in social life, and 
 on methods for reconstructing and modeling spheres of interaction at different 
@@ -76,6 +76,10 @@ variety of theories and concepts that will enable students to apply this method
 to further regions, material groups, and time periods. The course is divided 
 into individual lessons presented by experts, thus providing a diverse overview 
 of approaches.
+
+---
+
+## MOSAIC - Modelling Speheres of Interaction
 
 **About Mosaic**
 
