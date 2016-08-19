@@ -38,14 +38,14 @@ strong {
 3. [R Basics: Frist Steps](03-R_basics01/index.html)
 4. [R Basics: Getting used to R](04-R_basics02/index.html)
 5. [Using R as GIS](05-R_GIS/index.html)
-6. [**Workshop:** Basic Spatial Statistics]
+6. [**Workshop:** Basic Spatial Statistics](06-WS_Basic_SPatial_Statistics/index.html)
 
 *** =right
 
 **Wednesday, 7th of September**
 
 7. [Modelling Interaction: Cultural distances]
-8. [**Workshop**: Geographical and Econimic Distances]
+8. [**Workshop**: Geographical and Econimic Distances](08-WS_Geo_Eco_Distances/index.html)
 9. [**Workshop:** Cultural Distances]
 10. [Using network approaches to modell Interaction]
 11. [**Workshop:** Pointpattern Analysis]
