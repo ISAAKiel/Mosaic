@@ -110,7 +110,7 @@ strong {
 </slide>.
 <slide class="segue" id="slide-2">
 <hgroup>
-<h2>Something to remember...</h2>
+<h2>Somethings to remember...</h2>
 </hgroup>
 <article>
 <p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
@@ -126,7 +126,7 @@ strong {
 </slide>.
 <slide class="" id="slide-3">
 <hgroup>
-<h2>Something to remember:</h2>
+<h2>Somethings to remember:</h2>
 </hgroup>
 <article>
 <p>To understand computations in R, two slogans are helpful:</p>
@@ -252,8 +252,8 @@ vec03
 <article>
 <pre><code class="r">seq_var &lt;- 1:10
 seq_var
-seq_var &lt;- seq(10)                # sep() is a function!
-seq_var
+seq_var &lt;- seq(10)               # seq() is a function!
+seq_var                           
 seq_var &lt;- seq(1, 9, by = 0.1)    # seq(&quot;from&quot;, &quot;to&quot;, by = &quot;steps&quot;)
 seq_var
 </code></pre>
@@ -273,7 +273,7 @@ seq_var
 <pre><code class="r">seq_var &lt;- 1:10
 seq_var
 ##  [1]  1  2  3  4  5  6  7  8  9 10
-seq_var &lt;- seq(10)                # sep() is a function!
+seq_var &lt;- seq(10)                # seq() is a function!
 seq_var
 ##  [1]  1  2  3  4  5  6  7  8  9 10
 seq_var &lt;- seq(1, 9, by = 0.1)    # seq(&quot;from&quot;, &quot;to&quot;, by = &quot;steps&quot;)
@@ -316,16 +316,15 @@ seq_var
 </div>
 <div style='float:right;width:48%;'>
   <pre><code class="r">dbl_var &lt;- c(4,6,7,2)     
-dbl_var
+
 # With the L suffix, you get an integer
 int_var &lt;- c(1L, 6L, 10L)
-int_var 
+
 # Use TRUE and FALSE (or T and F) 
 # to create logical vectors
 log_var &lt;- c(TRUE, FALSE, T, F)
-log_var
+
 chr_var &lt;- c(&quot;these are&quot;, &quot;some strings&quot;)
-chr_var
 </code></pre>
 
 </div>
@@ -408,14 +407,13 @@ chr_var
 </div>
 <div style='float:right;width:48%;'>
   <pre><code class="r">cpl_var &lt;-2i+2     
-cpl_var
+
 
 d &lt;- as.Date(&quot;2016-09-06&quot;)
-d
+
 # Raw vectors are used to store 
 # fixed-length sequences of bytes.
 raw_var &lt;- raw(10)
-raw_var
 </code></pre>
 
 </div>
@@ -980,7 +978,7 @@ str(df)
 ## &#39;data.frame&#39;:    8 obs. of  3 variables:
 ##  $ vec_a: num  3 5 2 2 5 8 5 2
 ##  $ vec_b: num  3 10 6 8 25 48 35 16
-##  $ nam_s: Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
+##  $ nam_s: Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 4 7 5 8 2 3
 </code></pre>
 
 <footer class = 'logo'>
@@ -999,13 +997,13 @@ str(df)
 
 <pre><code class="r">df
 ##   vec_a vec_b        nam_s
-## 1     3     3 Bettelsbühl
+## 1     3     3  Bettelsbühl
 ## 2     5    10 Mont Lassoir
 ## 3     2     6       Kappel
 ## 4     2     8        salem
-## 5     5    25 Königsbück
+## 5     5    25   Königsbück
 ## 6     8    48        seltz
-## 7     5    35  Giesshübel
+## 7     5    35   Giesshübel
 ## 8     2    16   Hohmichele
 </code></pre>
 
@@ -1033,7 +1031,7 @@ str(df)
 ## &#39;data.frame&#39;:    8 obs. of  3 variables:
 ##  $ vec_a: num  3 5 2 2 5 8 5 2
 ##  $ vec_b: num  3 10 6 8 25 48 35 16
-##  $ nam_s: Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
+##  $ nam_s: Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 4 7 5 8 2 3
 </code></pre>
 
 <footer class = 'logo'>
@@ -1051,15 +1049,15 @@ str(df)
 <p><strong>Factors are special vectors that represent categorical data.</strong></p>
 
 <pre><code class="r">df$nam_s
-## [1] Bettelsbühl Mont Lassoir Kappel       Salem        Königsbück
-## [6] Seltz        Gie�&lt;U+009F&gt;hübel  Hohmichele  
-## 8 Levels: Bettelsbühl Gie�&lt;U+009F&gt;hübel Hohmichele Königsbück ... Seltz
+## [1] Bettelsbühl  Mont Lassoir Kappel       Salem        Königsbück  
+## [6] Seltz        Gießhübel    Hohmichele  
+## 8 Levels: Bettelsbühl Gießhübel Hohmichele Kappel ... Seltz
 str(df$nam_s)
-##  Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
+##  Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 4 7 5 8 2 3
 df$nam_s &lt;- as.character(df$nam_s)
 df$nam_s
-## [1] &quot;Bettelsbühl&quot; &quot;Mont Lassoir&quot; &quot;Kappel&quot;       &quot;Salem&quot;       
-## [5] &quot;Königsbück&quot; &quot;Seltz&quot;        &quot;Gie�&lt;U+009F&gt;hübel&quot;  &quot;Hohmichele&quot;
+## [1] &quot;Bettelsbühl&quot;  &quot;Mont Lassoir&quot; &quot;Kappel&quot;       &quot;Salem&quot;       
+## [5] &quot;Königsbück&quot;   &quot;Seltz&quot;        &quot;Gießhübel&quot;    &quot;Hohmichele&quot;
 str(df$nam_s)
 ##  chr [1:8] &quot;Bettelsbühl&quot; &quot;Mont Lassoir&quot; &quot;Kappel&quot; &quot;Salem&quot; ...
 </code></pre>
@@ -1111,13 +1109,13 @@ y
                   Site = nam_s)
 ndf
 ##   Imports Graves         Site
-## 1       3      3 Bettelsbühl
+## 1       3      3  Bettelsbühl
 ## 2       5     10 Mont Lassoir
 ## 3       2      6       Kappel
 ## 4       2      8        Salem
-## 5       5     25 Königsbück
+## 5       5     25   Königsbück
 ## 6       8     48        Seltz
-## 7       5     35  Gie�&lt;U+009F&gt;hübel
+## 7       5     35    Gießhübel
 ## 8       2     16   Hohmichele
 </code></pre>
 
@@ -1126,13 +1124,13 @@ ndf
   <pre><code class="r">names(df) &lt;- c(&quot;Imports&quot;, &quot;Graves&quot;, &quot;Site&quot;)
 df
 ##   Imports Graves         Site
-## 1       3      3 Bettelsbühl
+## 1       3      3  Bettelsbühl
 ## 2       5     10 Mont Lassoir
 ## 3       2      6       Kappel
 ## 4       2      8        Salem
-## 5       5     25 Königsbück
+## 5       5     25   Königsbück
 ## 6       8     48        Seltz
-## 7       5     35  Gie�&lt;U+009F&gt;hübel
+## 7       5     35    Gießhübel
 ## 8       2     16   Hohmichele
 </code></pre>
 
@@ -1278,13 +1276,13 @@ df
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Something to remember...'>
+        data-slide=2 title='Somethings to remember...'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Something to remember:'>
+        data-slide=3 title='Somethings to remember:'>
          3
       </a>
     </li>

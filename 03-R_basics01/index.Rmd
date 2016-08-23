@@ -51,7 +51,7 @@ strong {
 
 --- .segue bg:grey
 
-## Something to remember...
+## Somethings to remember...
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
@@ -59,7 +59,7 @@ strong {
 
 ---
 
-## Something to remember:
+## Somethings to remember:
 
 To understand computations in R, two slogans are helpful:
 
@@ -125,6 +125,11 @@ vec02
 vec03
 ```
 
+*** =pnotes
+
+Please decide wether you want to use a script for your exercises or use only the 
+console
+
 ---
 
 ## 1.  Vectors | How to create a vector?
@@ -146,10 +151,11 @@ vec03
 ```{r collapse=TRUE, results='hide'}
 seq_var <- 1:10
 seq_var
-seq_var <- seq(10)                # sep() is a function!
-seq_var
+seq_var <- seq(10)               # seq() is a function!
+seq_var                           
 seq_var <- seq(1, 9, by = 0.1)    # seq("from", "to", by = "steps")
 seq_var
+
 ```
 
 ---
@@ -160,7 +166,7 @@ seq_var
 ```{r collapse=TRUE}
 seq_var <- 1:10
 seq_var
-seq_var <- seq(10)                # sep() is a function!
+seq_var <- seq(10)                # seq() is a function!
 seq_var
 seq_var <- seq(1, 9, by = 0.1)    # seq("from", "to", by = "steps")
 seq_var
@@ -185,16 +191,16 @@ seq_var
 
 ```{r collapse=TRUE, results='hide'}
 dbl_var <- c(4,6,7,2)     
-dbl_var
+
 # With the L suffix, you get an integer
 int_var <- c(1L, 6L, 10L)
-int_var 
+ 
 # Use TRUE and FALSE (or T and F) 
 # to create logical vectors
 log_var <- c(TRUE, FALSE, T, F)
-log_var
+
 chr_var <- c("these are", "some strings")
-chr_var
+
 ```
 
 --- &twocol
@@ -247,14 +253,14 @@ chr_var
 
 ```{r collapse=TRUE, results='hide'}
 cpl_var <-2i+2     
-cpl_var
+
 
 d <- as.Date("2016-09-06")
-d
+
 # Raw vectors are used to store 
 # fixed-length sequences of bytes.
 raw_var <- raw(10)
-raw_var
+
 ```
 
 --- &twocol
