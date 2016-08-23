@@ -162,6 +162,155 @@ setwd(wd)
 </slide>.
 <slide class="" id="slide-5">
 <hgroup>
+<h2>1.  Load Data | Loading a Data Table</h2>
+</hgroup>
+<article>
+<pre><code class="r">df_mounds &lt;- read.table(&#39;gravemounds.csv&#39;, header=TRUE, sep=&#39;;&#39;)
+# See ?read.table for further information
+
+filename &lt;- &quot;gravemounds02.csv&quot; # Creating a string vector 
+
+# Writing a data frame
+write.table(df_mounds, file = filename, quote = FALSE,
+sep = &quot;;&quot;, na = &quot;NA&quot;, dec = &quot;.&quot;, row.names = TRUE, col.names = TRUE)
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-6">
+<hgroup>
+<h2>1.  Load Data | Loading a Data Table</h2>
+</hgroup>
+<article>
+<pre><code class="r">df_mounds
+</code></pre>
+
+<pre><code>##                    Nekropole Gravemounds Inhumation Incremation Epoche
+## 1            Schelmenhostadt           8          y           y   both
+## 2                  Heuschier           6                            BA
+## 3                Wolfswinkel          33          y           y   both
+## 4                  Deilsberg          14                      y     BA
+## 5               Taubenhuebel          12          y           y   both
+## 6                   Eichlach          16          y           y     BA
+## 7                 Fischereck           7          y           y   both
+## 8             Hatternstangen          18                      y     BA
+## 9        Dachhuebel-Birklach          20          y           y     BA
+## 10                Beckenmatt          31          y                 BA
+## 11        Weisensee-Oberfeld          63          y           y   both
+## 12                   Erzlach           5                            BA
+## 13                 Donauberg          14          y           y   both
+## 14               Koenigsberg          23          y           y   both
+## 15 Fischerhuebel-Kurzgelaend          98          y           y   both
+## 16           Schirrheinerweg          17          y           y   both
+## 17                 Kirchlach         120          y           y   both
+## 18                     Gries           5                          both
+## 19                 Weitbruch          15          y           y     BA
+## 20                 Harthouse          15          y           y   both
+## 21                  Maegstub          31                          both
+## 22              Oberstritten           1                            BA
+## 23                  Ohlungen           3                      y     IA
+## 24                 Uhlwiller          15                      y     IA
+##    Excavated     Literature Bronze Ceramics Amber Gold Glass Iron Stone
+## 1          8 Schaeffer 1926     43        8     9   NA     1    1     1
+## 2          1 Schaeffer 1926     NA       NA    NA   NA    NA   NA    NA
+## 3         12 Schaeffer 1930     13        9    NA   NA    NA   NA    NA
+## 4          5 Schaeffer 1926     12        3     3    1     2   NA    NA
+## 5          7 Schaeffer 1930     29        9     1   NA    NA   NA    NA
+## 6          9 Schaeffer 1926      7        9    NA   NA    NA   NA     1
+## 7          7 Schaeffer 1930     14        4    NA   NA    NA   NA     2
+## 8          9 Schaeffer 1926      4       11    NA   NA    NA   NA    NA
+## 9          7 Schaeffer 1926     23       13     4   NA    NA   NA    NA
+## 10        26 Schaeffer 1926     15       24    NA   NA    NA   NA    NA
+## 11        38 Schaeffer 1930     88       62     8    1    NA    5    NA
+## 12         5 Schaeffer 1926      3       NA    NA   NA    NA   NA    NA
+## 13        14 Schaeffer 1930     68       24    NA   NA     1    2    NA
+## 14        20 Schaeffer 1930    257       50     7    3    11   30     6
+## 15        89 Schaeffer 1930    304       90    20    2     8   19    13
+## 16        13 Schaeffer 1930     62       11    NA    2     1    3     4
+## 17       100 Schaeffer 1930    134      173    12   NA     3   13     4
+## 18         2 Schaeffer 1930      7       18    NA   NA    NA   NA    NA
+## 19         7 Schaeffer 1930     53       11    NA    2    NA    5    NA
+## 20         9 Schaeffer 1930    118       19    NA   NA     2   10    16
+## 21        13 Schaeffer 1930    309       23    10    3    10   31     9
+## 22         1 Schaeffer 1926      8        1    NA   NA    NA   NA    NA
+## 23         3 Schaeffer 1930    101       NA    12    4    16    3    12
+## 24        14 Schaeffer 1930     49        1     1   NA     3    9     1
+##    Coral       X       Y
+## 1     NA 3419142 5416936
+## 2     NA 3417717 5415907
+## 3     NA 3421495 5415052
+## 4     NA 3423415 5413753
+## 5     NA 3419884 5414973
+## 6     NA 3419139 5413198
+## 7     NA 3416267 5413553
+## 8     NA 3417327 5412854
+## 9     NA 3412431 5412258
+## 10    NA 3419640 5411492
+## 11    NA 3422261 5411072
+## 12    NA 3423314 5411595
+## 13    NA 3424722 5411495
+## 14     2 3425604 5412985
+## 15     3 3422962 5409879
+## 16     1 3421628 5408831
+## 17    NA 3419741 5408021
+## 18    NA 3412957 5404536
+## 19    NA 3411268 5404405
+## 20     1 3406774 5406406
+## 21     1 3406705 5411437
+## 22    NA 3412351 5418083
+## 23     3 3405413 5410742
+## 24    NA 3404224 5411166
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-7">
+<hgroup>
+<h2>1.  Load Data | Creating new Data Frames using <code>subset</code></h2>
+</hgroup>
+<article>
+<pre><code class="r">df_BA &lt;- subset(df_mounds, df_mounds$Epoche == &quot;BA&quot;)
+df_BA_INH &lt;- subset(df_mounds, df_mounds$Epoche == &quot;BA&quot; &amp; df_mounds$Inhumation == &quot;y&quot;)
+str(df_BA_INH)
+## &#39;data.frame&#39;:    4 obs. of  17 variables:
+##  $ Nekropole  : Factor w/ 24 levels &quot;Beckenmatt&quot;,&quot;Dachhuebel-Birklach&quot;,..: 5 2 1 23
+##  $ Gravemounds: int  16 20 31 15
+##  $ Inhumation : Factor w/ 2 levels &quot;&quot;,&quot;y&quot;: 2 2 2 2
+##  $ Incremation: Factor w/ 2 levels &quot;&quot;,&quot;y&quot;: 2 2 1 2
+##  $ Epoche     : Factor w/ 3 levels &quot;BA&quot;,&quot;both&quot;,&quot;IA&quot;: 1 1 1 1
+##  $ Excavated  : int  9 7 26 7
+##  $ Literature : Factor w/ 2 levels &quot;Schaeffer 1926&quot;,..: 1 1 1 2
+##  $ Bronze     : int  7 23 15 53
+##  $ Ceramics   : int  9 13 24 11
+##  $ Amber      : int  NA 4 NA NA
+##  $ Gold       : int  NA NA NA 2
+##  $ Glass      : int  NA NA NA NA
+##  $ Iron       : int  NA NA NA 5
+##  $ Stone      : int  1 NA NA NA
+##  $ Coral      : int  NA NA NA NA
+##  $ X          : num  3419139 3412431 3419640 3411268
+##  $ Y          : num  5413198 5412258 5411492 5404405
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-8">
+<hgroup>
 <h2>1.  Load Data | Save your current environement</h2>
 </hgroup>
 <article>
@@ -176,70 +325,13 @@ setwd(wd)
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-6">
+<slide class="" id="slide-9">
 <hgroup>
 <h2>1.  Load Data | Save your current environement</h2>
 </hgroup>
 <article>
 <pre><code class="r">save.image(&quot;7ws/name01.rws&quot;)
 load(&quot;7ws/name01.rws&quot;)
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-7">
-<hgroup>
-<h2>1.  Load Data | Loading a Data Table</h2>
-</hgroup>
-<article>
-<pre><code class="r">df_mounds &lt;- read.table(&#39;2data/gravemounds.csv&#39;, header=TRUE)
-## Warning in file(file, &quot;rt&quot;): cannot open file &#39;2data/gravemounds.csv&#39;: No
-## such file or directory
-## Error in file(file, &quot;rt&quot;): cannot open the connection
-
-filename &lt;- &quot;2data/gravemounds02.csv&quot;
-
-write.table(df_mounds, file = filename, append = FALSE, quote = FALSE,
-sep = &quot;;&quot;, eol = &quot;\n&quot;, na = &quot;NA&quot;, dec = &quot;.&quot;, row.names = TRUE, col.names = TRUE)
-## Error in is.data.frame(x): object &#39;df_mounds&#39; not found
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-8">
-<hgroup>
-<h2>1.  Load Data | Loading a Data Table</h2>
-</hgroup>
-<article>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-9">
-<hgroup>
-<h2>1.  Load Data | Tidy Data</h2>
-</hgroup>
-<article>
-<pre><code class="r">df_BA &lt;- subset(df_mounds, variable==&quot;colour&quot;)
-## Error in subset(df_mounds, variable == &quot;colour&quot;): object &#39;df_mounds&#39; not found
-df_BA_INH &lt;- subset(df_mounds, variable==&quot;diameter&quot; |variable==&quot;length&quot;)
-## Error in subset(df_mounds, variable == &quot;diameter&quot; | variable == &quot;length&quot;): object &#39;df_mounds&#39; not found
-str(df_BA_INH)
-## Error in str(df_BA_INH): object &#39;df_BA_INH&#39; not found
 </code></pre>
 
 <footer class = 'logo'>
@@ -267,20 +359,33 @@ str(df_BA_INH)
 </slide>.
 <slide class="" id="slide-11">
 <hgroup>
-<h2>2.  Manipulate Data | Subset</h2>
+<h2>2.  Manipulate Data | How to choose a specific value</h2>
 </hgroup>
 <article>
-<pre><code class="r">vec_a[4]
-## [1] 2
-vec_a[3]
-## [1] 2
-df[1,]
-##   Imports Graves         Site
-## 1       3      3 Bettelsbühl
-df[ ,1]
-## [1] 3 5 1 2 5 8 5 2
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">df &lt;- df_mounds # Coping df_mounds
+df[c(1:3),c(2,3)]
+##   Gravemounds Inhumation
+## 1           8          y
+## 2           6           
+## 3          33          y
+df[3, c(1,3)]
+##     Nekropole Inhumation
+## 3 Wolfswinkel          y
 </code></pre>
 
+</div>
+<div style='float:right;width:48%;'>
+  <p><strong>... and to change it</strong></p>
+
+<pre><code class="r">df[c(6,7,8),3] &lt;- NA # Asign these values with NA 
+df[c(6,7,8),3]
+## [1] &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## Levels:  y
+</code></pre>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -290,58 +395,7 @@ df[ ,1]
 </slide>.
 <slide class="" id="slide-12">
 <hgroup>
-<h2>2.  Manipulate Data | Subset</h2>
-</hgroup>
-<article>
-
-<div style='float:left;width:48%;' class='centered'>
-  <pre><code class="r">vec_a[c(3:5)]
-## [1] 2 2 5
-df[ c(1:3),c(2,3)]
-##   Graves         Site
-## 1      3 Bettelsbühl
-## 2     10 Mont Lassoir
-## 3      6       Kappel
-df[3, c(1,3)]
-##   Imports   Site
-## 3       1 Kappel
-# Using subset to change a value
-df[3,&quot;Imports&quot;] 
-## [1] 1
-df[3,&quot;Imports&quot;] &lt;- 1
-df[3,&quot;Imports&quot;] 
-## [1] 1
-</code></pre>
-
-</div>
-<div style='float:right;width:48%;'>
-  <pre><code class="r">df[c(6,7,8),2] &lt;- NA
-df
-##   Imports Graves         Site
-## 1       3      3 Bettelsbühl
-## 2       5     10 Mont Lassoir
-## 3       1      6       Kappel
-## 4       2      8        Salem
-## 5       5     25 Königsbück
-## 6       8     NA        Seltz
-## 7       5     NA  Gie�&lt;U+009F&gt;hübel
-## 8       2     NA   Hohmichele
-df$Site
-## [1] &quot;Bettelsbühl&quot; &quot;Mont Lassoir&quot; &quot;Kappel&quot;       &quot;Salem&quot;       
-## [5] &quot;Königsbück&quot; &quot;Seltz&quot;        &quot;Gie�&lt;U+009F&gt;hübel&quot;  &quot;Hohmichele&quot;
-</code></pre>
-
-</div>
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-13">
-<hgroup>
-<h2>2.  Manipulate Data | Subset</h2>
+<h2>2.  Manipulate Data | How to choose a specific value</h2>
 </hgroup>
 <article>
 <p><strong>vector[...]</strong></p>
@@ -350,7 +404,7 @@ df$Site
 
 <table><thead>
 <tr>
-<th><strong>subset</strong></th>
+<th><strong>argument</strong></th>
 <th><strong>effect</strong></th>
 <th>Example</th>
 </tr>
@@ -389,6 +443,26 @@ df$Site
 </footer>
 </article>
 </slide>.
+<slide class="" id="slide-13">
+<hgroup>
+<h2>2.  Manipulate Data | Adding new Columns</h2>
+</hgroup>
+<article>
+<pre><code class="r">df$newcol &lt;- df$Excavated/df$Gravemounds*100
+df$newcol
+##  [1] 100.00000  16.66667  36.36364  35.71429  58.33333  56.25000 100.00000
+##  [8]  50.00000  35.00000  83.87097  60.31746 100.00000 100.00000  86.95652
+## [15]  90.81633  76.47059  83.33333  40.00000  46.66667  60.00000  41.93548
+## [22] 100.00000 100.00000  93.33333
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
 <slide class="" id="slide-14">
 <hgroup>
 <h2>2.  Manipulate Data | Combine Data Frames</h2>
@@ -409,16 +483,11 @@ df$Site
 </slide>.
 <slide class="" id="slide-15">
 <hgroup>
-<h2>2.  Manipulate Data | Combine Data Frames</h2>
+<h2>2.  Manipulate Data | Merge Data Frames</h2>
 </hgroup>
 <article>
-<pre><code class="r">str(ndf)
-## &#39;data.frame&#39;:    8 obs. of  3 variables:
-##  $ Imports: num  3 5 2 2 5 8 5 2
-##  $ Graves : num  3 10 6 8 25 48 35 16
-##  $ Site   : Factor w/ 8 levels &quot;Bettelsbühl&quot;,..: 1 6 5 7 4 8 2 3
-str(df_mounds)
-## Error in str(df_mounds): object &#39;df_mounds&#39; not found
+<pre><code class="r">ndf&lt;- merge(df_mounds, df, all.x=TRUE, all.y=FALSE, by.x=&quot;Nekropole&quot;,
+                    by.y=&quot;Nekropole&quot;)
 </code></pre>
 
 <footer class = 'logo'>
@@ -433,8 +502,42 @@ str(df_mounds)
 <h2>2.  Manipulate Data | Combine Data Frames</h2>
 </hgroup>
 <article>
-<pre><code class="r">cbind(x,y) # Combines data frames columnwise
-rbind(x,y) # Combines data frames rowwise
+<pre><code class="r">str(ndf)
+## &#39;data.frame&#39;:    24 obs. of  34 variables:
+##  $ Nekropole    : Factor w/ 24 levels &quot;Beckenmatt&quot;,&quot;Dachhuebel-Birklach&quot;,..: 1 2 3 4 5 6 7 8 9 10 ...
+##  $ Gravemounds.x: int  31 20 14 14 16 5 7 98 5 15 ...
+##  $ Inhumation.x : Factor w/ 2 levels &quot;&quot;,&quot;y&quot;: 2 2 1 2 2 1 2 2 1 2 ...
+##  $ Incremation.x: Factor w/ 2 levels &quot;&quot;,&quot;y&quot;: 1 2 2 2 2 1 2 2 1 2 ...
+##  $ Epoche.x     : Factor w/ 3 levels &quot;BA&quot;,&quot;both&quot;,&quot;IA&quot;: 1 1 1 2 1 1 2 2 2 2 ...
+##  $ Excavated.x  : int  26 7 5 14 9 5 7 89 2 9 ...
+##  $ Literature.x : Factor w/ 2 levels &quot;Schaeffer 1926&quot;,..: 1 1 1 2 1 1 2 2 2 2 ...
+##  $ Bronze.x     : int  15 23 12 68 7 3 14 304 7 118 ...
+##  $ Ceramics.x   : int  24 13 3 24 9 NA 4 90 18 19 ...
+##  $ Amber.x      : int  NA 4 3 NA NA NA NA 20 NA NA ...
+##  $ Gold.x       : int  NA NA 1 NA NA NA NA 2 NA NA ...
+##  $ Glass.x      : int  NA NA 2 1 NA NA NA 8 NA 2 ...
+##  $ Iron.x       : int  NA NA NA 2 NA NA NA 19 NA 10 ...
+##  $ Stone.x      : int  NA NA NA NA 1 NA 2 13 NA 16 ...
+##  $ Coral.x      : int  NA NA NA NA NA NA NA 3 NA 1 ...
+##  $ X.x          : num  3419640 3412431 3423415 3424722 3419139 ...
+##  $ Y.x          : num  5411492 5412258 5413753 5411495 5413198 ...
+##  $ Gravemounds.y: int  31 20 14 14 16 5 7 98 5 15 ...
+##  $ Inhumation.y : Factor w/ 2 levels &quot;&quot;,&quot;y&quot;: 2 2 1 2 NA 1 NA 2 1 2 ...
+##  $ Incremation.y: Factor w/ 2 levels &quot;&quot;,&quot;y&quot;: 1 2 2 2 2 1 2 2 1 2 ...
+##  $ Epoche.y     : Factor w/ 3 levels &quot;BA&quot;,&quot;both&quot;,&quot;IA&quot;: 1 1 1 2 1 1 2 2 2 2 ...
+##  $ Excavated.y  : int  26 7 5 14 9 5 7 89 2 9 ...
+##  $ Literature.y : Factor w/ 2 levels &quot;Schaeffer 1926&quot;,..: 1 1 1 2 1 1 2 2 2 2 ...
+##  $ Bronze.y     : int  15 23 12 68 7 3 14 304 7 118 ...
+##  $ Ceramics.y   : int  24 13 3 24 9 NA 4 90 18 19 ...
+##  $ Amber.y      : int  NA 4 3 NA NA NA NA 20 NA NA ...
+##  $ Gold.y       : int  NA NA 1 NA NA NA NA 2 NA NA ...
+##  $ Glass.y      : int  NA NA 2 1 NA NA NA 8 NA 2 ...
+##  $ Iron.y       : int  NA NA NA 2 NA NA NA 19 NA 10 ...
+##  $ Stone.y      : int  NA NA NA NA 1 NA 2 13 NA 16 ...
+##  $ Coral.y      : int  NA NA NA NA NA NA NA 3 NA 1 ...
+##  $ X.y          : num  3419640 3412431 3423415 3424722 3419139 ...
+##  $ Y.y          : num  5411492 5412258 5413753 5411495 5413198 ...
+##  $ newcol       : num  83.9 35 35.7 100 56.2 ...
 </code></pre>
 
 <footer class = 'logo'>
@@ -449,8 +552,8 @@ rbind(x,y) # Combines data frames rowwise
 <h2>2.  Manipulate Data | Combine Data Frames</h2>
 </hgroup>
 <article>
-<pre><code class="r">cbind(df_mounds, ndf) 
-## Error in cbind(df_mounds, ndf): object &#39;df_mounds&#39; not found
+<pre><code class="r">cbind(x,y) # Combines data frames columnwise
+rbind(x,y) # Combines data frames rowise
 </code></pre>
 
 <footer class = 'logo'>
@@ -462,39 +565,6 @@ rbind(x,y) # Combines data frames rowwise
 </slide>.
 <slide class="" id="slide-18">
 <hgroup>
-<h2>2.  Manipulate Data | Combine Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">rbind(df_mounds, ndf)
-## Error in rbind(df_mounds, ndf): object &#39;df_mounds&#39; not found
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-19">
-<hgroup>
-<h2>2.  Manipulate Data | Merge Data Frames</h2>
-</hgroup>
-<article>
-<pre><code class="r">ndf_mounds &lt;- merge(df_mounds, ndf, all.x=TRUE, all.y=FALSE, by.x=Nekropole,
-                    by.y=site)
-## Error in merge(df_mounds, ndf, all.x = TRUE, all.y = FALSE, by.x = Nekropole, : object &#39;df_mounds&#39; not found
-</code></pre>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>.
-<slide class="" id="slide-20">
-<hgroup>
 <h2>2.  Manipulate Data | Unique</h2>
 </hgroup>
 <article>
@@ -503,12 +573,12 @@ rbind(x,y) # Combines data frames rowwise
 
 <p><strong>... <code>unique()</code> returns a vector, data frame or array like x but with duplicate elements/rows removed.</strong></p>
 
-<pre><code class="r">R &lt;- data.frame(V1 = c(1,1,1), V2 = c(2,2,2), V3 = c(&quot;A&quot;,&quot;A&quot;,&quot;B&quot;))
-unique(R)
+<pre><code class="r">df &lt;- data.frame(V1 = c(1,1,1), V2 = c(2,2,2), V3 = c(&quot;A&quot;,&quot;A&quot;,&quot;B&quot;))
+unique(df)
 ##   V1 V2 V3
 ## 1  1  2  A
 ## 3  1  2  B
-uni_v3 &lt;- unique(R$V3)
+uni_v3 &lt;- unique(df$V3)
 uni_v3
 ## [1] A B
 ## Levels: A B
@@ -521,7 +591,7 @@ uni_v3
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-21">
+<slide class="" id="slide-19">
 <hgroup>
 <h2>2.  Manipulate Data | Unique</h2>
 </hgroup>
@@ -531,12 +601,12 @@ uni_v3
 
 <p><strong>... <code>duplicated()</code> determines which elements of a vector or data frame are duplicates of elements with smaller subscripts, and returns a logical vector indicating which elements (rows) are duplicates.</strong></p>
 
-<pre><code class="r">R 
+<pre><code class="r">df 
 ##   V1 V2 V3
 ## 1  1  2  A
 ## 2  1  2  A
 ## 3  1  2  B
-duplicated(x = R, fromLast = TRUE)
+duplicated(x = df, fromLast = TRUE)
 ## [1]  TRUE FALSE FALSE
 </code></pre>
 
@@ -547,7 +617,7 @@ duplicated(x = R, fromLast = TRUE)
 </footer>
 </article>
 </slide>.
-<slide class="segue" id="slide-22">
+<slide class="segue" id="slide-20">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -563,7 +633,7 @@ duplicated(x = R, fromLast = TRUE)
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-23">
+<slide class="" id="slide-21">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -584,7 +654,7 @@ a &lt;- a+a
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-24">
+<slide class="" id="slide-22">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -608,7 +678,7 @@ a
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-25">
+<slide class="" id="slide-23">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -630,7 +700,7 @@ i=i+1
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-26">
+<slide class="" id="slide-24">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -657,7 +727,7 @@ i
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-27">
+<slide class="" id="slide-25">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -677,7 +747,7 @@ a &lt;- a*2
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-28">
+<slide class="" id="slide-26">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -702,7 +772,7 @@ a
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-29">
+<slide class="" id="slide-27">
 <hgroup>
 <h2>3.  Loops and Restrictions</h2>
 </hgroup>
@@ -719,29 +789,29 @@ a
 <tr>
 <td>Loop</td>
 <td><code>for</code></td>
-<td><code>(i in **repetition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
+<td><code>(i in &quot;repetition&quot;)</code></td>
+<td><code>{ result &lt;- &quot;functions to apply&quot;</code></td>
 <td><code>}</code> in a seperate line</td>
 </tr>
 <tr>
 <td>Restrictions</td>
 <td><code>while</code></td>
-<td><code>(i in **condition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
+<td><code>(i in &quot;condition&quot;)</code></td>
+<td><code>{ result &lt;- &quot;functions to apply&quot;</code></td>
 <td><code>}</code> in a seperate line</td>
 </tr>
 <tr>
 <td>Restrictions</td>
 <td><code>if</code> in combination with <code>else</code></td>
-<td><code>(i in **condition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
+<td><code>(i in &quot;condition&quot;)</code></td>
+<td><code>{ result &lt;- &quot;functions to apply&quot;</code></td>
 <td><code>}</code> in a seperate line</td>
 </tr>
 <tr>
 <td>Restrictions</td>
 <td><code>else</code></td>
-<td><code>(i in **condition**)</code></td>
-<td><code>{ result &lt;- **functions to apply**</code></td>
+<td><code>(i in &quot;condition&quot;)</code></td>
+<td><code>{ result &lt;- &quot;functions to apply&quot;</code></td>
 <td><code>}</code> in a seperate line</td>
 </tr>
 </tbody></table>
@@ -753,7 +823,7 @@ a
 </footer>
 </article>
 </slide>.
-<slide class="segue" id="slide-30">
+<slide class="segue" id="slide-28">
 <hgroup>
 <h2>4.  Package management</h2>
 </hgroup>
@@ -769,7 +839,7 @@ a
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-31">
+<slide class="" id="slide-29">
 <hgroup>
 <h2>4.  Package management</h2>
 </hgroup>
@@ -799,7 +869,7 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
 </footer>
 </article>
 </slide>.
-<slide class="segue" id="slide-32">
+<slide class="segue" id="slide-30">
 <hgroup>
 <h2>5.  Plots</h2>
 </hgroup>
@@ -815,17 +885,17 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-33">
+<slide class="" id="slide-31">
 <hgroup>
 <h2>Exercise 3</h2>
 </hgroup>
 <article>
 <pre><code class="r"># 1. Set your working directory.
 # 2. Load gravemound.csv
-# 3. Save created Dara Frame of Iron Age graves (Note: This is dummy data!)
-# 4. 
-# 5.
-# 6. Download and load all neccessary packages for our next lectrue.
+# 3. Save created Data Frame of Iron Age graves using `subset`
+# 4. Save this Data Frame in your Subfolder `2data`
+# 5. Explore following functions `rbind()` and `cbind`
+# 6. Download and load all neccessary packages for our next lecture.
 </code></pre>
 
 <footer class = 'logo'>
@@ -835,7 +905,7 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-34">
+<slide class="" id="slide-32">
 <hgroup>
 
 </hgroup>
@@ -882,31 +952,31 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='1.  Load Data | Save your current environement'>
+        data-slide=5 title='1.  Load Data | Loading a Data Table'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='1.  Load Data | Save your current environement'>
+        data-slide=6 title='1.  Load Data | Loading a Data Table'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='1.  Load Data | Loading a Data Table'>
+        data-slide=7 title='1.  Load Data | Creating new Data Frames using <code>subset</code>'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='1.  Load Data | Loading a Data Table'>
+        data-slide=8 title='1.  Load Data | Save your current environement'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='1.  Load Data | Tidy Data'>
+        data-slide=9 title='1.  Load Data | Save your current environement'>
          9
       </a>
     </li>
@@ -918,19 +988,19 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='2.  Manipulate Data | Subset'>
+        data-slide=11 title='2.  Manipulate Data | How to choose a specific value'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='2.  Manipulate Data | Subset'>
+        data-slide=12 title='2.  Manipulate Data | How to choose a specific value'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='2.  Manipulate Data | Subset'>
+        data-slide=13 title='2.  Manipulate Data | Adding new Columns'>
          13
       </a>
     </li>
@@ -942,7 +1012,7 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='2.  Manipulate Data | Combine Data Frames'>
+        data-slide=15 title='2.  Manipulate Data | Merge Data Frames'>
          15
       </a>
     </li>
@@ -960,25 +1030,25 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='2.  Manipulate Data | Combine Data Frames'>
+        data-slide=18 title='2.  Manipulate Data | Unique'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='2.  Manipulate Data | Merge Data Frames'>
+        data-slide=19 title='2.  Manipulate Data | Unique'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='2.  Manipulate Data | Unique'>
+        data-slide=20 title='3.  Loops and Restrictions'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='2.  Manipulate Data | Unique'>
+        data-slide=21 title='3.  Loops and Restrictions'>
          21
       </a>
     </li>
@@ -1020,44 +1090,32 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='3.  Loops and Restrictions'>
+        data-slide=28 title='4.  Package management'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='3.  Loops and Restrictions'>
+        data-slide=29 title='4.  Package management'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='4.  Package management'>
+        data-slide=30 title='5.  Plots'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='4.  Package management'>
+        data-slide=31 title='Exercise 3'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='5.  Plots'>
+        data-slide=32 title='NA'>
          32
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Exercise 3'>
-         33
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='NA'>
-         34
       </a>
     </li>
   </ul>
