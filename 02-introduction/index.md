@@ -110,6 +110,11 @@ strong {
     <img  height="200" width="200" src='assets/img/Chambers.jpg' />
 </div>
 
+<div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
+  <a href="https://statistics.stanford.edu/people/john-chambers" title="User:John Chambers">
+  John Chambers</a> , https://statistics.stanford.edu/people/john-chambers
+</div>
+
 ---
 
 ## History of R 
@@ -119,11 +124,21 @@ strong {
 - 1993: Free implementation of R under the name R by **Ross Ihaka and Robert Gentleman**
 
 <div style='position:absolute;bottom:20%;right:20%'>
-    <img  height="200" width="200" src='assets/img/Gentleman.jpg' />
+    <img  height="200" width="150" src='assets/img/Gentleman.jpg' />
 </div>
 
 <div style='position:absolute;bottom:20%;left:20%'>
     <img  height="200" width="200" src='assets/img/ihaka.jpg' />
+</div>
+
+<div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
+  <a href="http://america.pink/images/3/8/1/4/7/7/1/en/1-ross-ihaka.jpg" title="User:Ross Ihaka">
+  Ross Ihaka</a> , https://america.pink/ross-ihaka_3814771.html
+</div>
+
+<div style='position:absolute;bottom:12%;right:5%;font-size:10px'>
+  <a href="https://researchers.23andme.org/robert-gentleman-phd" title="User:Robert Gentleman">
+  Robert Gentleman</a> , https://researchers.23andme.org/robert-gentleman-phd
 </div>
 
 ---
@@ -492,6 +507,15 @@ ISAAKiel|https://isaakiel.github.io/
 ## Thinks to remember
 
 > - **Scripts** are an exact documentation of the work.
+> - **Scripts** allow reproducing the analysis.
+> - **Scripts** allow reusing commands, algorithms etc.
+> - Each analysis has its own **script**.
+> - Each **script** has a header containing important information such as title, 
+topic, purpose, author, date, etc.
+> - Avoid special characters in file names, variable names, etc. 
+> - Use a convenient yet standardised folder structure for scripts, data, 
+results and reports.
+
 
 --- .segue bg:grey
 
@@ -509,12 +533,14 @@ ISAAKiel|https://isaakiel.github.io/
 
 
 ```r
-# This is an R Code sniplet
+# This is R Code 
 5+3
 5-3
 5*3
 5/3
-5^2
+sqrt(25)
+sin(3.14)
+3.14 * (180 / pi)
 ```
 
 - **Please start R Studio**
@@ -536,12 +562,14 @@ ISAAKiel|https://isaakiel.github.io/
 
 
 ```r
-# This is an R Code sniplet
+# This is R Code 
 5+3
 5-3
 5*3
 5/3
-5^2
+sqrt(25)
+sin(3.14)
+3.14 * (180 / pi)
 ```
 
 ---
@@ -551,7 +579,7 @@ ISAAKiel|https://isaakiel.github.io/
 
 
 ```r
-# This is an R Code sniplet
+# This is R Code
 5+3
 ## [1] 8
 5-3
@@ -560,40 +588,14 @@ ISAAKiel|https://isaakiel.github.io/
 ## [1] 15
 5/3
 ## [1] 1.666667
-5^2
-## [1] 25
-```
-
----
-
-## 5.  Getting started with R
-
-
-```r
-sqrt(25)
-sin(3.14)
-3.14 * (180 / pi)
-log(25)
-log10(25)
-```
-
----
-
-## 5.  Getting started with R
-
-
-```r
 sqrt(25)
 ## [1] 5
 sin(3.14)
 ## [1] 0.001592653
 3.14 * (180 / pi)
 ## [1] 179.9087
-log(25)
-## [1] 3.218876
-log10(25)
-## [1] 1.39794
 ```
+
 
 ---
 
