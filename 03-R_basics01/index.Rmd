@@ -49,17 +49,9 @@ strong {
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
 
---- .segue bg:grey
-
-## Somethings to remember...
-
-<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a>
-
 ---
 
-## Somethings to remember:
+## Objects anf Functions?!
 
 To understand computations in R, two slogans are helpful:
 
@@ -70,9 +62,9 @@ John Chambers
 
 ---
 
-## Further basics...
+## R Data Structure
 
-R has many data structures. These include:
+R has many data structures. These are the most common ones:
 
 > - atomic vector
 > - list
@@ -117,12 +109,12 @@ Vectors are pretty much the workhorses...
 ## 1.  Vectors | How to create a vector?
 
 ```{r collapse=TRUE, results='hide'}
-vec01 <- 5                        # "<-" is an operator to asign vec01 with 5
-vec01
+vec01 <- 5                        # "<-" asign vec01 with 5
+
 vec02 = c(4,6,7,2)                # c() is short for combine()
-vec02
+
 "neolithic" -> vec03 
-vec03
+
 ```
 
 *** =pnotes
@@ -135,7 +127,7 @@ console
 ## 1.  Vectors | How to create a vector?
 
 ```{r collapse=TRUE}
-vec01 <- 5                        # "<-" is an operator to asign vec01 with 5
+vec01 <- 5                        # "<-" asign vec01 with 5
 vec01
 vec02 = c(4,6,7,2)                # c() is short for combine()
 vec02
@@ -150,11 +142,11 @@ vec03
 
 ```{r collapse=TRUE, results='hide'}
 seq_var <- 1:10
-seq_var
+
 seq_var <- seq(10)               # seq() is a function!
-seq_var                           
+                           
 seq_var <- seq(1, 9, by = 0.1)    # seq("from", "to", by = "steps")
-seq_var
+
 
 ```
 
@@ -199,6 +191,7 @@ int_var <- c(1L, 6L, 10L)
 # to create logical vectors
 log_var <- c(TRUE, FALSE, T, F)
 
+# Use " " for character strings
 chr_var <- c("these are", "some strings")
 
 ```
@@ -230,6 +223,7 @@ int_var
 # to create logical vectors
 log_var <- c(TRUE, FALSE, T, F)
 log_var
+# Use " " for character strings
 chr_var <- c("these are", "some strings")
 chr_var
 ```
@@ -252,9 +246,10 @@ chr_var
 *** =right
 
 ```{r collapse=TRUE, results='hide'}
+# complex vector
 cpl_var <-2i+2     
 
-
+# use 'as.Date()' to create a vector of type Date
 d <- as.Date("2016-09-06")
 
 # Raw vectors are used to store 
@@ -281,9 +276,10 @@ raw_var <- raw(10)
 *** =right
 
 ```{r collapse=TRUE}
+# complex vector
 cpl_var <-2i+2     
 cpl_var
-
+# use 'as.Date()' to create a vector of type Date
 d <- as.Date("2016-09-06")
 d
 # Raw vectors are used to store 
@@ -292,19 +288,6 @@ raw_var <- raw(10)
 raw_var
 ```
 
---- 
-
-## 1.  Vectors | Atomic Vectors
-
-Atomic vectors are always flat, even if you nest **c()**’s:
-
-```{r collapse=TRUE}
-c(1, c(2, c(3, 4)))
-
-# the same as
-c(1, 2, 3, 4)
-
-```
 
 ---
 
@@ -319,6 +302,17 @@ chr_var  <- c(chr_var, "and some", "more strings")
 chr_var 
 
 ```
+
+---
+
+## 1.  Vectors | Choosing parts of a vector
+
+```{r collapse= TRUE}
+vec_a[c(1:4)]         
+seq_a[c(1,5,7)]
+chr_var[3]
+```
+
 
 ---
 
@@ -356,6 +350,7 @@ How to check vector types?
 ```{r collapse=TRUE, eval=FALSE}
 is.atomic()
 is.character()
+is.numeric()
 is.double()
 is.integer()
 is.logical()
@@ -381,7 +376,6 @@ class()
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
- 
 </a>
 
 *** =pnotes
@@ -391,6 +385,7 @@ Most programming languages come with a prewritten set of functions that are kept
 
 The term function is also used synonymously with operation and command. For example, you execute the delete function to erase a word.
 http://www.webopedia.com/TERM/F/function.html
+
 ---
 
 ## 2.  Functions
@@ -409,7 +404,7 @@ vec_rs <- rev(sort(vec_a))              # Nested funtions!
 
 --- 
 
-## 2.  Functions | How to adapte an unkown funtion
+## 2.  Functions | How to adapte an unkown function
 
 ```{r collapse=TRUE, eval=FALSE}
 # Use implemented help function
@@ -425,10 +420,11 @@ help(round)
 <img  height="500" width="750" src='assets/img/RStudio_help.png' />
 </div>
 
-
----
+--- &twocol
 
 ## 2.  Functions | Some Examples
+
+*** =left
 
 ```{r collapse=TRUE}
 vec_a <- c(3,5,2,2,5,8,5,2)
@@ -441,9 +437,7 @@ range(vec_a)
 
 ```
 
---- 
-
-## 2.  Functions | Some Examples
+*** =right
 
 ```{r collapse=TRUE}
 length(vec_a)
@@ -465,7 +459,7 @@ name_func <- function(parameter1,parameter2){
   return (output)
 }
 
-name_func(vec_a, vec_b)
+name_func(parameter1,parameter2)
 ```
 
 --- &twocol
@@ -507,9 +501,13 @@ myfunc(2,4)
  
 </a>
 
----
+--- &twocol
 
 ## 3.  Operators | Some basic Operators
+
+*** =left
+
+Arithmetic Operators
 
 ```{r collapse=TRUE}
 2 + 5 # addition
@@ -518,17 +516,15 @@ myfunc(2,4)
 8 / 2 # division
 5^2 # exponentiate
 2 ** 5 # exponentiate
-```
-
---- &twocol
-
-## 3.  Operators
-
-*** =left
-
-```{r collapse=TRUE}
 7 %% 3 # x mod y
 7 %/% 3 # integer division
+```
+
+*** =right
+
+Logical Operators 
+
+```{r collapse=TRUE}
 2 < 5  # x smaler as y
 2 > 5 # x bigger as y
 2 == 5 # x equal to y
@@ -537,25 +533,12 @@ myfunc(2,4)
 (2 < 5) & (2 > 5) # "and"
 ```
 
-*** =right
-
-```{r collapse= TRUE}
-vec_a[c(1:4)]
-seq_a[c(1:4)]
-vec_a[c(1:4)] >= seq_a[c(1:4)]
-vec_a[c(1:4)] <= seq_a[c(1:4)]
-com <- vec_a[c(1:4)] == seq_a[c(1:4)]
-vec_b <- vec_a * seq_a
-vec_b
-```
-
 --- .segue bg:grey
 
 ## 4.  Data Frames, Martices & Arrays 
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
- 
 </a>
 
 *** =pnotes
@@ -611,10 +594,10 @@ these different data types.
 
 **A Data Frame combines different data types.**
 ```{r collapse=TRUE}
-nam_s <- c("Bettelsbühl", "Mont Lassoir", "Kappel", "salem", "Königsbück", 
-           "seltz", "Giesshübel", "Hohmichele")
+nam_s <- c("Bettelsbuehl", "Mont Lassoir", "Kappel", "Salem", "Koenigsbueck", 
+           "Seltz", "Giesshuebel", "Hohmichele")
 
-df <- data.frame(vec_a, vec_b, nam_s)
+df <- data.frame(vec_a, seq_a, nam_s)
 class(df)
 str(df)
 ```
@@ -628,20 +611,6 @@ str(df)
 df
 ```
 
----
-
-## 4. Data Frames, Martices & Arrays | Data Frame & Factors
-
-**A Data Frame combines different data types.**
-```{r collapse=TRUE}
-nam_s <- c("Bettelsbühl", "Mont Lassoir", "Kappel", "Salem", "Königsbück", 
-           "Seltz", "Gießhübel", "Hohmichele")
-
-df <- data.frame(vec_a, vec_b, nam_s)
-class(df)
-str(df)
-```
-
 *** =pnotes
 Here we see some thing funny: Our sites are no character strings, but a factor!
 
@@ -649,7 +618,7 @@ Here we see some thing funny: Our sites are no character strings, but a factor!
 
 ## 4. Data Frames, Martices & Arrays | Factors
 
-**Factors are special vectors that represent categorical data.**
+**Factors are special vectors that represent categorical/nominal data.**
 ```{r collapse=TRUE}
 df$nam_s
 str(df$nam_s)
@@ -671,8 +640,8 @@ Factors are pretty much integers that have labels on them. While factors look (a
 ```{r collapse=TRUE}
 x <- factor(c("settlement", "grave", "settlement", "settlement", "grave"))
 x
-x <- as.character(x)
-x
+as.character(x)
+
 
 y <- factor(c("grave", "grave", "settlement"), levels = c("settlement", "grave"))
 y
@@ -687,7 +656,7 @@ You can name elements of a R objects while creating them or using `names()`.
 
 ```{r collapse=TRUE}
 ndf <- data.frame(Imports = vec_a, 
-                  Graves = vec_b, 
+                  Graves = seq_a, 
                   Site = nam_s)
 ndf
 ```
@@ -699,35 +668,60 @@ names(df) <- c("Imports", "Graves", "Site")
 df
 ```
 
+
 ---
 
 ## Summary | Objects in R
 
-> - Vectors
-> - Matrices
-> - Arrays
-> - Lists
-> - Data Frames
-
----
-
-## Summary | Helper Functions
-
 **Obejct**|**Create**|**change to**|**check**|**get names**|**get dimensions**
 ------|------|------|------|------|------
 vector|`c()` or `vector()`|`as.vector`|`is.vector`|`names()`|`lenght()`
-matirx|`matrix()`|`as.matrix`|`is.matrix`|`rownames()` or `colnames()`|`dim()`, `nrow()`or `ncol()`
+matrix|`matrix()`|`as.matrix`|`is.matrix`|`rownames()` or `colnames()`|`dim()`, `nrow()`or `ncol()`
 array|`array()`|`as.array`|`is.array`|`dimnames()`|`dim()`
 list|`list()`|`as.list`|`is.list`|`names()`|`lenght()`
 data frame|`data.frame()`|`as.data.frame()`|`is.data.frame`|`names()`|`dim()`, `nrow()`or `ncol()`
 
+--- &twocol
+
+## Summary | Operators
+
+*** =left
+
+Arithmetic Operators
+
+**Operator**|Description
+------|------
++|addition
+-|subtraction
+*|multiplication
+/|division
+^ or **|exponentiation
+x %% y|modulus (x mod y) 5%%2 is 1
+x %/% y|integer division 5%/%2 is 2 
+
+*** =right
+
+Logical Operators 
+
+**Operator**|Description
+------|------
+<|less than
+<=|less than or equal to
+>|greater than
+>=|greater than or equal to
+==|exactly equal to
+!=|not equal to
+!x|Not x
+x | y|x OR y
+x & y|x AND y
+isTRUE(x)|test if X is TRUE 
 
 ---
 
 ##  Exercise 2
 
 ```{r collapse=TRUE}
-# Create a new section in your exercise script
+# Create a new section in your exercise script.
 # 1. Use your existing vectors to create a Matirx and transpond it.
 # 2. Use your existing vectors to create an array and explore this array.
 # 3. Create a data frame using your vectors.

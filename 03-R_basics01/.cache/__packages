@@ -1,9 +1,4 @@
 base
-<<<<<<< HEAD
 slidify
 slidifyLibraries
 knitr
-=======
-devtools
-slidify
->>>>>>> 22ae100b969f580498cd49cddca872f6aaa07353
