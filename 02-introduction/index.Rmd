@@ -57,8 +57,8 @@ strong {
 
 *** =right
 
-<div style='text-align: right;'>
-    <img  height="500" width="500" src='assets/img/Rlogo07.png' />
+<div style='position:absolute;bottom:20%;right:5%'>
+    <img  height="200" width="200" src='assets/img/Rlogo.png' />
 </div>
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
