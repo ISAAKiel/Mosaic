@@ -33,7 +33,7 @@ strong {
 > 1. Vectors
 > 2. Functions
 > 3. Operators
-> 4. Data Frames, Martices & Arrays
+> 4. Data Frames, Matrices & Arrays
 
 *** =right
 
@@ -218,7 +218,7 @@ chr_var <- c("these are", "some strings")
        - logical
        - integer
        - double
-- charackter
+- character
 - complex
 - raw
 - date
@@ -255,7 +255,7 @@ chr_var
        - logical
        - integer
        - double
-- charackter
+- character
 - complex
 - raw
 - date
@@ -285,7 +285,7 @@ raw_var <- raw(10)
        - logical
        - integer
        - double
-- charackter
+- character
 - complex
 - raw
 - date
@@ -403,7 +403,7 @@ class()
 
 ```r
 # Create a new R Script to document your exercises.
-# 1. Create some new vectors of typ numeric and character (name those vectors meaningfully)
+# 1. Create some new vectors of type numeric and character (name those vectors meaningfully)
 # 2. Use seq() function to create a vector from 5 to 23 with 0,3 steps.
 # 3. Combine two numeric vectors to a new vector.
 # 4. Combine vectors of different classes.
@@ -445,7 +445,7 @@ vec_rs <- rev(sort(vec_a))              # Nested funtions!
 
 --- 
 
-## 2.  Functions | How to adapte an unkown function
+## 2.  Functions | How to adapt an unkown function
 
 
 ```r
@@ -502,7 +502,7 @@ vec_rs
 
 ---
 
-## 2.  Funtion | How to develope your own function?
+## 2.  Funtion | How to develop your own function?
 
 
 ```r
@@ -516,7 +516,7 @@ name_func(parameter1,parameter2)
 
 --- &twocol
 
-## 2.  Funtion | How to develope your own function?
+## 2.  Funtion | How to develop your own function?
 
 *** =left
 
@@ -606,7 +606,7 @@ Logical Operators
 
 --- .segue bg:grey
 
-## 4.  Data Frames, Martices & Arrays 
+## 4.  Data Frames, Matrices & Arrays 
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
@@ -619,7 +619,7 @@ Now we will continue with matrices and arrays as further basic object in R
 
 ---
 
-## 4. Data Frames, Martices & Arrays | Matrices
+## 4. Data Frames, Matrices & Arrays | Matrices
 
 **A Matrix stores multiple elements in a two dimensional array.**
 
@@ -642,9 +642,9 @@ mat_t
 
 ---
 
-## 4. Data Frames, Martices & Arrays | Array
+## 4. Data Frames, Matrices & Arrays | Array
 
-**An Array stores multiple elements in more then two dimensions.**
+**An Array stores multiple elements in more than two dimensions.**
 
 ```r
 arr <- array(vec_a, dim=(c(2,2,3)))   # array(data, dim, dimnames)
@@ -670,7 +670,7 @@ arr
 
 ---
 
-## 4. Data Frames, Martices & Arrays | What are Data Frames for?
+## 4. Data Frames, Matrices & Arrays | What are Data Frames for?
 
 **Vectors, Matrices and Arrays can't include different data types.**
 
@@ -695,7 +695,7 @@ these different data types.
 
 ---
 
-## 4. Data Frames, Martices & Arrays | Data Frame
+## 4. Data Frames, Matrices & Arrays | Data Frame
 
 **A Data Frame combines different data types.**
 
@@ -715,7 +715,7 @@ str(df)
 
 ---
 
-## 4. Data Frames, Martices & Arrays | Data Frame
+## 4. Data Frames, Matrices & Arrays | Data Frame
 
 **A data frame is a two diomensional group of R objects.**
 
@@ -737,7 +737,7 @@ Here we see some thing funny: Our sites are no character strings, but a factor!
 
 ---
 
-## 4. Data Frames, Martices & Arrays | Factors
+## 4. Data Frames, Matrices & Arrays | Factors
 
 **Factors are special vectors that represent categorical/nominal data.**
 
@@ -764,7 +764,7 @@ Factors are pretty much integers that have labels on them. While factors look (a
 
 ---
 
-## 4. Data Frames, Martices & Arrays | Factors
+## 4. Data Frames, Matrices & Arrays | Factors
 
 
 ```r
@@ -784,7 +784,7 @@ y
 
 --- &twocol
 
-## 4. Data Frames, Martices & Arrays | Data Frame
+## 4. Data Frames, Matrices & Arrays | Data Frame
 
 *** =left
 You can name elements of a R objects while creating them or using `names()`.

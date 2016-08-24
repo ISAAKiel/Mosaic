@@ -107,7 +107,7 @@ strong {
 - 1976: **S language by John Chambers** at Bell Laboratories (AT&T)
 
 <div style='position:absolute;bottom:20%;right:40%'>
-    <img  height="200" width="200" src='assets/img/Chambers.jpg' />
+    <img  height="200" width="200" src='assets/img/Chambers.png' />
 </div>
 
 <div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
@@ -124,11 +124,11 @@ strong {
 - 1993: Free implementation of R under the name R by **Ross Ihaka and Robert Gentleman**
 
 <div style='position:absolute;bottom:20%;right:20%'>
-    <img  height="200" width="150" src='assets/img/Gentleman.jpg' />
+    <img  height="200" width="150" src='assets/img/Gentleman.png' />
 </div>
 
 <div style='position:absolute;bottom:20%;left:20%'>
-    <img  height="200" width="200" src='assets/img/ihaka.jpg' />
+    <img  height="200" width="200" src='assets/img/ihaka.png' />
 </div>
 
 <div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
@@ -165,7 +165,7 @@ strong {
 ## 2. Some Advantages and Disadvantages
 
    
-Most statistical software provides usfull standartised test, as $chi^2$ test etc. R has some very convienient advantages:
+Most statistical software provides convenient standartised test, as $chi^2$ test etc. R has some very convienient advantages:
 
 **Advantages**|**Disadvantages**
 ------------------------------------|------------------------------------
@@ -204,7 +204,7 @@ independent platform with a great support|
 > 3. **Data:** Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?
 > 4. **Method:** Which methods can solve the problem? Learn the methods!
 > 5. **Tool:** Learn the tools to apply the methods.
-> 6. **Finally:** Check, validate and interpret the results. plausible? significant?
+> 6. **Finally:** Check, validate and interpret the results. Plausible? Significant?
 
 --- &twocol
 
@@ -501,7 +501,7 @@ ISAAKiel|https://isaakiel.github.io/
 
 ---
 
-## Thinks to remember
+## Things to remember
 
 > - **Scripts** are an exact documentation of the work.
 > - **Scripts** allow reproducing the analysis.

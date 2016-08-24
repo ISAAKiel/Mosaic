@@ -33,7 +33,7 @@ strong {
  1. Vectors
  2. Functions
  3. Operators
- 4. Data Frames, Martices & Arrays
+ 4. Data Frames, Matrices & Arrays
 
 *** =right
 

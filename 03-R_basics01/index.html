@@ -79,7 +79,7 @@ strong {
 <li>Vectors</li>
 <li>Functions</li>
 <li>Operators</li>
-<li>Data Frames, Martices &amp; Arrays</li>
+<li>Data Frames, Matrices &amp; Arrays</li>
 </ol>
 
 </div>
@@ -334,7 +334,7 @@ chr_var &lt;- c(&quot;these are&quot;, &quot;some strings&quot;)
 <li>integer</li>
 <li>double</li>
 </ul></li>
-<li>charackter</li>
+<li>character</li>
 <li>complex</li>
 <li>raw</li>
 <li>date</li>
@@ -383,7 +383,7 @@ chr_var
 <li>integer</li>
 <li>double</li>
 </ul></li>
-<li>charackter</li>
+<li>character</li>
 <li>complex</li>
 <li>raw</li>
 <li>date</li>
@@ -425,7 +425,7 @@ raw_var &lt;- raw(10)
 <li>integer</li>
 <li>double</li>
 </ul></li>
-<li>charackter</li>
+<li>character</li>
 <li>complex</li>
 <li>raw</li>
 <li>date</li>
@@ -576,7 +576,7 @@ class()
 </hgroup>
 <article>
 <pre><code class="r"># Create a new R Script to document your exercises.
-# 1. Create some new vectors of typ numeric and character (name those vectors meaningfully)
+# 1. Create some new vectors of type numeric and character (name those vectors meaningfully)
 # 2. Use seq() function to create a vector from 5 to 23 with 0,3 steps.
 # 3. Combine two numeric vectors to a new vector.
 # 4. Combine vectors of different classes.
@@ -631,7 +631,7 @@ vec_rs &lt;- rev(sort(vec_a))              # Nested funtions!
 </slide>.
 <slide class="" id="slide-22">
 <hgroup>
-<h2>2.  Functions | How to adapte an unkown function</h2>
+<h2>2.  Functions | How to adapt an unkown function</h2>
 </hgroup>
 <article>
 <pre><code class="r"># Use implemented help function
@@ -707,7 +707,7 @@ vec_rs
 </slide>.
 <slide class="" id="slide-25">
 <hgroup>
-<h2>2.  Funtion | How to develope your own function?</h2>
+<h2>2.  Funtion | How to develop your own function?</h2>
 </hgroup>
 <article>
 <pre><code class="r">name_func &lt;- function(parameter1,parameter2){
@@ -727,7 +727,7 @@ name_func(parameter1,parameter2)
 </slide>.
 <slide class="" id="slide-26">
 <hgroup>
-<h2>2.  Funtion | How to develope your own function?</h2>
+<h2>2.  Funtion | How to develop your own function?</h2>
 </hgroup>
 <article>
 
@@ -835,7 +835,7 @@ myfunc(2,4)
 </slide>.
 <slide class="segue" id="slide-29">
 <hgroup>
-<h2>4.  Data Frames, Martices &amp; Arrays</h2>
+<h2>4.  Data Frames, Matrices &amp; Arrays</h2>
 </hgroup>
 <article>
 <p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
@@ -851,7 +851,7 @@ myfunc(2,4)
 </slide>.
 <slide class="" id="slide-30">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | Matrices</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | Matrices</h2>
 </hgroup>
 <article>
 <p><strong>A Matrix stores multiple elements in a two dimensional array.</strong></p>
@@ -879,10 +879,10 @@ mat_t
 </slide>.
 <slide class="" id="slide-31">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | Array</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | Array</h2>
 </hgroup>
 <article>
-<p><strong>An Array stores multiple elements in more then two dimensions.</strong></p>
+<p><strong>An Array stores multiple elements in more than two dimensions.</strong></p>
 
 <pre><code class="r">arr &lt;- array(vec_a, dim=(c(2,2,3)))   # array(data, dim, dimnames)
 arr
@@ -914,7 +914,7 @@ arr
 </slide>.
 <slide class="" id="slide-32">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | What are Data Frames for?</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | What are Data Frames for?</h2>
 </hgroup>
 <article>
 <p><strong>Vectors, Matrices and Arrays can&#39;t include different data types.</strong></p>
@@ -941,7 +941,7 @@ is.character(mat)
 </slide>.
 <slide class="" id="slide-33">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | Data Frame</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | Data Frame</h2>
 </hgroup>
 <article>
 <p><strong>A Data Frame combines different data types.</strong></p>
@@ -968,7 +968,7 @@ str(df)
 </slide>.
 <slide class="" id="slide-34">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | Data Frame</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | Data Frame</h2>
 </hgroup>
 <article>
 <p><strong>A data frame is a two diomensional group of R objects.</strong></p>
@@ -994,7 +994,7 @@ str(df)
 </slide>.
 <slide class="" id="slide-35">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | Factors</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | Factors</h2>
 </hgroup>
 <article>
 <p><strong>Factors are special vectors that represent categorical/nominal data.</strong></p>
@@ -1022,7 +1022,7 @@ str(df$nam_s)
 </slide>.
 <slide class="" id="slide-36">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | Factors</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | Factors</h2>
 </hgroup>
 <article>
 <pre><code class="r">x &lt;- factor(c(&quot;settlement&quot;, &quot;grave&quot;, &quot;settlement&quot;, &quot;settlement&quot;, &quot;grave&quot;))
@@ -1048,7 +1048,7 @@ y
 </slide>.
 <slide class="" id="slide-37">
 <hgroup>
-<h2>4. Data Frames, Martices &amp; Arrays | Data Frame</h2>
+<h2>4. Data Frames, Matrices &amp; Arrays | Data Frame</h2>
 </hgroup>
 <article>
 
@@ -1432,7 +1432,7 @@ df
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='2.  Functions | How to adapte an unkown function'>
+        data-slide=22 title='2.  Functions | How to adapt an unkown function'>
          22
       </a>
     </li>
@@ -1450,13 +1450,13 @@ df
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='2.  Funtion | How to develope your own function?'>
+        data-slide=25 title='2.  Funtion | How to develop your own function?'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='2.  Funtion | How to develope your own function?'>
+        data-slide=26 title='2.  Funtion | How to develop your own function?'>
          26
       </a>
     </li>
@@ -1474,55 +1474,55 @@ df
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='4.  Data Frames, Martices &amp; Arrays'>
+        data-slide=29 title='4.  Data Frames, Matrices &amp; Arrays'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='4. Data Frames, Martices &amp; Arrays | Matrices'>
+        data-slide=30 title='4. Data Frames, Matrices &amp; Arrays | Matrices'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='4. Data Frames, Martices &amp; Arrays | Array'>
+        data-slide=31 title='4. Data Frames, Matrices &amp; Arrays | Array'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='4. Data Frames, Martices &amp; Arrays | What are Data Frames for?'>
+        data-slide=32 title='4. Data Frames, Matrices &amp; Arrays | What are Data Frames for?'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='4. Data Frames, Martices &amp; Arrays | Data Frame'>
+        data-slide=33 title='4. Data Frames, Matrices &amp; Arrays | Data Frame'>
          33
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='4. Data Frames, Martices &amp; Arrays | Data Frame'>
+        data-slide=34 title='4. Data Frames, Matrices &amp; Arrays | Data Frame'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='4. Data Frames, Martices &amp; Arrays | Factors'>
+        data-slide=35 title='4. Data Frames, Matrices &amp; Arrays | Factors'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=36 title='4. Data Frames, Martices &amp; Arrays | Factors'>
+        data-slide=36 title='4. Data Frames, Matrices &amp; Arrays | Factors'>
          36
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=37 title='4. Data Frames, Martices &amp; Arrays | Data Frame'>
+        data-slide=37 title='4. Data Frames, Matrices &amp; Arrays | Data Frame'>
          37
       </a>
     </li>
