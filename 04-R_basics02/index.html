@@ -887,6 +887,92 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
 </slide>.
 <slide class="" id="slide-31">
 <hgroup>
+<h2>5. Plots | Histogram</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <pre><code class="r">hist_gm &lt;- hist(df_mounds$Gravemounds)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-26-1.png" alt="plot of chunk unnamed-chunk-26"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">hist_ex &lt;- hist(df_mounds$Excavated)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-27-1.png" alt="plot of chunk unnamed-chunk-27"></p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-32">
+<hgroup>
+<h2>5. Plots | Histogram</h2>
+</hgroup>
+<article>
+<pre><code class="r">plot(hist_gm, main=&quot;Gravemounds of Haguenau Froest&quot;, xlab=&quot;Number of Gravemounds&quot;,
+     sub=&quot;Schaeffer 1926/1930&quot;, col=&quot;dark red&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-28-1.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" style="display: block; margin: auto 0 auto auto;" /></p>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-33">
+<hgroup>
+<h2>Plots | Violinplots</h2>
+</hgroup>
+<article>
+<pre><code class="r">library(vioplot)
+vioplot(df_mounds$Gravemounds)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-29-1.png" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" style="display: block; margin: auto 0 auto auto;" /></p>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-34">
+<hgroup>
+<h2>Plots | ggplot2</h2>
+</hgroup>
+<article>
+<pre><code class="r">library(ggplot2)
+</code></pre>
+
+<div style='position:absolute;bottom:10%;right:5%'>
+<img  height="500" width="700" src='assets/img/ggplot1.png' />
+</div>
+
+<p><a class="btn btn-primary btn-large" href='https://plot.ly/ggplot2/'>
+ <img  height="200" width="200" style='position:absolute;bottom:30%;left:5%' src='assets/img/ggplot.png' />
+</a></p>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>.
+<slide class="" id="slide-35">
+<hgroup>
 <h2>Exercise 3</h2>
 </hgroup>
 <article>
@@ -895,7 +981,9 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
 # 3. Save created Data Frame of Iron Age graves using `subset`
 # 4. Save this Data Frame in your Subfolder `2data`
 # 5. Explore following functions `rbind()` and `cbind`
-# 6. Download and load all neccessary packages for our next lecture.
+# 6. Create and edit a Histogramm and a Violinplot.
+# 7. Use `?plot` to create a scatterplot.
+# 8. Download and load all neccessary packages for our next lecture.
 </code></pre>
 
 <footer class = 'logo'>
@@ -905,7 +993,7 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
 </footer>
 </article>
 </slide>.
-<slide class="" id="slide-32">
+<slide class="" id="slide-36">
 <hgroup>
 
 </hgroup>
@@ -1108,14 +1196,38 @@ update.packages(&quot;package-name&quot;)       # Update a specific package
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Exercise 3'>
+        data-slide=31 title='5. Plots | Histogram'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='NA'>
+        data-slide=32 title='5. Plots | Histogram'>
          32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Plots | Violinplots'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Plots | ggplot2'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Exercise 3'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='NA'>
+         36
       </a>
     </li>
   </ul>

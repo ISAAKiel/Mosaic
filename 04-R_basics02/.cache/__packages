@@ -2,3 +2,6 @@ base
 slidify
 slidifyLibraries
 knitr
+sm
+vioplot
+ggplot2

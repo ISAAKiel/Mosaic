@@ -596,6 +596,71 @@ library(package-name)               # Loading packages every time you restart R!
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
 
+
+--- &twocol
+
+## 5. Plots | Histogram
+
+*** =left
+
+
+```r
+hist_gm <- hist(df_mounds$Gravemounds)
+```
+
+![plot of chunk unnamed-chunk-26](assets/fig/unnamed-chunk-26-1.png)
+
+
+*** =right
+
+
+```r
+hist_ex <- hist(df_mounds$Excavated)
+```
+
+![plot of chunk unnamed-chunk-27](assets/fig/unnamed-chunk-27-1.png)
+
+---
+
+## 5. Plots | Histogram
+
+
+```r
+plot(hist_gm, main="Gravemounds of Haguenau Froest", xlab="Number of Gravemounds",
+     sub="Schaeffer 1926/1930", col="dark red")
+```
+
+<img src="assets/fig/unnamed-chunk-28-1.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" style="display: block; margin: auto 0 auto auto;" />
+
+--- 
+
+## Plots | Violinplots
+
+
+```r
+library(vioplot)
+vioplot(df_mounds$Gravemounds)
+```
+
+<img src="assets/fig/unnamed-chunk-29-1.png" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" style="display: block; margin: auto 0 auto auto;" />
+
+---
+
+## Plots | ggplot2
+
+
+```r
+library(ggplot2)
+```
+
+<div style='position:absolute;bottom:10%;right:5%'>
+<img  height="500" width="700" src='assets/img/ggplot1.png' />
+</div>
+
+<a class="btn btn-primary btn-large" href='https://plot.ly/ggplot2/'>
+ <img  height="200" width="200" style='position:absolute;bottom:30%;left:5%' src='assets/img/ggplot.png' />
+</a>
+
 ---
 
 ##  Exercise 3
@@ -607,7 +672,9 @@ library(package-name)               # Loading packages every time you restart R!
 # 3. Save created Data Frame of Iron Age graves using `subset`
 # 4. Save this Data Frame in your Subfolder `2data`
 # 5. Explore following functions `rbind()` and `cbind`
-# 6. Download and load all neccessary packages for our next lecture.
+# 6. Create and edit a Histogramm and a Violinplot.
+# 7. Use `?plot` to create a scatterplot.
+# 8. Download and load all neccessary packages for our next lecture.
 ```
 
 ---

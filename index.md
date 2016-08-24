@@ -30,7 +30,7 @@ strong {
 
 **Monday, 5th of September**
 
-1. [Interaction as a key term]
+1. [Interaction as a key term](01-interaction/index.html)
 
 **Tuesday, 6th of September**
 
@@ -44,7 +44,7 @@ strong {
 
 **Wednesday, 7th of September**
 
-7. [Modelling Interaction: Cultural distances]
+7. [Modelling Interaction: Cultural distances](07-cul_distances(index.html))
 8. [**Workshop**: Geographical and Econimic Distances](08-WS_Geo_Eco_Distances/index.html)
 9. [**Workshop:** Cultural Distances]
 10. [Using network approaches to modell Interaction]

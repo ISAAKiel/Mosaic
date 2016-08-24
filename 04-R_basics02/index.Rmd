@@ -414,6 +414,58 @@ library(package-name)               # Loading packages every time you restart R!
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
 
+
+--- &twocol
+
+## 5. Plots | Histogram
+
+*** =left
+
+```{r collapse=TRUE, results='hide', fig.height=5, fig.width=5}
+hist_gm <- hist(df_mounds$Gravemounds)
+```
+
+
+*** =right
+
+```{r collapse=TRUE, fig.height=5, fig.width=5}
+hist_ex <- hist(df_mounds$Excavated)
+```
+
+---
+
+## 5. Plots | Histogram
+
+```{r collapse=TRUE, fig.align='right', fig.height=5, fig.width=5}
+plot(hist_gm, main="Gravemounds of Haguenau Froest", xlab="Number of Gravemounds",
+     sub="Schaeffer 1926/1930", col="dark red")
+```
+
+--- 
+
+## Plots | Violinplots
+
+```{r collapse=TRUE, fig.align='right', fig.height=5, fig.width=5}
+library(vioplot)
+vioplot(df_mounds$Gravemounds)
+```
+
+---
+
+## Plots | ggplot2
+
+```{r eval=FALSE}
+library(ggplot2)
+```
+
+<div style='position:absolute;bottom:10%;right:5%'>
+<img  height="500" width="700" src='assets/img/ggplot1.png' />
+</div>
+
+<a class="btn btn-primary btn-large" href='https://plot.ly/ggplot2/'>
+ <img  height="200" width="200" style='position:absolute;bottom:30%;left:5%' src='assets/img/ggplot.png' />
+</a>
+
 ---
 
 ##  Exercise 3
@@ -424,7 +476,9 @@ library(package-name)               # Loading packages every time you restart R!
 # 3. Save created Data Frame of Iron Age graves using `subset`
 # 4. Save this Data Frame in your Subfolder `2data`
 # 5. Explore following functions `rbind()` and `cbind`
-# 6. Download and load all neccessary packages for our next lecture.
+# 6. Create and edit a Histogramm and a Violinplot.
+# 7. Use `?plot` to create a scatterplot.
+# 8. Download and load all neccessary packages for our next lecture.
 ```
 
 ---
