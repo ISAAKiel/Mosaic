@@ -1495,3 +1495,26 @@ Middle range theories
 <div style='position:absolute;top:15%;right:10%'>
   <img  height="250" src='assets/img/pic51.png' />
 </div>
+
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Cultural distance**
+- topography of cultural similarities
+- territories of cultural similarities
+- cultural areas
+- interaction models
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="250" src='assets/img/pic44.png' />
+</div>
+
+<div style='position:absolute;top:15%;right:10%'>
+  <img  height="250" src='assets/img/pic51.png' />
+</div>
