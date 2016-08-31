@@ -1,6 +1,6 @@
 ---
-title       : Interaction as a Key Term
-author      : Oliver Nakoinz
+title       : Cultural Distances
+author      : Oliver Nakoinz, Daniel Knitter
 job         : MOSAIC Summer School 2016
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -24,548 +24,862 @@ strong {
 </style>
 
 
-## Structure 
+## Cultural Distances
+
+- Introduction
+- Cultural distances: Theory
+- Cultural distances: Practice
+- Distance diagramms: Theory
+- Distance diagramms: Practice
+
+
+<div style='position:absolute;bottom:20%;right:5%'>
+    <img  height="200" width="200" src='assets/img/logo03.png' />
+</div>
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
+--- .segue bg:grey
+
+## Cultural distances
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
+--- &twocol 
+
+## Cultural distances
 
 *** =left
 
-1.  R - What is it?!
-2.  Why using R?
-3.  How to start?
-4.  Scipts and why they are usefull
-5.  Getting started with R
+**Imports vs cultural distances**
+
+- connectinga site to a provenience region
+- individual interactions can be traced
+
+<div style='position:absolute;bottom:20%;left:15%'>
+    <img  height="200" width="200" src='assets/img/pic01.png' />
+</div>
 
 *** =right
 
-<div style='position:absolute;bottom:20%;right:5%'>
-    <img  height="200" width="200" src='assets/img/Rlogo.png' />
-</div>
+**Cultural distance**
 
-<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a>
+- interactions are producing cultural similarities
+- difference in material culture
+- statistical level of interaction between sites or regions
 
---- .segue bg:grey
-
-## 1.  R - What is it?!
-
-<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a>
-
----  
-
-## 1.  R - What is it?!
-
-> - R is a language and environment for statistical computing and graphics
-> - Open Source Software: www.r-project.org
-> - extendible by packages (libraries)
-> - running with most operational systems
-> - interfaces to C, Python and Fortran etc.
-> - functional with object oriented extension
-> - vector based / dataframe
-> - developing and implementing own functions
-
-<div style='position:absolute;bottom:20%;right:5%'>
-    <img  height="200" width="200" src='assets/img/Rlogo.png' />
+<div style='position:absolute;bottom:15%;right:10%'>
+    <img  height="200" width="450" src='assets/img/pic02.png' />
 </div>
 
 ---
 
-## Why should I apply statistics?
+## Cultural distances
 
-> - Data analysis is an essential tool of empirical research
+**traditional „Culture“ in Archaeology**
 
-> - "learning programming is learning to think"
+Archaeological culture = spatial and temporal limited entity of material culture 
 
-> - forcing the problem in a logical and sequential structure
+**Cultures can correspond with:**
 
----
+- language
+- people
+- race
+- collective identity
+- more...
 
-## History of R 
-
-- 1976: **S language by John Chambers** at Bell Laboratories (AT&T)
-
-<div style='position:absolute;bottom:20%;right:40%'>
-    <img  height="200" width="200" src='assets/img/Chambers.jpg' />
+<div style='position:absolute;top:35%;right:30%'>
+    <img  height="250" width="200" src='assets/img/pic03.png' />
 </div>
 
-<div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
-  <a href="https://statistics.stanford.edu/people/john-chambers" title="User:John Chambers">
-  John Chambers</a> , https://statistics.stanford.edu/people/john-chambers
+<div style='position:absolute;top:35%;right:5%'>
+    <img  height="250" width="200" src='assets/img/pic04.png' />
 </div>
 
----
-
-## History of R 
-
-- 1976: S language by **John Chambers** at Bell Laboratories (AT&T)
-
-- 1993: Free implementation of R under the name R by **Ross Ihaka and Robert Gentleman**
-
-<div style='position:absolute;bottom:20%;right:20%'>
-    <img  height="200" width="150" src='assets/img/Gentleman.jpg' />
-</div>
-
-<div style='position:absolute;bottom:20%;left:20%'>
-    <img  height="200" width="200" src='assets/img/ihaka.jpg' />
-</div>
-
-<div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
-  <a href="http://america.pink/images/3/8/1/4/7/7/1/en/1-ross-ihaka.jpg" title="User:Ross Ihaka">
-  Ross Ihaka</a> , https://america.pink/ross-ihaka_3814771.html
-</div>
-
-<div style='position:absolute;bottom:12%;right:5%;font-size:10px'>
-  <a href="https://researchers.23andme.org/robert-gentleman-phd" title="User:Robert Gentleman">
-  Robert Gentleman</a> , https://researchers.23andme.org/robert-gentleman-phd
-</div>
-
----
-
-## History of R 
-
-- 1976: S language by **John Chambers** at Bell Laboratories (AT&T)
-- 1993: Free implementation of R under the name R by **Ross Ihaka** and **Robert Gentleman**
-
-> - 1997: R becomes **GNU project**
-> - 2000: **R1.0**
-> - 2015: **R Consortium**: R Foundation, Microsoft, R Studio, Google etc.
-
---- .segue bg:grey
-
-## 2.  Why using R?
-
-<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a>
-
----
-
-## 2. Some Advantages and Disadvantages
-
-   
-Most statistical software provides usfull standartised test, as $chi^2$ test etc. R has some very convienient advantages:
-
-**Advantages**|**Disadvantages**
-------------------------------------|------------------------------------
-reproducibility and verifiablilty|high barriers to learn
-flexible and extensible|'raw' syntax
-many different packages|
-customisable|
-independent platform with a great support|
-
----
-
-## 7 levels of using R
-
-> 1. Asking a colleague to run R for you
-> 2. Applying build in functions
-> 3. Combining build in functions
-> 4. Writing own algorithms
-> 5. Writing own functions and objects
-> 6. Developing efficient code
-> 7. Writing own packages
-
---- .segue bg:grey
-
-## 3.  How to start?
-
-<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a>
-
----
-
-## Gerneral Workflow | Before you beginn
-
-> 1. **Problem:** Put your question.
-> 2. **Theory:** Which theoretical frame is adequate for solving the problem?
-> 3. **Data:** Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?
-> 4. **Method:** Which methods can solve the problem? Learn the methods!
-> 5. **Tool:** Learn the tools to apply the methods.
-> 6. **Finally:** Check, validate and interpret the results. plausible? significant?
-
---- &twocol
-
-## Gerneral Workflow | Now, you can beginn 
-
-*** =left
-
-> - **Loading** data
-> - **Exploring** data
-> - **Analysing** data
->    - Descriptive analysis
->        - Univariate analysis
->        - Bivariate analysis
->        - Multivariate analysis
-
-*** =right
-
->    - Inference
->        - tests
->        - Bayes
->    - Simulation
-> - **Visualise** and export results
-> - **Report** and publication
-
---- 
-
-## 3.  How to start? | R Studio
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
-</div>
-
---- 
-
-## 3.  R Studio | Text Editor
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
-</div>
-
---- 
-
-## 3.  R Studio | Console
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
-</div>
-
-*** =pnotes
-
-The Console gives you a place to execute commands written in R language
-Comand promt ">": Tipe in your code and hit enter ro run it
-Command "+". Indicating your command/code is unfinished, so complete it and hit 
-run; or hit esc, if you expect an Error!
----
-
-## 3.  R Studio | History
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_history.png' />
-</div>
-
-*** =pnotes
-
-As you enter commands, sou accumulate a hsitroy of past commands, which are 
-saved in the R history...
-
---- 
-
-## 3.  R Studio | File Manager
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_file.png' />
-</div>
-
---- 
-
-## 3.  R Studio | Documentation viewer
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
-</div>
-
---- 
-
-## 3.  R Studio | Project and Session Manager
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
-</div>
-
---- 
-
-## 3.  R Studio | Workspace Explorer
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
-</div>
-
---- 
-
-## 3.  R Studio | Package Manager
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_empty.png' />
-</div>
-
-*** =pnotes
-Packages...
-A Collection of code and functions written for the R Language.
-Ususally focusses on a specific task or problem. 
-Most of the usful R applications appear in packages.
-
---- 
-
-## 3.  R Studio | Wirzards and Assistants
-
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+<div style='position:absolute;bottom:10%;right:50%'>
+    <img  height="200" width="200" src='assets/img/pic05.png' />
 </div>
 
 --- &twocol
 
-## 3.  How to start? | R Studio
+## Cultural distances | Components of cultural theory
 
 *** =left
 
-> * Text Editor
-> * Console
-> * Data Explorer
-> * File Manager
-> * Image Viewer
+- What is culture?
+  - Hansen, Tylor
+- Why using culture?
+  - B. Malinowski, A. Schweitzer
+- How does culture work?
+  - T. Parsons, A. Kroeber, R.Dawkins
+- How are cultures connected?
+  - F. Steger
+- How do cultures evolve?
+  - O. Spengler, R. Redfield, R. Linton u. M. Herskovits
+
 
 *** =right
 
-> * Documentation Viewer
-> * Project and Session Manager
-> * Workspace Explorer
-> * Package Manager
-> * Wizards and Assistants
+- Which components have cultures?
+  - J. Huxley
+
+<div style='position:absolute;top:35%;right:30%'>
+    <img  height="200" width="150" src='assets/img/pic06.png' />
+</div>
+
+<div style='position:absolute;top:35%;right:5%'>
+    <img  height="200" width="250" src='assets/img/pic07.png' />
+</div>
+
+<div style='position:absolute;bottom:7%;right:25%'>
+    <img  height="200" width="150" src='assets/img/pic08.png' />
+</div>
 
 --- .segue bg:grey
 
-## 4. Scipts and why they are usefull
+## What is wrong with the traditional approaches?
+
+--- &twocol
+
+## Cultural distances | Culture
+
+*** =left
+
+```{r collapse=TRUE, eval=FALSE}
+Culture covers standardisations which 
+are valid in collectives. 
+
+(Hansen 2003, 39)
+```
+
+<div style='position:absolute;top:45%;left:5%'>
+    <img  height="200" width="550" src='assets/img/pic09.png' />
+</div>
+
+*** =right
+
+- Formal and abstract definition which covers most other
+- Spatial archaeological cultures as special case
+- Applicable in archaeology
+
+<div style='position:absolute;bottom:5%;right:5%'>
+    <img  height="200" width="550" src='assets/img/pic10.png' />
+</div>
+
+--- 
+
+## Cultural distances
+
+Structures|**Traditional arch. culture**|**Current arch. culture**
+----|----|----
+Actors|historical actor|cultures can not act
+Dimensions|disjunct and exclusive|overlapping, multiple mem.
+Hierarchy|mono-hierarchic|poly-hierarchic
+Markers|based on cultural markers |broad basis of material culture
+...|* ECNR-System| * No cultural equation
+...|* Ethnic Groups = historical identification| * Ethnic Groups are the results of social interaction
+...|* Cultures = empirical foundation| * Cultures are the adaptation, caused by interaction
+...|* Nations = significance for people| * Nations are the result of political interaction
+...|*Races = modern science based on laws of nature| * ’Races’, or rather biological units are the result of biological interaction
+Entaglement|ethnic group = seed of nation = race = culture|ethnic group ̸= seed of nation ̸= race ̸= culture
+
+<div style='position:absolute;top:5%;right:5%'>
+    <img  height="100" width="275" src='assets/img/pic11.png' />
+</div>
+
+--- &twocol
+
+## Cultural distances
+
+*** =left
+
+**'Typenspektren'**
+
+- All data are used for the calculation of cultural distances
+- No diagnostic types or cultural markers
+- ’Typenspektren’ include the relative amount of objects of certain types.
+
+<div style='position:absolute;bottom:15%;left:10%'>
+    <img  height="200" width="450" src='assets/img/pic02.png' />
+</div>
+
+*** =right
+
+<div style='position:absolute;bottom:20%;right:10%'>
+    <img  height="450" width="300" src='assets/img/pic12.png' />
+</div>
+
+--- &twocol
+
+## Cultural distances | 'Typenspektren' 
+
+*** =left
+
+**Cultural fingerprint**
+
+- 'Typenspektren' are a kind of cultural fingerprints.
+- 'Typenspektren' don’t assume spatial archaeological cultures.
+- 'Typenspektren' consider quantities and not only presence/absence.
+- for every type of 'Typenspektren' a group of types, representing a certain part of society can be defines.
+- 'Typenspektren' provide much more information and are much more robust than so called 'cultural markers'.
+
+*** =right
+
+<div style='position:absolute;top:15%;right:15%'>
+  <img  height="300" width="200" src='assets/img/pic13.png' />
+</div>
+
+<div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="200" width="350" src='assets/img/pic14.png' />
+</div>
+
+--- &twocol
+
+## Cultural distances | 'Typenspektren' 
+
+**'Typenspektren' - using all available information**
+
+*** =left
+
+- 2; ”Beil”; xxx
+  - 22; ”Beil, Tüllenbeil”; xxx
+  - 221; ”Beil, T, Schlichte vierkantige T”; xxx
+  - 2211; ”Beil, T, Schlichte vierkantige T, Norddeutsche T, Var. Hesepe”; xxx
+
+
+*** =right
+
+- 4; ”Nadel”; xxx
+  - 41; ”Nadel, Rippenkopfnadeln”; xxx
+  - 411; ”Nadel, Rippenkopfnadeln, Var. Nutteln”; xxx
+  - 412; ”Nadel, Rippenkopfnadeln, Var. Badenstedt”; xxx
+
+<div style='position:absolute;bottom:5%;right:25%'>
+  <img  height="200" width="450" src='assets/img/pic15.png' />
+</div>
+
+--- .segue bg:grey
+
+## Which information can be used in 'Typenspektren'?
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
 
 ---
 
-## Lets talk about scripts
+## Cultural distances
 
-> - **Scripts** are an exact documentation of the work.
-> - **Scripts** allow reproducing the analysis.
-> - **Scripts** allow reusing commands, algorithms etc.
-> - **Scripts** allow sharing code.
-> - **Scripts** allow the automation of complex analyses.
-> - **Scripts** allow the automation of report generation; for instance, in R with the packages `knitr` or `sweave`.
-> - **Scripts** allow rerunning and testing code snippets.
-> - **Scripts** make it easy to create complex solutions.
-> - **Scripts** allow limiting the active knowledge of the researcher to the most important aspects.
+**Map of cultural distances**
+- the cultural distances to one reference point are mapped on a grid
+- topography of cultural similarities
+- structure of interaction space
 
----
+<div style='position:absolute;bottom:15%;right:20%'>
+  <img  height="200" width="550" src='assets/img/pic16.png' />
+</div>
 
-## Lets talk about scripts | Some rules
+--- &twocol
 
-> * Each analysis has its own **script**.
-> * Each **script** has a header containing important information such as title, 
-topic, purpose, author, date, etc.
+## Cultural distances
 
----
+*** =left
 
-## Lets talk about scripts | Script Header
-```{r}
- ##################################################################
- ## Didactic R-Script for Modelling Summer School
- ## ===============================================================
- ## Project: Modelling Summer School
- ## Author: O. Nakoinz, D. Knitter & F. Faupel
- ## Version: 01
- ## Date of last changes: 03.08.2016
- ## Data: some.data
- ## Author of data: author.data
- ## Purpose: didactic
- ## Content: 1. preparation, 2. data import, ...
- ## Description: The script include ...
- ## Licence data: -
- ## Licence Script: GPL (http://www.gnu.org/licenses/gpl-3.0.html)
- ##################################################################
-```
+**Interaction spaces**
 
----
+- groups of similar material culture indicate interaction spaces
+- hierarchical Cluster analysis of regional Typensprektren
+- cultural distance as Euclidean distance of two normalised Typensprektren
 
-## Lets talk about scripts | Some rules
-
-- For each **command**, you should learn the usage only once.
-       - Supplement the command with comments so that you can re-use the 
-command for similar purposes without reading the manual again. 
-       - Copy, paste and adapt the commands from old scripts.
-
-```{r collapse=TRUE}
-# This is a comment
-a <- c(3,6,7,4,9,7,3,3,3)       # This is a vector
-median(a)                         # This is the "median" function
-```
-
-> - Use standardised names and denotations to ease the re-use of code.
-
----
-
-## Lets talk about scripts | Some rules
-
-> * Use detailed **comments** to understand your analysis years later.
->        * It is useful to think that you should hand over the script to a 
-colleague with limited knowledge to optimise comments and structure.
-> * Use **versioning** of the scripts by adding a version number to the file name 
-(-v01.xxx) or a version control system.
-
----
-
-## Lets talk about scripts | Some rules
+*** =right
 
 <div style='position:absolute;bottom:10%;right:5%'>
-    <img  height="200" width="200" src='assets/img/github01.png' />
+  <img  height="600" width="500" src='assets/img/pic17.png' />
 </div>
-
-- Use detailed **comments** to understand your analysis years later.
-      - It is useful to think that you should hand over the script to a 
-colleague with limited knowledge to optimise comments and structure.
-- Use **versioning** of the scripts by adding a version number to the file name 
-(-v01.xxx) or a version control system.
-      - For example GitHub: https://github.com/
 
 ---
 
-## Lets talk about scripts | Some rules
+## Cultural distances | Methodology for cultural areas
 
+**Interaction areas**
 
-> - Avoid special characters in file names, variable names, etc. 
->        - Subset Ä with Ae etc.
->        - Moreover, it is a good idea to encode the file in UTF8.
-> - Use a convenient yet standardised folder structure for scripts, data, 
-results and reports.
+<div style='position:absolute;bottom:10%;right:15%'>
+  <img  height="450" width="800" src='assets/img/pic18.png' />
+</div>
 
 --- &twocol
 
-## Lets talk about scripts 
-
-Use a convenient yet standardised folder structure for scripts, data, 
-results and reports. During the Mosaic Summer School, we will work with the follwoing structure.
+## Cultural distances
 
 *** =left
-> - 1script
-> - 2data
-> - 3geodata
+
+**Hunsrück-Eifel-Kultur**
+- same extent of different groups of material culture
+- crisp border
+
+<div style='position:absolute;bottom:20%;left:10%'>
+  <img  height="250" width="300" src='assets/img/pic20.png' />
+</div>
+
 
 *** =right
-> - 4ws
-> - 5results
-> - 6pictures
-> - 7report
 
----
+**Baden-Württemberg**
+- fuzzy borders
+- overlapping cultural areas
 
-## Weblinks
-
-Source|Link
----------|----------
-R Foundation Homepage| https://www.r-project.org/ 
-Homepage of RStudio| https://www.rstudio.com/ 
-Homepage of R Consortium | https://www.r-consortium.org/
-R language | https://de.wikipedia.org/wiki/R_(Programmiersprache)
-R language (german) | https://en.wikipedia.org/wiki/R_(programming_language)
-Wikibook | https://de.wikibooks.org/wiki/GNU_R
-Support |http://www.r-bloggers.com
-Support| http://stackoverflow.com/
-ISAAKiel|https://isaakiel.github.io/
-
----
-
-## Weblinks and literature
-
-<div style='position:absolute;bottom:20%;right:20%'>
-    <img  height="300" src='assets/img/graphics_cookbook.jpg' />
+<div style='position:absolute;bottom:15%;right:5%'>
+  <img  height="300" width="550" src='assets/img/pic19.png' />
 </div>
 
-<div style='position:absolute;bottom:20%;left:20%'>
-    <img  height="300" src='assets/img/r_cookbook.jpg' />
-</div>
-
-- J. Adler, R in a nutshell, Second edition. (Sebastopol 2012)
-- J. M. Chambers, A Statistical Data Language. In: R. C. Milton, J. A. Nelder (Hrsg.), Statistical Computation. (New York 1969), 179-199.
-
 ---
 
-## Thinks to remember
+## Cultural distances | Methodology for cultural areas
 
-> - **Scripts** are an exact documentation of the work.
-> - **Scripts** allow reproducing the analysis.
-> - **Scripts** allow reusing commands, algorithms etc.
-> - Each analysis has its own **script**.
-> - Each **script** has a header containing important information such as title, 
-topic, purpose, author, date, etc.
-> - Avoid special characters in file names, variable names, etc. 
-> - Use a convenient yet standardised folder structure for scripts, data, 
-results and reports.
+**distance diagrams**
 
+<div style='position:absolute;bottom:20%;right:15%'>
+  <img  height="350" width="800" src='assets/img/pic21.png' />
+</div>
 
 --- .segue bg:grey
 
-
-## 5.  Getting started with R
+## But how?!
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
 
 ---
 
-## 5.  Getting started with R
+## Preparation | Working Directory & Load Data
 
-
-```{r collapse=TRUE, results='hide'}
-# This is R Code 
-5+3
-5-3
-5*3
-5/3
-sqrt(25)
-sin(3.14)
-3.14 * (180 / pi)
+```{r collapse=TRUE, eval=FALSE}
+wd <- "/home/fon/daten/analyse/mosaic"
+setwd(wd)
 ```
 
-- **Please start R Studio**
-
-> - We will get used to R!
+```{r collapse=TRUE}
+df.weapons <- read.csv("2data/shkr-weapons.csv", header=TRUE, sep=";")
+t <- as.character(df.weapons[,13])
+df.weapons <- data.frame(id= df.weapons[,4], 
+               x=df.weapons[,1], y=df.weapons[,2], 
+               t, stringsAsFactors = FALSE)
+```
 
 ---
 
-## 5.  Getting started with R
+## Exploring Data | Structure & Content
+
+```{r collapse=TRUE}
+str(df.weapons)
+```
+
+```{r collapse=TRUE}
+df.weapons[1:4,]
+```
+
+--- &twocol
+
+## Global 'Typenspektrum' 
+
+*** =left
+
+- counting finds per type
+- considering type hierarchy
+
+```{r echo=FALSE, fig.align='right', fig.height=6, fig.width=6 }
+tab.weapons <- table(df.weapons[,4])
+tw <- tab.weapons
+for (i in seq_along(tab.weapons)) {
+  a <- dimnames(tab.weapons)[[1]][i]
+  b <- dimnames(tab.weapons)[[1]][]
+  tw[i] <- sum(tab.weapons[grepl(a, b)])
+}
+barplot(tw)
+```
+
+*** =right
+
+```{r collapse=TRUE, fig.show='hide', eval=FALSE}
+tab.weapons <- table(df.weapons[,4])
+tw <- tab.weapons
+for (i in seq_along(tab.weapons)) {
+  a <- dimnames(tab.weapons)[[1]][i]
+  b <- dimnames(tab.weapons)[[1]][]
+  tw[i] <- sum(tab.weapons[grepl(a, b)])
+}
+barplot(tw)
+```
+
+--- &twocol
+
+## Spatial Data
+
+*** =left
+
+- packages
+- projection data
+- conversion
+
+*** =right
+
+```{r collapse=TRUE, results='hide'}
+library(sp)         # spatial objects
+library(proj4)      # projection
+library(spatstat)   # spatial statistics
+library(maptools)   # spatial tools
+
+crs1 <- "+proj=tmerc +lat_0=0 +lon_0=9
++k=1 +x_0=3500000 +y_0=0
++ellps=WGS84 +units=m +no_defs"
+
+coordinates(df.weapons)=~x+y
+proj4string(df.weapons) <-
+CRS(as.character(crs1))
+```
+
+---
+
+## What is inside? | Structure of Spatial Objects
+
+```{r collapse=TRUE}
+str(df.weapons)
+```
+
+--- &twocol
+
+## Prep. local 'Typenspektren'
+
+*** =left
+
+- list of types
+- variables
+- owin object (`spatstat`)
+- regular sample points
+
+*** =right
+
+```{r collapse=TRUE}
+type.list <- unlist(dimnames(tab.weapons))
+type.n <- length(type.list)
+sdev <- 5000
+bb <- bbox(df.weapons)
+win <- owin(xrange=c(bb[1,1],bb[1,2]),
+yrange= c(bb[2,1],bb[2,2]),
+  unitname="m")
+s.points <- spsample(df.weapons, 100,
+  type="regular")
+samp <- list()
+i=0
+```
+
+--- &twocol
+
+## Loop local 'Typenspektren'
+
+*** =left
+
+- loop through all types
+- producing a point pattern object
+- calculating density
+- sampling density
+- Typenspektren as list of vectors
+
+*** =right
+
+```{r collapse=TRUE, warning=FALSE}
+for (t in type.list) {
+  i <- i+1
+  finds <- df.weapons[which(df.weapons
+                            @data$t==t),]
+  ppp_w <- ppp(finds@coords[,1],
+      finds@coords[,2], window=win)
+  dens <- density(ppp_w, kernel="gaussian", 
+      sigma=sdev, dimyx=c(36,56), w=win,
+      edge=TRUE, at="pixels")
+  sgdf_w_dens <- as.SpatialGridDataFrame.im(
+      dens)
+  proj4string(sgdf_w_dens) <- CRS(
+      as.character(crs1))
+  meg_dens_samp <- over(s.points, 
+                        sgdf_w_dens)
+  samp[[i]] <- meg_dens_samp
+}
+```
+
+--- 
+
+## Exploring the result | Structure & Content
+
+```{r}
+str(samp)
+```
+
+--- 
+
+## Exploring the result | Structure & Content
+
+
+```{r}
+samp
+```
+
+--- &twocol
+
+## Conversion to Data Frame
+
+*** =left
+
+- points in rows
+- types in columns
+- rename columns
+
+*** =right
+
+```{r collapse=TRUE, warning=FALSE}
+ts <- data.frame(matrix(unlist(samp),
+      nrow=49, byrow=T))
+colnames(ts) <- type.list
+ts[1:4,1:3]
+```
+
+--- &twocol
+
+## Distance diagram (dd)
+
+*** =left
+
+- different view-points
+- different focus-points
+- cultural distance as an inverse interaction proxy
+
+<div style='position:absolute;bottom:20%;left:10%'>
+  <img  height="250" width="350" src='assets/img/pic23.png' />
+</div>
+
+
+*** =right
+
+Viewpoint|fixed vocus|selected focus|all foucused
+----|----|----|----
+fixed viewpoint|**dd1** fixed profile dd, similarity profiles|**dd2** fixed sector dd|**dd3** fixed multi-focal dd, fall-off curve
+selected viewpoints|**dd4** selected profile dd|**dd5** selected secotr dd|**dd6** selected multi-focal dd
+all viewpoints**dd7** aggregated profile dd|**dd8** aggregated sector dd|**dd9** aggregated multi-focal dd, variogram
+  
+
+---
+
+## Cultural Distances 
 
 <div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_empty.png' />
+  <img  height="500" width="750" src='assets/img/pic24.png' />
+</div>
+
+--- .segue bg:grey
+
+## Do you have other ideas for interpretation?
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
+---
+
+## Space 
+
+**Disciplinary spaces**
+
+A metrical space is spanned by a metric, which defines
+distances.
+- A **social space** is constructed by social distances.
+- An **economic space** is constructed by economic distances.
+- A **cultural space** is constructed by cultural distances.
+- A **geographic space** is constructed by geodetic distances.
+
+--- &twocol
+
+## Interaction model
+
+*** =left
+
+- fixed starting point
+- fixed profile
+- ceramics
+- interaction friction at Black Forrest?
+
+<div style='position:absolute;bottom:10%;left:10%'>
+  <img  height="300" width="250" src='assets/img/pic26.png' />
+</div>
+
+
+*** =right
+
+<div style='position:absolute;bottom:20%;right:5%'>
+  <img  height="350" width="550" src='assets/img/pic25.png' />
+</div>
+
+--- &twocol
+
+## Interaction model
+
+*** =left
+
+- fixed starting point
+- along the main axes
+- ceramics
+- rivers as interactive areas?
+
+<div style='position:absolute;bottom:10%;left:10%'>
+  <img  height="300" width="250" src='assets/img/pic28.png' />
+</div>
+
+
+*** =right
+
+<div style='position:absolute;bottom:20%;right:5%'>
+  <img  height="350" width="550" src='assets/img/pic27.png' />
+</div>
+
+--- &twocol
+
+## Interaction model
+
+*** =left
+
+- from all points
+- to all points
+- fibulae and adornment
+- interaction threshold at 200 km?
+
+
+*** =right
+
+<div style='position:absolute;bottom:20%;right:5%'>
+  <img  height="350" width="550" src='assets/img/pic29.png' />
 </div>
 
 ---
 
-## 5.  Getting started with R
+## Theoretical Models
 
+**Interaction decreases with distance.**
+Distance decay functions can quantify the decrease.
 
-```{r collapse=TRUE, results='hide'}
-# This is R Code 
-5+3
-5-3
-5*3
-5/3
-sqrt(25)
-sin(3.14)
-3.14 * (180 / pi)
+<div style='position:absolute;bottom:10%;left:5%'>
+  <p><b>Tobler’s first law of geography</b></p>
+  <p>Everything is related to everything else, but near things are more related </p>
+  <p>than distant things.</p>
+</div>
+
+<div style='position:absolute;bottom:33%;right:5%'>
+  <img  height="300" width="450" src='assets/img/pic24.png' />
+</div>
+
+<div style='position:absolute;bottom:35%;left:5%'>
+  <img  height="250" width="500" src='assets/img/pic30.png' />
+</div>
+
+--- &twocol
+
+## Gravity models
+
+*** =left
+
+- involve properties of the interaction partners
+- based on an analogy from physics
+- population, settlement size, …
+- can be used to produce distance decay functions/fall off curves, which consider population
+
+*** =right
+
+<div style='position:absolute;bottom:25%;right:5%'>
+  <img  height="300" width="450" src='assets/img/pic31.png' />
+</div>
+
+--- &twocol
+
+## Distance diagram (dd)
+
+*** =left
+
+- different viewpoints
+- different focus-points
+- cultural distance as an inverse interaction proxy
+
+*** =right
+
+Viewpoint|fixed vocus|selected focus|all foucused
+----|----|----|----
+fixed viewpoint|**dd1** fixed profile dd, similarity profiles|**dd2** fixed sector dd|**dd3** fixed multi-focal dd, fall-off curve
+selected viewpoints|**dd4** selected profile dd|**dd5** selected secotr dd|**dd6** selected multi-focal dd
+all viewpoints**dd7** aggregated profile dd|**dd8** aggregated sector dd|**dd9** aggregated multi-focal dd, variogram
+
+--- &twocol
+
+## Mapping profiles
+
+*** =left 
+
+```{r collapse=TRUE,  fig.show='hide'}
+p.index <- (s.points@coords[,1] > 3475200 & s.points@coords[,1] < 3511200)
+p.points <- s.points[p.index,]
+p.ts <- ts[p.index,]
+
+plot(s.points)
+points(df.weapons, col='grey')
+points(p.points, pch=16, col="dark red")
 ```
 
----
+*** =right
 
-## 5.  Getting started with R
-
-
-```{r collapse=TRUE}
-# This is R Code
-5+3
-5-3
-5*3
-5/3
-sqrt(25)
-sin(3.14)
-3.14 * (180 / pi)
+```{r echo=FALSE,  fig.align='right', fig.height=6, fig.width=6 }
+plot(s.points)
+points(df.weapons, col='grey')
+points(p.points, pch=16, col="dark red")
 ```
 
+--- &twocol
+
+## dd1
+
+*** =left
+
+- distance function
+- data for specific distance diagram
+- distance calculation
+- plot
+
+<div style='position:absolute;bottom:15%;left:10%'>
+  <img  height="250" width="300" src='assets/img/pic33.png' />
+</div>
+
+*** =right
+
+```{r collapse=TRUE, fig.show='hide', eval=FALSE}
+edist <- function(a,b){sqrt(sum((a-b)^2))}
+n <-length(p.points@coords[,1])
+x <-1:n
+df.d <- data.frame(p1=rep(1,n),p2=x,
+  d1=x,d2=x)
+for (i in seq_along(p.ts[,1])) {
+  df.d[i,3] <- edist(p.points@coords[1,],
+  p.points@coords[i,])
+}
+for (i in seq_along(p.ts[,1])) {
+  df.d[i,4] <- edist(p.ts[1,],p.ts[i,])
+}
+plot(df.d[,3:4], pch=16, xlab="spatial
+  distance (km)", ylab= "density
+  distance", main="dd1")
+lines(df.d[,3:4])
+```
+
+--- &twocol
+
+## dd3
+
+*** =left
+
+- similar to dd1
+- sampling cultural distances in spatial distance ranges
+
+<div style='position:absolute;bottom:15%;left:10%'>
+  <img  height="250" width="300" src='assets/img/pic34.png' />
+</div>
+
+*** =right
+
+```{r collapse=TRUE, fi.show='hide', eval=FALSE}
+p.points <- s.points; p.ts <- ts
+n <-length(p.points@coords[,1]); x <-1:n
+df.d<-data.frame(p1=rep(1,n),p2=x,d1=x,d2=x)
+for (i in seq_along(p.ts[,1])) {
+  df.d[i,3] <- edist(p.points@coords[50,],
+  p.points@coords[i,])}
+for (i in seq_along(p.ts[,1])) {
+  df.d[i,4] <- edist(p.ts[50,],p.ts[i,])}
+  df.dd <- data.frame(id=seq(0,250000,20000)
+  /20000+1,d1=seq(0,250000,20000),
+  d2=seq(0,250000,20000))
+for (i in df.dd[,1]) {
+  df.dd[i,3] <- mean(df.d[(df.d[,3] >
+  df.dd[i,2] & df.d[,3] < df.dd[i+1,2]),4])}
+plot(df.dd[,2:3], pch=16, xlab="spatial distance (m)", 
+  ylab= "density distance", main="dd3")
+lines(df.dd[,2:3])
+```
+
+--- &twocol
+
+## dd9
+
+*** =left
+
+- similar to dd1
+- sampling cultural distances in spatial distance ranges
+
+```{r collapse=TRUE, fi.show='hide', eval=FALSE}
+p.points <- s.points; p.ts <- ts
+n <-length(p.points@coords[,1]); x <-1:n
+df.d <- data.frame(p1=rep(1,n),p2=x,d1=x,d2=x)
+```
+
+
+<div style='position:absolute;bottom:5%;left:15%'>
+  <img  height="250" width="300" src='assets/img/pic35.png' />
+</div>
+
+
+*** =right
+
+```{r collapse=TRUE, fi.show='hide', eval=FALSE}
+for (i in 2:n) {
+  df.d <- rbind(df.d,data.frame(p1=rep
+  (i,n),p2=x,d1=x,d2=x))}
+for (i in seq_along(df.d[,1])) {
+  df.d[i,3] <- edist(p.points@coords[
+  df.d[i,1],],p.points@coords[df.d[i,2],])}
+for (i in seq_along(df.d[,1])) {
+  df.d[i,4] <- edist(p.ts[df.d[i,1],],
+  p.ts[df.d[i,2],])}
+df.dd <- data.frame(id=seq(0,250000,20000)
+  /20000+1,d1=seq(0,250000,20000),
+  d2=seq(0,250000,20000))
+for (i in df.dd[,1]) {
+  df.dd[i,3] <- mean(df.d[(df.d[,3] >
+  df.dd[i,2] & df.d[,3] < df.dd[i+1,2]),4])}
+plot(df.dd[,2:3], pch=16, xlab="spatial distance
+  (m)", ylab= "density distance", main="dd9")
+lines(df.dd[,2:3])
+```
+
+
+--- .segue bg:grey
+
+## How can we interpret the distance diagrams?
+## Which pitfalls for interpretation can you find?
+## How can we improve thedistance diagrams and develop other versions?
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+    
+
+--- .segue bg:grey
+
+## Apply distance diagrams in the workshop this afternoon!
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
 
 ---
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' />
- 
+  <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' />
 </a>

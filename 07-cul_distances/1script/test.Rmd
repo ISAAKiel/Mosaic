@@ -1,0 +1,24 @@
+---
+title: "test"
+author: 'xxx'
+output: pdf_document
+---
+
+# Test
+This is a R Markdown test. Please, save this code snipped as a xxx.Rmd file and run 'Knit PDF' in RStudio.
+
+
+Some simple calculations
+```{r}
+a <- 3
+b <- 8
+a+b
+```
+# Table
+a | b
+------------- | -------------
+222 | 444
+333 | 555
+
+# Further information
+<http://rmarkdown.rstudio.com>.
