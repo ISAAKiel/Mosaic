@@ -34,22 +34,25 @@ strong {
 
 **Tuesday, 6th of September**
 
-2. [Introduction to R](02-introduction/index.html)
-3. [R Basics: Frist Steps](03-R_basics01/index.html)
-4. [R Basics: Getting used to R](04-R_basics02/index.html)
-5. [Using R as GIS](05-R_GIS/index.html)
-6. [**Workshop:** Basic Spatial Statistics](06-WS_Basic_SPatial_Statistics/index.html)
+1. [Introduction to R](02-introduction/index.html)
+2. [R Basics: Frist Steps](03-R_basics01/index.html)
+3. [R Basics: Getting used to R](04-R_basics02/index.html)
+4. [Using R as GIS](05-R_GIS/index.html)
+5. [**Workshop:** Basic Spatial Statistics](06-WS_Basic_Spatial_Statistics/index.html)
 
 *** =right
 
 **Wednesday, 7th of September**
 
-7. [Modelling Interaction: Cultural distances](07-cul_distances(index.html))
-8. [**Workshop**: Geographical and Econimic Distances](08-WS_Geo_Eco_Distances/index.html)
-9. [**Workshop:** Cultural Distances]
-10. [Using network approaches to modell Interaction]
-11. [**Workshop:** Pointpattern Analysis]
-12. [**Workshop:** Network Analysis]
+1. [Modelling Interaction: Cultural distances](07-cul_distances/index.html)
+2. [**Workshop**: Geographical and Economic Distances](08-WS_Geo_Eco_Distances/index.html)
+3. [**Workshop:** Cultural Distances]
+
+**Thursday, 8th of September**
+
+1. [Using network approaches to modell Interaction]
+2. [**Workshop:** Pointpattern Analysis]
+3. [**Workshop:** Network Analysis]
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
@@ -59,6 +62,7 @@ strong {
 
 ## Needed Packages
 
+- `vioplot`
 - `rgdal`
 - `raster`
 
