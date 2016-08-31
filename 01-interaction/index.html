@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Introdution to R</title>
+  <title>Interaction as a Key Term</title>
   <meta charset="utf-8">
-  <meta name="description" content="Introdution to R">
-  <meta name="author" content="Franziska Faupel">
+  <meta name="description" content="Interaction as a Key Term">
+  <meta name="author" content="Oliver Nakoinz">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -43,9 +43,9 @@
     <img src="assets/img/logo03.png">
   </aside>
   <hgroup class="auto-fadein">
-    <h1>Introdution to R</h1>
-    <h2>Advantages and Disadvatages</h2>
-    <p>Franziska Faupel<br/>MOSAIC Summer School 2016</p>
+    <h1>Interaction as a Key Term</h1>
+    <h2></h2>
+    <p>Oliver Nakoinz<br/>MOSAIC Summer School 2016</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -68,22 +68,27 @@ strong {
 }
 </style>
 
-<h2>With special thanks to...</h2>
+<h2>Interaction as a key term</h2>
 
 <ul>
-<li>Oliver Nakoinz</li>
-<li>Clemens Schmid</li>
-<li>Dirk Seidensticker</li>
-<li>Martin Hinz</li>
+<li>Introduction</li>
+<li>Facets of interaction</li>
+<li>Interaction in different disciplines</li>
+<li>Modells</li>
+<li>Quantitative analysis</li>
+<li>Theory and method of interaction modelling</li>
+<li>Approaches of interaction analysis</li>
+<li>Case studies</li>
+<li>Summary</li>
 </ul>
 
-<div style='position:absolute;top:20%;right:5%'>
-    <img  height="300" width="500" src='assets/img/IsaaKiel.png' />
+<div style='position:absolute;bottom:20%;right:5%'>
+    <img  height="200" width="200" src='assets/img/logo03.png' />
 </div>
 
-<div style='position:absolute;bottom:20%;left:5%'>
- <a href="https://isaakiel.github.io/index.html"> For more Information, please check out our homepage: https://isaakiel.github.io/ </a> 
-</div>
+<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a></p>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -92,32 +97,15 @@ strong {
 </footer>
 </article>
 </slide>
-<slide class="" id="slide-2">
+<slide class="segue" id="slide-2">
 <hgroup>
-<h2>Structure</h2>
+<h2>Why <em>interaction</em>?</h2>
 </hgroup>
 <article>
-
-<div style='float:left;width:48%;' class='centered'>
-  <ol>
-<li> R - What is it?!</li>
-<li> Why using R?</li>
-<li> How to start?</li>
-<li> Scipts and why they are usefull</li>
-<li> Getting started with R</li>
-</ol>
-
-</div>
-<div style='float:right;width:48%;'>
-  <div style='position:absolute;bottom:20%;right:5%'>
-    <img  height="200" width="200" src='assets/img/Rlogo.png' />
-</div>
-
 <p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a></p>
 
-</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -125,14 +113,33 @@ strong {
 </footer>
 </article>
 </slide>
-<slide class="segue" id="slide-3">
+<slide class="" id="slide-3">
 <hgroup>
-<h2>1.  R - What is it?!</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a></p>
+<ul>
+<li>Trade</li>
+<li>Conflict</li>
+<li>Transportation</li>
+</ul>
+
+<div style='position:absolute;top:10%;right:5%'>
+  <img  height="250" width="400" src='assets/img/pic01.png' />
+</div>
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="250" width="400" src='assets/img/pic03.png' />
+</div>
+
+<div style='position:absolute;bottom:15%;left:15%'>
+  <img  height="300" width="200" src='assets/img/pic02.png' />
+</div>
+
+<div style='position:absolute;bottom:7%;right:5%'>
+ <font size="2">paintings from S. Bening, E. Hünten, C. Monet</font> 
+ <font size="2">source: Wikipedia</font> 
+</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -143,23 +150,15 @@ strong {
 </slide>
 <slide class="" id="slide-4">
 <hgroup>
-<h2>1.  R - What is it?!</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<ul class = "build incremental">
-<li>R is a language and environment for statistical computing and graphics</li>
-<li>Open Source Software: <a href="http://www.r-project.org">www.r-project.org</a></li>
-<li>extendible by packages (libraries)</li>
-<li>running with most operational systems</li>
-<li>interfaces to C, Python and Fortran etc.</li>
-<li>functional with object oriented extension</li>
-<li>vector based / dataframe</li>
-<li>developing and implementing own functions</li>
-</ul>
+<p><strong>Purpose of interaction</strong></p>
 
-<div style='position:absolute;bottom:20%;right:5%'>
-    <img  height="200" width="200" src='assets/img/Rlogo.png' />
-</div>
+<ul>
+<li>allows to join forces to reach certain targets</li>
+<li>changes (extends/reduces) the individual capability</li>
+</ul>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -168,16 +167,14 @@ strong {
 </footer>
 </article>
 </slide>
-<slide class="" id="slide-5">
+<slide class="segue" id="slide-5">
 <hgroup>
-<h2>Why should I apply statistics?</h2>
+<h2>What is interaction?</h2>
 </hgroup>
 <article>
-<ul class = "build incremental">
-<li><p>Data analysis is an essential tool of empirical research</p></li>
-<li><p>&quot;learning programming is learning to think&quot;</p></li>
-<li><p>forcing the problem in a logical and sequential structure</p></li>
-</ul>
+<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a></p>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -188,22 +185,36 @@ strong {
 </slide>
 <slide class="" id="slide-6">
 <hgroup>
-<h2>History of R</h2>
+<h2>Defining interaction</h2>
 </hgroup>
 <article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Definition 1</strong></p>
+
 <ul>
-<li>1976: <strong>S language by John Chambers</strong> at Bell Laboratories (AT&amp;T)</li>
+<li>Interaction is the joint action of at least two interaction partners.</li>
 </ul>
 
-<div style='position:absolute;bottom:20%;right:40%'>
-    <img  height="200" width="200" src='assets/img/Chambers.jpg' />
+<p><strong>Definition 2</strong></p>
+
+<ul>
+<li>Spatial Interaction connects different locations by the means of moving people, goods or knowledge between the locations.</li>
+</ul>
+
+<p><strong>Definition 3</strong></p>
+
+<ul>
+<li>Communication is the exchange of information.</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="500" width="400" src='assets/img/pic04.png' />
 </div>
 
-<div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
-  <a href="https://statistics.stanford.edu/people/john-chambers" title="User:John Chambers">
-  John Chambers</a> , https://statistics.stanford.edu/people/john-chambers
 </div>
-
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -213,31 +224,20 @@ strong {
 </slide>
 <slide class="" id="slide-7">
 <hgroup>
-<h2>History of R</h2>
+<h2>Facets of interaction</h2>
 </hgroup>
 <article>
 <ul>
-<li><p>1976: S language by <strong>John Chambers</strong> at Bell Laboratories (AT&amp;T)</p></li>
-<li><p>1993: Free implementation of R under the name R by <strong>Ross Ihaka and Robert Gentleman</strong></p></li>
+<li>culture</li>
+<li>mobility and transport</li>
+<li>centrality</li>
+<li>trade and exchange</li>
+<li>conflicts</li>
+<li>social structure</li>
+<li>territoriality and borders</li>
+<li>collective identities</li>
+<li>…</li>
 </ul>
-
-<div style='position:absolute;bottom:20%;right:20%'>
-    <img  height="200" width="150" src='assets/img/Gentleman.jpg' />
-</div>
-
-<div style='position:absolute;bottom:20%;left:20%'>
-    <img  height="200" width="200" src='assets/img/ihaka.jpg' />
-</div>
-
-<div style='position:absolute;bottom:10%;right:5%;font-size:10px'>
-  <a href="http://america.pink/images/3/8/1/4/7/7/1/en/1-ross-ihaka.jpg" title="User:Ross Ihaka">
-  Ross Ihaka</a> , https://america.pink/ross-ihaka_3814771.html
-</div>
-
-<div style='position:absolute;bottom:12%;right:5%;font-size:10px'>
-  <a href="https://researchers.23andme.org/robert-gentleman-phd" title="User:Robert Gentleman">
-  Robert Gentleman</a> , https://researchers.23andme.org/robert-gentleman-phd
-</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -248,20 +248,29 @@ strong {
 </slide>
 <slide class="" id="slide-8">
 <hgroup>
-<h2>History of R</h2>
+<h2>Conflict and cooperation</h2>
 </hgroup>
 <article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Conflict</strong></p>
+
 <ul>
-<li>1976: S language by <strong>John Chambers</strong> at Bell Laboratories (AT&amp;T)</li>
-<li>1993: Free implementation of R under the name R by <strong>Ross Ihaka</strong> and <strong>Robert Gentleman</strong></li>
+<li>contradicting goals of the two interaction partners</li>
+<li>limitation of the other’s capability</li>
+<li>hamper the other’s efforts Cooperation</li>
+<li>similar goals of the two interaction partners</li>
+<li>extension of the other’s capability</li>
+<li>supporting the other’s efforts</li>
 </ul>
 
-<ul class = "build incremental">
-<li>1997: R becomes <strong>GNU project</strong></li>
-<li>2000: <strong>R1.0</strong></li>
-<li>2015: <strong>R Consortium</strong>: R Foundation, Microsoft, R Studio, Google etc.</li>
-</ul>
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="400" width="400" src='assets/img/pic05.png' />
+</div>
 
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -269,15 +278,28 @@ strong {
 </footer>
 </article>
 </slide>
-<slide class="segue" id="slide-9">
+<slide class="" id="slide-9">
 <hgroup>
-<h2>2.  Why using R?</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a></p>
 
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Power and Leverage</strong></p>
+
+<p>Traditional history is about events, when people interact. It is about gaining and applying power and influencing and controlling the behaviour of other people using different means.</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:30%;right:10%'>
+  <img  height="300" width="400" src='assets/img/pic01.png' />
+</div>
+
+<div style='position:absolute;bottom:7%;right:5%'>
+ <font size="2">Battle of Königsgrätz, painting by E. Hünten</font>
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -287,39 +309,26 @@ strong {
 </slide>
 <slide class="" id="slide-10">
 <hgroup>
-<h2>2. Some Advantages and Disadvantages</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<p>Most statistical software provides usfull standartised test, as \(chi^2\) test etc. R has some very convienient advantages:</p>
 
-<table><thead>
-<tr>
-<th><strong>Advantages</strong></th>
-<th><strong>Disadvantages</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td>reproducibility and verifiablilty</td>
-<td>high barriers to learn</td>
-</tr>
-<tr>
-<td>flexible and extensible</td>
-<td>&#39;raw&#39; syntax</td>
-</tr>
-<tr>
-<td>many different packages</td>
-<td></td>
-</tr>
-<tr>
-<td>customisable</td>
-<td></td>
-</tr>
-<tr>
-<td>independent platform with a great support</td>
-<td></td>
-</tr>
-</tbody></table>
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Social structures</strong></p>
 
+<p>Social structures are a kind of infrastructure of effective interaction. Social structures are defining the acceptable and unacceptable kinds of interaction. The negotiation of social status is a process of interaction.</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:30%;right:10%'>
+  <img  height="300" width="400" src='assets/img/pic06.png' />
+</div>
+
+<div style='position:absolute;bottom:7%;right:5%'>
+ <font size="2">Nationalversammlung Frankfurt 1848, painting by L. v. Elliott</font>
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -329,19 +338,34 @@ strong {
 </slide>
 <slide class="" id="slide-11">
 <hgroup>
-<h2>7 levels of using R</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<ol class = "build incremental">
-<li>Asking a colleague to run R for you</li>
-<li>Applying build in functions</li>
-<li>Combining build in functions</li>
-<li>Writing own algorithms</li>
-<li>Writing own functions and objects</li>
-<li>Developing efficient code</li>
-<li>Writing own packages</li>
-</ol>
 
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Interaction</strong></p>
+
+<p>Interaction supports the fulfilment of needs and to overcome shortages by changing the distribution of commodities and conducting
+services:</p>
+
+<ul>
+<li>trade</li>
+<li>division of labour</li>
+<li>services</li>
+<li>…</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:15%;right:10%'>
+  <img  height="500" width="350" src='assets/img/pic07.png' />
+</div>
+
+<div style='position:absolute;bottom:7%;right:5%'>
+ <font size="2">Renfrew 1975</font>
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -349,15 +373,33 @@ strong {
 </footer>
 </article>
 </slide>
-<slide class="segue" id="slide-12">
+<slide class="" id="slide-12">
 <hgroup>
-<h2>3.  How to start?</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a></p>
 
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Innovations</strong></p>
+
+<p>Interaction supports innovations by</p>
+
+<ul>
+<li>enabling the required knowledge base by the collaboration of developers</li>
+<li>distributing the innovation</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:15%;right:10%'>
+  <img  height="500" width="400" src='assets/img/pic08.png' />
+</div>
+
+<div style='position:absolute;bottom:7%;right:5%'>
+ <font size="2">M. Lomonosow, painting by I. Feodorov</font>
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -367,18 +409,29 @@ strong {
 </slide>
 <slide class="" id="slide-13">
 <hgroup>
-<h2>Gerneral Workflow | Before you beginn</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<ol class = "build incremental">
-<li><strong>Problem:</strong> Put your question.</li>
-<li><strong>Theory:</strong> Which theoretical frame is adequate for solving the problem?</li>
-<li><strong>Data:</strong> Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?</li>
-<li><strong>Method:</strong> Which methods can solve the problem? Learn the methods!</li>
-<li><strong>Tool:</strong> Learn the tools to apply the methods.</li>
-<li><strong>Finally:</strong> Check, validate and interpret the results. plausible? significant?</li>
-</ol>
 
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Transportation</strong></p>
+
+<p>If people are at different places, they need means of transportation or telecommunication for conducting interaction. It is required to move people, commodities or ideas/knowledge.
+The means of transportation and the transportation infrastructure is at the same time enabling and restricting interaction. The system of transportation:</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>is mapping the structure of the system of interaction</li>
+<li>is canalizing the interaction</li>
+<li>is influenced by the system of interaction (although, there is a certain inertia)</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="300" width="350" src='assets/img/pic09.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -388,43 +441,24 @@ strong {
 </slide>
 <slide class="" id="slide-14">
 <hgroup>
-<h2>Gerneral Workflow | Now, you can beginn</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
 
 <div style='float:left;width:48%;' class='centered'>
-  <ul class = "build incremental">
-<li><strong>Loading</strong> data</li>
-<li><strong>Exploring</strong> data</li>
-<li><strong>Analysing</strong> data
+  <p><strong>Daily live and culture</strong></p>
 
-<ul>
-<li>Descriptive analysis
-
-<ul>
-<li>Univariate analysis</li>
-<li>Bivariate analysis</li>
-<li>Multivariate analysis</li>
-</ul></li>
-</ul></li>
-</ul>
+<p>Interaction is an essential part of the daily live. Every contact to another individual represents a process of interaction, even if the purpose is not clear.</p>
 
 </div>
 <div style='float:right;width:48%;'>
-  <ul class = "build incremental">
-<li>Inference
+  <div style='position:absolute;bottom:30%;right:10%'>
+  <img  height="250" width="400" src='assets/img/pic10.png' />
+</div>
 
-<ul>
-<li>tests</li>
-<li>Bayes</li>
-</ul></li>
-<li>Simulation
-
-<ul>
-<li><strong>Visualise</strong> and export results</li>
-<li><strong>Report</strong> and publication</li>
-</ul></li>
-</ul>
+<div style='position:absolute;bottom:7%;right:5%'>
+ <font size="2">painting by P. A. Renoir</font>
+</div>
 
 </div>
 <footer class = 'logo'>
@@ -436,13 +470,32 @@ strong {
 </slide>
 <slide class="" id="slide-15">
 <hgroup>
-<h2>3.  How to start? | R Studio</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Daily live and culture</strong></p>
+
+<p>If a certain behaviour becomes a custom and is shared with others, we call it culture. Since interaction causes common standardisations, culture is a kind of effect of interaction.</p>
+
+<p><strong>Definition 4</strong></p>
+
+<ul>
+<li>Culture covers standardisations which are valid in collectives.</li>
+</ul>
+
+<div style='position:absolute;bottom:25%;left:40%'>
+ <font size="2">Hansen 2003, 39</font>
 </div>
 
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:30%;right:10%'>
+  <img  height="350" width="400" src='assets/img/pic11.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -452,13 +505,35 @@ strong {
 </slide>
 <slide class="" id="slide-16">
 <hgroup>
-<h2>3.  R Studio | Text Editor</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Culture</strong></p>
+
+<ul>
+<li>Formal and abstract definition which covers most other</li>
+<li>Spatial archaeological cultures as special case</li>
+</ul>
+
+<div style='position:absolute;top:48%;left:5%'>
+    <img  height="200" width="550" src='assets/img/pic12.png' />
 </div>
 
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>Applicable in archaeology</li>
+</ul>
+
+<p><strong>Cultures are mapping interaction structures</strong></p>
+
+<div style='position:absolute;bottom:5%;right:5%'>
+    <img  height="200" width="550" src='assets/img/pic13.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -468,13 +543,27 @@ strong {
 </slide>
 <slide class="" id="slide-17">
 <hgroup>
-<h2>3.  R Studio | Console</h2>
+<h2>Advantages of interaction as concept</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>interaction is the driving force of soical, economic, cultural and historical processes and present in many aspects of daily live</li>
+<li>interaction is very abstract and is able to cover different aspects of human behaviour
+<strong>hence</strong></li>
+<li>we need not to start our investigation with distinguishing different kinds of interaction</li>
+<li>interaction is a key term for different geographical and archaeological topics</li>
+<li>we can easily connect to other disciplines</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="500" width="400" src='assets/img/pic04.png' />
 </div>
 
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -484,12 +573,18 @@ strong {
 </slide>
 <slide class="" id="slide-18">
 <hgroup>
-<h2>3.  R Studio | File Manager</h2>
+<h2>Interaction in different disciplines</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_file.png' />
-</div>
+<ul>
+<li><strong>physics</strong>: gravity law, Hamada-Johnston-Potential</li>
+<li><strong>human-ecology</strong>: human-environment interaction</li>
+<li><strong>sociology</strong>: Parson theory of roles, Blumer theory of symbolic interaction</li>
+<li><strong>psychology</strong>: interaction in diades theory, dialog theory</li>
+<li><strong>ethnology</strong>: Malinowskies theory of gift exchange</li>
+<li><strong>economy</strong>: Polanyis market theory</li>
+<li><strong>geography</strong>: Ravensteins theory of migration, Wilsons theory entropy of traffic, Christallers theory of central places</li>
+</ul>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -500,13 +595,30 @@ strong {
 </slide>
 <slide class="" id="slide-19">
 <hgroup>
-<h2>3.  R Studio | Documentation viewer</h2>
+<h2>Interaction in different disciplines</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Physics</strong></p>
+
+<ul>
+<li>Newton</li>
+<li>gravity law
+\[I = \frac{m_1*m_2}{d^k}  \]</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:20%'>
+  <img  height="280" width="200" src='assets/img/pic15.png' />
 </div>
 
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" width="400" src='assets/img/pic14.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -516,13 +628,30 @@ strong {
 </slide>
 <slide class="" id="slide-20">
 <hgroup>
-<h2>3.  R Studio | Project and Session Manager</h2>
+<h2>Interaction in different disciplines</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Ethnology</strong></p>
+
+<ul>
+<li>Malinowski</li>
+<li>Kula ring</li>
+<li>gift exchange</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:20%'>
+  <img  height="280" width="200" src='assets/img/pic17.png' />
 </div>
 
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" width="400" src='assets/img/pic16.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -532,13 +661,29 @@ strong {
 </slide>
 <slide class="" id="slide-21">
 <hgroup>
-<h2>3.  R Studio | Workspace Explorer</h2>
+<h2>Interaction in different disciplines</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Economy</strong></p>
+
+<ul>
+<li>Polanyi</li>
+<li>market, redistribution, reciprocity</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:10%'>
+  <img  height="280" width="350" src='assets/img/pic19.png' />
 </div>
 
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" width="400" src='assets/img/pic18.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -548,13 +693,29 @@ strong {
 </slide>
 <slide class="" id="slide-22">
 <hgroup>
-<h2>3.  R Studio | Package Manager</h2>
+<h2>Interaction in different disciplines</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_empty.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Sociology</strong></p>
+
+<ul>
+<li>Blumer</li>
+<li>symbolic interaction</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:20%'>
+  <img  height="280" width="250" src='assets/img/pic21.png' />
 </div>
 
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" width="400" src='assets/img/pic20.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -564,13 +725,25 @@ strong {
 </slide>
 <slide class="" id="slide-23">
 <hgroup>
-<h2>3.  R Studio | Wirzards and Assistants</h2>
+<h2>Interaction in different disciplines</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio-Screenshot.png' />
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Psychology</strong></p>
+
+<ul>
+<li>Garrod/Pickering</li>
+<li>alignment in dialogues</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" width="400" src='assets/img/pic22.png' />
 </div>
 
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -580,28 +753,27 @@ strong {
 </slide>
 <slide class="" id="slide-24">
 <hgroup>
-<h2>3.  How to start? | R Studio</h2>
+<h2>Interaction in different disciplines</h2>
 </hgroup>
 <article>
 
 <div style='float:left;width:48%;' class='centered'>
-  <ul class = "build incremental">
-<li>Text Editor</li>
-<li>Console</li>
-<li>Data Explorer</li>
-<li>File Manager</li>
-<li>Image Viewer</li>
+  <p><strong>Geography</strong></p>
+
+<ul>
+<li>Christaller</li>
+<li>central place theory</li>
 </ul>
+
+<div style='position:absolute;bottom:10%;left:20%'>
+  <img  height="280" width="230" src='assets/img/pic24.png' />
+</div>
 
 </div>
 <div style='float:right;width:48%;'>
-  <ul class = "build incremental">
-<li>Documentation Viewer</li>
-<li>Project and Session Manager</li>
-<li>Workspace Explorer</li>
-<li>Package Manager</li>
-<li>Wizards and Assistants</li>
-</ul>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" width="400" src='assets/img/pic23.png' />
+</div>
 
 </div>
 <footer class = 'logo'>
@@ -611,15 +783,40 @@ strong {
 </footer>
 </article>
 </slide>
-<slide class="segue" id="slide-25">
+<slide class="" id="slide-25">
 <hgroup>
-<h2>4. Scipts and why they are usefull</h2>
+<h2>Centrality as example</h2>
 </hgroup>
 <article>
-<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
-</a></p>
 
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Definition 5</strong></p>
+
+<p>Centrality is the relative surplus of meaning due to fulfilling central functions for the surrounding area.</p>
+
+<div style='position:absolute;top:40%;left:40%'>
+ <font size="2">Christaller 1933, 26-27</font>
+</div>
+
+<div style='position:absolute;bottom:15%;left:10%'>
+  <img  height="300" width="250" src='assets/img/pic25.png' />
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><strong>Definition 6</strong></p>
+
+<p>Centrality is the relative concentration of interaction. </p>
+
+<div style='position:absolute;top:35%;right:10%'>
+ <font size="2">Nakoinz 2012</font>
+</div>
+
+<div style='position:absolute;bottom:15%;right:10%'>
+  <img  height="250" width="350" src='assets/img/pic26.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -629,21 +826,25 @@ strong {
 </slide>
 <slide class="" id="slide-26">
 <hgroup>
-<h2>Lets talk about scripts</h2>
+<h2>Vector of centrality</h2>
 </hgroup>
 <article>
-<ul class = "build incremental">
-<li><strong>Scripts</strong> are an exact documentation of the work.</li>
-<li><strong>Scripts</strong> allow reproducing the analysis.</li>
-<li><strong>Scripts</strong> allow reusing commands, algorithms etc.</li>
-<li><strong>Scripts</strong> allow sharing code.</li>
-<li><strong>Scripts</strong> allow the automation of complex analyses.</li>
-<li><strong>Scripts</strong> allow the automation of report generation; for instance, in R with the packages <code>knitr</code> or <code>sweave</code>.</li>
-<li><strong>Scripts</strong> allow rerunning and testing code snippets.</li>
-<li><strong>Scripts</strong> make it easy to create complex solutions.</li>
-<li><strong>Scripts</strong> allow limiting the active knowledge of the researcher to the most important aspects.</li>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li><strong>I</strong> Intensity of Interaction</li>
+<li><strong>R</strong>  Reach of Interaction</li>
+<li><strong>H</strong> Level of Hierarchy</li>
+<li><strong>K</strong> Control of Interaction</li>
 </ul>
 
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:15%;right:10%'>
+  <img  height="500" width="500" src='assets/img/pic27.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -653,14 +854,12 @@ strong {
 </slide>
 <slide class="" id="slide-27">
 <hgroup>
-<h2>Lets talk about scripts | Some rules</h2>
+<h2>Interaction</h2>
 </hgroup>
 <article>
-<ul class = "build incremental">
-<li>Each analysis has its own <strong>script</strong>.</li>
-<li>Each <strong>script</strong> has a header containing important information such as title, 
-topic, purpose, author, date, etc.</li>
-</ul>
+<div style='position:absolute;bottom:5%;right:18%'>
+  <img  height="550" width="750" src='assets/img/pic28.png' />
+</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -669,27 +868,14 @@ topic, purpose, author, date, etc.</li>
 </footer>
 </article>
 </slide>
-<slide class="" id="slide-28">
+<slide class="segue" id="slide-28">
 <hgroup>
-<h2>Lets talk about scripts | Script Header</h2>
+<h2>What is a model?</h2>
 </hgroup>
 <article>
-<pre><code class="r"> ##################################################################
- ## Didactic R-Script for Modelling Summer School
- ## ===============================================================
- ## Project: Modelling Summer School
- ## Author: O. Nakoinz, D. Knitter &amp; F. Faupel
- ## Version: 01
- ## Date of last changes: 03.08.2016
- ## Data: some.data
- ## Author of data: author.data
- ## Purpose: didactic
- ## Content: 1. preparation, 2. data import, ...
- ## Description: The script include ...
- ## Licence data: -
- ## Licence Script: GPL (http://www.gnu.org/licenses/gpl-3.0.html)
- ##################################################################
-</code></pre>
+<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a></p>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -700,29 +886,26 @@ topic, purpose, author, date, etc.</li>
 </slide>
 <slide class="" id="slide-29">
 <hgroup>
-<h2>Lets talk about scripts | Some rules</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<ul>
-<li>For each <strong>command</strong>, you should learn the usage only once.
 
-<ul>
-<li>Supplement the command with comments so that you can re-use the 
-command for similar purposes without reading the manual again. </li>
-<li>Copy, paste and adapt the commands from old scripts.</li>
-</ul></li>
-</ul>
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Definition 7</strong></p>
 
-<pre><code class="r"># This is a comment
-a &lt;- c(3,6,7,4,9,7,3,3,3)       # This is a vector
-median(a)                         # This is the &quot;median&quot; function
-## [1] 4
-</code></pre>
+<p>A possible realisation in which all valid sentences of a theory T are satisfied is called a model of T.</p>
 
-<ul class = "build incremental">
-<li>Use standardised names and denotations to ease the re-use of code.</li>
-</ul>
+<div style='position:absolute;top:40%;left:40%'>
+ <font size="2">Alfred Tarski 1953</font>
+</div>
 
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="300" width="400" src='assets/img/pic29.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -732,20 +915,52 @@ median(a)                         # This is the &quot;median&quot; function
 </slide>
 <slide class="" id="slide-30">
 <hgroup>
-<h2>Lets talk about scripts | Some rules</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<ul class = "build incremental">
-<li>Use detailed <strong>comments</strong> to understand your analysis years later.
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>A model is characterised by:</strong></p>
 
 <ul>
-<li>It is useful to think that you should hand over the script to a 
-colleague with limited knowledge to optimise comments and structure.</li>
-</ul></li>
-<li>Use <strong>versioning</strong> of the scripts by adding a version number to the file name 
-(-v01.xxx) or a version control system.</li>
+<li>mapping</li>
+<li>reduction</li>
+<li>pragmatism</li>
 </ul>
 
+<div style='position:absolute;top:40%;left:30%'>
+ <font size="2">Herbert Stachowiak 1973</font>
+</div>
+
+<h1><strong>Definition 8</strong></h1>
+
+<p>\(O_1\) and \(O_2\) are objects and \(O_2\) is a model of \(O_1\) for \(k\) in the time interval \(t\) regarding a certain purpose \(Z\) if in \(t k\):</p>
+
+<ul>
+<li>is L-rational</li>
+<li>performs a description \(P_1\) of \(O_1\)</li>
+<li>performs a description \(P_2\) of \(O_2\)</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>performs a mapping of \(P_1\) on \(P_2\)</li>
+<li>performs a transcoding of \(P_1\) in \(P_2\)</li>
+<li>performs the substitution of \(O_1\) by \(O_2\)</li>
+<li>performs certain operations on \(O_2\) in order to fulfil the purpose \(Z\) and which transfer \(O_2\) to \(O_2*\)</li>
+<li>performs a description \(P_2*\) of \(O_2*\)</li>
+<li>performs the reverse mapping of \(P_2*\) on \(P_1*\)</li>
+<li>accepts \(P_1*\) as the description of \(O_1*\)</li>
+<li>accepts the substitution of \(O_1*\) by \(O_2*\)</li>
+<li>performs a recoding of P1 in P2 regarding \(P_1*\) and \(P_2*\)</li>
+</ul>
+
+<div style='position:absolute;bottom:8%;right:5%'>
+ <font size="2">Herbert Stachowiak 1973</font>
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -755,27 +970,12 @@ colleague with limited knowledge to optimise comments and structure.</li>
 </slide>
 <slide class="" id="slide-31">
 <hgroup>
-<h2>Lets talk about scripts | Some rules</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:5%'>
-    <img  height="200" width="200" src='assets/img/github01.png' />
-</div>
+<p><strong>Definition 9</strong></p>
 
-<ul>
-<li>Use detailed <strong>comments</strong> to understand your analysis years later.
-
-<ul>
-<li>It is useful to think that you should hand over the script to a 
-colleague with limited knowledge to optimise comments and structure.</li>
-</ul></li>
-<li>Use <strong>versioning</strong> of the scripts by adding a version number to the file name 
-(-v01.xxx) or a version control system.
-
-<ul>
-<li>For example GitHub: <a href="https://github.com/">https://github.com/</a></li>
-</ul></li>
-</ul>
+<p>A model is a simplified mapping used for a certain purpose.</p>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -786,19 +986,20 @@ colleague with limited knowledge to optimise comments and structure.</li>
 </slide>
 <slide class="" id="slide-32">
 <hgroup>
-<h2>Lets talk about scripts | Some rules</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<ul class = "build incremental">
-<li>Avoid special characters in file names, variable names, etc. 
+<p><strong>Definition 10</strong></p>
 
 <ul>
-<li>Subset Ä with Ae etc.</li>
-<li>Moreover, it is a good idea to encode the file in UTF8.</li>
-</ul></li>
-<li>Use a convenient yet standardised folder structure for scripts, data, 
-results and reports.</li>
+<li>is a structure of a theory;</li>
+<li>complies with a set of hypotheses; and</li>
+<li>is not a simple statement.</li>
 </ul>
+
+<div style='position:absolute;top:45%;left:30%'>
+ <font size="2">Wolfgang Balzer 2009</font>
+</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -809,29 +1010,25 @@ results and reports.</li>
 </slide>
 <slide class="" id="slide-33">
 <hgroup>
-<h2>Lets talk about scripts</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<p>Use a convenient yet standardised folder structure for scripts, data, 
-results and reports. During the Mosaic Summer School, we will work with the follwoing structure.</p>
+<p><strong>Definition 11</strong></p>
 
-<div style='float:left;width:48%;' class='centered'>
-  <ul class = "build incremental">
-<li>1script</li>
-<li>2data</li>
-<li>3geodata</li>
-</ul>
+<p>A model is an iconic sign.</p>
 
+<div style='position:absolute;top:30%;left:20%'>
+ <font size="2">Björn Kralemann, Claas Lattmann 2012</font>
 </div>
-<div style='float:right;width:48%;'>
-  <ul class = "build incremental">
-<li>4ws</li>
-<li>5results</li>
-<li>6pictures</li>
-<li>7report</li>
-</ul>
 
+<div style='position:absolute;top:10%;right:10%'>
+  <img  height="300"src='assets/img/pic30.png' />
 </div>
+
+<div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="200" src='assets/img/pic31.png' />
+</div>
+
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -841,53 +1038,26 @@ results and reports. During the Mosaic Summer School, we will work with the foll
 </slide>
 <slide class="" id="slide-34">
 <hgroup>
-<h2>Weblinks</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<table><thead>
-<tr>
-<th>Source</th>
-<th>Link</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>R Foundation Homepage</td>
-<td><a href="https://www.r-project.org/">https://www.r-project.org/</a></td>
-</tr>
-<tr>
-<td>Homepage of RStudio</td>
-<td><a href="https://www.rstudio.com/">https://www.rstudio.com/</a></td>
-</tr>
-<tr>
-<td>Homepage of R Consortium</td>
-<td><a href="https://www.r-consortium.org/">https://www.r-consortium.org/</a></td>
-</tr>
-<tr>
-<td>R language</td>
-<td><a href="https://de.wikipedia.org/wiki/R_(Programmiersprache)">https://de.wikipedia.org/wiki/R_(Programmiersprache)</a></td>
-</tr>
-<tr>
-<td>R language (german)</td>
-<td><a href="https://en.wikipedia.org/wiki/R_(programming_language)">https://en.wikipedia.org/wiki/R_(programming_language)</a></td>
-</tr>
-<tr>
-<td>Wikibook</td>
-<td><a href="https://de.wikibooks.org/wiki/GNU_R">https://de.wikibooks.org/wiki/GNU_R</a></td>
-</tr>
-<tr>
-<td>Support</td>
-<td><a href="http://www.r-bloggers.com">http://www.r-bloggers.com</a></td>
-</tr>
-<tr>
-<td>Support</td>
-<td><a href="http://stackoverflow.com/">http://stackoverflow.com/</a></td>
-</tr>
-<tr>
-<td>ISAAKiel</td>
-<td><a href="https://isaakiel.github.io/">https://isaakiel.github.io/</a></td>
-</tr>
-</tbody></table>
 
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Definition 12</strong></p>
+
+<p>A model is an artefact, used for a certain purpose by a specific community. The model is analogue to the original. A model has certain methods for development and usage and is based on certain theories and assumptions.</p>
+
+<div style='position:absolute;top:58%;left:35%'>
+ <font size="2">Bernd Thalheim 2015</font>
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="400" src='assets/img/pic32.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -897,22 +1067,39 @@ results and reports. During the Mosaic Summer School, we will work with the foll
 </slide>
 <slide class="" id="slide-35">
 <hgroup>
-<h2>Weblinks and literature</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:20%;right:20%'>
-    <img  height="300" src='assets/img/graphics_cookbook.jpg' />
-</div>
+<h1>Cambridge</h1>
 
-<div style='position:absolute;bottom:20%;left:20%'>
-    <img  height="300" src='assets/img/r_cookbook.jpg' />
-</div>
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Peter Haggett</strong></p>
 
 <ul>
-<li>J. Adler, R in a nutshell, Second edition. (Sebastopol 2012)</li>
-<li>J. M. Chambers, A Statistical Data Language. In: R. C. Milton, J. A. Nelder (Hrsg.), Statistical Computation. (New York 1969), 179-199.</li>
+<li>New Geography</li>
+<li>Locational Analysis in Human Geography, 1965</li>
+<li>Models in Geography, 1967, together with R. Chorley</li>
 </ul>
 
+<p><strong>David L. Clarke</strong></p>
+
+<ul>
+<li>New Archaeology</li>
+<li>Analytical Archaeology 1968</li>
+<li>Models in Archaeology, 1972</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;top:15%;right:10%'>
+  <img  height="250" src='assets/img/pic33.png' />
+</div>
+
+<div style='position:absolute;bottom:10%;right:20%'>
+  <img  height="250" src='assets/img/pic34.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -922,20 +1109,27 @@ results and reports. During the Mosaic Summer School, we will work with the foll
 </slide>
 <slide class="" id="slide-36">
 <hgroup>
-<h2>Thinks to remember</h2>
+<h2>Definitions of model</h2>
 </hgroup>
 <article>
-<ul class = "build incremental">
-<li><strong>Scripts</strong> are an exact documentation of the work.</li>
-<li><strong>Scripts</strong> allow reproducing the analysis.</li>
-<li><strong>Scripts</strong> allow reusing commands, algorithms etc.</li>
-<li>Each analysis has its own <strong>script</strong>.</li>
-<li>Each <strong>script</strong> has a header containing important information such as title, 
-topic, purpose, author, date, etc.</li>
-<li>Avoid special characters in file names, variable names, etc. </li>
-<li>Use a convenient yet standardised folder structure for scripts, data, 
-results and reports.</li>
+<p><strong>Definition 13</strong></p>
+
+<h1>A model is characterised by:</h1>
+
+<ul>
+<li>comprehensiveness;</li>
+<li>predictivness;</li>
+<li>efficiency; and</li>
+<li>accuracy.</li>
 </ul>
+
+<div style='position:absolute;top:45%;left:35%'>
+ <font size="2">David L. Clarke 1972</font>
+</div>
+
+<div style='position:absolute;bottom:20%;right:20%'>
+  <img  height="300" src='assets/img/pic35.png' />
+</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -944,44 +1138,43 @@ results and reports.</li>
 </footer>
 </article>
 </slide>
-<slide class="segue" id="slide-37">
+<slide class="" id="slide-37">
 <hgroup>
-<h2>5.  Getting started with R</h2>
+<h2>Definitions of model</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Definition 14</strong></p>
+
+<p>A model is a simplified and intelligible picture of the world.</p>
+
+<div style='position:absolute;top:35%;left:20%'>
+ <font size="2">Richard Chorley, Peter Haggett 1967</font>
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:20%'>
+  <img  height="300" src='assets/img/pic36.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="segue" id="slide-38">
+<hgroup>
+<h2>Which types of models can you distinguish?</h2>
 </hgroup>
 <article>
 <p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a></p>
-
-<footer class = 'logo'>
-<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
-<img src = "assets/img/logo03.png" height="70" width="70">
-</div>
-</footer>
-</article>
-</slide>
-<slide class="" id="slide-38">
-<hgroup>
-<h2>5.  Getting started with R</h2>
-</hgroup>
-<article>
-<pre><code class="r"># This is R Code 
-5+3
-5-3
-5*3
-5/3
-sqrt(25)
-sin(3.14)
-3.14 * (180 / pi)
-</code></pre>
-
-<ul>
-<li><strong>Please start R Studio</strong></li>
-</ul>
-
-<ul class = "build incremental">
-<li>We will get used to R!</li>
-</ul>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -992,11 +1185,11 @@ sin(3.14)
 </slide>
 <slide class="" id="slide-39">
 <hgroup>
-<h2>5.  Getting started with R</h2>
+<h2>Interaction as a key term</h2>
 </hgroup>
 <article>
-<div style='position:absolute;bottom:10%;right:15%'>
-<img  height="500" width="750" src='assets/img/RStudio_empty.png' />
+<div style='position:absolute;bottom:10%;right:20%'>
+  <img  height="500" src='assets/img/pic37.png' />
 </div>
 
 <footer class = 'logo'>
@@ -1008,18 +1201,12 @@ sin(3.14)
 </slide>
 <slide class="" id="slide-40">
 <hgroup>
-<h2>5.  Getting started with R</h2>
+<h2>Interaction as a key term</h2>
 </hgroup>
 <article>
-<pre><code class="r"># This is R Code 
-5+3
-5-3
-5*3
-5/3
-sqrt(25)
-sin(3.14)
-3.14 * (180 / pi)
-</code></pre>
+<div style='position:absolute;bottom:10%;right:20%'>
+  <img  height="500" src='assets/img/pic38.png' />
+</div>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -1030,26 +1217,62 @@ sin(3.14)
 </slide>
 <slide class="" id="slide-41">
 <hgroup>
-<h2>5.  Getting started with R</h2>
+<h2>Model classification | SQM-Classification</h2>
 </hgroup>
 <article>
-<pre><code class="r"># This is R Code
-5+3
-## [1] 8
-5-3
-## [1] 2
-5*3
-## [1] 15
-5/3
-## [1] 1.666667
-sqrt(25)
-## [1] 5
-sin(3.14)
-## [1] 0.001592653
-3.14 * (180 / pi)
-## [1] 179.9087
-</code></pre>
 
+<div style='float:left;width:48%;' class='centered'>
+  <div style='position:absolute;top:15%;left:80%'>
+ <font size="4">Kai Velten 2009</font>
+</div>
+
+<div style='position:absolute;top:15%;left:5%'>
+ <font size="6">S - system</font>
+</div>
+
+<ul>
+<li>physical - conceptual</li>
+<li>natural - technical</li>
+<li>stochastic - deterministic</li>
+<li>continuous - discrete</li>
+<li>dimension</li>
+<li>field of application</li>
+</ul>
+
+<div style='position:absolute;top:56%;left:5%'>
+ <font size="6">Q - objectives</font>
+</div>
+
+<ul>
+<li>phenomenological - mechanistic</li>
+<li>stationary -instationary</li>
+<li>lumped - distributed</li>
+<li>direct - inverse</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>research - management</li>
+<li>speculation - design</li>
+<li>scale</li>
+</ul>
+
+<div style='position:absolute;top:36%;right:15%'>
+ <font size="6">M - mathematical structure</font>
+</div>
+
+<ul>
+<li>linear - non-linear</li>
+<li>analytical - numerical</li>
+<li>autonomous - non-autonomous</li>
+<li>continuous - discrete</li>
+<li>differential equations</li>
+<li>integral equations</li>
+<li>algebraic equations</li>
+</ul>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -1059,14 +1282,1069 @@ sin(3.14)
 </slide>
 <slide class="" id="slide-42">
 <hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+<div style='position:absolute;bottom:10%;right:15%'>
+  <img  height="500" src='assets/img/pic39.png' />
+</div>
 
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-43">
+<hgroup>
+<h2>Examples of modelling interaction</h2>
+</hgroup>
+<article>
+<p><strong>Diffusion model</strong></p>
+
+<p>\[\frac{\delta p}{\delta t} = k \frac{\delta^2p}{\delta x^2} + mp(1-p)\]</p>
+
+<p><strong>Wave of advance</strong> (Fisher 1937):</p>
+
+<ul>
+<li>\(p\) is the frequency of a mutantgene</li>
+<li>\(t\) the time</li>
+<li>\(x\) a spatial coordinate</li>
+<li>\(m\) the intensity of selection</li>
+<li>\(k\) the diffusion coefficient</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-44">
+<hgroup>
+<h2>Examples of modelling interaction</h2>
+</hgroup>
+<article>
+<p><strong>Pred predator</strong></p>
+
+<p>\[\frac{\delta x}{\delta t} = ayx - bx\]</p>
+
+<p>\[\frac{\delta y}{\delta t} = cy - dxy\]</p>
+
+<p><strong>Lotka-Volterra equations</strong> (Lotka 1925; Volterra 1926):</p>
+
+<ul>
+<li>\(x\) population of the predator</li>
+<li>\(y\) population of its prey</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="230" src='assets/img/pic40.png' />
+</div>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-45">
+<hgroup>
+<h2>Examples of modelling interaction</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Voronoi graph</strong></p>
+
+<ul>
+<li>tesselation</li>
+<li>influence of centre depends on distance</li>
+<li>distance to centre is equal for all points of the border</li>
+<li>\(a = b\)</li>
+<li> territory is optimized for transportation</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:25%;right:5%'>
+  <img  height="350" src='assets/img/pic41.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-46">
+<hgroup>
+<h2>Examples of modelling interaction</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Voronoi graph</strong></p>
+
+<h1>geographical space</h1>
+
+<ul>
+<li>economical space (least cost distance)</li>
+<li> cultural space</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" src='assets/img/pic42.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-47">
+<hgroup>
+<h2>Examples of modelling interaction</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Voronoi graph</strong></p>
+
+<ul>
+<li>geographical space</li>
+</ul>
+
+<h1>economical space (least cost distance)</h1>
+
+<ul>
+<li> cultural space</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" src='assets/img/pic43.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-48">
+<hgroup>
+<h2>Examples of modelling interaction</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Voronoi graph</strong></p>
+
+<ul>
+<li>geographical space</li>
+<li>economical space (least cost distance)</li>
+</ul>
+
+<h1>cultural space</h1>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="300" src='assets/img/pic44.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-49">
+<hgroup>
+<h2>Space</h2>
+</hgroup>
+<article>
+<p><strong>Disciplinary spaces</strong></p>
+
+<p>A metrical space is spanned by a metric, which defines
+distances.</p>
+
+<ul>
+<li>A <strong>social space</strong> is constructed by social distances.</li>
+<li>An <strong>economic space</strong> is constructed by economic-distances.</li>
+<li>A <strong>cultural space</strong> is constructed by cultural distances.</li>
+<li>A <strong>geographic space</strong> is constructed by geodetic distances.</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-50">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Fetter modell</strong></p>
+
+<ul>
+<li>weighted Voronoi-graph</li>
+<li>market areas on the basis of costs of transport</li>
+<li>Fetter 1924; Haggett 2004</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:15%'>
+  <img  height="250" src='assets/img/pic48.png' />
+</div>
+
+<div style='position:absolute;bottom:8%;left:15%'>
+ <font size="2">Frank A. Fetter (1863-1949)</font>
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="500" src='assets/img/pic45.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-51">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>X-tent</strong></p>
+
+<ul>
+<li>weighted Voronoi-graph</li>
+<li>Renfrew &amp; Level 1979</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:15%'>
+  <img  height="250" src='assets/img/pic47.png' />
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;top:21%;right:8%'>
+  <img  height="300" src='assets/img/pic46.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-52">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Weighted Voroni</strong></p>
+
+<ul>
+<li>\(\alpha_s\) static additive weight</li>
+<li>\(\alpha_d\) dynamic additive weight</li>
+<li>\(\gamma_s\) static multiplicative weight</li>
+<li>\(\gamma_d\) dynamic multiplicative weight</li>
+<li>\(t_\alpha\) 1=dynamic additive</li>
+<li>\(t_\gamma\) 1=dynamic multiplicativeweight</li>
+<li>\(\psi\) distance manipulating function</li>
+<li>\(x_z\) x reference point</li>
+<li>\(y_z\) y reference point</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>\(x_p\) x point in question</li>
+<li>\(y_p\) y point in question</li>
+</ul>
+
+<p>\[ \Phi = \alpha - \gamma\psi(\delta) \]</p>
+
+<p>\[ \alpha = \alpha_s(t_\alpha \alpha_d + \mid t_\alpha -1 \mid)\]</p>
+
+<p>\[ \gamma = \gamma_s(t_\gamma \gamma_d + \mid t_\gamma -1 \mid)\]</p>
+
+<p>\[ \delta = \left(\sqrt{(x_z - x_p)^2 + (y_z -y_p)}\right)\]</p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-53">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Weighted Voronoi</strong></p>
+
+<ul>
+<li>Princely seats</li>
+<li>weighted Voronoi graphs</li>
+<li>weighted with number of rich graves</li>
+<li>Software: <code>Grass</code></li>
+<li>today a Grass-addon is available: r.xtent</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;top:10%;right:5%'>
+  <img  height="550" src='assets/img/pic49.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-54">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Weighted Voronoi</strong></p>
+
+<ul>
+<li>Princely seats</li>
+<li>weighted Voronoi graphs</li>
+<li>weighted with number of rich graves and wagon graves</li>
+<li>least cost distance</li>
+<li>Software: <code>R</code></li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:10%'>
+  <img  height="200" src='assets/img/pic51.png' />
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;top:10%;right:5%'>
+  <img  height="550" src='assets/img/pic50.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="segue" id="slide-55">
+<hgroup>
+<h2>Why modelling interaction?</h2>
 </hgroup>
 <article>
 <p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' /></p>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a></p>
 
-<p></a></p>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-56">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
 
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Quantitative analysis</strong></p>
+
+<ol>
+<li><strong>Problem</strong>: Put your question.</li>
+<li>Theory: Which theoretical frame is adequate for solving the problem?</li>
+<li>Data: Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?</li>
+<li>Method: Which methods can solve the problem? Learn the methods!</li>
+<li>Tool: Learn the tools to apply the methods.</li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol>
+<li>Check, validate and interpret the results: plausible? significant?</li>
+</ol>
+
+<div style='position:absolute;bottom:50%;right:25%'>
+ <font size="8">?</font>
+</div>
+
+<div style='position:absolute;bottom:45%;right:15%'>
+ <font size="6">ODTM-Balance</font>
+</div>
+
+<div style='position:absolute;bottom:40%;right:5%'>
+ <font size="5">Objective - Data - Theory - Method</font>
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-57">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Quantitative analysis</strong></p>
+
+<ol>
+<li>Problem: Put your question.</li>
+<li><strong>Theory</strong>: Which theoretical frame is adequate for solving the problem?</li>
+<li>Data: Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?</li>
+<li>Method: Which methods can solve the problem? Learn the methods!</li>
+<li>Tool: Learn the tools to apply the methods.</li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol>
+<li>Check, validate and interpret the results: plausible? significant?</li>
+</ol>
+
+<div style='position:absolute;top:45%;right:5%'>
+  <img  height="150" src='assets/img/pic52.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-58">
+<hgroup>
+<h2>Theories</h2>
+</hgroup>
+<article>
+<p><strong>Defitniion 15</strong></p>
+
+<p>A <strong>theory</strong> is an abstract concept of the relationship of facts.</p>
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="300" src='assets/img/pic52.png' />
+</div>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-59">
+<hgroup>
+<h2>Theories</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Type a</strong></p>
+
+<p>Meta theories</p>
+
+<ul>
+<li>philosophy</li>
+<li>research strategies</li>
+<li>epistemology</li>
+</ul>
+
+<p>Low level theories</p>
+
+<ul>
+<li>mathematics</li>
+<li>database development</li>
+<li>logic</li>
+<li>theory of cluster analysis</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><strong>Type b</strong></p>
+
+<p>High level theories</p>
+
+<ul>
+<li>social theories</li>
+<li>human behaviour and cognition theories</li>
+<li>chronological systems</li>
+</ul>
+
+<p>Middle range theories</p>
+
+<ul>
+<li>formation processes</li>
+<li>source criticism</li>
+<li>theory of typology</li>
+</ul>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-60">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Quantitative analysis</strong></p>
+
+<ol>
+<li>Problem: Put your question.</li>
+<li>Theory: Which theoretical frame is adequate for solving the problem?</li>
+<li><strong>Data</strong>: Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?</li>
+<li>Method: Which methods can solve the problem? Learn the methods!</li>
+<li>Tool: Learn the tools to apply the methods.</li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol>
+<li>Check, validate and interpret the results: plausible? significant?</li>
+</ol>
+
+<div style='position:absolute;top:40%;right:15%'>
+  <img  height="300" src='assets/img/pic53.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-61">
+<hgroup>
+<h2>Data</h2>
+</hgroup>
+<article>
+<div style='position:absolute;bottom:20%;right:15%'>
+  <img  height="400" src='assets/img/pic54.png' />
+</div>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-62">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Quantitative analysis</strong></p>
+
+<ol>
+<li>Problem: Put your question.</li>
+<li>Theory: Which theoretical frame is adequate for solving the problem?</li>
+<li>Data: Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?</li>
+<li><strong>Method</strong>: Which methods can solve the problem? Learn the methods!</li>
+<li>Tool: Learn the tools to apply the methods.</li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol>
+<li>Check, validate and interpret the results: plausible? significant?</li>
+</ol>
+
+<div style='position:absolute;top:40%;right:5%'>
+  <img  height="100" src='assets/img/pic55.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-63">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Quantitative analysis</strong></p>
+
+<ol>
+<li>Problem: Put your question.</li>
+<li>Theory: Which theoretical frame is adequate for solving the problem?</li>
+<li>Data: Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?</li>
+<li>Method: Which methods can solve the problem? Learn the methods!</li>
+<li><strong>Tool</strong>: Learn the tools to apply the methods.</li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol>
+<li>Check, validate and interpret the results: plausible? significant?</li>
+</ol>
+
+<div style='position:absolute;top:40%;right:10%'>
+  <img  height="200" src='assets/img/Rlogo.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-64">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Quantitative analysis</strong></p>
+
+<ol>
+<li>Problem: Put your question.</li>
+<li>Theory: Which theoretical frame is adequate for solving the problem?</li>
+<li>Data: Which data can be used for solving the problem? Are they available as database etc.? How can you access the data?</li>
+<li>Method: Which methods can solve the problem? Learn the methods!</li>
+<li>Tool: Learn the tools to apply the methods.</li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol>
+<li><strong>Interpret</strong>, check and validate the results. plausible? significant?</li>
+</ol>
+
+<div style='position:absolute;bottom:15%;right:5%'>
+  <img  height="200" src='assets/img/pic56.png' />
+</div>
+
+<div style='position:absolute;bottom:65%;right:5%'>
+ <font size="4">Can it be?</font>
+</div>
+
+<div style='position:absolute;bottom:60%;right:20%'>
+ <font size="4">Is it significant?</font>
+</div>
+
+<div style='position:absolute;bottom:50%;right:10%'>
+ <font size="4">What does it mean?</font>
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-65">
+<hgroup>
+<h2>Research process</h2>
+</hgroup>
+<article>
+<div style='position:absolute;bottom:15%;right:10%'>
+  <img  height="450" src='assets/img/pic57.png' />
+</div>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-66">
+<hgroup>
+<h2>Research process</h2>
+</hgroup>
+<article>
+<div style='position:absolute;bottom:15%;right:10%'>
+  <img  height="450" src='assets/img/pic58.png' />
+</div>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-67">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Types of interaction models</strong></p>
+
+<ul>
+<li>conceptual models</li>
+<li>affirmative models</li>
+<li>quantitative relationship models</li>
+<li>system models</li>
+<li>models of complex systems</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:15%;right:5%'>
+  <img  height="500" src='assets/img/pic59.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-68">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+<p><strong>Considerations</strong></p>
+
+<ul>
+<li>which elements do we investigate?</li>
+<li>which parameters are important?</li>
+<li>how are the parameters related?</li>
+<li>how are the elements and parameters establishing systems?</li>
+<li>how can we compare empirical and theoretical models?</li>
+<li>what do the results tell us?</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="segue" id="slide-69">
+<hgroup>
+<h2>Which factors and parameters of interaction do you know?</h2>
+</hgroup>
+<article>
+<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a></p>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-70">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>distance</strong></p>
+
+<ul>
+<li>geographical distance</li>
+<li>social distance</li>
+<li>cultural distance</li>
+<li>economical distance</li>
+</ul>
+
+<p><strong>point features</strong></p>
+
+<ul>
+<li>size</li>
+<li>population</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:15%;right:5%'>
+  <img  height="500" src='assets/img/pic4.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="segue" id="slide-71">
+<hgroup>
+<h2>How can we measure interaction?</h2>
+</hgroup>
+<article>
+<p><a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a></p>
+
+<div style='position:absolute;bottom:20%;right:10%'>
+ <font size="5">Which measures of and proxies for interaction do you know?</font>
+</div>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-72">
+<hgroup>
+<h2>Measures</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>point distribution</strong></p>
+
+<ul>
+<li>minimal requirements</li>
+<li>measures general degree of interaction in a region</li>
+</ul>
+
+<p><strong>number of exchanged objects</strong></p>
+
+<ul>
+<li>small data</li>
+<li>can deal with individual interactions</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;left:15%'>
+  <img  height="150" src='assets/img/pic60.png' />
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><strong>inverse cultural distance</strong></p>
+
+<ul>
+<li>robust because of extensive data</li>
+<li>can deal with short range interaction</li>
+<li>can measure different types of interaction</li>
+</ul>
+
+<div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="200" src='assets/img/pic61.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-73">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>NN-Distance</strong></p>
+
+<ul>
+<li>Is there interaction between the points?</li>
+<li>Test on complete spatial randomness</li>
+<li>regular - random - clustered</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="250" src='assets/img/pic62.png' />
+</div>
+
+<div style='position:absolute;top:10%;right:5%'>
+  <img  height="250" src='assets/img/pic63.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-74">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Imports</strong></p>
+
+<ul>
+<li>connecting a site to a provenience region</li>
+<li>individual interactions can be traced</li>
+</ul>
+
+<div style='position:absolute;bottom:15%;left:10%'>
+  <img  height="200" src='assets/img/pic67.png' />
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="400" src='assets/img/pic64.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-75">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Cultural distance</strong></p>
+
+<ul>
+<li>interactions are producing cultural similarities</li>
+<li>difference in material culture</li>
+<li>statistical level of interaction between sites or regions</li>
+</ul>
+
+<div style='position:absolute;bottom:15%;left:10%'>
+  <img  height="200" src='assets/img/pic66.png' />
+</div>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" src='assets/img/pic65.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-76">
+<hgroup>
+<h2>Interaction as a key term</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Cultural distance</strong></p>
+
+<ul>
+<li>topography of cultural similarities</li>
+<li>territories of cultural similarities</li>
+<li>cultural areas</li>
+<li>interaction models</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="250" src='assets/img/pic44.png' />
+</div>
+
+<div style='position:absolute;top:15%;right:10%'>
+  <img  height="250" src='assets/img/pic51.png' />
+</div>
+
+</div>
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
 <img src = "assets/img/logo03.png" height="70" width="70">
@@ -1086,248 +2364,452 @@ sin(3.14)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Structure'>
+        data-slide=2 title='Why <em>interaction</em>?'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='1.  R - What is it?!'>
+        data-slide=3 title='Interaction'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='1.  R - What is it?!'>
+        data-slide=4 title='Interaction'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Why should I apply statistics?'>
+        data-slide=5 title='What is interaction?'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='History of R'>
+        data-slide=6 title='Defining interaction'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='History of R'>
+        data-slide=7 title='Facets of interaction'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='History of R'>
+        data-slide=8 title='Conflict and cooperation'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='2.  Why using R?'>
+        data-slide=9 title='Interaction'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='2. Some Advantages and Disadvantages'>
+        data-slide=10 title='Interaction'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='7 levels of using R'>
+        data-slide=11 title='Interaction'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='3.  How to start?'>
+        data-slide=12 title='Interaction'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Gerneral Workflow | Before you beginn'>
+        data-slide=13 title='Interaction'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Gerneral Workflow | Now, you can beginn'>
+        data-slide=14 title='Interaction'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='3.  How to start? | R Studio'>
+        data-slide=15 title='Interaction'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='3.  R Studio | Text Editor'>
+        data-slide=16 title='Interaction'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='3.  R Studio | Console'>
+        data-slide=17 title='Advantages of interaction as concept'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='3.  R Studio | File Manager'>
+        data-slide=18 title='Interaction in different disciplines'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='3.  R Studio | Documentation viewer'>
+        data-slide=19 title='Interaction in different disciplines'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='3.  R Studio | Project and Session Manager'>
+        data-slide=20 title='Interaction in different disciplines'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='3.  R Studio | Workspace Explorer'>
+        data-slide=21 title='Interaction in different disciplines'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='3.  R Studio | Package Manager'>
+        data-slide=22 title='Interaction in different disciplines'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='3.  R Studio | Wirzards and Assistants'>
+        data-slide=23 title='Interaction in different disciplines'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='3.  How to start? | R Studio'>
+        data-slide=24 title='Interaction in different disciplines'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='4. Scipts and why they are usefull'>
+        data-slide=25 title='Centrality as example'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='Lets talk about scripts'>
+        data-slide=26 title='Vector of centrality'>
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='Lets talk about scripts | Some rules'>
+        data-slide=27 title='Interaction'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Lets talk about scripts | Script Header'>
+        data-slide=28 title='What is a model?'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Lets talk about scripts | Some rules'>
+        data-slide=29 title='Definitions of model'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Lets talk about scripts | Some rules'>
+        data-slide=30 title='Definitions of model'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Lets talk about scripts | Some rules'>
+        data-slide=31 title='Definitions of model'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='Lets talk about scripts | Some rules'>
+        data-slide=32 title='Definitions of model'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Lets talk about scripts'>
+        data-slide=33 title='Definitions of model'>
          33
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='Weblinks'>
+        data-slide=34 title='Definitions of model'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='Weblinks and literature'>
+        data-slide=35 title='Definitions of model'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=36 title='Thinks to remember'>
+        data-slide=36 title='Definitions of model'>
          36
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=37 title='5.  Getting started with R'>
+        data-slide=37 title='Definitions of model'>
          37
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='5.  Getting started with R'>
+        data-slide=38 title='Which types of models can you distinguish?'>
          38
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=39 title='5.  Getting started with R'>
+        data-slide=39 title='Interaction as a key term'>
          39
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=40 title='5.  Getting started with R'>
+        data-slide=40 title='Interaction as a key term'>
          40
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=41 title='5.  Getting started with R'>
+        data-slide=41 title='Model classification | SQM-Classification'>
          41
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='NA'>
+        data-slide=42 title='Interaction as a key term'>
          42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='Examples of modelling interaction'>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='Examples of modelling interaction'>
+         44
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='Examples of modelling interaction'>
+         45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='Examples of modelling interaction'>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='Examples of modelling interaction'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='Examples of modelling interaction'>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='Space'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='Interaction as a key term'>
+         50
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='Interaction as a key term'>
+         51
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=52 title='Interaction as a key term'>
+         52
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=53 title='Interaction as a key term'>
+         53
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=54 title='Interaction as a key term'>
+         54
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=55 title='Why modelling interaction?'>
+         55
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=56 title='Interaction as a key term'>
+         56
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=57 title='Interaction as a key term'>
+         57
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=58 title='Theories'>
+         58
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=59 title='Theories'>
+         59
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=60 title='Interaction as a key term'>
+         60
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=61 title='Data'>
+         61
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=62 title='Interaction as a key term'>
+         62
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=63 title='Interaction as a key term'>
+         63
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=64 title='Interaction as a key term'>
+         64
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=65 title='Research process'>
+         65
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=66 title='Research process'>
+         66
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=67 title='Interaction as a key term'>
+         67
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=68 title='Interaction as a key term'>
+         68
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=69 title='Which factors and parameters of interaction do you know?'>
+         69
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=70 title='Interaction as a key term'>
+         70
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=71 title='How can we measure interaction?'>
+         71
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=72 title='Measures'>
+         72
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=73 title='Interaction as a key term'>
+         73
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=74 title='Interaction as a key term'>
+         74
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=75 title='Interaction as a key term'>
+         75
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=76 title='Interaction as a key term'>
+         76
       </a>
     </li>
   </ul>
