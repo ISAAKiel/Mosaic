@@ -104,6 +104,19 @@ strong {
 
 ---
 
+## Install Packages from a local directory
+
+In case the internet connection is not stable enough, you find all needed packages on your flash drive.
+Please adapte the follwing code to your needs. 
+
+
+```r
+ install.packages("ggplot2", lib="path to flash drive or local dir/Rpackages/")
+ library(ggplot2, lib.loc="path to flash drive or local dir/Rpackages/")
+```
+
+---
+
 ## MOSAIC - Modelling Speheres of Interaction
 
 **Aim**
