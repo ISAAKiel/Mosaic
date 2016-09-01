@@ -1,0 +1,166 @@
+# Vortrag Interaktionssysteme
+
+## Introduction
+### slide 1
+introduction
+hier die übliche Einleitungsfolie
+
+### slide 2
+Interacting partners
+* individual interactions
+* interaction in groups
+* interaction between groups
+
+a02.png
+
+
+### slide 3
+Interactiong systems
+* Point Patterns
+* Networks
+* Systems
+
+
+a03.png
+
+
+## Point Patterns
+### slide 4-xxx
+Daniels Teil zu Punktmustern
+
+
+## Networks
+### slide 101
+
+
+**Definition**
+A networks are objects, in which elements (vertices) are connected by edges. Networks are models, mapping certain facets of the real world.
+
+
+Network theory has roots in geography and in social sciences
+
+
+
+
+
+Networkstheory is based on graph theory
+
+a102.png
+
+### slide 103
+Do you know examples of networks?
+
+
+### slide 104
+Delaunay graph as example for graphs/spatial networks
+The Delaunay graph connects the natural neighbours
+
+a104.png
+
+### slide 105
+Construction rules for some  neighbourhood graphs
+
+a105.png
+
+### slide 106
+The connections represent the liklyness of interaction
+
+a106.png
+
+
+
+R code Graphenkonstruktion
+
+Beispiel Rivers/Knappett/Evans Cyclades in Bronze Age
+
+Kennwerte: Zentralität
+
+
+
+### slide 120
+centrality maps the structural importance of a node/edge in a network
+
+a120.png
+
+
+
+R code zentralität
+
+
+
+
+## Systems
+### slide 201
+AMB comprises
+* an actors
+* an envirionment and
+* a process
+
+a201.png
+
+
+### slide 202
+Example Heuneburg
+
+Actors:
+* indigenous people
+* merchants
+
+a202.png
+
+
+### slide 203
+Reasoning for certain relationships
+
+a203.png
+
+
+### slide 204
+The process
+
+Actors can:
+* move
+* trade
+* accumulate wealth
+
+a204.png
+
+
+### slide 205
+Some results
+
+a205.png
+
+
+### slide 206
+But is it useful?
+Whad do you think?
+
+a206.png
+
+
+### slide 207
+Introducing some complexity
+
+a207.png
+
+
+### slide 208
+Some more results
+
+a208.png
+
+
+### slide 209
+interpretation for the Heuneburg
+
+a208.png
+
+
+### slide 210
+No code provided for the AMB (Summer School 2017)
+
+Apply point pattern analysis and network analysis in the workshop this afternoon!
+
+
+

@@ -50,7 +50,7 @@ strong {
 
 **Thursday, 8th of September**
 
-1. [Using network approaches to modell Interaction]
+1. [Using network approaches to modell Interaction](10-Network_Analysis/index.html)
 2. [**Workshop:** Pointpattern Analysis]
 3. [**Workshop:** Network Analysis]
 
@@ -60,11 +60,47 @@ strong {
 
 ---
 
+## Some usefull information
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="500" src='assets/img/Ufg_Lage.png' />
+</div>
+
+---
+
+## Timetable
+
+<div style='position:absolute;bottom:10%;right:15%'>
+  <img  height="500" src='assets/img/time.png' />
+</div>
+
+--- &twocol
+
 ## Needed Packages
 
+*** =left
 - `vioplot`
+- `ggplot2`
+- `sm`
 - `rgdal`
 - `raster`
+-  `sp`
+- `rgeos`
+- `maptools`
+- `proj4`
+- `gstat`
+
+*** =right
+
+- `foreign`
+- `shapefiles`
+- `plyr`
+- `RSAGA`
+- `Matrix`
+- `spdep`
+- `nlme`
+- `rpart`
+- `spatstat`
 
 ---
 
