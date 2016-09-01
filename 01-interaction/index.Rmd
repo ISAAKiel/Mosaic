@@ -54,7 +54,9 @@ strong {
 
 ---
 
-## Interaction
+## Interaction as a key term
+
+**Interaction**
 
 - Trade
 - Conflict
@@ -166,7 +168,7 @@ Traditional history is about events, when people interact. It is about gaining a
   <img  height="300" width="400" src='assets/img/pic01.png' />
 </div>
 
-<div style='position:absolute;bottom:7%;right:5%'>
+<div style='position:absolute;bottom:25%;right:20%'>
  <font size="2">Battle of Königsgrätz, painting by E. Hünten</font>
 </div>
 
@@ -186,7 +188,7 @@ Social structures are a kind of infrastructure of effective interaction. Social 
   <img  height="300" width="400" src='assets/img/pic06.png' />
 </div>
 
-<div style='position:absolute;bottom:7%;right:5%'>
+<div style='position:absolute;bottom:25%;right:10%'>
  <font size="2">Nationalversammlung Frankfurt 1848, painting by L. v. Elliott</font>
 </div>
 
@@ -234,7 +236,7 @@ Interaction supports innovations by
   <img  height="500" width="400" src='assets/img/pic08.png' />
 </div>
 
-<div style='position:absolute;bottom:7%;right:5%'>
+<div style='position:absolute;bottom:10%;right:5%'>
  <font size="2">M. Lomonosow, painting by I. Feodorov</font>
 </div>
 
@@ -277,7 +279,7 @@ Interaction is an essential part of the daily live. Every contact to another ind
   <img  height="250" width="400" src='assets/img/pic10.png' />
 </div>
 
-<div style='position:absolute;bottom:7%;right:5%'>
+<div style='position:absolute;bottom:25%;right:10%'>
  <font size="2">painting by P. A. Renoir</font>
 </div>
 
@@ -1134,7 +1136,7 @@ $$ \delta = \left(\sqrt{(x_z - x_p)^2 + (y_z -y_p)}\right)$$
 
 ## Theories
 
-**Defitniion 15**
+**Definition 15**
 
 A **theory** is an abstract concept of the relationship of facts.
 
@@ -1366,7 +1368,7 @@ Middle range theories
 *** =right
 
 <div style='position:absolute;bottom:15%;right:5%'>
-  <img  height="500" src='assets/img/pic4.png' />
+  <img  height="500" src='assets/img/pic04.png' />
 </div>
 
 --- .segue bg:grey
@@ -1420,8 +1422,6 @@ Middle range theories
 - Is there interaction between the points?
 - Test on complete spatial randomness
 - regular - random - clustered
-
-
 
 *** =right
 
@@ -1503,18 +1503,363 @@ Middle range theories
 
 *** =left
 
-**Cultural distance**
-- topography of cultural similarities
-- territories of cultural similarities
-- cultural areas
-- interaction models
+**Theoretical Models**
+- Interaction decreases with distance. Distance decay functions can quantify the decrease.
+
+<div style='position:absolute;bottom:15%;left:5%'>
+  <img  height="300" src='assets/img/pic70.png' />
+</div>
 
 *** =right
 
-<div style='position:absolute;bottom:10%;right:10%'>
-  <img  height="250" src='assets/img/pic44.png' />
+$$I = \frac{k}{d^i}$$
+
+<div style='position:absolute;bottom:15%;right:30%'>
+  <img  height="200" src='assets/img/pic68.png' />
 </div>
 
-<div style='position:absolute;top:15%;right:10%'>
-  <img  height="250" src='assets/img/pic51.png' />
+<div style='position:absolute;bottom:15%;right:5%'>
+  <img  height="300" src='assets/img/pic69.png' />
 </div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Gravity models**
+- involve properties of the interaction partners
+- based on an analogy from physics
+- population, settlement size, ...
+- can be used to produce distance decay functions/fall off curves, which consider population
+
+*** =right
+
+<div style='position:absolute;bottom:35%;right:5%'>
+  <img  height="300" src='assets/img/pic71.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Distance diagram (dd)**
+- different view-points
+- different focus-points
+- cultural distance as an inverse interaction proxy
+
+
+*** =right
+
+Viewpoint|fixed vocus|selected focus|all foucused
+----|----|----|----
+fixed viewpoint|**dd1** fixed profile dd, similarity profiles|**dd2** fixed sector dd|**dd3** fixed multi-focal dd, fall-off curve
+selected viewpoints|**dd4** selected profile dd|**dd5** selected secotr dd|**dd6** selected multi-focal dd
+all viewpoints**dd7** aggregated profile dd|**dd8** aggregated sector dd|**dd9** aggregated multi-focal dd, variogram
+
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Definition 16**
+Interaction models plot
+intensity of interaction over
+distance.
+
+- cultural distances as inverse proxys of interaction
+- different metrics and weightings
+
+<div style='position:absolute;bottom:50%;left:30%'>
+ <font size="2">Nakoinz 2013</font>
+</div>
+
+<div style='position:absolute;bottom:33%;left:43%'>
+  <img  height="150" src='assets/img/pic68.png' />
+</div>
+
+<div style='position:absolute;bottom:10%;left:43%'>
+  <img  height="150" src='assets/img/pic73.png' />
+</div>
+
+<div style='position:absolute;bottom:15%;left:5%'>
+  <img  height="200" src='assets/img/pic71.png' />
+</div>
+
+*** =right
+
+<div style='position:absolute;top:10%;right:5%'>
+  <img  height="300" src='assets/img/pic72.png' />
+</div>
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="250" src='assets/img/pic74.png' />
+</div>
+
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Interaction model**
+- fixed starting point
+- fixed profile
+- ceramics
+- interaction friction at Black Forrest?
+
+
+<div style='position:absolute;bottom:15%;left:5%'>
+  <img  height="240" src='assets/img/pic74.png' />
+</div>
+
+*** =right
+
+<div style='position:absolute;bottom:30%;right:5%'>
+  <img  height="300" src='assets/img/pic72.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Interaction model**
+- from all points
+- to all points
+- fibulae and adornment
+- interaction threshold at 200 km?
+
+
+*** =right
+
+<div style='position:absolute;bottom:30%;right:5%'>
+  <img  height="400" src='assets/img/pic77.png' />
+</div>
+
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Modelling systems of transportation**
+
+- is essential for modelling interaction
+- produces knowledge of significant parameters
+- the system of transportation provides
+  - the structure of the interaction model and
+  - economical distances by least cost modelling
+
+*** =right
+
+<div style='position:absolute;bottom:30%;right:5%'>
+  <img  height="300" src='assets/img/pic09.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Modelling systems of transportation**
+
+- empirical model based on the sites
+- theoretical least cost path model
+- the comparison of both models reveals the parameters of the routes
+
+*** =right
+
+<div style='position:absolute;bottom:30%;right:5%'>
+  <img  height="300" src='assets/img/pic78.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Least Cost Path**
+
+- calculated the most efficient path
+between
+$A and B$
+
+*** =right
+
+<div style='position:absolute;bottom:30%;right:5%'>
+  <img  height="300" src='assets/img/pic79.png' />
+</div>
+
+<div style='position:absolute;bottom:25%;right:20%'>
+ <font size="2">Surface-Evans 2012</font>
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**What does ’least cost’ mean?**
+
+- ...
+- ...
+- ...
+
+*** =right
+
+**Which data are required/available?**
+
+- ...
+- ...
+- ...
+
+--- &twocol
+
+## Interaction as a key term | Least Cost Path
+
+*** =left
+
+**How to find the pathway?**
+
+- costs for moving from one cell to the next one
+- ...
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="450" src='assets/img/pic80.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term | Least Cost Path
+
+*** =left
+
+**How to find the pathway?**
+
+- costs for moving from one cell to the next one
+- searching for the next connection which produces minimal cumulated costs
+- ...
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="450" src='assets/img/pic82.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term | Least Cost Path
+
+*** =left
+
+**How to find the pathway?**
+
+- costs for moving from one cell to the next one
+- searching for the next connection which produces minimal cumulated costs
+- going back the pathway along the connections, which me noted down
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="450" src='assets/img/pic83.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term | Least Cost Path
+
+*** =left
+
+**How to find the pathway?**
+
+- costs for moving from one cell to the next one
+- searching for the next connection which produces minimal cumulated costs
+- going back the pathway along the connections, which me noted down
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="450" src='assets/img/pic81.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Agent based model**
+- dynamic model of the exchange and settlement system
+
+<div style='position:absolute;bottom:15%;left:5%'>
+  <img  height="300" src='assets/img/pic84.png' />
+</div>
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="250" src='assets/img/pic86.png' />
+</div>
+
+<div style='position:absolute;top:10%;right:5%'>
+  <img  height="250" src='assets/img/pic85.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Consider your own life**
+
+- make a list of your interactions
+- which types of interactions can you distinguish?
+- which parameters are important?
+- which information would be archaeological available?
+
+*** =right
+
+<div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" src='assets/img/pic04.png' />
+</div>
+
+--- &twocol
+
+## Interaction as a key term
+
+*** =left
+
+**Summary**
+
+- interaction is a trans-disciplinary key term in many fields of research
+- interaction is an driver of historic, economic, social and cultural processes.
+- interaction is an abstract concept
+- different types of distances can be used
+- models of systems of interaction are based on simple interaction-distance relationships
+
+*** =right
+
+<div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="400" src='assets/img/logo03.png' />
+</div>
+
+---
+  
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+  <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' />
+</a>
