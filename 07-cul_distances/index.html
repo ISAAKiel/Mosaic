@@ -18,7 +18,7 @@
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
   <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
   <script data-main="libraries/frameworks/io2012/js/slides" 
     src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
@@ -652,7 +652,7 @@ are valid in collectives.
 <h2>Preparation | Working Directory &amp; Load Data</h2>
 </hgroup>
 <article>
-<pre><code class="r">wd &lt;- &quot;/home/fon/daten/analyse/mosaic&quot;
+<pre><code class="r">wd &lt;- &quot;.//home/fon/daten/analyse/mosaic&quot;
 setwd(wd)
 </code></pre>
 
@@ -6563,6 +6563,212 @@ lines(df.dd[,2:3])
 </slide>
 <slide class="" id="slide-45">
 <hgroup>
+<h2>Distance analyses in geographic space</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>abstract concept: can be measured in meters, time, money, strangeness, ...</li>
+<li>influence interactions</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='text-align: center;'>
+    <img height='460' src='assets/img/pic_daniel_Harris_Ullman_1945_p8.png' />
+</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-46">
+<hgroup>
+<h2>Distance analyses in geographic space</h2>
+</hgroup>
+<article>
+<ol>
+<li>straight/ direct</li>
+</ol>
+
+<ul>
+<li>Euclidean distance</li>
+<li>&quot;As the crow flies&quot;</li>
+<li>&quot;In a beeline&quot;</li>
+<li>geodesic distance</li>
+<li>great-circle distance</li>
+</ul>
+
+<ol>
+<li>not direct/ random</li>
+</ol>
+
+<ul>
+<li>random walk</li>
+<li>&quot;Drunkard&#39;s Walk&quot;</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-47">
+<hgroup>
+<h2>Distance analyses in geographic space</h2>
+</hgroup>
+<article>
+<p>Two concepts with different premises</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ol>
+<li>straight/ direct</li>
+</ol>
+
+<ul>
+<li>Euclidean distance</li>
+<li>&quot;As the crow flies&quot;</li>
+<li>&quot;In a beeline&quot;</li>
+<li>geodesic distance</li>
+<li>great-circle distance</li>
+<li>least-cost distance</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol>
+<li>not direct/ random</li>
+</ol>
+
+<ul>
+<li>random walk</li>
+<li>&quot;Drunkard&#39;s Walk&quot;</li>
+</ul>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-48">
+<hgroup>
+<h2>Distance analyses in geographic space</h2>
+</hgroup>
+<article>
+<p>A reminder about spatial data. </p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>What is the meaning of the coordinates?</p>
+
+<pre><code class="r">dem@bbox
+</code></pre>
+
+<pre><code>##       min     max
+## x 3550736 3579036
+## y 6022467 6040567
+</code></pre>
+
+<p>What is the Spatial Reference System (SRS)?</p>
+
+<p>[= Coordinate Reference System (CRS)]</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='text-align: center;'>
+    <img height='460' src='https://upload.wikimedia.org/wikipedia/commons/1/15/MercTranSph.png' />
+</div>
+
+<div style="font-size:10px">By <a href="//commons.wikimedia.org/wiki/User:Peter_Mercator" title="User:Peter Mercator">Peter Mercator</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, https://commons.wikimedia.org/w/index.php?curid=9910926</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-49">
+<hgroup>
+<h2>Distance analyses in geographic space</h2>
+</hgroup>
+<article>
+<p>A reminder about spatial data. </p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>What is the meaning of the coordinates?</p>
+
+<pre><code class="r">dem@bbox
+</code></pre>
+
+<pre><code>##       min     max
+## x 3550736 3579036
+## y 6022467 6040567
+</code></pre>
+
+<p>What is the Spatial Reference System (SRS)?</p>
+
+<p>[= Coordinate Reference System (CRS)]</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div style='text-align: center;'>
+    <img height='520' src='https://upload.wikimedia.org/wikipedia/de/1/12/Gau%C3%9F-Kr%C3%BCger-Raster_Deutschland.png' />
+</div>
+
+<div style="font-size:10px">Von <a href="//de.wikipedia.org/wiki/Benutzer:BerndH" title="Benutzer:BerndH">BerndH</a> - selbst erstellt mit Generic Mapping Tools (psbasemap, psxy), Python, GIMP, <a title="Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen Unported 3.0" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">CC BY-SA 3.0</a>, https://de.wikipedia.org/w/index.php?curid=4186798</div>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-50">
+<hgroup>
+<h2>Distance analyses in geographic space</h2>
+</hgroup>
+<article>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><a href="https://epsg.io/5677">https://epsg.io/5677</a></p>
+
+<pre><code class="r">dem@proj4string &lt;- CRS(&quot;+init=epsg:5677&quot;)
+is.projected(dem)
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+<pre><code class="r">plot(dem)
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-26-1.png" alt="plot of chunk unnamed-chunk-26"></p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-51">
+<hgroup>
 
 </hgroup>
 <article>
@@ -6847,8 +7053,44 @@ lines(df.dd[,2:3])
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=45 title='NA'>
+        data-slide=45 title='Distance analyses in geographic space'>
          45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='Distance analyses in geographic space'>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='Distance analyses in geographic space'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='Distance analyses in geographic space'>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='Distance analyses in geographic space'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='Distance analyses in geographic space'>
+         50
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='NA'>
+         51
       </a>
     </li>
   </ul>
@@ -6870,7 +7112,7 @@ lines(df.dd[,2:3])
       }
     });
   </script>
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script> -->
   <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')

@@ -361,7 +361,7 @@ Entaglement|ethnic group = seed of nation = race = culture|ethnic group ̸= seed
 
 
 ```r
-wd <- "/home/fon/daten/analyse/mosaic"
+wd <- ".//home/fon/daten/analyse/mosaic"
 setwd(wd)
 ```
 
@@ -6015,7 +6015,168 @@ lines(df.dd[,2:3])
  <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
 
+
+--- &twocol
+
+## Distance analyses in geographic space
+
+*** =left
+
+- abstract concept: can be measured in meters, time, money, strangeness, ...
+- influence interactions
+
+
+*** =right
+
+<div style='text-align: center;'>
+    <img height='460' src='assets/img/pic_daniel_Harris_Ullman_1945_p8.png' />
+</div>
+
 ---
+
+## Distance analyses in geographic space
+
+1. straight/ direct
+
+- Euclidean distance
+- "As the crow flies"
+- "In a beeline"
+- geodesic distance
+- great-circle distance
+
+2. not direct/ random
+    
+- random walk
+- "Drunkard's Walk"
+
+--- &twocol
+
+## Distance analyses in geographic space
+
+Two concepts with different premises
+
+*** =left
+
+1. straight/ direct
+
+- Euclidean distance
+- "As the crow flies"
+- "In a beeline"
+- geodesic distance
+- great-circle distance
+- least-cost distance
+
+*** =right
+
+2. not direct/ random
+    
+- random walk
+- "Drunkard's Walk"
+
+--- &twocol
+
+## Distance analyses in geographic space
+
+A reminder about spatial data. 
+
+
+
+*** =left
+
+What is the meaning of the coordinates?
+
+
+```r
+dem@bbox
+```
+
+```
+##       min     max
+## x 3550736 3579036
+## y 6022467 6040567
+```
+
+What is the Spatial Reference System (SRS)?
+
+[= Coordinate Reference System (CRS)]
+
+
+*** =right
+
+<div style='text-align: center;'>
+    <img height='460' src='https://upload.wikimedia.org/wikipedia/commons/1/15/MercTranSph.png' />
+</div>
+
+<div style="font-size:10px">By <a href="//commons.wikimedia.org/wiki/User:Peter_Mercator" title="User:Peter Mercator">Peter Mercator</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, https://commons.wikimedia.org/w/index.php?curid=9910926</div>
+
+
+--- &twocol
+
+## Distance analyses in geographic space
+
+A reminder about spatial data. 
+
+
+
+*** =left
+
+What is the meaning of the coordinates?
+
+
+```r
+dem@bbox
+```
+
+```
+##       min     max
+## x 3550736 3579036
+## y 6022467 6040567
+```
+
+What is the Spatial Reference System (SRS)?
+
+[= Coordinate Reference System (CRS)]
+
+
+*** =right
+
+<div style='text-align: center;'>
+    <img height='520' src='https://upload.wikimedia.org/wikipedia/de/1/12/Gau%C3%9F-Kr%C3%BCger-Raster_Deutschland.png' />
+</div>
+
+<div style="font-size:10px">Von <a href="//de.wikipedia.org/wiki/Benutzer:BerndH" title="Benutzer:BerndH">BerndH</a> - selbst erstellt mit Generic Mapping Tools (psbasemap, psxy), Python, GIMP, <a title="Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen Unported 3.0" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">CC BY-SA 3.0</a>, https://de.wikipedia.org/w/index.php?curid=4186798</div>
+
+
+--- &twocol
+
+## Distance analyses in geographic space
+
+*** =left
+
+https://epsg.io/5677
+
+
+```r
+dem@proj4string <- CRS("+init=epsg:5677")
+is.projected(dem)
+```
+
+```
+## [1] TRUE
+```
+
+```r
+plot(dem)
+```
+
+*** =right
+
+![plot of chunk unnamed-chunk-26](assets/fig/unnamed-chunk-26-1.png)
+
+
+
+---
+
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
   <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' />
