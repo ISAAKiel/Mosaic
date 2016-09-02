@@ -24,6 +24,129 @@ strong {
 }
 </style>
 
+## Organisation
+
+*** =left
+
+- Franziska Faupel
+- Carl Evers
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:15%'>
+  <img  height="200" src='assets/img/cEvers.png' />
+</div>
+
+<div style='position:absolute;top:10%;right:15%'>
+  <img  height="200" src='assets/img/FFaupel.jpg' />
+</div>
+
+---
+
+## Reconstructing and Modelling Early Iron Age Systems of Interaction and Distribution
+
+<div style='position:absolute;bottom:15%;left:5%'>
+  <img  height="500" src='assets/img/shkr.png' />
+</div>
+
+<div style='position:absolute;top:15%;right:5%'>
+  <img  height="300" src='assets/img/pic51.png' />
+</div>
+
+
+---
+
+## Mosaic | Modelling Speheres of Interaction
+
+<div style='position:absolute;bottom:10%;right:20%'>
+  <img  height="500" src='assets/img/mosaic.png' />
+</div>
+
+---
+
+## International Center
+
+<div style='position:absolute;bottom:10%;left:10%'>
+  <img  height="500" src='assets/img/IntCenter.png' />
+</div>
+
+<div style='position:absolute;top:15%;right:10%'>
+  <img  height="100" src='assets/img/CAu.png' />
+</div>
+
+--- 
+
+## Guest Lectures
+
+>- Loup Bernard
+
+>- James Allison
+
+>- Aleksandr Diachenko
+
+--- &twocol
+
+## Daniel Knitter
+
+*** =left
+
+- SS 2013 (Noer)
+- WS 2014 (Berlin)
+
+*** =right
+
+<div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="450" src='assets/img/diss.jpg' />
+</div>
+
+<div style='position:absolute;bottom:10%;left:15%'>
+  <img  height="300" src='assets/img/buch.jpeg' />
+</div>
+
+---
+
+## MOSAIC - Modelling Speheres of Interaction
+
+**Aims**
+- understand concepts
+- adapt methods and techniques
+- connect to experts
+- establish a community
+- develop a scientific network
+- **collaborative projects of participants**
+
+<div style='position:absolute;bottom:10%;right:10%'>
+  <img  height="300" src='assets/img/panic.jpeg' />
+</div>
+
+---
+
+## Some usefull information
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="500" src='assets/img/Ufg_Lage.png' />
+</div>
+
+---
+
+## Timetable
+
+<div style='position:absolute;bottom:10%;right:15%'>
+  <img  height="500" src='assets/img/time.png' />
+</div>
+
+--- .segue bg:grey
+
+## Interaction between Humans and Landscape
+
+## Jutta Kneisel
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
+--- &twocol
+
 ## Presentations
 
 *** =left
@@ -57,22 +180,6 @@ strong {
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
-
----
-
-## Some usefull information
-
-<div style='position:absolute;bottom:10%;right:5%'>
-  <img  height="500" src='assets/img/Ufg_Lage.png' />
-</div>
-
----
-
-## Timetable
-
-<div style='position:absolute;bottom:10%;right:15%'>
-  <img  height="500" src='assets/img/time.png' />
-</div>
 
 --- &twocol
 
