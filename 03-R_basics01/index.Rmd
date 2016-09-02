@@ -79,18 +79,6 @@ Blah
 
 --- .segue bg:grey
 
-## Open a new R Script
-
-<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
- <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
- 
-</a>
-
-*** =pnotes
-File > New File > R Script
-
---- .segue bg:grey
-
 ## 1.  Vectors
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
