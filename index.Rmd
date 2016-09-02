@@ -46,7 +46,7 @@ strong {
 ## Reconstructing and Modelling Early Iron Age Systems of Interaction and Distribution
 
 <div style='position:absolute;bottom:10%;right:5%'>
-  <img  height="500" src='assets/img/shkr.png' />
+  <img  height="450" src='assets/img/shkr.png' />
 </div>
 
 <div style='position:absolute;bottom:25%;left:5%'>
@@ -167,15 +167,15 @@ strong {
 
 **Wednesday, 7th of September**
 
-1. [Modelling Interaction: Cultural distances](07-cul_distances/index.html)
+1. [Modelling Interaction: Cultural & Geographic Distance](07-cul_distances/index.html)
 2. [**Workshop**: Geographical and Economic Distances](08-WS_Geo_Eco_Distances/index.html)
-3. [**Workshop:** Cultural Distances]
+3. [**Workshop:** Cultural Distances](09-WS_Cul_Distances/index.html)
 
 **Thursday, 8th of September**
 
-1. [Using network approaches to modell Interaction](10-Network_Analysis/index.html)
-2. [**Workshop:** Pointpattern Analysis]
-3. [**Workshop:** Network Analysis]
+1. [Modelling Interaction: Network Approaches](10-Network_Analysis/index.html)
+2. [**Workshop:** Pointpattern Analysis](11-WS_Pointpattern/index.html)
+3. [**Workshop:** Network Analysis](12-WS_Network/index.html)
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
