@@ -21,3 +21,5 @@ nlme
 rpart
 spatstat
 sm
+igraph
+RANN

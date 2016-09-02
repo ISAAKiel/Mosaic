@@ -45,11 +45,11 @@ strong {
 
 ## Reconstructing and Modelling Early Iron Age Systems of Interaction and Distribution
 
-<div style='position:absolute;bottom:15%;left:5%'>
+<div style='position:absolute;bottom:10%;right:5%'>
   <img  height="500" src='assets/img/shkr.png' />
 </div>
 
-<div style='position:absolute;top:15%;right:5%'>
+<div style='position:absolute;bottom:25%;left:5%'>
   <img  height="300" src='assets/img/pic51.png' />
 </div>
 
@@ -115,8 +115,8 @@ strong {
 - develop a scientific network
 - **collaborative projects of participants**
 
-<div style='position:absolute;bottom:10%;right:10%'>
-  <img  height="300" src='assets/img/panic.jpeg' />
+<div style='position:absolute;bottom:20%;right:10%'>
+  <img  height="300" src='assets/img/panic.jpg' />
 </div>
 
 ---
@@ -208,6 +208,8 @@ strong {
 - `nlme`
 - `rpart`
 - `spatstat`
+- `igraph`
+- `RANN`
 
 ---
 

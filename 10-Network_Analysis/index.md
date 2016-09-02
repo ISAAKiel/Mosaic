@@ -75,7 +75,10 @@ strong {
 ## Networks
 
 **Definition**
-A networks are objects, in which elements (vertices) are connected by edges. Networks are models, mapping certain facets of the real world.
+
+- A networks are objects, in which elements (vertices) are connected by edges.
+
+- Networks are models, mapping certain facets of the real world.
 
 - Network theory has roots in geography and in social sciences
 
@@ -584,9 +587,62 @@ plot(ceb, n4)
 
 ## Systems | Agent Based Modelling
 
-# But is it useful?
-# Whad do you think?
+## But is it useful?
+## Whad do you think?
 
 <div style='position:absolute;bottom:10%;right:5%'>
   <img  height="500" src='assets/img/a206.png' />
 </div>
+
+---
+
+## Systems | Agent Based Modelling
+
+# Introducing some complexity
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="500" src='assets/img/a207.png' />
+</div>
+
+---
+
+## Systems | Agent Based Modelling
+
+# Some more results
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="500" src='assets/img/a208.png' />
+</div>
+
+---
+
+## Systems | Agent Based Modelling
+
+# Interpretation for the Heuneburg
+
+<div style='position:absolute;bottom:10%;right:5%'>
+  <img  height="500" src='assets/img/a208.png' />
+</div>
+
+--- .segue bg:grey
+
+## No code provided for the AMB (Summer School 2017)
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
+--- .segue bg:grey
+
+## Apply point pattern analysis and network analysis in the workshop this afternoon!
+
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
+---
+  
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+  <img  height="300" width="300" style='position:absolute;top:20%;right:35%' src='assets/img/ISAAK.png' />
+</a>
