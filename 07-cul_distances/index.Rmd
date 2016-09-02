@@ -191,6 +191,15 @@ Entaglement|ethnic group = seed of nation = race = culture|ethnic group ̸= seed
     <img  height="100" width="275" src='assets/img/pic11.png' />
 </div>
 
+--- 
+
+## Cultural distances
+
+
+<div style='position:absolute;bottom:30%;right:10%'>
+    <img  height="300" src='assets/img/pic11.png' />
+</div>
+
 --- &twocol
 
 ## Cultural distances
@@ -789,7 +798,7 @@ lines(df.d[,3:4])
 - sampling cultural distances in spatial distance ranges
 
 <div style='position:absolute;bottom:15%;left:10%'>
-  <img  height="250" width="300" src='assets/img/pic34.png' />
+  <img  height="250" src='assets/img/pic34.png' />
 </div>
 
 *** =right
@@ -823,21 +832,13 @@ lines(df.dd[,2:3])
 - similar to dd1
 - sampling cultural distances in spatial distance ranges
 
-```{r collapse=TRUE, fi.show='hide', eval=FALSE}
-p.points <- s.points; p.ts <- ts
-n <-length(p.points@coords[,1]); x <-1:n
-df.d <- data.frame(p1=rep(1,n),p2=x,d1=x,d2=x)
-```
-
-
-<div style='position:absolute;bottom:5%;left:15%'>
-  <img  height="250" width="300" src='assets/img/pic35.png' />
-</div>
-
 
 *** =right
 
 ```{r collapse=TRUE, fi.show='hide', eval=FALSE}
+p.points <- s.points; p.ts <- ts
+n <-length(p.points@coords[,1]); x <-1:n
+df.d <- data.frame(p1=rep(1,n),p2=x,d1=x,d2=x)
 for (i in 2:n) {
   df.d <- rbind(df.d,data.frame(p1=rep
   (i,n),p2=x,d1=x,d2=x))}
@@ -853,17 +854,36 @@ df.dd <- data.frame(id=seq(0,250000,20000)
 for (i in df.dd[,1]) {
   df.dd[i,3] <- mean(df.d[(df.d[,3] >
   df.dd[i,2] & df.d[,3] < df.dd[i+1,2]),4])}
+```
+
+--- &twocol
+
+## dd9
+
+*** =left
+
+- similar to dd1
+- sampling cultural distances in spatial distance ranges
+
+<div style='position:absolute;bottom:15%;left:15%'>
+  <img  height="300" src='assets/img/pic35.png' />
+</div>
+
+
+*** =right
+
+```{r collapse=TRUE, fi.show='hide', eval=FALSE}
 plot(df.dd[,2:3], pch=16, xlab="spatial distance
   (m)", ylab= "density distance", main="dd9")
 lines(df.dd[,2:3])
 ```
 
 
---- .segue bg:grey
+--- 
 
 ## How can we interpret the distance diagrams?
 ## Which pitfalls for interpretation can you find?
-## How can we improve thedistance diagrams and develop other versions?
+## How can we improve the distance diagrams and develop other versions?
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
