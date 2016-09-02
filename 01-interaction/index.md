@@ -1,5 +1,6 @@
 ---
 title       : Interaction as a Key Term
+subtitle    : Modelling Spheres of Intercation
 author      : Oliver Nakoinz
 job         : MOSAIC Summer School 2016
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}

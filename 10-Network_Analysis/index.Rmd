@@ -1,6 +1,6 @@
 ---
-title       : Modelling Spheres of Interaction
-subtitle   : Network Approaches
+title       : Network Approaches
+subtitle    : Modelling Spheres of Intercation
 author      : Oliver Nakoinz, Daniel Knitter
 job         : MOSAIC Summer School 2016
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
