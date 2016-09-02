@@ -6157,7 +6157,16 @@ https://epsg.io/5677
 
 
 ```r
+dem@proj4string
+```
+
+```
+## CRS arguments: NA
+```
+
+```r
 dem@proj4string <- CRS("+init=epsg:5677")
+## dem@proj4string
 is.projected(dem)
 ```
 
@@ -6165,15 +6174,37 @@ is.projected(dem)
 ## [1] TRUE
 ```
 
-```r
-plot(dem)
-```
-
 *** =right
 
 ![plot of chunk unnamed-chunk-26](assets/fig/unnamed-chunk-26-1.png)
 
+---
 
+## Distance analyses in geographic space
+
+From a list of points to a spatial object [a reminder]
+
+
+```r
+download.file(
+    url = "https://raw.githubusercontent.com/dakni/mhbil/master/data/meg_dw.csv",
+    destfile = "2data/meg_dw.csv")
+
+meg_dw <- read.table(file = "2data/meg_dw.csv",
+                     header = TRUE,
+                     sep = ";")
+head(meg_dw)
+```
+
+```
+##   id       x       y
+## 1  1 3553751 6028609
+## 2  2 3553442 6027416
+## 3  3 3552502 6025080
+## 4  4 3552518 6024799
+## 5  5 3553799 6025130
+## 6  6 3551621 6025247
+```
 
 ---
 

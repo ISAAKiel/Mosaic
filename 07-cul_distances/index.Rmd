@@ -1011,18 +1011,35 @@ What is the Spatial Reference System (SRS)?
 https://epsg.io/5677
 
 ```{r fig.show='hide'}
+dem@proj4string
 dem@proj4string <- CRS("+init=epsg:5677")
+## dem@proj4string
 is.projected(dem)
-plot(dem)
 ```
 
 *** =right
 
 ```{r echo=FALSE}
-plot(dem)
+library(raster)
+plot(raster(dem))
 ```
 
+---
 
+## Distance analyses in geographic space
+
+From a list of points to a spatial object [a reminder]
+
+```{r}
+download.file(
+    url = "https://raw.githubusercontent.com/dakni/mhbil/master/data/meg_dw.csv",
+    destfile = "2data/meg_dw.csv")
+
+meg_dw <- read.table(file = "2data/meg_dw.csv",
+                     header = TRUE,
+                     sep = ";")
+head(meg_dw)
+```
 
 ---
 

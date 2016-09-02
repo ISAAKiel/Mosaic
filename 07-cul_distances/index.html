@@ -6745,14 +6745,18 @@ lines(df.dd[,2:3])
 <div style='float:left;width:48%;' class='centered'>
   <p><a href="https://epsg.io/5677">https://epsg.io/5677</a></p>
 
+<pre><code class="r">dem@proj4string
+</code></pre>
+
+<pre><code>## CRS arguments: NA
+</code></pre>
+
 <pre><code class="r">dem@proj4string &lt;- CRS(&quot;+init=epsg:5677&quot;)
+## dem@proj4string
 is.projected(dem)
 </code></pre>
 
 <pre><code>## [1] TRUE
-</code></pre>
-
-<pre><code class="r">plot(dem)
 </code></pre>
 
 </div>
@@ -6768,6 +6772,39 @@ is.projected(dem)
 </article>
 </slide>
 <slide class="" id="slide-51">
+<hgroup>
+<h2>Distance analyses in geographic space</h2>
+</hgroup>
+<article>
+<p>From a list of points to a spatial object [a reminder]</p>
+
+<pre><code class="r">download.file(
+    url = &quot;https://raw.githubusercontent.com/dakni/mhbil/master/data/meg_dw.csv&quot;,
+    destfile = &quot;2data/meg_dw.csv&quot;)
+
+meg_dw &lt;- read.table(file = &quot;2data/meg_dw.csv&quot;,
+                     header = TRUE,
+                     sep = &quot;;&quot;)
+head(meg_dw)
+</code></pre>
+
+<pre><code>##   id       x       y
+## 1  1 3553751 6028609
+## 2  2 3553442 6027416
+## 3  3 3552502 6025080
+## 4  4 3552518 6024799
+## 5  5 3553799 6025130
+## 6  6 3551621 6025247
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-52">
 <hgroup>
 
 </hgroup>
@@ -7089,8 +7126,14 @@ is.projected(dem)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=51 title='NA'>
+        data-slide=51 title='Distance analyses in geographic space'>
          51
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=52 title='NA'>
+         52
       </a>
     </li>
   </ul>
