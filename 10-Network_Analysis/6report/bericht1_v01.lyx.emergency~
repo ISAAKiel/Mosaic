@@ -1,0 +1,496 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass scrreprt
+\begin_preamble
+\widowpenalty=400		% einzelne Zeile auf neuer Seite
+\clubpenalty=300        	% erste Abstazzeile alleine
+\brokenpenalty=400		% Seitenumbruch im Wort
+\linepenalty=20		% Zeilenumburch allg
+\hyphenpenalty=500		% Zeilenumbruch im Wort
+\predisplaypenalty=1000	% Seitenumbruch vor Formel
+\lefthyphenmin=4
+\righthyphenmin=4
+\raggedbottom		% Seitenlänge flexibel
+\textfloatsep=3pt
+\usepackage[justification=raggedleft,font=small,format=hang,justification=raggedright,singlelinecheck=false]{caption}
+\renewcommand{\captionfont}{\footnotesize}
+\usepackage[protrusion=true,expansion]{microtype}
+
+\emergencystretch=40 pt
+%\fussy
+\sloppy
+\end_preamble
+\use_default_options true
+\begin_modules
+hanging
+\end_modules
+\language ngerman
+\inputencoding auto
+\font_roman times
+\font_sans helvet
+\font_typewriter cmtt
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing other 1.2
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Analysebericht Aleppo 1: Punktmusteranalyse (Entwurf)
+\end_layout
+
+\begin_layout Titlehead
+#####Titelkopf
+\end_layout
+
+\begin_layout Extratitle
+######Zusatztitel
+\end_layout
+
+\begin_layout Author
+Oliver Nakoinz
+\end_layout
+
+\begin_layout Address
+Topoi, Freie Universität Berlin, ####
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Projekt: #######
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Daten:
+\series default
+ 
+\end_layout
+
+\begin_layout Abstract
+Datengrundlage: ##
+\end_layout
+
+\begin_layout Abstract
+Bearbeiter: Oliver Nakoinz
+\end_layout
+
+\begin_layout Abstract
+Version: 01
+\end_layout
+
+\begin_layout Abstract
+Datum Datenzugriff: 11.04.2011
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Analyse:
+\end_layout
+
+\begin_layout Abstract
+Fragestellung: ######
+\end_layout
+
+\begin_layout Abstract
+Analysestrategie: #####
+\end_layout
+
+\begin_layout Abstract
+Methoden: ######
+\end_layout
+
+\begin_layout Abstract
+Bearbeiter: Oliver Nakoinz
+\end_layout
+
+\begin_layout Abstract
+Version: 01
+\end_layout
+
+\begin_layout Abstract
+Datum: ###
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Bericht:
+\end_layout
+
+\begin_layout Abstract
+Bearbeiter: Oliver Nakoinz
+\end_layout
+
+\begin_layout Abstract
+Version: 01
+\end_layout
+
+\begin_layout Abstract
+Datum der letzten Änderung: 11.04.2011
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Beschreibung:
+\series default
+ ###
+\end_layout
+
+\begin_layout Abstract
+#################
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+# 0.4 Kläre für jede Methode folgende Fragen:
+\end_layout
+
+\begin_layout Plain Layout
+#--------------------------------------------
+\end_layout
+
+\begin_layout Plain Layout
+# FM1 Was wird in der Analyse genau gemacht?
+\end_layout
+
+\begin_layout Plain Layout
+# FM2 Für welche Fragestellungen ist die Analyse geeignet?
+\end_layout
+
+\begin_layout Plain Layout
+# FM3 Wie hoch ist der Rechenaufwand?
+\end_layout
+
+\begin_layout Plain Layout
+# FM4 Lässt sich der Algorithmus vereinfachen oder optimieren?
+\end_layout
+
+\begin_layout Plain Layout
+# FM5 Welche Anforderungen bestehen an die Daten?
+\end_layout
+
+\begin_layout Plain Layout
+# FM6 Welchen Einfluss hat eine unzureichende Erfüllung der Anforderungen?
+\end_layout
+
+\begin_layout Plain Layout
+# FM7 Welche Parameter sind zu wählen?
+\end_layout
+
+\begin_layout Plain Layout
+# FM8 Wie werden die Parameter bestimmt?
+\end_layout
+
+\begin_layout Plain Layout
+# FM9 Welchen Einfluss haben die Parameter auf das Ergebnis?
+\end_layout
+
+\begin_layout Plain Layout
+# FM10 Welches Format hat das Ergebnis (Kennzahl?)?
+\end_layout
+
+\begin_layout Plain Layout
+# FM11 Handelt es sich um eine theoretische Optimierung oder um ein empirisches
+ Ergebnis?
+\end_layout
+
+\begin_layout Plain Layout
+# FM12 Welche Vorteile besitzt die Methode?
+\end_layout
+
+\begin_layout Plain Layout
+# FM13 Welche Nachteile besitzt die Methode?
+\end_layout
+
+\begin_layout Plain Layout
+# FM14 Welche Fehler können auftreten?
+\end_layout
+
+\begin_layout Plain Layout
+# FM15 Wie lassen sich die Ergebnisse interpretieren?
+\end_layout
+
+\begin_layout Plain Layout
+# FM16 Unter welchen Bedingungen ist die Methode sinnvoll?
+\end_layout
+
+\begin_layout Plain Layout
+# FM17 Welche weiterführenden Analysen sind sinnvoll?
+\end_layout
+
+\begin_layout Plain Layout
+# 0.5 Beschreibe für jede Gesamtanalyse:
+\end_layout
+
+\begin_layout Plain Layout
+#---------------------------------------
+\end_layout
+
+\begin_layout Plain Layout
+# B1 Die Daten
+\end_layout
+
+\begin_layout Plain Layout
+# B2 Die Fragestellung
+\end_layout
+
+\begin_layout Plain Layout
+# B3 Die theoretischen Grundlagen
+\end_layout
+
+\begin_layout Plain Layout
+# B4 Die Analysestrategie (warum welche Methoden?)
+\end_layout
+
+\begin_layout Plain Layout
+# 0.6 Kläre für jede Einzelanalyse folgende Fragen:
+\end_layout
+
+\begin_layout Plain Layout
+#--------------------------------------------
+\end_layout
+
+\begin_layout Plain Layout
+# FA1 Welche Fragestellung liegt vor?
+\end_layout
+
+\begin_layout Plain Layout
+# FA2 Welche theoretischen Grundlagen wurden verwendet?
+\end_layout
+
+\begin_layout Plain Layout
+# FA3 Welche Daten wurden verwendet?
+\end_layout
+
+\begin_layout Plain Layout
+# FA4 Erfüllen die Daten die Anforderungen?
+\end_layout
+
+\begin_layout Plain Layout
+# FA5 Welche Parameter wurden verwendet?
+\end_layout
+
+\begin_layout Plain Layout
+# FA6 Wie wurden die Parameter bestimmt?
+\end_layout
+
+\begin_layout Plain Layout
+# FA7 Sind bei der Durchführung der Analyse Fehler aufgetreten (wenn ja
+ welche)?
+\end_layout
+
+\begin_layout Plain Layout
+# FA8 Wie wird das Ergebnis interpretiert?
+\end_layout
+
+\begin_layout Plain Layout
+# FA9 Wie sind die Fehler des Ergebnisses einzuschätzen?
+\end_layout
+
+\begin_layout Plain Layout
+# FA10 Wie sind die Analyse und das Ergebnis zu validieren?
+\end_layout
+
+\begin_layout Plain Layout
+# FA11 Welche aufbauenden und ergänzenden Analysen sind durchzuführen?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Daten
+\end_layout
+
+\begin_layout Standard
+############
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/fon/aktuell_netbook/lv_puktmuster/aleppo/bilder/allepo_fundstellen.png
+	lyxscale 10
+	width 16cm
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+figurename}{Abb.}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "abb_funstellen"
+
+\end_inset
+
+############
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Verteilung
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Chapter
+Dichte
+\end_layout
+
+\begin_layout Standard
+##############
+\end_layout
+
+\begin_layout Chapter
+Abgrenzung
+\end_layout
+
+\begin_layout Standard
+###############
+\end_layout
+
+\begin_layout Chapter
+Zentren
+\end_layout
+
+\begin_layout Standard
+Zentren können als lokale Maxima in Dichtekarten ermittelt werden.
+ Im Wesenlichen zeigen die drei verwendeten karten das gleiche Bild.
+ Einige Abweichungen sind insbesondere bei der strukturbasierte Dichte aufgrund
+ des Extrapolationseffektes zu beobachten.
+ Bei den größeren Punktkonzentrationen weist die östliche ein Zentrum in
+ der Mitte auf.
+ Die beiden anderen scheinen polyzentrisch beziehungsweise weiter differenziert
+ zu sein.
+\end_layout
+
+\begin_layout Standard
+###############
+\end_layout
+
+\begin_layout Chapter
+Netze
+\end_layout
+
+\begin_layout Standard
+###########
+\end_layout
+
+\begin_layout Chapter
+Zentralität
+\end_layout
+
+\begin_layout Standard
+################
+\end_layout
+
+\begin_layout Chapter
+Interpretation 
+\end_layout
+
+\begin_layout Standard
+################
+\end_layout
+
+\begin_layout Chapter
+Literatur
+\end_layout
+
+\end_body
+\end_document
