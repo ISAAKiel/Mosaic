@@ -200,7 +200,7 @@ O'Sullivan & Unwin 2010, 126-126
 
 ## Point pattern analyses
 
-```{r "download meg"}
+```{r "download_meg"}
 download.file(
     url = "https://raw.githubusercontent.com/dakni/mhbil/master/data/meg_dw.csv",
     destfile = "2data/meg_dw.csv")
@@ -214,7 +214,7 @@ meg_dw <- read.table(file = "2data/meg_dw.csv",
 
 ## Point pattern analyses
 
-```{r "createPPP object", results="hide", message=FALSE}
+```{r "createPPP_object", results="hide", message=FALSE}
 library(spatstat)
 meg_pp <- ppp(x = meg_dw$x, y = meg_dw$y,
               window = owin(xrange = c(min(meg_dw$x),
@@ -232,7 +232,7 @@ meg_pp <- ppp(x = meg_dw$x, y = meg_dw$y,
 
 ## Point pattern analyses
 
-```{r "plot ppp"}
+```{r "plot_ppp"}
 plot(meg_pp)
 ```
 
@@ -240,7 +240,7 @@ plot(meg_pp)
 
 ## Point pattern analyses
 
-```{r "simple pp measures", message=F, results="hide",fig.show="hide"}
+```{r "simple_pp_measures", message=F, results="hide",fig.show="hide"}
 mc <- cbind(sum(meg_pp$x/meg_pp$n),
             sum(meg_pp$y/meg_pp$n)
             )
@@ -261,7 +261,7 @@ draw.circle(x = mc[1], y = mc[2], radius = stdist, border = "red")
 ## Point pattern analyses
 
 <div style="text-align:center">
-```{r "plot simple pp measures", echo=FALSE,fig.height=8}
+```{r "plot_simple_pp_measures", echo=FALSE,fig.height=8}
 plot(meg_pp)
 points(mc, col = "red")
 library(plotrix)
@@ -274,7 +274,7 @@ draw.circle(x = mc[1], y = mc[2], radius = stdist, border = "red")
 
 Global intensity = Number of points per area
 
-```{r "global intensity"}
+```{r "global_intensity"}
 ## A = a * b
 area.sqm <- diff(meg_pp$window$xrange) * diff(meg_pp$window$yrange)
 area.sqkm <- area.sqm*10^-6
@@ -311,7 +311,7 @@ Does the quadratcount indicates CSR?
 
 *** =right
 
-```{r "quadratcount plot", echo=FALSE}
+```{r "quadratcount_plot", echo=FALSE}
 qc.meg <- quadratcount(X = meg_pp)
 
 plot(qc.meg); points(meg_pp, pch = 20, cex = .5, col = rgb(.2,.2,.2,.5))
@@ -331,13 +331,38 @@ To check we use a $\chi^2$ test approach (remember: relation between observed (i
 
 *** =right
 
-```{r "quadratcount test"}
+```{r "quadratcount_test"}
 qt_meg <- quadrat.test(meg_pp)
-## plot(qt_meg) --> for per quadrant info.
 qt_meg
 ```
 
+--- &twocol
 
+## Point pattern analyses
+
+Local intensity
+
+*** =left
+
+- top left = observed
+- top right = expected
+- bottom = Pearson residual
+
+Meaning of bottom values:
+- +/- 2 = unusual
+- larger values = gross departure from fitted model
+
+*** =right
+
+```{r "quadratcount_test_plot"}
+plot(qt_meg)
+```
+
+---
+
+## Point pattern analyses
+
+Kernel density estimation
 
 
 

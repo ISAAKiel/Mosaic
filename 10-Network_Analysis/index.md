@@ -239,7 +239,7 @@ meg_pp <- ppp(x = meg_dw$x, y = meg_dw$y,
 plot(meg_pp)
 ```
 
-![plot of chunk plot ppp](assets/fig/plot ppp-1.png)
+![plot of chunk plot_ppp](assets/fig/plot_ppp-1.png)
 
 ---
 
@@ -267,7 +267,7 @@ draw.circle(x = mc[1], y = mc[2], radius = stdist, border = "red")
 ## Point pattern analyses
 
 <div style="text-align:center">
-![plot of chunk plot simple pp measures](assets/fig/plot simple pp measures-1.png)
+![plot of chunk plot_simple_pp_measures](assets/fig/plot_simple_pp_measures-1.png)
 
 ---
 
@@ -324,7 +324,7 @@ Does the quadratcount indicates CSR?
 
 *** =right
 
-![plot of chunk quadratcount plot](assets/fig/quadratcount plot-1.png)
+![plot of chunk quadratcount_plot](assets/fig/quadratcount_plot-1.png)
 
 --- &twocol
 
@@ -343,7 +343,6 @@ To check we use a $\chi^2$ test approach (remember: relation between observed (i
 
 ```r
 qt_meg <- quadrat.test(meg_pp)
-## plot(qt_meg) --> for per quadrant info.
 qt_meg
 ```
 
@@ -359,7 +358,36 @@ qt_meg
 ## Quadrats: 5 by 5 grid of tiles
 ```
 
+--- &twocol
 
+## Point pattern analyses
+
+Local intensity
+
+*** =left
+
+- top left = observed
+- top right = expected
+- bottom = Pearson residual
+
+Meaning of bottom values:
+- +/- 2 = unusual
+- larger values = gross departure from fitted model
+
+*** =right
+
+
+```r
+plot(qt_meg)
+```
+
+![plot of chunk quadratcount_test_plot](assets/fig/quadratcount_test_plot-1.png)
+
+---
+
+## Point pattern analyses
+
+Kernel density estimation
 
 
 
