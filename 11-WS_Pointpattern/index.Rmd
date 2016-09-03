@@ -45,6 +45,7 @@ strong {
 - explore the characteristics of the point pattern
 - identify potential first-order effects (density; e.g. regarding the topography)
 - identify potential second-order effects (G,F,K functions)
+- test the `envelope` function.
 
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>

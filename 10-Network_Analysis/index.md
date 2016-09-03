@@ -117,13 +117,570 @@ are influenced by:
   <img  height="400" src='assets/img/dk_PP_terms.png' />
   </div>
 
---- .dk
+---
+
+## Point pattern analyses
+
+Some terminology: in case we have an random point pattern, **Complete Spatial Randomness** or an **Independent Random Process** prevails. The condition are:
+
+- equal probability: any event has an equal probability of being in any position
+- independence: the positioning of any event is independent of the positioning of any other event
+
+---
+
+## Point pattern analyses
+
+Some terminology: in case we have an random point pattern, **Complete Spatial Randomness** or an **Independent Random Process** prevails. The condition are:
+
+- equal probability: any event has an equal probability of being in any position
+- independence: the positioning of any event is independent of the positioning of any other event
+
+CSR means that the **process is random** not the resulting point pattern!
+
+In point pattern analyses we test against CSR and different forms of specific processes to learn more about our pattern.
+
+---
 
 ## Point pattern analyses
 
 <div style='position:absolute;top:25%;right:10%'>
   <img  height="350" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
   </div>
+
+---
+
+## Point pattern analyses
+
+A structured point pattern violates CSR conditions:
+
+1. First-order effects influence the probability of events being in any position of the region
+--> to trace such influences we investigate the intensity function (~ density) of the points
+
+2. In case second-order effects are present, points are not independent from one another
+--> to trace such influences we investigate the distance distributions of the points
+
+---
+
+## Point pattern analyses
+
+- a **stationary point process** has a constant point density function.
+- a **homogeneous point process** is stationary and isotropic. --> CSR
+- a stationary **Poisson point process** is the reference model in many test for CSR
+
+---
+
+## Point pattern analyses
+
+Events are independent
+- a non-stationary **(Poisson) point process** has an inhomogeneous intensity function --> e.g. caused by a covariate.
+
+Events are not independent
+- the **Cox process** is an inhomogeneous Poisson process with a random
+intensity function. (Approach: create random pattern, create points using Poisson and covariate of random intensity)
+- a **Gibbs process** involves influence from other points and models an explicit interaction between points (mainly for inhibition). In the case of a hard core Gibbs process, points
+avoid each other up to a certain threshold and they ignore each other.
+- a **Strauss process** has a constant influence within a certain distance threshold.
+- a **Neyman–Scott process** is used to create clustered point pattern by creating random cluster centres that create "offspring" points
+
+---
+
+## Point pattern analyses
+
+Simple measures: mean, standard deviation, intensity (~ density)
+
+<div style='text-align:center'>
+  <img  height="450" src='assets/img/dk_PP_SimpleMeasures.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+O'Sullivan & Unwin 2010, 126-126
+</div>
+
+--- .small 
+
+## Point pattern analyses
+
+
+```r
+download.file(
+    url = "https://raw.githubusercontent.com/dakni/mhbil/master/data/meg_dw.csv",
+    destfile = "2data/meg_dw.csv")
+
+meg_dw <- read.table(file = "2data/meg_dw.csv",
+                     header = TRUE,
+                     sep = ";")
+```
+
+--- .small 
+
+## Point pattern analyses
+
+
+```r
+library(spatstat)
+meg_pp <- ppp(x = meg_dw$x, y = meg_dw$y,
+              window = owin(xrange = c(min(meg_dw$x),
+                                       max(meg_dw$x)
+                                       ),
+                            yrange = c(min(meg_dw$y),
+                                       max(meg_dw$y)
+                                       ),
+                            unitname = c("meter", "meters")
+                            )              
+              )
+```
+
+--- .small 
+
+## Point pattern analyses
+
+
+```r
+plot(meg_pp)
+```
+
+![plot of chunk plot_ppp](assets/fig/plot_ppp-1.png)
+
+---
+
+## Point pattern analyses
+
+
+```r
+mc <- cbind(sum(meg_pp$x/meg_pp$n),
+            sum(meg_pp$y/meg_pp$n)
+            )
+
+stdist <- sqrt(sum((meg_pp$x-mean(meg_pp$x))^2 +
+                   (meg_pp$y-mean(meg_pp$y))^2) /
+               meg_pp$n
+               )
+
+plot(meg_pp)
+points(mc)
+library(plotrix)
+draw.circle(x = mc[1], y = mc[2], radius = stdist, border = "red")
+```
+
+---
+
+## Point pattern analyses
+
+<div style="text-align:center">
+![plot of chunk plot_simple_pp_measures](assets/fig/plot_simple_pp_measures-1.png)
+
+---
+
+## Point pattern analyses
+
+Global intensity = Number of points per area
+
+
+```r
+## A = a * b
+area.sqm <- diff(meg_pp$window$xrange) * diff(meg_pp$window$yrange)
+area.sqkm <- area.sqm*10^-6
+# area <- area/1000000
+area.sqkm
+```
+
+```
+## [1] 431.3529
+```
+
+```r
+## calculate intensity
+intensity <- meg_pp$n/area.sqkm
+intensity
+```
+
+```
+## [1] 0.6189827
+```
+
+---
+
+## Point pattern analyses
+
+Local intensity
+
+
+```r
+qc.meg <- quadratcount(X = meg_pp)
+
+plot(qc.meg);
+points(meg_pp, pch = 20, cex = .5, col = rgb(.2,.2,.2,.5))
+```
+
+--- &twocol
+
+## Point pattern analyses
+
+Local intensity
+
+*** =left
+
+Does the quadratcount indicates CSR?
+
+*** =right
+
+![plot of chunk quadratcount_plot](assets/fig/quadratcount_plot-1.png)
+
+--- &twocol
+
+## Point pattern analyses
+
+Local intensity
+
+*** =left
+
+Does the quadratcount indicates CSR?
+
+To check we use a $\chi^2$ test approach (remember: relation between observed (i.e. empirical) and expected (i.e. theoretical, here CSR) amounts of points in quadrants)
+
+*** =right
+
+
+```r
+qt_meg <- quadrat.test(meg_pp)
+qt_meg
+```
+
+```
+## 
+## 	Chi-squared test of CSR using quadrat counts
+## 	Pearson X2 statistic
+## 
+## data:  meg_pp
+## X2 = 274.48, df = 24, p-value < 2.2e-16
+## alternative hypothesis: two.sided
+## 
+## Quadrats: 5 by 5 grid of tiles
+```
+
+--- &twocol
+
+## Point pattern analyses
+
+Local intensity
+
+*** =left
+
+- top left = observed
+- top right = expected
+- bottom = Pearson residual
+
+Meaning of bottom values:
+- +/- 2 = unusual
+- larger values = gross departure from fitted model
+
+*** =right
+
+
+```r
+plot(qt_meg)
+```
+
+![plot of chunk quadratcount_test_plot](assets/fig/quadratcount_test_plot-1.png)
+
+---
+
+## Point pattern analyses - First order effects
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="450" src='assets/img/dk_kde.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+O'Sullivan & Unwin 2010, Nakoinz & Knitter 2016
+</div>
+
+--- &twocol
+
+## Point pattern analyses - First order effects
+
+Kernel density estimation
+
+*** =left
+
+
+```r
+meg_dens <- density(x = meg_pp,
+                    sigma = 2500)
+
+plot(raster(meg_dens))
+```
+
+*** =right
+
+![plot of chunk kde_meg_plot](assets/fig/kde_meg_plot-1.png)
+
+---
+
+## Point pattern analyses - First order effects
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="400" src='assets/img/dk_kde_kernel.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Knitter & Nakoinz in press
+</div>
+
+---
+
+## Point pattern analyses - First order effects
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_kde_kernel_badia.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Meister et al. forthcoming
+</div>
+
+---
+
+## Point pattern analyses - First order effects
+
+We assume that the intensity of the point process is a function of the covariate (Z):
+
+$$\lambda(u) = \rho(Z(U))$$
+
+$\lambda(u)$ can be regarded as location selection function --> it causes an inhomogeneous probability of points to be located in same areas of the study region
+
+Calculation in `R` is straightforward
+
+
+```r
+cov_meg <- rhohat(object = "YOUR POINT PATTERN",
+                     covariate = "YOUR COVARIATE RASTER",
+                     bw = 100
+                  )
+pred_cov_meg <- predict(cov_meg)
+cov_compare <- meg_dens - pred_cov_meg
+```
+
+---
+
+## Point pattern analyses - First order effects
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_cov_badia_1.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Meister et al. forthcoming
+</div>
+
+---
+
+## Point pattern analyses - First order effects
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_cov_badia_2.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Meister et al. forthcoming
+</div>
+
+---
+
+## Point pattern analyses - Second order effects
+
+---
+
+## Point pattern analyses
+
+<div style='text-align:center'>
+  <img  height="450" src='assets/img/dk_nn.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+O'Sullivan & Unwin 2010
+</div>
+
+
+--- &twocol
+
+## Point pattern analyses - Second order effects
+
+*** =left
+
+$$R = \frac{observed~\overline{d_{min}}}{expected~\overline{d_{min}}}$$
+
+$$R = \frac{\overline{d_{min}}}{\frac{1}{2\sqrt{\lambda}}}$$
+
+*** =right
+
+
+```r
+meg_nn <- nndist(meg_pp)
+mean(meg_nn)
+```
+
+```
+## [1] 358.8447
+```
+
+```r
+nnE <- 1/(2*sqrt((meg_pp$n/area.sqm)))
+nnE
+```
+
+```
+## [1] 635.5222
+```
+
+```r
+R.meg <- mean(meg_nn)/nnE
+R.meg
+```
+
+```
+## [1] 0.5646453
+```
+
+
+--- &twocol
+
+## Point pattern analyses - Second order effects
+
+*** =left
+
+
+```r
+hist(meg_nn)
+abline(v=mean(meg_nn))
+abline(v=median(meg_nn), lty=2)
+```
+
+*** =right
+
+![plot of chunk nndist_plot](assets/fig/nndist_plot-1.png)
+
+---
+
+## Point pattern analyses - Second order effects
+
+<div style='text-align:center'>
+  <img  height="250" src='assets/img/dk_PP_nakoinz_knitter_2016_135.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Nakoinz & Knitter 2016, 135
+</div>
+
+---
+
+## Point pattern analyses - Second order effects
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_GFK_Knitter-et-al_2014_113.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Knitter et al. 2014, 113
+</div>
+
+
+
+--- &twocol
+
+## Point pattern analyses - Second order effects
+
+*** =left
+
+cumulative frequency distribution of the nearest-neighbor distances
+
+$$G(d) = \frac{\#(d_{min}(S_{i}) < d)}{n}$$
+
+The function tells us what fraction of all n-n
+distances is less than d
+
+
+```r
+meg_g <- Gest(meg_pp)
+plot(meg_g)
+```
+
+*** =right
+
+![plot of chunk g_plot](assets/fig/g_plot-1.png)
+
+--- &twocol
+
+## Point pattern analyses - Second order effects
+
+*** =left
+
+cumulative frequency distribution of the nearest-neighbor distances of arbitrary events
+to known events
+
+$$F(d) = \frac{\#(d_{min}(p_i,S) < d)}{m}$$
+
+
+```r
+meg_f <- Fest(meg_pp)
+plot(meg_f)
+```
+
+hmm...this can be advanced...in the Workshop :)
+
+*** =right
+
+![plot of chunk f_plot](assets/fig/f_plot-1.png)
+
+
+--- &twocol
+
+## Point pattern analyses - Second order effects
+
+*** =left
+
+~ cumulative frequency distribution of all points within a certain radius
+
+$$K(d) = \frac{\sum\limits_{i=1}^{n}\#(S \in C(s_i,d))}{n\lambda}$$
+
+
+```r
+meg_k <- Kest(meg_pp)
+plot(meg_k)
+```
+
+*** =right
+
+![plot of chunk k_plot](assets/fig/k_plot-1.png)
+
+
+---
+
+## Point pattern analyses - Second order effects
+
+<div style='text-align:center'>
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_142.png' />
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_143.png' />
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_143_2.png' />
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_143_3.png' />
+</div>
+
+<div style='text-align:right;font-size:12px'>
+Nakoinz & Knitter 2016, 142-143
+</div>
+
+
+
 
 --- .segue bg:grey
 
@@ -210,7 +767,7 @@ are influenced by:
 
 
 ```
-## Error in plot(n1): cannot open file 'C:/Diss/R/develpoment/Mosaic01/Mosaic/10-Network_Analysis/.cache/unnamed-chunk-6_a06615d0fab008585b8490f9b1746abe.rdb': No such file or directory
+## Error in plot(n1): object 'n1' not found
 ```
 
 
@@ -388,7 +945,20 @@ co.weapons <- read.csv("2data/
 
 *** =left
 
-![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13-1.png)
+
+```
+## 
+##      PLEASE NOTE:  The components "delsgs" and "summary" of the
+##  object returned by deldir() are now DATA FRAMES rather than
+##  matrices (as they were prior to release 0.0-18).
+##  See help("deldir").
+##  
+##      PLEASE NOTE: The process that deldir() uses for determining
+##  duplicated points has changed from that used in version
+##  0.0-9 of this package (and previously). See help("deldir").
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(del): object 'del' not found
+```
 
 *** =right
 
@@ -413,7 +983,11 @@ plot(del)
 
 *** =left
 
-![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15-1.png)
+
+```
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(soi): object 'soi' not found
+```
 
 *** =right
 
@@ -434,7 +1008,11 @@ plot(soi)
 
 *** =left
 
-![plot of chunk unnamed-chunk-17](assets/fig/unnamed-chunk-17-1.png)
+
+```
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(gabriel): object 'gabriel' not found
+```
 
 *** =right
 
@@ -454,7 +1032,11 @@ plot(gabriel)
 
 *** =left
 
-![plot of chunk unnamed-chunk-19](assets/fig/unnamed-chunk-19-1.png)
+
+```
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(relative): object 'relative' not found
+```
 
 *** =right
 
