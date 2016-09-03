@@ -121,11 +121,67 @@ are influenced by:
 
 ## Point pattern analyses
 
+Some terminology: in case we have an random point pattern, **Complete Spatial Randomness** or an **Independent Random Process** prevails. The condition are:
+
+- equal probability: any event has an equal probability of being in any position
+- independence: the positioning of any event is independent of the positioning of any other event
+
+---
+
+## Point pattern analyses
+
+Some terminology: in case we have an random point pattern, **Complete Spatial Randomness** or an **Independent Random Process** prevails. The condition are:
+
+- equal probability: any event has an equal probability of being in any position
+- independence: the positioning of any event is independent of the positioning of any other event
+
+CSR means that the **process is random** not the resulting point pattern!
+
+In point pattern analyses we test against CSR and different forms of specific processes to learn more about our pattern.
+
+---
+
+## Point pattern analyses
+
 <div style='position:absolute;top:25%;right:10%'>
   <img  height="350" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
   </div>
 
-<<<<<<< HEAD
+---
+
+## Point pattern analyses
+
+A structured point pattern violates CSR conditions:
+
+1. First-order effects influence the probability of events being in any position of the region
+--> to trace such influences we investigate the intensity function (~ density) of the points
+
+2. In case second-order effects are present, points are not independent from one another
+--> to trace such influences we investigate the distance distributions of the points
+
+---
+
+## Point pattern analyses
+
+- a **stationary point process** has a constant point density function.
+- a **homogeneous point process** is stationary and isotropic. --> CSR
+- a stationary **Poisson point process** is the reference model in many test for CSR
+
+---
+
+## Point pattern analyses
+
+Events are independent
+- a non-stationary **(Poisson) point process** has an inhomogeneous intensity function --> e.g. caused by a covariate.
+
+Events are not independent
+- the **Cox process** is an inhomogeneous Poisson process with a random
+intensity function. (Approach: create random pattern, create points using Poisson and covariate of random intensity)
+- a **Gibbs process** involves influence from other points and models an explicit interaction between points (mainly for inhibition). In the case of a hard core Gibbs process, points
+avoid each other up to a certain threshold and they ignore each other.
+- a **Strauss process** has a constant influence within a certain distance threshold.
+- a **Neyman–Scott process** is used to create clustered point pattern by creating random cluster centres that create "offspring" points
+
 ---
 
 ## Point pattern analyses
@@ -187,10 +243,126 @@ plot(meg_pp)
 
 ---
 
+## Point pattern analyses
 
 
-=======
->>>>>>> origin/HEAD
+```r
+mc <- cbind(sum(meg_pp$x/meg_pp$n),
+            sum(meg_pp$y/meg_pp$n)
+            )
+
+stdist <- sqrt(sum((meg_pp$x-mean(meg_pp$x))^2 +
+                   (meg_pp$y-mean(meg_pp$y))^2) /
+               meg_pp$n
+               )
+
+plot(meg_pp)
+points(mc)
+library(plotrix)
+draw.circle(x = mc[1], y = mc[2], radius = stdist, border = "red")
+```
+
+---
+
+## Point pattern analyses
+
+<div style="text-align:center">
+![plot of chunk plot simple pp measures](assets/fig/plot simple pp measures-1.png)
+
+---
+
+## Point pattern analyses
+
+Global intensity = Number of points per area
+
+
+```r
+## A = a * b
+area.sqm <- diff(meg_pp$window$xrange) * diff(meg_pp$window$yrange)
+area.sqkm <- area.sqm*10^-6
+# area <- area/1000000
+area.sqkm
+```
+
+```
+## [1] 431.3529
+```
+
+```r
+## calculate intensity
+intensity <- meg_pp$n/area.sqkm
+intensity
+```
+
+```
+## [1] 0.6189827
+```
+
+---
+
+## Point pattern analyses
+
+Local intensity
+
+
+```r
+qc.meg <- quadratcount(X = meg_pp)
+
+plot(qc.meg);
+points(meg_pp, pch = 20, cex = .5, col = rgb(.2,.2,.2,.5))
+```
+
+--- &twocol
+
+## Point pattern analyses
+
+Local intensity
+
+*** =left
+
+Does the quadratcount indicates CSR?
+
+*** =right
+
+![plot of chunk quadratcount plot](assets/fig/quadratcount plot-1.png)
+
+--- &twocol
+
+## Point pattern analyses
+
+Local intensity
+
+*** =left
+
+Does the quadratcount indicates CSR?
+
+To check we use a $\chi^2$ test approach (remember: relation between observed (i.e. empirical) and expected (i.e. theoretical, here CSR) amounts of points in quadrants)
+
+*** =right
+
+
+```r
+qt_meg <- quadrat.test(meg_pp)
+## plot(qt_meg) --> for per quadrant info.
+qt_meg
+```
+
+```
+## 
+## 	Chi-squared test of CSR using quadrat counts
+## 	Pearson X2 statistic
+## 
+## data:  meg_pp
+## X2 = 274.48, df = 24, p-value < 2.2e-16
+## alternative hypothesis: two.sided
+## 
+## Quadrats: 5 by 5 grid of tiles
+```
+
+
+
+
+
 --- .segue bg:grey
 
 ## Networks

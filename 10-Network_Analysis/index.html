@@ -231,6 +231,48 @@ strong {
 <h2>Point pattern analyses</h2>
 </hgroup>
 <article>
+<p>Some terminology: in case we have an random point pattern, <strong>Complete Spatial Randomness</strong> or an <strong>Independent Random Process</strong> prevails. The condition are:</p>
+
+<ul>
+<li>equal probability: any event has an equal probability of being in any position</li>
+<li>independence: the positioning of any event is independent of the positioning of any other event</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-9">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p>Some terminology: in case we have an random point pattern, <strong>Complete Spatial Randomness</strong> or an <strong>Independent Random Process</strong> prevails. The condition are:</p>
+
+<ul>
+<li>equal probability: any event has an equal probability of being in any position</li>
+<li>independence: the positioning of any event is independent of the positioning of any other event</li>
+</ul>
+
+<p>CSR means that the <strong>process is random</strong> not the resulting point pattern!</p>
+
+<p>In point pattern analyses we test against CSR and different forms of specific processes to learn more about our pattern.</p>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-10">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
 <div style='position:absolute;top:25%;right:10%'>
   <img  height="350" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
   </div>
@@ -242,8 +284,75 @@ strong {
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-9">
+<slide class="" id="slide-11">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p>A structured point pattern violates CSR conditions:</p>
+
+<ol>
+<li><p>First-order effects influence the probability of events being in any position of the region
+--&gt; to trace such influences we investigate the intensity function (~ density) of the points</p></li>
+<li><p>In case second-order effects are present, points are not independent from one another
+--&gt; to trace such influences we investigate the distance distributions of the points</p></li>
+</ol>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-12">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<ul>
+<li>a <strong>stationary point process</strong> has a constant point density function.</li>
+<li>a <strong>homogeneous point process</strong> is stationary and isotropic. --&gt; CSR</li>
+<li>a stationary <strong>Poisson point process</strong> is the reference model in many test for CSR</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-13">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p>Events are independent</p>
+
+<ul>
+<li>a non-stationary <strong>(Poisson) point process</strong> has an inhomogeneous intensity function --&gt; e.g. caused by a covariate.</li>
+</ul>
+
+<p>Events are not independent</p>
+
+<ul>
+<li>the <strong>Cox process</strong> is an inhomogeneous Poisson process with a random
+intensity function. (Approach: create random pattern, create points using Poisson and covariate of random intensity)</li>
+<li>a <strong>Gibbs process</strong> involves influence from other points and models an explicit interaction between points (mainly for inhibition). In the case of a hard core Gibbs process, points
+avoid each other up to a certain threshold and they ignore each other.</li>
+<li>a <strong>Strauss process</strong> has a constant influence within a certain distance threshold.</li>
+<li>a <strong>Neyman–Scott process</strong> is used to create clustered point pattern by creating random cluster centres that create &quot;offspring&quot; points</li>
+</ul>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-14">
 <hgroup>
 <h2>Point pattern analyses</h2>
 </hgroup>
@@ -265,7 +374,7 @@ O'Sullivan & Unwin 2010, 126-126
 </footer>
 </article>
 </slide>
-<slide class="small" id="slide-10">
+<slide class="small" id="slide-15">
 <hgroup>
 <h2>Point pattern analyses</h2>
 </hgroup>
@@ -286,7 +395,7 @@ meg_dw &lt;- read.table(file = &quot;2data/meg_dw.csv&quot;,
 </footer>
 </article>
 </slide>
-<slide class="small" id="slide-11">
+<slide class="small" id="slide-16">
 <hgroup>
 <h2>Point pattern analyses</h2>
 </hgroup>
@@ -311,7 +420,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<slide class="small" id="slide-12">
+<slide class="small" id="slide-17">
 <hgroup>
 <h2>Point pattern analyses</h2>
 </hgroup>
@@ -328,11 +437,25 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<slide class="" id="slide-13">
+<slide class="" id="slide-18">
 <hgroup>
-
+<h2>Point pattern analyses</h2>
 </hgroup>
 <article>
+<pre><code class="r">mc &lt;- cbind(sum(meg_pp$x/meg_pp$n),
+            sum(meg_pp$y/meg_pp$n)
+            )
+
+stdist &lt;- sqrt(sum((meg_pp$x-mean(meg_pp$x))^2 +
+                   (meg_pp$y-mean(meg_pp$y))^2) /
+               meg_pp$n
+               )
+
+plot(meg_pp)
+points(mc)
+library(plotrix)
+draw.circle(x = mc[1], y = mc[2], radius = stdist, border = &quot;red&quot;)
+</code></pre>
 
 <footer class = 'logo'>
 <div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
@@ -341,10 +464,134 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<slide class="segue" id="slide-14">
-=======
-<slide class="segue" id="slide-9">
->>>>>>> origin/HEAD
+<slide class="" id="slide-19">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p><div style="text-align:center">
+<img src="assets/fig/plot%20simple%20pp%20measures-1.png" alt="plot of chunk plot simple pp measures"></p>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-20">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p>Global intensity = Number of points per area</p>
+
+<pre><code class="r">## A = a * b
+area.sqm &lt;- diff(meg_pp$window$xrange) * diff(meg_pp$window$yrange)
+area.sqkm &lt;- area.sqm*10^-6
+# area &lt;- area/1000000
+area.sqkm
+</code></pre>
+
+<pre><code>## [1] 431.3529
+</code></pre>
+
+<pre><code class="r">## calculate intensity
+intensity &lt;- meg_pp$n/area.sqkm
+intensity
+</code></pre>
+
+<pre><code>## [1] 0.6189827
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-21">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p>Local intensity</p>
+
+<pre><code class="r">qc.meg &lt;- quadratcount(X = meg_pp)
+
+plot(qc.meg);
+points(meg_pp, pch = 20, cex = .5, col = rgb(.2,.2,.2,.5))
+</code></pre>
+
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-22">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p>Local intensity</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>Does the quadratcount indicates CSR?</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/quadratcount%20plot-1.png" alt="plot of chunk quadratcount plot"></p>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="" id="slide-23">
+<hgroup>
+<h2>Point pattern analyses</h2>
+</hgroup>
+<article>
+<p>Local intensity</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>Does the quadratcount indicates CSR?</p>
+
+<p>To check we use a \(\chi^2\) test approach (remember: relation between observed (i.e. empirical) and expected (i.e. theoretical, here CSR) amounts of points in quadrants)</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">qt_meg &lt;- quadrat.test(meg_pp)
+## plot(qt_meg) --&gt; for per quadrant info.
+qt_meg
+</code></pre>
+
+<pre><code>## 
+##  Chi-squared test of CSR using quadrat counts
+##  Pearson X2 statistic
+## 
+## data:  meg_pp
+## X2 = 274.48, df = 24, p-value &lt; 2.2e-16
+## alternative hypothesis: two.sided
+## 
+## Quadrats: 5 by 5 grid of tiles
+</code></pre>
+
+</div>
+<footer class = 'logo'>
+<div style="position: absolute; right: 980px; bottom: 20px; z-index:100">
+<img src = "assets/img/logo03.png" height="70" width="70">
+</div>
+</footer>
+</article>
+</slide>
+<slide class="segue" id="slide-24">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -360,11 +607,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-15">
-=======
-<slide class="" id="slide-10">
->>>>>>> origin/HEAD
+<slide class="" id="slide-25">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -384,11 +627,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-16">
-=======
-<slide class="" id="slide-11">
->>>>>>> origin/HEAD
+<slide class="" id="slide-26">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -406,11 +645,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="segue" id="slide-17">
-=======
-<slide class="segue" id="slide-12">
->>>>>>> origin/HEAD
+<slide class="segue" id="slide-27">
 <hgroup>
 <h2>Do you know examples of networks?</h2>
 </hgroup>
@@ -426,11 +661,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-18">
-=======
-<slide class="" id="slide-13">
->>>>>>> origin/HEAD
+<slide class="" id="slide-28">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -452,11 +683,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-19">
-=======
-<slide class="" id="slide-14">
->>>>>>> origin/HEAD
+<slide class="" id="slide-29">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -477,11 +704,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-20">
-=======
-<slide class="" id="slide-15">
->>>>>>> origin/HEAD
+<slide class="" id="slide-30">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -503,11 +726,7 @@ meg_pp &lt;- ppp(x = meg_dw$x, y = meg_dw$y,
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-21">
-=======
-<slide class="" id="slide-16">
->>>>>>> origin/HEAD
+<slide class="" id="slide-31">
 <hgroup>
 <h2>Networks | Graphs</h2>
 </hgroup>
@@ -548,11 +767,7 @@ V(n1)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-22">
-=======
-<slide class="" id="slide-17">
->>>>>>> origin/HEAD
+<slide class="" id="slide-32">
 <hgroup>
 <h2>Networks | Graphs</h2>
 </hgroup>
@@ -587,11 +802,7 @@ V(n1)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-23">
-=======
-<slide class="" id="slide-18">
->>>>>>> origin/HEAD
+<slide class="" id="slide-33">
 <hgroup>
 <h2>Networks | Graphs</h2>
 </hgroup>
@@ -616,11 +827,7 @@ plot(n1)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-24">
-=======
-<slide class="" id="slide-19">
->>>>>>> origin/HEAD
+<slide class="" id="slide-34">
 <hgroup>
 <h2>Networks | Graphs</h2>
 </hgroup>
@@ -643,11 +850,7 @@ plot(n2)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-25">
-=======
-<slide class="" id="slide-20">
->>>>>>> origin/HEAD
+<slide class="" id="slide-35">
 <hgroup>
 <h2>Networks | Graphs</h2>
 </hgroup>
@@ -671,11 +874,7 @@ plot(n3)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-26">
-=======
-<slide class="" id="slide-21">
->>>>>>> origin/HEAD
+<slide class="" id="slide-36">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -703,11 +902,7 @@ plot(n3)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-27">
-=======
-<slide class="" id="slide-22">
->>>>>>> origin/HEAD
+<slide class="" id="slide-37">
 <hgroup>
 <h2>Networks | Delaunay graph</h2>
 </hgroup>
@@ -725,11 +920,7 @@ plot(n3)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-28">
-=======
-<slide class="" id="slide-23">
->>>>>>> origin/HEAD
+<slide class="" id="slide-38">
 <hgroup>
 <h2>Networks | Delaunay graph</h2>
 </hgroup>
@@ -752,11 +943,7 @@ plot(n3)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-29">
-=======
-<slide class="" id="slide-24">
->>>>>>> origin/HEAD
+<slide class="" id="slide-39">
 <hgroup>
 <h2>Networks</h2>
 </hgroup>
@@ -787,11 +974,7 @@ co.weapons &lt;- read.csv(&quot;2data/
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-30">
-=======
-<slide class="" id="slide-25">
->>>>>>> origin/HEAD
+<slide class="" id="slide-40">
 <hgroup>
 <h2>Networks | Delaunay graph</h2>
 </hgroup>
@@ -834,11 +1017,7 @@ plot(del)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-31">
-=======
-<slide class="" id="slide-26">
->>>>>>> origin/HEAD
+<slide class="" id="slide-41">
 <hgroup>
 <h2>Networks | SOI</h2>
 </hgroup>
@@ -868,11 +1047,7 @@ plot(soi)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-32">
-=======
-<slide class="" id="slide-27">
->>>>>>> origin/HEAD
+<slide class="" id="slide-42">
 <hgroup>
 <h2>Networks | Gabriel-Graph</h2>
 </hgroup>
@@ -901,11 +1076,7 @@ plot(gabriel)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-33">
-=======
-<slide class="" id="slide-28">
->>>>>>> origin/HEAD
+<slide class="" id="slide-43">
 <hgroup>
 <h2>Networks | Relative-Neighbour-Graph</h2>
 </hgroup>
@@ -935,11 +1106,7 @@ plot(relative)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-34">
-=======
-<slide class="" id="slide-29">
->>>>>>> origin/HEAD
+<slide class="" id="slide-44">
 <hgroup>
 <h2>Networks | Delaunay graph</h2>
 </hgroup>
@@ -969,11 +1136,7 @@ plot(n4)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="segue" id="slide-35">
-=======
-<slide class="segue" id="slide-30">
->>>>>>> origin/HEAD
+<slide class="segue" id="slide-45">
 <hgroup>
 <h2>What do spatial graphs tell about interaction?</h2>
 </hgroup>
@@ -989,11 +1152,7 @@ plot(n4)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-36">
-=======
-<slide class="" id="slide-31">
->>>>>>> origin/HEAD
+<slide class="" id="slide-46">
 <hgroup>
 <h2>Networks | Centrality</h2>
 </hgroup>
@@ -1016,11 +1175,7 @@ plot(n4)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-37">
-=======
-<slide class="" id="slide-32">
->>>>>>> origin/HEAD
+<slide class="" id="slide-47">
 <hgroup>
 <h2>Networks | Centrality</h2>
 </hgroup>
@@ -1047,11 +1202,7 @@ edge_betweenness(n4)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-38">
-=======
-<slide class="" id="slide-33">
->>>>>>> origin/HEAD
+<slide class="" id="slide-48">
 <hgroup>
 <h2>Networks | Plotting Centrality</h2>
 </hgroup>
@@ -1079,11 +1230,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-39">
-=======
-<slide class="" id="slide-34">
->>>>>>> origin/HEAD
+<slide class="" id="slide-49">
 <hgroup>
 <h2>Networks | Plotting Centrality</h2>
 </hgroup>
@@ -1109,11 +1256,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="segue" id="slide-40">
-=======
-<slide class="segue" id="slide-35">
->>>>>>> origin/HEAD
+<slide class="segue" id="slide-50">
 <hgroup>
 <h2>What does centrality tell about interaction?</h2>
 </hgroup>
@@ -1129,11 +1272,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="segue" id="slide-41">
-=======
-<slide class="segue" id="slide-36">
->>>>>>> origin/HEAD
+<slide class="segue" id="slide-51">
 <hgroup>
 <h2>Systems</h2>
 </hgroup>
@@ -1149,11 +1288,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-42">
-=======
-<slide class="" id="slide-37">
->>>>>>> origin/HEAD
+<slide class="" id="slide-52">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1177,11 +1312,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-43">
-=======
-<slide class="" id="slide-38">
->>>>>>> origin/HEAD
+<slide class="" id="slide-53">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1204,11 +1335,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-44">
-=======
-<slide class="" id="slide-39">
->>>>>>> origin/HEAD
+<slide class="" id="slide-54">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1226,11 +1353,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-45">
-=======
-<slide class="" id="slide-40">
->>>>>>> origin/HEAD
+<slide class="" id="slide-55">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1256,11 +1379,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-46">
-=======
-<slide class="" id="slide-41">
->>>>>>> origin/HEAD
+<slide class="" id="slide-56">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1278,11 +1397,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-47">
-=======
-<slide class="" id="slide-42">
->>>>>>> origin/HEAD
+<slide class="" id="slide-57">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1302,11 +1417,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-48">
-=======
-<slide class="" id="slide-43">
->>>>>>> origin/HEAD
+<slide class="" id="slide-58">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1324,11 +1435,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-49">
-=======
-<slide class="" id="slide-44">
->>>>>>> origin/HEAD
+<slide class="" id="slide-59">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1346,11 +1453,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-50">
-=======
-<slide class="" id="slide-45">
->>>>>>> origin/HEAD
+<slide class="" id="slide-60">
 <hgroup>
 <h2>Systems | Agent Based Modelling</h2>
 </hgroup>
@@ -1368,11 +1471,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="segue" id="slide-51">
-=======
-<slide class="segue" id="slide-46">
->>>>>>> origin/HEAD
+<slide class="segue" id="slide-61">
 <hgroup>
 <h2>No code provided for the AMB (Summer School 2017)</h2>
 </hgroup>
@@ -1388,11 +1487,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="segue" id="slide-52">
-=======
-<slide class="segue" id="slide-47">
->>>>>>> origin/HEAD
+<slide class="segue" id="slide-62">
 <hgroup>
 <h2>Apply point pattern analysis and network analysis in the workshop this afternoon!</h2>
 </hgroup>
@@ -1408,11 +1503,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
 </footer>
 </article>
 </slide>
-<<<<<<< HEAD
-<slide class="" id="slide-53">
-=======
-<slide class="" id="slide-48">
->>>>>>> origin/HEAD
+<slide class="" id="slide-63">
 <hgroup>
 
 </hgroup>
@@ -1482,11 +1573,7 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
         data-slide=9 title='Point pattern analyses'>
-=======
-        data-slide=9 title='Networks'>
->>>>>>> origin/HEAD
          9
       </a>
     </li>
@@ -1504,323 +1591,316 @@ dendPlot(ceb, mode=&quot;hclust&quot;)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
         data-slide=12 title='Point pattern analyses'>
-=======
-        data-slide=12 title='Do you know examples of networks?'>
->>>>>>> origin/HEAD
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=13 title='NA'>
-=======
-        data-slide=13 title='Networks'>
->>>>>>> origin/HEAD
+        data-slide=13 title='Point pattern analyses'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Networks'>
+        data-slide=14 title='Point pattern analyses'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Networks'>
+        data-slide=15 title='Point pattern analyses'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Networks | Graphs'>
+        data-slide=16 title='Point pattern analyses'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Do you know examples of networks?'>
+        data-slide=17 title='Point pattern analyses'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Networks'>
+        data-slide=18 title='Point pattern analyses'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Networks'>
+        data-slide=19 title='Point pattern analyses'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Networks'>
+        data-slide=20 title='Point pattern analyses'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Networks'>
+        data-slide=21 title='Point pattern analyses'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=22 title='Networks | Graphs'>
-=======
-        data-slide=22 title='Networks | Delaunay graph'>
->>>>>>> origin/HEAD
+        data-slide=22 title='Point pattern analyses'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Networks | Graphs'>
+        data-slide=23 title='Point pattern analyses'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=24 title='Networks | Graphs'>
-=======
         data-slide=24 title='Networks'>
->>>>>>> origin/HEAD
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=25 title='Networks | Graphs'>
-=======
-        data-slide=25 title='Networks | Delaunay graph'>
->>>>>>> origin/HEAD
+        data-slide=25 title='Networks'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
         data-slide=26 title='Networks'>
-=======
-        data-slide=26 title='Networks | SOI'>
->>>>>>> origin/HEAD
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=27 title='Networks | Delaunay graph'>
-=======
-        data-slide=27 title='Networks | Gabriel-Graph'>
->>>>>>> origin/HEAD
+        data-slide=27 title='Do you know examples of networks?'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=28 title='Networks | Delaunay graph'>
-=======
-        data-slide=28 title='Networks | Relative-Neighbour-Graph'>
->>>>>>> origin/HEAD
+        data-slide=28 title='Networks'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
         data-slide=29 title='Networks'>
-=======
-        data-slide=29 title='Networks | Delaunay graph'>
->>>>>>> origin/HEAD
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='What do spatial graphs tell about interaction?'>
+        data-slide=30 title='Networks'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=31 title='Networks | SOI'>
-=======
-        data-slide=31 title='Networks | Centrality'>
->>>>>>> origin/HEAD
+        data-slide=31 title='Networks | Graphs'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='Networks | Gabriel-Graph'>
+        data-slide=32 title='Networks | Graphs'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=33 title='Networks | Relative-Neighbour-Graph'>
-=======
-        data-slide=33 title='Networks | Plotting Centrality'>
->>>>>>> origin/HEAD
+        data-slide=33 title='Networks | Graphs'>
          33
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='Networks | Delaunay graph'>
+        data-slide=34 title='Networks | Graphs'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=35 title='What do spatial graphs tell about interaction?'>
-=======
-        data-slide=35 title='What does centrality tell about interaction?'>
->>>>>>> origin/HEAD
+        data-slide=35 title='Networks | Graphs'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=36 title='Networks | Centrality'>
-=======
-        data-slide=36 title='Systems'>
->>>>>>> origin/HEAD
+        data-slide=36 title='Networks'>
          36
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=37 title='Networks | Centrality'>
-=======
-        data-slide=37 title='Systems | Agent Based Modelling'>
->>>>>>> origin/HEAD
+        data-slide=37 title='Networks | Delaunay graph'>
          37
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='Networks | Plotting Centrality'>
+        data-slide=38 title='Networks | Delaunay graph'>
          38
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=39 title='Networks | Plotting Centrality'>
+        data-slide=39 title='Networks'>
          39
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=40 title='What does centrality tell about interaction?'>
+        data-slide=40 title='Networks | Delaunay graph'>
          40
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=41 title='Systems'>
+        data-slide=41 title='Networks | SOI'>
          41
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='Systems | Agent Based Modelling'>
+        data-slide=42 title='Networks | Gabriel-Graph'>
          42
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=43 title='Systems | Agent Based Modelling'>
+        data-slide=43 title='Networks | Relative-Neighbour-Graph'>
          43
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=44 title='Systems | Agent Based Modelling'>
+        data-slide=44 title='Networks | Delaunay graph'>
          44
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=45 title='Systems | Agent Based Modelling'>
+        data-slide=45 title='What do spatial graphs tell about interaction?'>
          45
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=46 title='No code provided for the AMB (Summer School 2017)'>
+        data-slide=46 title='Networks | Centrality'>
          46
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=47 title='Systems | Agent Based Modelling'>
-=======
-        data-slide=47 title='Apply point pattern analysis and network analysis in the workshop this afternoon!'>
->>>>>>> origin/HEAD
+        data-slide=47 title='Networks | Centrality'>
          47
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-<<<<<<< HEAD
-        data-slide=48 title='Systems | Agent Based Modelling'>
+        data-slide=48 title='Networks | Plotting Centrality'>
          48
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=49 title='Systems | Agent Based Modelling'>
+        data-slide=49 title='Networks | Plotting Centrality'>
          49
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=50 title='Systems | Agent Based Modelling'>
+        data-slide=50 title='What does centrality tell about interaction?'>
          50
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=51 title='No code provided for the AMB (Summer School 2017)'>
+        data-slide=51 title='Systems'>
          51
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=52 title='Apply point pattern analysis and network analysis in the workshop this afternoon!'>
+        data-slide=52 title='Systems | Agent Based Modelling'>
          52
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=53 title='NA'>
+        data-slide=53 title='Systems | Agent Based Modelling'>
          53
       </a>
     </li>
-=======
-        data-slide=48 title='NA'>
-         48
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=54 title='Systems | Agent Based Modelling'>
+         54
       </a>
     </li>
->>>>>>> origin/HEAD
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=55 title='Systems | Agent Based Modelling'>
+         55
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=56 title='Systems | Agent Based Modelling'>
+         56
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=57 title='Systems | Agent Based Modelling'>
+         57
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=58 title='Systems | Agent Based Modelling'>
+         58
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=59 title='Systems | Agent Based Modelling'>
+         59
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=60 title='Systems | Agent Based Modelling'>
+         60
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=61 title='No code provided for the AMB (Summer School 2017)'>
+         61
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=62 title='Apply point pattern analysis and network analysis in the workshop this afternoon!'>
+         62
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=63 title='NA'>
+         63
+      </a>
+    </li>
   </ul>
   </div>  <!--[if IE]>
     <script 
