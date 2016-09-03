@@ -389,7 +389,233 @@ plot(qt_meg)
 
 Kernel density estimation
 
+<div style='text-align:center'>
+  <img  height="450" src='assets/img/dk_kde.png' />
+  </div>
 
+<div style='text-align:right;font-size:12px'>
+O'Sullivan & Unwin 2010, Nakoinz & Knitter 2016
+</div>
+
+--- &twocol
+
+## Point pattern analyses
+
+Kernel density estimation
+
+*** =left
+
+
+```r
+meg_dens <- density(x = meg_pp,
+                    sigma = 2500)
+
+plot(raster(meg_dens))
+```
+
+*** =right
+
+![plot of chunk kde_meg_plot](assets/fig/kde_meg_plot-1.png)
+
+---
+
+## Point pattern analyses
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="400" src='assets/img/dk_kde_kernel.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Knitter & Nakoinz in press
+</div>
+
+---
+
+## Point pattern analyses
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_kde_kernel_badia.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Meister et al. forthcoming
+</div>
+
+---
+
+## Point pattern analyses
+
+We assume that the intensity of the point process is a function of the covariate (Z):
+
+$$\lambda(u) = \rho(Z(U))$$
+
+$\lambda(u)$ can be regarded as location selection function --> it causes an inhomogeneous probability of points to be located in same areas of the study region
+
+Calculation in `R` is straightforward
+
+
+```r
+cov_meg <- rhohat(object = "YOUR POINT PATTERN",
+                     covariate = "YOUR COVARIATE RASTER",
+                     bw = 100
+                  )
+pred_cov_meg <- predict(cov_meg)
+cov_compare <- meg_dens - pred_cov_meg
+```
+
+---
+
+## Point pattern analyses
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_cov_badia_1.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Meister et al. forthcoming
+</div>
+
+---
+
+## Point pattern analyses
+
+Kernel density estimation
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_cov_badia_2.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Meister et al. forthcoming
+</div>
+
+---
+
+## Point pattern analyses
+
+Second order effects
+
+---
+
+## Point pattern analyses
+
+Second order effects
+
+<div style='text-align:center'>
+  <img  height="450" src='assets/img/dk_nn.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+O'Sullivan & Unwin 2010
+</div>
+
+
+--- &twocol
+
+## Point pattern analyses
+
+Second order effects
+
+*** =left
+
+$$R = \frac{observed~\overline{d_{min}}}{expected~\overline{d_{min}}}$$
+
+$$R = \frac{\overline{d_{min}}}{\frac{1}{2\sqrt{\lambda}}}$$
+
+*** =right
+
+
+```r
+meg_nn <- nndist(meg_pp)
+mean(meg_nn)
+```
+
+```
+## [1] 358.8447
+```
+
+```r
+nnE <- 1/(2*sqrt((meg_pp$n/area.sqm)))
+nnE
+```
+
+```
+## [1] 635.5222
+```
+
+```r
+R.meg <- mean(meg_nn)/nnE
+R.meg
+```
+
+```
+## [1] 0.5646453
+```
+
+
+--- &twocol
+
+## Point pattern analyses
+
+Second order effects
+
+*** =left
+
+
+```r
+hist(meg_nn)
+abline(v=mean(meg_nn))
+abline(v=median(meg_nn), lty=2)
+```
+
+*** =right
+
+![plot of chunk nndist_plot](assets/fig/nndist_plot-1.png)
+
+---
+
+## Point pattern analyses
+
+Second order effects
+
+<div style='text-align:center'>
+  <img  height="250" src='assets/img/dk_PP_nakoinz_knitter_2016_135.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Nakoinz & Knitter 2016, 135
+</div>
+
+
+--- &twocol
+
+## Point pattern analyses
+
+*** =left
+Second order effects
+
+cumulative frequency distribution of the nearest-neighbor distances
+
+$$G(d) = \frac{\#(d_{min}(s_{i}) < d)}{n}$$
+
+The function tells us what fraction of all n-n
+distances is less than d
+
+
+```r
+meg_g <- Gest(meg_pp)
+plot(meg_g)
+```
+
+*** =right
+
+![plot of chunk g_plot](assets/fig/g_plot-1.png)
 
 --- .segue bg:grey
 
