@@ -34,11 +34,11 @@ strong {
 *** =right
 
 <div style='position:absolute;bottom:10%;right:15%'>
-  <img  height="200" src='assets/img/cEvers.png' />
+  <img  height="300" src='assets/img/cevers.JPG' />
 </div>
 
 <div style='position:absolute;top:10%;right:15%'>
-  <img  height="200" src='assets/img/FFaupel.jpg' />
+  <img  height="250" src='assets/img/FFaupel.jpg' />
 </div>
 
 ---

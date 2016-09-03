@@ -501,7 +501,7 @@ Meister et al. forthcoming
 
 ---
 
-## Point pattern analyses
+## Point pattern analyses - Second order effects
 
 <div style='text-align:center'>
   <img  height="450" src='assets/img/dk_nn.png' />
@@ -956,9 +956,9 @@ co.weapons <- read.csv("2data/
 ##      PLEASE NOTE: The process that deldir() uses for determining
 ##  duplicated points has changed from that used in version
 ##  0.0-9 of this package (and previously). See help("deldir").
-## Error in CRS(as.character(crs1)): object 'crs1' not found
-## Error in plot(del): object 'del' not found
 ```
+
+![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13-1.png)
 
 *** =right
 
@@ -983,11 +983,7 @@ plot(del)
 
 *** =left
 
-
-```
-## Error in CRS(as.character(crs1)): object 'crs1' not found
-## Error in plot(soi): object 'soi' not found
-```
+![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15-1.png)
 
 *** =right
 
@@ -1008,11 +1004,7 @@ plot(soi)
 
 *** =left
 
-
-```
-## Error in CRS(as.character(crs1)): object 'crs1' not found
-## Error in plot(gabriel): object 'gabriel' not found
-```
+![plot of chunk unnamed-chunk-17](assets/fig/unnamed-chunk-17-1.png)
 
 *** =right
 
@@ -1032,11 +1024,7 @@ plot(gabriel)
 
 *** =left
 
-
-```
-## Error in CRS(as.character(crs1)): object 'crs1' not found
-## Error in plot(relative): object 'relative' not found
-```
+![plot of chunk unnamed-chunk-19](assets/fig/unnamed-chunk-19-1.png)
 
 *** =right
 
@@ -1281,6 +1269,42 @@ plot(ceb, n4)
 
 ## Apply point pattern analysis and network analysis in the workshop this afternoon!
 
+
+<a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
+ <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
+</a>
+
+--- &twocol
+
+## Presentations
+
+*** =left
+
+**Monday, 5th of September**
+
+1. [Interaction as a key term](01-interaction/index.html)
+
+**Tuesday, 6th of September**
+
+1. [Introduction to R](02-introduction/index.html)
+2. [R Basics: Frist Steps](03-R_basics01/index.html)
+3. [R Basics: Getting used to R](04-R_basics02/index.html)
+4. [Using R as GIS](05-R_GIS/index.html)
+5. [**Workshop:** Basic Spatial Statistics](06-WS_Basic_Spatial_Statistics/index.html)
+
+*** =right
+
+**Wednesday, 7th of September**
+
+1. [Modelling Interaction: Cultural & Geographic Distance](07-cul_distances/index.html)
+2. [**Workshop**: Geographical and Economic Distances](08-WS_Geo_Eco_Distances/index.html)
+3. [**Workshop:** Cultural Distances](09-WS_Cul_Distances/index.html)
+
+**Thursday, 8th of September**
+
+1. [Modelling Interaction: Network Approaches](10-Network_Analysis/index.html)
+2. [**Workshop:** Pointpattern Analysis](11-WS_Pointpattern/index.html)
+3. [**Workshop:** Network Analysis](12-WS_Network/index.html)
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
