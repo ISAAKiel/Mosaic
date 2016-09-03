@@ -125,6 +125,7 @@ are influenced by:
   <img  height="350" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
   </div>
 
+<<<<<<< HEAD
 ---
 
 ## Point pattern analyses
@@ -188,6 +189,8 @@ plot(meg_pp)
 
 
 
+=======
+>>>>>>> origin/HEAD
 --- .segue bg:grey
 
 ## Networks
@@ -677,7 +680,7 @@ plot(ceb, n4)
 
 ## Systems | Agent Based Modelling
 
-**AMB** comprises
+**ABM** comprises
 - an actors
 - an envirionment and
 - a process
@@ -739,7 +742,7 @@ plot(ceb, n4)
 ## Systems | Agent Based Modelling
 
 ## But is it useful?
-## Whad do you think?
+## What do you think?
 
 <div style='position:absolute;bottom:10%;right:5%'>
   <img  height="500" src='assets/img/a206.png' />
