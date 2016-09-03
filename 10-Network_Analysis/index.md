@@ -117,7 +117,7 @@ are influenced by:
   <img  height="400" src='assets/img/dk_PP_terms.png' />
   </div>
 
---- .dk
+---
 
 ## Point pattern analyses
 
@@ -125,10 +125,66 @@ are influenced by:
   <img  height="350" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
   </div>
 
-
 ---
 
-  
+## Point pattern analyses
+
+Simple measures: mean, standard deviation, intensity (~ density)
+
+<div style='text-align:center'>
+  <img  height="450" src='assets/img/dk_PP_SimpleMeasures.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+O'Sullivan & Unwin 2010, 126-126
+</div>
+
+--- .small 
+
+## Point pattern analyses
+
+
+```r
+download.file(
+    url = "https://raw.githubusercontent.com/dakni/mhbil/master/data/meg_dw.csv",
+    destfile = "2data/meg_dw.csv")
+
+meg_dw <- read.table(file = "2data/meg_dw.csv",
+                     header = TRUE,
+                     sep = ";")
+```
+
+--- .small 
+
+## Point pattern analyses
+
+
+```r
+library(spatstat)
+meg_pp <- ppp(x = meg_dw$x, y = meg_dw$y,
+              window = owin(xrange = c(min(meg_dw$x),
+                                       max(meg_dw$x)
+                                       ),
+                            yrange = c(min(meg_dw$y),
+                                       max(meg_dw$y)
+                                       ),
+                            unitname = c("meter", "meters")
+                            )              
+              )
+```
+
+--- .small 
+
+## Point pattern analyses
+
+
+```r
+plot(meg_pp)
+```
+
+![plot of chunk plot ppp](assets/fig/plot ppp-1.png)
+
+---
 
 
 
@@ -217,7 +273,7 @@ are influenced by:
 
 
 ```
-## Error in plot(n1): cannot open file 'C:/Diss/R/develpoment/Mosaic01/Mosaic/10-Network_Analysis/.cache/unnamed-chunk-6_a06615d0fab008585b8490f9b1746abe.rdb': No such file or directory
+## Error in plot(n1): object 'n1' not found
 ```
 
 
@@ -395,7 +451,20 @@ co.weapons <- read.csv("2data/
 
 *** =left
 
-![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13-1.png)
+
+```
+## 
+##      PLEASE NOTE:  The components "delsgs" and "summary" of the
+##  object returned by deldir() are now DATA FRAMES rather than
+##  matrices (as they were prior to release 0.0-18).
+##  See help("deldir").
+##  
+##      PLEASE NOTE: The process that deldir() uses for determining
+##  duplicated points has changed from that used in version
+##  0.0-9 of this package (and previously). See help("deldir").
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(del): object 'del' not found
+```
 
 *** =right
 
@@ -420,7 +489,11 @@ plot(del)
 
 *** =left
 
-![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15-1.png)
+
+```
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(soi): object 'soi' not found
+```
 
 *** =right
 
@@ -441,7 +514,11 @@ plot(soi)
 
 *** =left
 
-![plot of chunk unnamed-chunk-17](assets/fig/unnamed-chunk-17-1.png)
+
+```
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(gabriel): object 'gabriel' not found
+```
 
 *** =right
 
@@ -461,7 +538,11 @@ plot(gabriel)
 
 *** =left
 
-![plot of chunk unnamed-chunk-19](assets/fig/unnamed-chunk-19-1.png)
+
+```
+## Error in CRS(as.character(crs1)): object 'crs1' not found
+## Error in plot(relative): object 'relative' not found
+```
 
 *** =right
 
