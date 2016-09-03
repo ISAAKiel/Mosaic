@@ -1,6 +1,6 @@
 ---
-title       : Network Approaches
-subtitle    : Modelling Spheres of Intercation
+title       : Point Patterns and Network Approaches
+subtitle    : Modelling Spheres of Interaction
 author      : Oliver Nakoinz, Daniel Knitter
 job         : MOSAIC Summer School 2016
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -60,7 +60,79 @@ strong {
 
 ---
 
-## Daniels Teil zu PointPatterns
+## Point pattern analyses
+
+An approach and a set of methods that helps you to **be explicit about the processes** that caused the spatial distribution of your points (e.g. ceramic finds, settlements, graveyards, ...) [from pattern to process]
+
+- http://spatstat.github.io/
+- https://cran.r-project.org/web/packages/spatstat/index.html
+- <a href="https://cran.r-project.org/web/packages/spatstat/vignettes/getstart.pdf">Getting Started with Spatstat</a>
+- <a href="https://cran.r-project.org/web/packages/spatstat/spatstat.pdf">Spatstat manual (1639 pages)</a>
+- THE book - - - - >
+
+<a href='https://www.crcpress.com/Spatial-Point-Patterns-Methodology-and-Applications-with-R/Baddeley-Rubak-Turner/p/book/9781482210200'>
+ <img  height="300" style='position:absolute;top:40%;right:5%' src='https://images.tandf.co.uk/common/jackets/amazon/978148221/9781482210200.jpg' />
+</a>
+
+---
+
+## Point pattern analyses
+
+It uses the simplest possible form of spatial data: points/events in an area/region/space
+
+<div style='text-align:center'>
+  <img  height="300" src='assets/img/dk_PP.png' />
+</div>
+
+--- &twocol
+
+## Point pattern analyses
+
+*** =left
+
+**Random point pattern**
+
+independent from space ...
+
+- noise
+- individuality
+- non-spatial process
+
+*** =right
+
+**Structured point patterns**
+
+are influenced by:
+
+- space (first-order effects/properties)
+- points (second-order effects/properties)
+- structures (third-order effects/properties)
+
+---
+
+
+## Point pattern analyses
+
+<div style='text-align:center'>
+  <img  height="400" src='assets/img/dk_PP_terms.png' />
+  </div>
+
+---
+
+## Point pattern analyses
+
+
+
+<div style='text-align:center'>
+  <img  height="400" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
+  </div>
+
+
+---
+
+  
+
+
 
 --- .segue bg:grey
 
