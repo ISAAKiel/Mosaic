@@ -125,7 +125,6 @@ are influenced by:
   <img  height="350" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
   </div>
 
-<<<<<<< HEAD
 ---
 
 ## Point pattern analyses
@@ -182,10 +181,6 @@ plot(meg_pp)
 
 ---
 
-
-
-=======
->>>>>>> origin/HEAD
 --- .segue bg:grey
 
 ## Networks
