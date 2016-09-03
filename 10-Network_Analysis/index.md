@@ -385,7 +385,7 @@ plot(qt_meg)
 
 ---
 
-## Point pattern analyses
+## Point pattern analyses - First order effects
 
 Kernel density estimation
 
@@ -399,7 +399,7 @@ O'Sullivan & Unwin 2010, Nakoinz & Knitter 2016
 
 --- &twocol
 
-## Point pattern analyses
+## Point pattern analyses - First order effects
 
 Kernel density estimation
 
@@ -419,7 +419,7 @@ plot(raster(meg_dens))
 
 ---
 
-## Point pattern analyses
+## Point pattern analyses - First order effects
 
 Kernel density estimation
 
@@ -433,7 +433,7 @@ Knitter & Nakoinz in press
 
 ---
 
-## Point pattern analyses
+## Point pattern analyses - First order effects
 
 Kernel density estimation
 
@@ -447,7 +447,7 @@ Meister et al. forthcoming
 
 ---
 
-## Point pattern analyses
+## Point pattern analyses - First order effects
 
 We assume that the intensity of the point process is a function of the covariate (Z):
 
@@ -469,7 +469,7 @@ cov_compare <- meg_dens - pred_cov_meg
 
 ---
 
-## Point pattern analyses
+## Point pattern analyses - First order effects
 
 Kernel density estimation
 
@@ -483,7 +483,7 @@ Meister et al. forthcoming
 
 ---
 
-## Point pattern analyses
+## Point pattern analyses - First order effects
 
 Kernel density estimation
 
@@ -497,15 +497,11 @@ Meister et al. forthcoming
 
 ---
 
-## Point pattern analyses
-
-Second order effects
+## Point pattern analyses - Second order effects
 
 ---
 
 ## Point pattern analyses
-
-Second order effects
 
 <div style='text-align:center'>
   <img  height="450" src='assets/img/dk_nn.png' />
@@ -518,9 +514,7 @@ O'Sullivan & Unwin 2010
 
 --- &twocol
 
-## Point pattern analyses
-
-Second order effects
+## Point pattern analyses - Second order effects
 
 *** =left
 
@@ -561,9 +555,7 @@ R.meg
 
 --- &twocol
 
-## Point pattern analyses
-
-Second order effects
+## Point pattern analyses - Second order effects
 
 *** =left
 
@@ -580,9 +572,7 @@ abline(v=median(meg_nn), lty=2)
 
 ---
 
-## Point pattern analyses
-
-Second order effects
+## Point pattern analyses - Second order effects
 
 <div style='text-align:center'>
   <img  height="250" src='assets/img/dk_PP_nakoinz_knitter_2016_135.png' />
@@ -592,17 +582,29 @@ Second order effects
 Nakoinz & Knitter 2016, 135
 </div>
 
+---
+
+## Point pattern analyses - Second order effects
+
+<div style='text-align:center'>
+  <img  height="350" src='assets/img/dk_GFK_Knitter-et-al_2014_113.png' />
+  </div>
+
+<div style='text-align:right;font-size:12px'>
+Knitter et al. 2014, 113
+</div>
+
+
 
 --- &twocol
 
-## Point pattern analyses
+## Point pattern analyses - Second order effects
 
 *** =left
-Second order effects
 
 cumulative frequency distribution of the nearest-neighbor distances
 
-$$G(d) = \frac{\#(d_{min}(s_{i}) < d)}{n}$$
+$$G(d) = \frac{\#(d_{min}(S_{i}) < d)}{n}$$
 
 The function tells us what fraction of all n-n
 distances is less than d
@@ -616,6 +618,69 @@ plot(meg_g)
 *** =right
 
 ![plot of chunk g_plot](assets/fig/g_plot-1.png)
+
+--- &twocol
+
+## Point pattern analyses - Second order effects
+
+*** =left
+
+cumulative frequency distribution of the nearest-neighbor distances of arbitrary events
+to known events
+
+$$F(d) = \frac{\#(d_{min}(p_i,S) < d)}{m}$$
+
+
+```r
+meg_f <- Fest(meg_pp)
+plot(meg_f)
+```
+
+hmm...this can be advanced...in the Workshop :)
+
+*** =right
+
+![plot of chunk f_plot](assets/fig/f_plot-1.png)
+
+
+--- &twocol
+
+## Point pattern analyses - Second order effects
+
+*** =left
+
+~ cumulative frequency distribution of all points within a certain radius
+
+$$K(d) = \frac{\sum\limits_{i=1}^{n}\#(S \in C(s_i,d))}{n\lambda}$$
+
+
+```r
+meg_k <- Kest(meg_pp)
+plot(meg_k)
+```
+
+*** =right
+
+![plot of chunk k_plot](assets/fig/k_plot-1.png)
+
+
+---
+
+## Point pattern analyses - Second order effects
+
+<div style='text-align:center'>
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_142.png' />
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_143.png' />
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_143_2.png' />
+  <img  height="120" src='assets/img/dk_cpp_nak-kni-16_143_3.png' />
+</div>
+
+<div style='text-align:right;font-size:12px'>
+Nakoinz & Knitter 2016, 142-143
+</div>
+
+
+
 
 --- .segue bg:grey
 
