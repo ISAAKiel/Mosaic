@@ -40,6 +40,12 @@ strong {
 
 *** =right
 
+**Tasks**
+- create a point pattern object
+- explore the characteristics of the point pattern
+- identify potential first-order effects (density; e.g. regarding the topography)
+- identify potential second-order effects (G,F,K functions)
+
 
 <a class="btn btn-primary btn-large" href='https://isaakiel.github.io/index.html'>
  <img  height="50" width="50" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
