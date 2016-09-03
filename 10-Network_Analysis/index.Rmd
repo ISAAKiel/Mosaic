@@ -58,7 +58,7 @@ strong {
  <img  height="100" width="100" style='position:absolute;top:5%;right:5%' src='assets/img/ISAAK.png' />
 </a>
 
----
+--- .dk
 
 ## Point pattern analyses
 
@@ -74,7 +74,7 @@ An approach and a set of methods that helps you to **be explicit about the proce
  <img  height="300" style='position:absolute;top:40%;right:5%' src='https://images.tandf.co.uk/common/jackets/amazon/978148221/9781482210200.jpg' />
 </a>
 
----
+--- .dk
 
 ## Point pattern analyses
 
@@ -84,7 +84,7 @@ It uses the simplest possible form of spatial data: points/events in an area/reg
   <img  height="300" src='assets/img/dk_PP.png' />
 </div>
 
---- &twocol
+--- .dk &twocol
 
 ## Point pattern analyses
 
@@ -108,7 +108,7 @@ are influenced by:
 - points (second-order effects/properties)
 - structures (third-order effects/properties)
 
----
+--- 
 
 
 ## Point pattern analyses
@@ -117,14 +117,12 @@ are influenced by:
   <img  height="400" src='assets/img/dk_PP_terms.png' />
   </div>
 
----
+--- .dk
 
 ## Point pattern analyses
 
-
-
-<div style='text-align:center'>
-  <img  height="400" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
+<div style='position:absolute;top:25%;right:10%'>
+  <img  height="350" src='assets/img/dk_FirstSecond-order_nakoinz_knitter_2016_130.png' />
   </div>
 
 
